@@ -1,0 +1,47 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background: rgba(247,245,239,0.92);
+
+  backdrop-filter: blur(12px);
+
+  border-bottom:
+    1px solid var(--line);
+}
+
+.header-inner {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  min-height: 80px;
+}
+
+.logo {
+  font-size: 18px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+}
+
+.main-nav {
+  display: flex;
+
+  gap: 32px;
+}
+
+.main-nav a {
+  color: var(--muted);
+
+  transition:
+    color var(--transition);
+}
+
+.main-nav a:hover {
+  color: var(--green);
+}

@@ -1,0 +1,143 @@
+```astro
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  const modules = import.meta.glob("../../content/products/**/*.md", { eager: true });
+  const paths = Object.keys(modules)
+    .filter(key => key.includes("stone-sinks"))
+    .map(key => {
+      const slug = key.split("/").pop()?.replace(".md", "");
+      return { params: { slug } };
+    });
+  return paths;
+}
+
+const { slug } = Astro.params;
+
+// Dynamically import the markdown file
+const modules = import.meta.glob("../../content/products/**/*.md", { eager: true });
+const moduleKey = Object.keys(modules).find(key => key.includes(`stone-sinks/${slug}`));
+const module = moduleKey ? modules[moduleKey] : null;
+
+if (!module) {
+  return Astro.redirect("/404");
+}
+
+const { frontmatter } = module;
+const { title, description, featuredImage, gallery, seoTitle, seoDescription, material } = frontmatter;
+
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: title,
+  description: description,
+  image: [
+    featuredImage,
+    ...(gallery || [])
+  ],
+  manufacturer: {
+    "@type": "Organization",
+    name: "Win-Win Stone"
+  },
+  brand: {
+    "@type": "Brand",
+    name: "Win-Win Stone"
+  }
+};
+---
+
+<BaseLayout
+  title={seoTitle}
+  description={seoDescription}
+>
+
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify(productSchema)}
+/>
+
+<section class="product-page">
+  <div class="container">
+    <nav class="breadcrumb">
+      <a href="/">Home</a>
+      <span>/</span>
+      <a href="/stone-sinks/">Stone Sinks</a>
+      <span>/</span>
+      <span>{title}</span>
+    </nav>
+
+    <div class="product-grid">
+      <div class="product-gallery">
+        <img src={featuredImage} alt={title} />
+        <div class="gallery-grid">
+          {gallery?.map((image) => (
+            <img src={image} alt={title} />
+          ))}
+        </div>
+      </div>
+
+      <div class="product-content">
+        <h1>{title}</h1>
+        <p>{description}</p>
+        {
+          material ? (
+            <div class="product-meta">
+              <strong>Material:</strong>
+              {material}
+            </div>
+          ) : null
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+</BaseLayout>
+
+<style>
+.product-page {
+  padding: 80px 0;
+}
+
+.breadcrumb {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 32px;
+  font-size: 14px;
+}
+
+.breadcrumb a {
+  color: var(--green);
+  text-decoration: none;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 48px;
+}
+
+.product-gallery img {
+  width: 100%;
+  display: block;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.product-content h1 {
+  margin-bottom: 24px;
+}
+
+.product-meta {
+  margin-top: 24px;
+  font-size: 14px;
+  color: rgba(0,0,0,.7);
+}
+</style>
+```

@@ -1,0 +1,37 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Materials"
+  description="Stone material information for marble, granite, travertine and more."
+>
+  <section class="materials-overview">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="/">Home</a>
+        <span>/</span>
+        <span>Materials</span>
+      </nav>
+
+      <h1>Materials</h1>
+      <p>Learn about the stone materials we work with and how to choose the right option for your project.</p>
+
+      <div class="materials-notice">
+        <p>这里可以作为材料百科入口，将来可通过 <code>src/content/materials</code> 来管理每种石材内容。</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+.materials-overview {
+  padding: 80px 0;
+}
+.materials-notice {
+  margin-top: 40px;
+  padding: 24px;
+  border: 1px solid rgba(0,0,0,.08);
+  background: rgba(0,0,0,.03);
+}
+</style>

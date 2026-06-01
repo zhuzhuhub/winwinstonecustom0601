@@ -1,0 +1,95 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+
+const category = Astro.params.category;
+const products = (await getCollection("products")).filter((product) => product.data.category === category);
+
+function humanize(value: string) {
+  return value
+    .replace(/-/g, " ")
+    .replace(/\b\w/g, (char) => char.toUpperCase());
+}
+---
+
+<BaseLayout
+  title={`${humanize(category)} | Products`}
+  description={`Custom ${humanize(category)} products and collections.`}
+>
+  <section class="category-page">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="/">Home</a>
+        <span>/</span>
+        <a href="/products/">Products</a>
+        <span>/</span>
+        <span>{humanize(category)}</span>
+      </nav>
+
+      <h1>{humanize(category)}</h1>
+      <p>Browse our custom {humanize(category)} product collection.</p>
+
+      {products.length ? (
+        <div class="product-grid">
+          {products.map((product) => (
+            <a class="product-card" href={`/products/${category}/${product.slug}/`}>
+              <div class="product-image">
+                <img src={product.data.featuredImage} alt={product.data.title} />
+              </div>
+              <div class="product-content">
+                <h2>{product.data.title}</h2>
+                <p>{product.data.description}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+      ) : (
+        <p>暂时没有该分类的产品，请稍后返回查看。</p>
+      )}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+.category-page {
+  padding: 80px 0;
+}
+.breadcrumb {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+.breadcrumb a {
+  color: var(--green);
+  text-decoration: none;
+}
+.product-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-top: 40px;
+}
+.product-card {
+  display: block;
+  border: 1px solid rgba(0,0,0,.08);
+  text-decoration: none;
+  color: inherit;
+  transition: transform .2s ease, border-color .2s ease;
+}
+.product-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0,0,0,.18);
+}
+.product-image img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.product-content {
+  padding: 20px;
+}
+.product-content h2 {
+  margin-bottom: 12px;
+}
+</style>

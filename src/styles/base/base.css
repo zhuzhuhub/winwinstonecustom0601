@@ -1,0 +1,21 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--paper);
+}
+
+section {
+  padding:
+    var(--space-xl)
+    0;
+}
+
+.container {
+  width:
+    min(100% - 40px,
+    var(--container));
+
+  margin-inline: auto;
+}

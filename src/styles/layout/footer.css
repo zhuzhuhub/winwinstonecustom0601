@@ -1,0 +1,10 @@
+.site-footer {
+  padding: 80px 0;
+
+  border-top:
+    1px solid var(--line);
+}
+
+.site-footer p {
+  text-align: center;
+}
