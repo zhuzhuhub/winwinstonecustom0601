@@ -2,9 +2,19 @@
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
 
+export async function getStaticPaths() {
+  const allProducts = await getCollection("products");
+  return allProducts.map((entry) => ({
+    params: {
+      category: entry.data.category,
+      slug: entry.id.split("/").pop(),
+    },
+  }));
+}
+
 const { category, slug } = Astro.params;
 const products = await getCollection("products");
-const product = products.find((entry) => entry.slug === slug && entry.data.category === category);
+const product = products.find((entry) => entry.id.split("/").pop() === slug && entry.data.category === category);
 
 if (!product) {
   throw new Error(`Product not found: ${category}/${slug}`);

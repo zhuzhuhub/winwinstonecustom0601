@@ -1,0 +1,53 @@
+<!-- Reusable Structured Data component
+     Props:
+       - siteUrl: string
+       - product: { name, slug, image?, sku?, brand? }
+       - breadcrumbs: Array<{ name, url }>
+     Emits BreadcrumbList and Product JSON-LD without price or reviews.
+-->
+---
+export interface ProductInput {
+  name: string;
+  slug: string;
+  image?: string;
+  sku?: string;
+  brand?: string;
+}
+
+export interface BreadcrumbItem {
+  name: string;
+  url: string;
+}
+
+export let siteUrl: string;
+export let product: ProductInput | undefined;
+export let breadcrumbs: BreadcrumbItem[] = [];
+
+const breadcrumbLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: breadcrumbs.map((b, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: b.name,
+    item: b.url
+  }))
+};
+
+const productLd: Record<string, any> | undefined = product && product.name ? {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: product.name,
+  image: product.image ? [product.image] : undefined,
+  sku: product.sku || undefined,
+  brand: product.brand ? { "@type": "Brand", name: product.brand } : undefined,
+  url: `${siteUrl.replace(/\/$/, '')}/${product.slug.replace(/^\//, '')}`
+} : undefined;
+
+if (productLd) {
+  Object.keys(productLd).forEach(k => productLd[k] === undefined && delete productLd[k]);
+}
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
+{productLd ? (<script type="application/ld+json" set:html={JSON.stringify(productLd)} />) : null}

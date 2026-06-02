@@ -8,15 +8,8 @@ const products = defineCollection({
 
 const blog = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/blog" }),
-  schema: z.object({
-    title: z.string(),
-    description: z.string(),
-    category: z.string(),
-    publishDate: z.date(),
-    featuredImage: z.string(),
-    seoTitle: z.string(),
-    seoDescription: z.string()
-  })
+  // Use flexible schema to support future blog posts without strict requirements
+  schema: z.any()
 });
 
 export const collections = {

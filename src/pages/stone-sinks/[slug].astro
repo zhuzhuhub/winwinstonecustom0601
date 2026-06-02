@@ -1,50 +1,50 @@
-```astro
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
 export async function getStaticPaths() {
   const modules = import.meta.glob("../../content/products/**/*.md", { eager: true });
-  const paths = Object.keys(modules)
+  return Object.keys(modules)
     .filter(key => key.includes("stone-sinks"))
     .map(key => {
       const slug = key.split("/").pop()?.replace(".md", "");
       return { params: { slug } };
     });
-  return paths;
 }
 
-const { slug } = Astro.params;
-
-// Dynamically import the markdown file
+const slug = Astro.params.slug;
 const modules = import.meta.glob("../../content/products/**/*.md", { eager: true });
 const moduleKey = Object.keys(modules).find(key => key.includes(`stone-sinks/${slug}`));
-const module = moduleKey ? modules[moduleKey] : null;
 
-if (!module) {
-  return Astro.redirect("/404");
+if (!moduleKey) {
+  throw Astro.redirect("/404");
 }
 
+const module = modules[moduleKey] as { frontmatter: any };
 const { frontmatter } = module;
 const { title, description, featuredImage, gallery, seoTitle, seoDescription, material } = frontmatter;
 
-const productSchema = {
-  "@context": "https://schema.org",
-  "@type": "Product",
+const siteUrl = import.meta.env.SITE || 'https://winwinstonecustom.com';
+
+function absUrl(path) {
+  if (!path) return undefined;
+  if (/^https?:\/\//.test(path)) return path;
+  return siteUrl.replace(/\/$/, '') + (path.startsWith('/') ? path : '/' + path);
+}
+
+const breadcrumbs = [
+  { name: 'Home', url: siteUrl + '/' },
+  { name: 'Stone Sinks', url: siteUrl + '/stone-sinks/' },
+  { name: title, url: `${siteUrl}/stone-sinks/${Astro.params.slug}` }
+];
+
+const productForLd = {
   name: title,
-  description: description,
-  image: [
-    featuredImage,
-    ...(gallery || [])
-  ],
-  manufacturer: {
-    "@type": "Organization",
-    name: "Win-Win Stone"
-  },
-  brand: {
-    "@type": "Brand",
-    name: "Win-Win Stone"
-  }
+  slug: `stone-sinks/${Astro.params.slug}`,
+  image: absUrl(featuredImage),
+  sku: frontmatter.sku || undefined,
+  brand: frontmatter.brand || 'Win-Win Stone'
 };
+
 ---
 
 <BaseLayout
@@ -52,10 +52,26 @@ const productSchema = {
   description={seoDescription}
 >
 
-<script
-  type="application/ld+json"
-  set:html={JSON.stringify(productSchema)}
-/>
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: breadcrumbs.map((b, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: b.name,
+    item: b.url
+  }))
+})} />
+
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: productForLd.name,
+  image: productForLd.image ? [productForLd.image] : undefined,
+  sku: productForLd.sku || undefined,
+  brand: productForLd.brand ? { "@type": "Brand", name: productForLd.brand } : undefined,
+  url: `${siteUrl.replace(/\/$/, '')}/${productForLd.slug.replace(/^\//, '')}`
+})} />
 
 <section class="product-page">
   <div class="container">
@@ -80,14 +96,12 @@ const productSchema = {
       <div class="product-content">
         <h1>{title}</h1>
         <p>{description}</p>
-        {
-          material ? (
-            <div class="product-meta">
-              <strong>Material:</strong>
-              {material}
-            </div>
-          ) : null
-        }
+        {material ? (
+          <div class="product-meta">
+            <strong>Material:</strong>
+            {material}
+          </div>
+        ) : null}
       </div>
     </div>
   </div>
@@ -140,4 +154,3 @@ const productSchema = {
   color: rgba(0,0,0,.7);
 }
 </style>
-```

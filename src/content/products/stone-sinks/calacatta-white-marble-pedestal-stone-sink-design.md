@@ -11,9 +11,9 @@ featuredImage: /images/products/stone-sinks/calacatta-white-marble-pedestal-ston
 
 gallery:
   - /images/products/stone-sinks/calacatta-white-marble-pedestal-stone-sink-design/cover.jpg
-  - /images/products/stone-sinks/calacatta-white-marble-pedestal-stone-sink-design/detail-01.jpg
-  - /images/products/stone-sinks/calacatta-white-marble-pedestal-stone-sink-design/detail-02.jpg
-  - /images/products/stone-sinks/calacatta-white-marble-pedestal-stone-sink-design/detail-03.jpg
+  - /images/products/stone-sinks/calacatta-white-marble-pedestal-stone-sink-design/details-01.jpg
+  - /images/products/stone-sinks/calacatta-white-marble-pedestal-stone-sink-design/details-02.jpg
+  - /images/products/stone-sinks/calacatta-white-marble-pedestal-stone-sink-design/details-03.jpg
   - /images/products/stone-sinks/calacatta-white-marble-pedestal-stone-sink-design/scene-01.jpg
   - /images/products/stone-sinks/calacatta-white-marble-pedestal-stone-sink-design/scene-02.jpg
   - /images/products/stone-sinks/calacatta-white-marble-pedestal-stone-sink-design/scene-03.jpg

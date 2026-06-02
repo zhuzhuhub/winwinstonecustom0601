@@ -2,6 +2,12 @@
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
 
+export async function getStaticPaths() {
+  const products = await getCollection("products");
+  const categories = Array.from(new Set(products.map((product) => product.data.category)));
+  return categories.map((category) => ({ params: { category } }));
+}
+
 const category = Astro.params.category;
 const products = (await getCollection("products")).filter((product) => product.data.category === category);
 
@@ -32,7 +38,7 @@ function humanize(value: string) {
       {products.length ? (
         <div class="product-grid">
           {products.map((product) => (
-            <a class="product-card" href={`/products/${category}/${product.slug}/`}>
+            <a class="product-card" href={`/products/${category}/${product.id.split("/").pop()}/`}>
               <div class="product-image">
                 <img src={product.data.featuredImage} alt={product.data.title} />
               </div>

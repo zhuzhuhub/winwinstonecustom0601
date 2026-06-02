@@ -3,7 +3,12 @@ import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
 const products = await getCollection("products");
-const stoneSinks = products.filter(product => product.data.category === "stone-sinks");
+const stoneSinks = products
+  .filter(product => product.data.category === "stone-sinks")
+  .map(product => ({
+    ...product,
+    __slug: product.id.split("/").pop()
+  }));
 ---
 
 <BaseLayout
@@ -65,7 +70,7 @@ const stoneSinks = products.filter(product => product.data.category === "stone-s
   <div class="container">
     <div class="product-grid">
       {stoneSinks.map((product) => (
-        <a href={`/stone-sinks/${product.slug}/`} class="product-card">
+        <a href={`/stone-sinks/${product.__slug}/`} class="product-card">
           <div class="product-image">
             <img src={product.data.featuredImage} alt={product.data.title} />
           </div>
@@ -198,6 +203,7 @@ const stoneSinks = products.filter(product => product.data.category === "stone-s
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
+}
   display: block;
 }
 
