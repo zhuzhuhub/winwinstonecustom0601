@@ -1,37 +1,123 @@
 ---
 import "../styles/layout/header.css";
+
+import logo from "../assets/logo.png";
 ---
 
 <header class="site-header">
+
   <div class="container header-inner">
 
+    <!-- Logo -->
+
     <a href="/" class="logo">
-      WIN WIN STONE
+
+      <img
+        src={logo.src}
+        alt="WIN WIN STONE"
+        class="logo-image"
+      />
+
+      <div class="logo-text">
+
+        <span class="logo-main">
+          WIN WIN STONE
+        </span>
+
+        <span class="logo-sub">
+          CUSTOM STONE MANUFACTURER
+        </span>
+
+      </div>
+
     </a>
+
+    <!-- Navigation -->
 
     <nav class="main-nav">
 
-      <a href="/products/">
-        Products
+      <!-- Home -->
+
+      <a href="/">
+        Home
       </a>
 
-      <a href="/materials/">
-        Materials
-      </a>
+      <!-- Products -->
+
+      <div class="nav-dropdown">
+
+        <button class="nav-trigger">
+          Products
+        </button>
+
+        <div class="dropdown-menu">
+
+          <a href="/stone-tables/">
+            Stone Tables
+          </a>
+
+          <a href="/stone-sinks/">
+            Stone Sinks
+          </a>
+
+          <a href="/stone-bathtubs/">
+            Stone Bathtubs
+          </a>
+
+          <a href="/stone-fireplace-surrounds/">
+            Fireplace Surrounds
+          </a>
+
+          <a href="/custom-stone-furniture/">
+            Custom Stone Furniture
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- OEM -->
+
+      <div class="nav-dropdown">
+
+        <button class="nav-trigger">
+          OEM & ODM
+        </button>
+
+        <div class="dropdown-menu">
+
+          <a href="/oem-odm/oem-stone-furniture/">
+            OEM Stone Furniture
+          </a>
+
+          <a href="/oem-odm/custom-stone-projects/">
+            Custom Stone Projects
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- Blog -->
 
       <a href="/blog/">
         Blog
       </a>
 
-      <a href="/factory/">
-        Factory
+      <!-- Why Us -->
+
+      <a href="/why-us/">
+        Why Us
       </a>
 
-      <a href="/contact/">
+      <!-- CTA -->
+
+      <a href="/contact/" class="nav-cta">
         Contact
       </a>
 
     </nav>
 
   </div>
+
 </header>

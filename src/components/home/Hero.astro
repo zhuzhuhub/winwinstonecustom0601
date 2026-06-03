@@ -1,0 +1,90 @@
+---
+import heroImage from "../../assets/home/hero-bg.jpg";
+
+import Button from "../Button.astro";
+---
+
+<section
+  class="hero"
+  style={`background-image:url(${heroImage.src})`}
+>
+
+  <!-- Overlay -->
+
+  <div class="hero-overlay"></div>
+
+  <div class="container hero-container">
+
+    <div class="hero-content">
+
+      <!-- Eyebrow -->
+
+      <span class="hero-eyebrow">
+        Factory-Direct Natural Stone Manufacturer in Yunfu, China
+      </span>
+
+      <!-- Heading -->
+
+      <h1>
+        Custom Stone Furniture
+        and Architectural Stone
+        for Interior Brands and
+        Global Projects
+      </h1>
+
+      <!-- Description -->
+
+      <p class="hero-description">
+
+        We help brands, designers, wholesalers,
+        and project buyers develop custom natural
+        stone products with flexible fabrication,
+        stable production, and export-ready delivery.
+
+      </p>
+
+      <!-- CTA -->
+
+      <div class="hero-actions">
+
+        <Button
+          href="/contact/"
+          variant="primary"
+          size="large"
+        >
+          Get A Free Quote
+        </Button>
+
+        <Button
+          href="/stone-tables/"
+          variant="secondary"
+          size="large"
+        >
+          Explore Products
+        </Button>
+
+      </div>
+
+      <!-- Trust Points -->
+
+      <div class="hero-points">
+
+        <div>
+          15+ Years of Stone Fabrication
+        </div>
+
+        <div>
+          OEM / ODM for Brands and Wholesalers
+        </div>
+
+        <div>
+          Global Delivery with Export-Safe Packing
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

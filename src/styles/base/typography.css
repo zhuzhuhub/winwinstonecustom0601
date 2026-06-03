@@ -1,13 +1,6 @@
-body {
-  font-family:
-    "Inter",
-    "Segoe UI",
-    sans-serif;
-
-  line-height: 1.7;
-
-  color: var(--ink);
-}
+/* =========================
+   Headings
+========================= */
 
 h1,
 h2,
@@ -15,29 +8,151 @@ h3,
 h4,
 h5,
 h6 {
-  line-height: 1.1;
+
+  margin: 0;
 
   font-weight: 600;
 
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
+
+  line-height: 1.06;
+
+  color: var(--ink);
 }
+
+/* =========================
+   H1
+========================= */
 
 h1 {
-  font-size: clamp(48px, 7vw, 84px);
+
+  font-size: clamp(3.2rem, 7vw, 6.4rem);
+
+  max-width: 12ch;
 }
+
+/* =========================
+   H2
+========================= */
 
 h2 {
-  font-size: clamp(36px, 5vw, 60px);
+
+  font-size: clamp(2.2rem, 5vw, 4rem);
+
+  max-width: 14ch;
 }
+
+/* =========================
+   H3
+========================= */
 
 h3 {
-  font-size: clamp(28px, 3vw, 40px);
+
+  font-size: clamp(1.4rem, 2vw, 2rem);
+
+  line-height: 1.2;
 }
 
+/* =========================
+   Paragraph
+========================= */
+
 p {
+
+  margin: 0;
+
+  font-size: 1rem;
+
+  line-height: 1.9;
+
   color: var(--muted);
 }
 
-strong {
-  color: var(--ink);
+/* =========================
+   Links
+========================= */
+
+a {
+
+  text-decoration: none;
+}
+
+/* =========================
+   Lists
+========================= */
+
+ul,
+ol {
+
+  margin: 0;
+
+  padding: 0;
+
+  list-style: none;
+}
+
+/* =========================
+   Utility Typography
+========================= */
+
+.eyebrow {
+
+  display: inline-block;
+
+  margin-bottom: 22px;
+
+  font-size: 0.78rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.18em;
+
+  text-transform: uppercase;
+
+  color: var(--green);
+}
+
+.lead {
+
+  max-width: 720px;
+
+  font-size: 1.18rem;
+
+  line-height: 1.9;
+
+  color: var(--muted);
+}
+
+.section-heading {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 24px;
+
+  margin-bottom: 72px;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 768px) {
+
+  h1 {
+
+    font-size: clamp(2.8rem, 12vw, 4.8rem);
+  }
+
+  h2 {
+
+    font-size: clamp(2rem, 8vw, 3.2rem);
+  }
+
+  .lead {
+
+    font-size: 1.04rem;
+  }
+
 }

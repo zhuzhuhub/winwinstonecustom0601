@@ -1,0 +1,241 @@
+/* =========================
+   Hero
+========================= */
+
+.hero {
+
+  position: relative;
+
+  min-height: calc(92vh - 90px);
+
+  padding-top: 120px;
+
+  display: flex;
+
+  align-items: center;
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+}
+
+/* =========================
+   Overlay
+========================= */
+
+.hero-overlay {
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+
+   linear-gradient(
+  90deg,
+  rgba(22, 26, 24, 0.72) 0%,
+  rgba(22, 26, 24, 0.52) 38%,
+  rgba(22, 26, 24, 0.26) 100%
+       ),
+
+    linear-gradient(
+  180deg,
+  rgba(0,0,0,0.12) 0%,
+  rgba(0,0,0,0.18) 100%
+     );
+  z-index: 1;
+}
+
+/* =========================
+   Container
+========================= */
+
+.hero-container {
+
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+}
+
+/* =========================
+   Content
+========================= */
+
+.hero-content {
+
+  max-width: 980px;
+
+  color: white;
+}
+
+/* =========================
+   Eyebrow
+========================= */
+
+.hero-eyebrow {
+
+  display: inline-block;
+
+  margin-bottom: 24px;
+
+  font-size: 0.82rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+
+  color: rgba(255,255,255,0.72);
+}
+
+/* =========================
+   Heading
+========================= */
+
+.hero h1 {
+
+  max-width: 1100px;
+
+  font-size: clamp(4.2rem, 7vw, 7rem);
+
+  line-height: 0.92;
+
+  letter-spacing: -0.05em;
+
+  color: white;
+}
+
+/* =========================
+   Description
+========================= */
+
+.hero-description {
+
+  max-width: 760px;
+
+  margin-top: 34px;
+
+  font-size: 1.08rem;
+
+  line-height: 1.9;
+
+  color: rgba(255,255,255,0.88);
+}
+/* =========================
+   Actions
+========================= */
+
+.hero-actions {
+
+  display: flex;
+
+  gap: 18px;
+
+  flex-wrap: wrap;
+
+  margin-top: 44px;
+}
+
+/* =========================
+   Trust Points
+========================= */
+
+.hero-points {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 16px;
+
+  margin-top: 54px;
+}
+
+.hero-points div {
+
+  padding:
+    14px
+    22px;
+
+  border: 1px solid rgba(255,255,255,0.18);
+
+  border-radius: 999px;
+
+  background: rgba(255,255,255,0.06);
+
+  backdrop-filter: blur(10px);
+
+  font-size: 0.92rem;
+
+  color: rgba(255,255,255,0.92);
+}
+
+/* =========================
+   Secondary Button Override
+========================= */
+
+.hero .button-secondary {
+
+  border-color: rgba(255,255,255,0.4);
+
+  color: white;
+}
+
+.hero .button-secondary:hover {
+
+  background: white;
+
+  color: var(--green);
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 980px) {
+
+  .hero {
+
+    min-height: auto;
+
+    padding:
+      140px 0
+      100px;
+  }
+
+  .hero h1 {
+
+    font-size: clamp(2.8rem, 10vw, 4.6rem);
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .hero {
+
+    padding:
+      120px 0
+      80px;
+  }
+
+  .hero-description {
+
+    font-size: 1rem;
+  }
+
+  .hero-points {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+}
