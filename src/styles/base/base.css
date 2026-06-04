@@ -2,11 +2,7 @@ body {
 
   margin: 0;
 
-  font-family:
-    "Inter",
-    "Helvetica Neue",
-    Arial,
-    sans-serif;
+  font-family: var(--font-body);
 
   color: var(--ink);
 
@@ -17,9 +13,20 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+  font-family: var(--font-heading);
+
+}
+
 .container {
 
-  width: min(100% - 48px, var(--container));
+  width: min(92%, 1400px);
 
   margin-inline: auto;
 }
@@ -29,12 +36,11 @@ main {
 }
 
 section {
-  padding: var(--section-space) 0;
+  padding: 90px 0;
 }
 
 img {
   max-width: 100%;
-
   display: block;
 }
 

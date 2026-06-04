@@ -1,0 +1,100 @@
+---
+const categories = [
+  {
+    title: "Stone Tables",
+    description:
+      "Custom dining tables, coffee tables, side tables, and statement stone furniture pieces.",
+    href: "/stone-tables/",
+    image: "/images/categories/stone-tables.jpg"
+  },
+
+  {
+    title: "Stone Sinks",
+    description:
+      "Pedestal sinks, vessel sinks, integrated basins, and custom sink fabrication.",
+    href: "/stone-sinks/",
+    image: "/images/categories/stone-sinks.jpg"
+  },
+
+  {
+    title: "Stone Bathtubs",
+    description:
+      "Freestanding stone bathtubs crafted for luxury residential and hospitality projects.",
+    href: "/stone-bathtubs/",
+    image: "/images/categories/stone-bathtubs.jpg"
+  },
+
+  {
+    title: "Fireplace Surrounds",
+    description:
+      "Architectural fireplace surrounds tailored for villas, hotels, and interior projects.",
+    href: "/stone-fireplace-surrounds/",
+    image: "/images/categories/fireplace-surrounds.jpg"
+  },
+
+  {
+    title: "Custom Stone Furniture",
+    description:
+      "Bespoke stone furniture developed for brands, designers, and private clients.",
+    href: "/custom-stone-furniture/",
+    image: "/images/categories/custom-stone-furniture.jpg"
+  }
+];
+---
+
+<section class="featured-categories">
+
+  <div class="container">
+
+    <div class="section-header">
+
+
+      <h2>
+        Explore Our Product Categories
+      </h2>
+
+      <p>
+        Discover custom stone categories developed for brands,
+        wholesalers, designers, project buyers, and private clients.
+      </p>
+
+    </div>
+
+    <div class="category-grid">
+
+      {
+        categories.map((category) => (
+
+          <a
+            href={category.href}
+            class="category-card"
+          >
+
+            <img
+              src={category.image}
+              alt={category.title}
+              loading="lazy"
+            />
+
+            <div class="category-content">
+
+              <h3>
+                {category.title}
+              </h3>
+
+              <p>
+                {category.description}
+              </p>
+
+            </div>
+
+          </a>
+
+        ))
+      }
+
+    </div>
+
+  </div>
+
+</section>

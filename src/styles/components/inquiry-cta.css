@@ -1,0 +1,151 @@
+/* =========================
+   Inquiry CTA
+========================= */
+.inquiry-cta {
+
+  padding: 20px 0;
+
+  background: #fff;
+
+}
+.inquiry-box {
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  text-align: center;
+
+  color: white;
+}
+
+/* =========================
+   Title
+========================= */
+
+.inquiry-box h2 {
+
+  margin-bottom: 14px;
+
+  max-width: none;
+
+  width: 100%;
+
+  text-align: center;
+
+  line-height: 1.05;
+
+  white-space: nowrap;
+}
+
+/* =========================
+   Text
+========================= */
+
+.inquiry-box p {
+
+  max-width: 900px;
+
+  margin: 0 auto 24px;
+
+  color: var(--muted);
+
+  line-height: 1.8;
+
+  font-size: 1.05rem;
+}
+/* =========================
+   Buttons
+========================= */
+
+.inquiry-actions {
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 16px;
+
+  margin-bottom: 20px;
+
+  flex-wrap: wrap;
+}
+
+.inquiry-button,
+.whatsapp-button {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  height: 54px;
+
+  min-width: 220px;
+
+  border-radius: 999px;
+
+  font-weight: 700;
+
+  transition: .3s;
+}
+.inquiry-button {
+
+  background: var(--green);
+
+  color: white;
+}
+
+.whatsapp-button {
+
+  border: 1px solid rgba(0,0,0,.12);
+
+  color: var(--ink);
+
+  background: white;
+}
+.inquiry-button:hover,
+.whatsapp-button:hover {
+
+  transform: translateY(-2px);
+}
+
+/* =========================
+   Meta
+========================= */
+
+.inquiry-meta {
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  color: var(--muted);
+
+  font-size: .92rem;
+}
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 768px) {
+
+  .inquiry-box {
+
+    padding: 50px 24px;
+  }
+
+  .inquiry-box h2 {
+
+    white-space: normal;
+  }
+
+  .inquiry-meta {
+
+    flex-wrap: wrap;
+  }
+
+}
