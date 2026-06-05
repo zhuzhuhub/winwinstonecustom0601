@@ -1,0 +1,68 @@
+---
+import heroImage from "../../assets/factory/factory-hero.jpg";
+
+import Button from "../Button.astro";
+---
+
+<section
+  class="factory-hero"
+  style={`background-image:url(${heroImage.src})`}
+>
+
+  <div class="factory-overlay"></div>
+
+  <div class="container factory-container">
+
+    <div class="factory-content">
+
+      <span class="factory-eyebrow">
+        OUR FACTORY
+      </span>
+
+      <h1>
+        Inside Our Stone
+        Manufacturing Facility
+      </h1>
+
+      <p class="factory-description">
+
+        From raw stone blocks to finished furniture,
+        every piece is crafted through advanced
+        fabrication, skilled craftsmanship, and
+        strict quality control.
+
+      </p>
+
+      <div class="factory-actions">
+
+        <Button
+          href="/contact/"
+          variant="primary"
+          size="large"
+        >
+          Start Your Project
+        </Button>
+
+      </div>
+
+      <div class="factory-points">
+
+        <div>
+          10,000㎡ Manufacturing Facility
+        </div>
+
+        <div>
+          50+ Skilled Craftsmen
+        </div>
+
+        <div>
+          Exporting Worldwide
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

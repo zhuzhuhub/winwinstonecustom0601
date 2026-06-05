@@ -1,0 +1,52 @@
+---
+const {
+  title,
+  description,
+  material
+} = Astro.props;
+---
+
+<section class="product-hero">
+
+  <div class="container">
+
+    <div class="product-hero-content">
+
+      <span class="product-eyebrow">
+        CUSTOM STONE PRODUCT
+      </span>
+
+      <h1>
+        {title}
+      </h1>
+
+      <p>
+        {description}
+      </p>
+
+      <div class="product-badges">
+
+        <span>OEM Available</span>
+
+        <span>MOQ From 1 Piece</span>
+
+        <span>Global Shipping</span>
+
+      </div>
+
+      {
+        material && (
+          <div class="product-material">
+
+            Material:
+            <strong>{material}</strong>
+
+          </div>
+        )
+      }
+
+    </div>
+
+  </div>
+
+</section>

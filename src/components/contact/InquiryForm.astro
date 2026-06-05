@@ -1,0 +1,152 @@
+---
+import SectionHeader from "../SectionHeader.astro";
+---
+
+<section
+  id="inquiry-form"
+  class="inquiry-form-section"
+>
+
+  <div class="container">
+
+    <SectionHeader
+
+      title="Tell Us About Your Project"
+      description="Share your project details and our team will get back to you with recommendations, pricing, and manufacturing solutions."
+    />
+
+    <form
+      class="inquiry-form"
+      action="https://formspree.io/f/mvzngday"
+      method="POST"
+    >
+    <input
+      type="hidden"
+      name="_subject"
+      value="New Inquiry From Website"
+   />
+
+    <input
+     type="hidden"
+     name="_next"
+     value="https://winwinstonecustom.com/contact-success/"
+   />
+      <div class="form-grid">
+
+        <div class="form-group">
+          <label for="name">Name *</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="company">Company</label>
+          <input
+            type="text"
+            id="company"
+            name="company"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="country">Country</label>
+          <input
+            type="text"
+            id="country"
+            name="country"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="product">
+            Product Type
+          </label>
+
+          <select
+            id="product"
+            name="product"
+          >
+
+            <option value="">
+              Select Product
+            </option>
+
+            <option>
+              Stone Tables
+            </option>
+
+            <option>
+              Stone Sinks
+            </option>
+
+            <option>
+              Stone Bathtubs
+            </option>
+
+            <option>
+              Fireplace Surrounds
+            </option>
+
+            <option>
+              Custom Stone Furniture
+            </option>
+
+          </select>
+
+        </div>
+
+        <div class="form-group">
+          <label for="quantity">
+            Estimated Quantity
+          </label>
+
+          <input
+            type="text"
+            id="quantity"
+            name="quantity"
+          />
+        </div>
+
+      </div>
+
+      <div class="form-group">
+
+        <label for="message">
+          Project Details *
+        </label>
+
+        <textarea
+          id="message"
+          name="message"
+          rows="8"
+          required
+        ></textarea>
+
+      </div>
+
+      <button
+        type="submit"
+        class="form-submit"
+      >
+        Send Inquiry
+      </button>
+
+    </form>
+
+  </div>
+
+</section>

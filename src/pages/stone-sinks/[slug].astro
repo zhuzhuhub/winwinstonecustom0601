@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
+import ProductHero from "../../components/product/ProductHero.astro";
+
 export async function getStaticPaths() {
   const modules = import.meta.glob("../../content/products/**/*.md", { eager: true });
   return Object.keys(modules)
@@ -21,7 +23,7 @@ if (!moduleKey) {
 
 const module = modules[moduleKey] as { frontmatter: any };
 const { frontmatter } = module;
-const { title, description, featuredImage, gallery, seoTitle, seoDescription, material } = frontmatter;
+const { title, description, featuredImage, gallery, seoTitle, seoDescription, material,finish,applications,customization,moq,leadtime} = frontmatter;
 
 const siteUrl = import.meta.env.SITE || 'https://winwinstonecustom.com';
 
@@ -51,6 +53,11 @@ const productForLd = {
   title={seoTitle}
   description={seoDescription}
 >
+<ProductHero
+  title={title}
+  description={description}
+  material={material}
+/>
 
 <script type="application/ld+json" set:html={JSON.stringify({
   "@context": "https://schema.org",
@@ -94,14 +101,17 @@ const productForLd = {
       </div>
 
       <div class="product-content">
-        <h1>{title}</h1>
-        <p>{description}</p>
-        {material ? (
-          <div class="product-meta">
-            <strong>Material:</strong>
-            {material}
-          </div>
-        ) : null}
+
+       <h2>
+         Product Gallery
+       </h2>
+
+       <p>
+        Explore detailed views of this custom stone product,
+        including material texture, craftsmanship details,
+        and project applications.
+       </p>
+
       </div>
     </div>
   </div>
@@ -144,8 +154,27 @@ const productForLd = {
   margin-top: 12px;
 }
 
-.product-content h1 {
-  margin-bottom: 24px;
+.product-content {
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.product-content h2 {
+
+  margin-bottom: 20px;
+
+  font-size: 2rem;
+}
+
+.product-content p {
+
+  color: var(--muted);
+
+  line-height: 1.8;
 }
 
 .product-meta {

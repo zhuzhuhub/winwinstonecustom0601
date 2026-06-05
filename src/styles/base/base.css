@@ -24,6 +24,17 @@ h6 {
 
 }
 
+h2 {
+
+  font-size: clamp(2rem, 3vw, 2.8rem);
+
+  line-height: 1.15;
+
+  letter-spacing: -0.03em;
+
+  font-weight: 700;
+}
+
 .container {
 
   width: min(92%, 1400px);

@@ -1,0 +1,136 @@
+<section class="why-advantages">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <h2>
+        Why Global Clients Choose Win-Win Stone
+      </h2>
+
+      <p>
+        Combining industry resources, project expertise,
+        flexible customization, and export experience.
+      </p>
+
+    </div>
+
+    <div class="advantages-grid">
+
+      <article class="advantage-card reveal">
+
+        <span class="advantage-number">
+          01
+        </span>
+
+        <h3>
+          Located in China's Stone Capital
+        </h3>
+
+        <p>
+          Based in Yunfu, Guangdong, we benefit from one
+          of the world's most complete stone supply chains,
+          offering a wide range of materials, competitive pricing,
+          and skilled craftsmanship.
+        </p>
+
+      </article>
+
+      <article class="advantage-card reveal">
+
+        <span class="advantage-number">
+          02
+        </span>
+
+        <h3>
+          15+ Years of Project Experience
+        </h3>
+
+        <p>
+          From hotels and residential developments
+          to luxury villas and custom furniture,
+          we have successfully delivered projects
+          of various scales worldwide.
+        </p>
+
+      </article>
+
+      <article class="advantage-card reveal">
+
+        <span class="advantage-number">
+          03
+        </span>
+
+        <h3>
+          True Custom Manufacturing
+        </h3>
+
+        <p>
+          Size, stone type, finish, edge profile,
+          shape, drain position, logo, and packaging
+          can all be customized to your requirements.
+        </p>
+
+      </article>
+
+      <article class="advantage-card reveal">
+
+        <span class="advantage-number">
+          04
+        </span>
+
+        <h3>
+          Export-Focused Production
+        </h3>
+
+        <p>
+          With years of experience serving Europe,
+          North America, and Australia, we understand
+          international quality standards, packing,
+          and logistics requirements.
+        </p>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const reveals = document.querySelectorAll(".reveal");
+
+  const observer = new IntersectionObserver(
+
+    entries => {
+
+      entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+          entry.target.classList.add("active");
+
+        }
+
+      });
+
+    },
+
+    {
+      threshold: 0.15
+    }
+
+  );
+
+  reveals.forEach(item => {
+
+    observer.observe(item);
+
+  });
+
+});
+
+</script>

@@ -1,0 +1,56 @@
+---
+const {
+  material,
+  finish,
+  moq,
+  leadTime
+} = Astro.props;
+---
+
+<section class="product-specifications">
+
+  <div class="container">
+
+    <div class="specifications-header">
+
+      <h2>
+        Specifications
+      </h2>
+
+      <p>
+        Key technical information for this custom stone product.
+      </p>
+
+    </div>
+
+    <div class="specifications-grid">
+
+      <div class="spec-item">
+        <span>Material</span>
+        <strong>{material}</strong>
+      </div>
+
+      <div class="spec-item">
+        <span>Finish</span>
+        <strong>
+          {Array.isArray(finish)
+            ? finish.join(", ")
+            : finish}
+        </strong>
+      </div>
+
+      <div class="spec-item">
+        <span>MOQ</span>
+        <strong>{moq}</strong>
+      </div>
+
+      <div class="spec-item">
+        <span>Lead Time</span>
+        <strong>{leadTime}</strong>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

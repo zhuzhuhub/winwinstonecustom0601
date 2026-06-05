@@ -1,0 +1,569 @@
+/* =========================
+   WHY US - ADVANTAGES
+========================= */
+
+.why-advantages {
+  padding: 80px 0;               /* 上下间距紧凑 */
+  background: #f9f9f9;           /* 可选，和背景区分 */
+}
+
+.section-header {
+
+  width: 100%;
+
+  text-align: center;
+
+  margin: 0 auto 40px;
+}
+
+.section-header h2 {
+
+  display: block;
+
+  width: 100%;
+
+  text-align: center;
+
+  white-space: nowrap;
+
+  font-size: 2.2rem;
+
+  line-height: 1.15;
+
+  margin: 0 auto 16px;
+
+  font-weight: 600;
+}
+
+.section-header p {
+
+  max-width: 620px;
+
+  margin: 0 auto;
+
+  text-align: center;
+
+  font-size: 1rem;
+
+  line-height: 1.7;
+
+  color: #555;
+}
+
+/* 优势卡片网格 */
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;                     /* 卡片间距 */
+}
+
+.advantage-card {
+  padding: 28px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+}
+
+.advantage-number {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  opacity: 0.6;
+  color: var(--green);
+}
+
+.advantage-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.15rem;
+  line-height: 1.3;
+  color: var(--ink);
+}
+
+.advantage-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* =========================
+   SCROLL REVEAL
+========================= */
+
+.reveal {
+
+  opacity: 0;
+
+  transform: translateY(50px);
+
+  transition:
+    opacity 1s ease,
+    transform 1s ease;
+}
+
+.reveal.active {
+
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+/* Sequential Animation */
+
+.advantage-card:nth-child(1) {
+
+  transition-delay: .1s;
+}
+
+.advantage-card:nth-child(2) {
+
+  transition-delay: .25s;
+}
+
+.advantage-card:nth-child(3) {
+
+  transition-delay: .4s;
+}
+
+.advantage-card:nth-child(4) {
+
+  transition-delay: .55s;
+}
+
+/* 响应式 */
+@media (max-width: 980px) {
+  .advantages-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-header h2 {
+    font-size: 1.8rem;
+    white-space: normal;
+  }
+
+  .section-header p {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .why-advantages {
+    padding: 60px 0;
+  }
+
+  .section-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .advantage-card {
+    padding: 22px;
+  }
+
+  .advantage-card h3 {
+    font-size: 1.05rem;
+  }
+
+  .advantage-card p {
+    font-size: 0.9rem;
+  }
+}
+/* =========================
+   CARD HOVER EFFECT
+========================= */
+
+.advantage-card {
+
+  transition:
+    transform .35s ease,
+    box-shadow .35s ease;
+}
+
+.advantage-card:hover {
+
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 18px 40px rgba(0,0,0,.08);
+}
+
+/* =========================
+   CUSTOMIZATION
+========================= */
+
+.why-customization {
+
+  padding: 80px 0;
+}
+
+.custom-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 16px;
+
+  margin-top: 40px;
+}
+
+.custom-item {
+
+  padding: 20px;
+
+  text-align: center;
+
+  background: #fff;
+
+  border: 1px solid var(--line);
+
+  border-radius: 14px;
+
+  font-weight: 600;
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+}
+
+.custom-item:hover {
+
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 12px 30px rgba(0,0,0,.06);
+}
+
+.custom-note {
+
+  margin-top: 50px;
+
+  text-align: center;
+
+  max-width: 700px;
+
+  margin-left: auto;
+
+  margin-right: auto;
+}
+
+.custom-note strong {
+
+  display: block;
+
+  margin-bottom: 12px;
+
+  font-size: 1.2rem;
+
+  color: var(--green);
+}
+
+@media (max-width: 980px) {
+
+  .custom-grid {
+
+    grid-template-columns:
+      repeat(2, minmax(0,1fr));
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .custom-grid {
+
+    grid-template-columns: 1fr;
+  }
+
+}
+/* =========================
+   QUALITY PROCESS
+========================= */
+
+.quality-process {
+
+  padding: 80px 0;
+
+  background: #f9f9f9;
+}
+
+.process-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0,1fr));
+
+  gap: 24px;
+
+  margin-top: 50px;
+}
+
+.process-step {
+
+  position: relative;
+
+  padding: 30px;
+
+  background: #fff;
+
+  border-radius: 16px;
+
+  border: 1px solid var(--line);
+
+  transition:
+    transform .35s ease,
+    box-shadow .35s ease;
+}
+
+.process-step:hover {
+
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 20px 50px rgba(0,0,0,.08);
+}
+
+.step-number {
+
+  display: inline-block;
+
+  margin-bottom: 14px;
+
+  font-size: .75rem;
+
+  letter-spacing: 2px;
+
+  color: var(--green);
+
+  opacity: .6;
+}
+
+.process-step h3 {
+
+  margin-bottom: 14px;
+}
+
+.process-step p {
+
+  margin: 0;
+
+  line-height: 1.7;
+}
+
+@media (max-width: 1100px) {
+
+  .process-grid {
+
+    grid-template-columns:
+      repeat(2, minmax(0,1fr));
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .process-grid {
+
+    grid-template-columns: 1fr;
+  }
+
+}
+/* =========================
+   GLOBAL EXPORT
+========================= */
+
+.global-export {
+
+  padding: 80px 0;
+}
+
+.export-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0,1fr));
+
+  gap: 24px;
+
+  margin-top: 50px;
+}
+
+.export-card {
+
+  padding: 32px;
+
+  border: 1px solid var(--line);
+
+  border-radius: 16px;
+
+  background: #fff;
+
+  transition:
+    transform .35s ease,
+    box-shadow .35s ease;
+}
+
+.export-card:hover {
+
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 20px 50px rgba(0,0,0,.08);
+}
+
+.export-card h3 {
+
+  margin-bottom: 14px;
+}
+
+.export-card p {
+
+  margin: 0;
+
+  line-height: 1.7;
+}
+
+/* Project Tags */
+
+.export-projects {
+
+  margin-top: 50px;
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  gap: 14px;
+}
+
+.project-tag {
+
+  padding:
+    12px 20px;
+
+  border-radius: 999px;
+
+  border: 1px solid var(--line);
+
+  background: #fff;
+
+  font-size: .95rem;
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+}
+
+.project-tag:hover {
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 25px rgba(0,0,0,.06);
+}
+
+@media (max-width: 980px) {
+
+  .export-grid {
+
+    grid-template-columns: 1fr;
+  }
+
+}
+
+/* =========================
+   FINAL CTA
+========================= */
+
+.why-cta {
+
+  padding:
+    100px 0
+    120px;
+}
+
+.cta-box {
+
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  padding:
+    70px 50px;
+
+  text-align: center;
+
+  background: var(--green);
+
+  color: #fff;
+
+  border-radius: 24px;
+}
+
+.cta-eyebrow {
+
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  letter-spacing: 2px;
+
+  font-size: .8rem;
+
+  opacity: .75;
+}
+
+.cta-box h2 {
+
+  margin-bottom: 24px;
+
+  color: #fff;
+
+  font-size: clamp(
+    2rem,
+    4vw,
+    3rem
+  );
+}
+
+.cta-box p {
+
+  max-width: 650px;
+
+  margin:
+    0 auto
+    36px;
+
+  line-height: 1.8;
+
+  opacity: .92;
+}
+
+.cta-actions {
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 18px;
+
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+
+  .cta-box {
+
+    padding:
+      50px 28px;
+  }
+
+}

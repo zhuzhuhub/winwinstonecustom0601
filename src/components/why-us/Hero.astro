@@ -1,0 +1,69 @@
+---
+import heroImage from "../../assets/why-us/why-us-hero.jpg";
+
+import Button from "../Button.astro";
+---
+
+<section
+  class="hero"
+  style={`background-image:url(${heroImage.src})`}
+>
+
+  <div class="hero-overlay"></div>
+
+  <div class="container hero-container">
+
+    <div class="hero-content">
+
+      <span class="hero-eyebrow">
+        WHY WIN-WIN STONE
+      </span>
+
+      <h1>
+        Why Global Clients
+        Choose Win-Win Stone
+      </h1>
+
+      <p class="hero-description">
+
+        Based in Yunfu, the stone capital of China,
+        we combine 15+ years of project experience,
+        deep material expertise, and flexible
+        custom manufacturing to help clients
+        bring stone designs to life.
+
+      </p>
+
+      <div class="hero-actions">
+
+        <Button
+          href="/contact/"
+          variant="primary"
+          size="large"
+        >
+          Get A Free Quote
+        </Button>
+
+      </div>
+
+      <div class="hero-points">
+
+        <div>
+          Located in China's Stone Capital
+        </div>
+
+        <div>
+          MOQ From 1 Piece
+        </div>
+
+        <div>
+          Exporting to Europe, North America & Australia
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
