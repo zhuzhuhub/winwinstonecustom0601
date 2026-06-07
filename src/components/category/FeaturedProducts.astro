@@ -1,0 +1,70 @@
+---
+import SectionHeader from "../common/SectionHeader.astro";
+
+const {
+  products = [],
+  category = "",
+  title = "Featured Products",
+  description = "Browse our custom stone products."
+} = Astro.props;
+---
+
+<section class="featured-products">
+
+  <div class="container">
+
+    <SectionHeader
+      eyebrow="FEATURED PRODUCTS"
+      title={title}
+      description={description}
+    />
+
+    <div class="product-grid">
+
+      {products.map((product) => {
+
+        const slug =
+          product.id
+            .split("/")
+            .pop();
+
+        return (
+
+          <a
+            href={`/${category}/${slug}/`}
+            class="product-card"
+          >
+
+            <div class="product-image">
+
+              <img
+                src={product.data.featuredImage}
+                alt={product.data.title}
+                loading="lazy"
+              />
+
+            </div>
+
+            <div class="product-content">
+
+              <h3>
+                {product.data.title}
+              </h3>
+
+              <p>
+                {product.data.description}
+              </p>
+
+            </div>
+
+          </a>
+
+        );
+
+      })}
+
+    </div>
+
+  </div>
+
+</section>

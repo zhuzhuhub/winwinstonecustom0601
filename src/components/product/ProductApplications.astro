@@ -1,0 +1,21 @@
+---
+const { applications } = Astro.props;
+---
+
+<section class="product-applications">
+  <div class="container">
+    <div class="applications-header">
+      <h2>Applications</h2>
+      <p>Suitable for the following project types:</p>
+    </div>
+
+    <div class="applications-grid">
+      {applications?.map((item) => (
+        <div class="application-card">
+          <span>🏢</span>
+          <h3>{item}</h3>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

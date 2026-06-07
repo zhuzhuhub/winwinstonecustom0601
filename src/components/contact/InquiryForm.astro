@@ -1,5 +1,8 @@
 ---
 import SectionHeader from "../SectionHeader.astro";
+
+const product =
+  Astro.url.searchParams.get("product") || "";
 ---
 
 <section
@@ -31,8 +34,35 @@ import SectionHeader from "../SectionHeader.astro";
      name="_next"
      value="https://winwinstonecustom.com/contact-success/"
    />
-      <div class="form-grid">
+   
+    <input
+     type="hidden"
+     name="product_slug"
+     value={product}
+   />
 
+      <div class="form-grid">
+        {
+          product && (
+
+           <div class="form-group">
+
+             <label for="interested-product">
+                Interested Product
+             </label>
+
+             <input
+               type="text"
+               id="interested-product"
+               name="interested_product"
+               value={product}
+               readonly
+             />
+
+           </div>
+   
+         )
+        }
         <div class="form-group">
           <label for="name">Name *</label>
           <input

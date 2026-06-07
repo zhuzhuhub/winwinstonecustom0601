@@ -1,0 +1,57 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+import Hero from "../../components/category/Hero.astro";
+import Advantages from "../../components/category/Advantages.astro";
+import Customization from "../../components/category/Customization.astro";
+import FeaturedProducts from "../../components/category/FeaturedProducts.astro";
+import Applications from "../../components/category/Applications.astro";
+import FAQ from "../../components/category/FAQ.astro";
+import FinalCTA from "../../components/category/FinalCTA.astro";
+
+import { getCollection } from "astro:content";
+
+// 获取所有产品
+const products = await getCollection("products");
+
+// 过滤 Custom Stone Furniture 分类产品
+const furnitureProducts =
+  products.filter(
+    p => p.data.category === "custom-stone-furniture"
+  );
+---
+<BaseLayout
+  title="Custom Stone Furniture Manufacturer"
+  description="Luxury marble furniture, travertine countertops and custom natural stone fixtures for residential and commercial spaces."
+>
+
+  <Hero
+
+  eyebrow="STONE FURNITURE MANUFACTURER"
+
+  title="Custom Stone Furniture For Luxury Projects"
+
+  description="Premium marble, travertine and natural stone furniture manufactured for villas, hotels, resorts and commercial projects worldwide."
+
+  backgroundImage="/images/categories/custom-stone-furniture-hero.jpg"
+
+/>
+
+  <Advantages />
+  
+  <Customization />
+
+  <FeaturedProducts
+  products={furnitureProducts}
+  category="custom-stone-furniture"
+  title="Explore Our Stone Furniture Collection"
+  description="Browse a selection of custom stone furniture manufactured for luxury residential and commercial projects."
+  />
+
+  <Applications />
+
+  <FAQ />
+
+  <FinalCTA />
+
+</BaseLayout>

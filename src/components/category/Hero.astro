@@ -1,0 +1,62 @@
+---
+interface Props {
+
+  eyebrow?: string;
+
+  title: string;
+
+  description: string;
+
+  backgroundImage?: string;
+}
+
+const {
+  eyebrow,
+  title,
+  description,
+  backgroundImage
+} = Astro.props;
+---
+
+<section
+  class="category-hero"
+  style={
+    backgroundImage
+      ? `background-image:url(${backgroundImage})`
+      : undefined
+  }
+>
+
+  <div class="category-overlay"></div>
+
+  <div class="container">
+
+    <div class="category-hero-content">
+
+      {eyebrow && (
+
+        <span class="category-eyebrow">
+
+          {eyebrow}
+
+        </span>
+
+      )}
+
+      <h1>
+
+        {title}
+
+      </h1>
+
+      <p>
+
+        {description}
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>

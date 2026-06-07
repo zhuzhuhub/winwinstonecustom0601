@@ -2,6 +2,7 @@
 @import "./base/variables.css";
 @import "./base/typography.css";
 @import "./base/base.css";
+
 @import "./components/button.css";
 @import "./components/hero.css";
 @import "./components/trust-bar.css";
@@ -12,3 +13,5 @@
 @import "./components/why-us.css";
 @import "./components/factory.css";
 @import "./components/contact.css";
+@import "./components/product.css";
+@import "./components/category.css";

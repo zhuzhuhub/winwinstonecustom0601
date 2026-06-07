@@ -1,0 +1,49 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+import Hero from "../../components/category/Hero.astro";
+import Advantages from "../../components/category/Advantages.astro";
+import Customization from "../../components/category/Customization.astro";
+import FeaturedProducts from "../../components/category/FeaturedProducts.astro";
+import Applications from "../../components/category/Applications.astro";
+import FAQ from "../../components/category/FAQ.astro";
+import FinalCTA from "../../components/category/FinalCTA.astro";
+
+import { getCollection } from "astro:content";
+
+// 获取所有产品
+const products = await getCollection("products");
+
+// 过滤 Stone Fireplace Surrounds 分类产品
+const stoneFireplaceSurrounds = products.filter(p => p.data.category === "stone-fireplace-surrounds");
+---
+<BaseLayout
+  title="Custom Stone Fireplace Surrounds Manufacturer"
+  description="Luxury marble fireplace surrounds, custom stone fireplaces and bespoke fireplace solutions for residential and commercial spaces."
+>
+
+ <Hero
+  eyebrow="FIREPLACE SURROUND MANUFACTURER"
+  title="Custom Marble Fireplace Surrounds"
+  description="Luxury marble fireplace surrounds manufactured for villas, hotels and high-end residential interiors."
+  backgroundImage="/images/categories/fireplace-surrounds-hero.jpg"
+/>
+
+  <Advantages />
+  
+  <Customization />
+
+  <FeaturedProducts
+  products={stoneFireplaceSurrounds}
+  category="stone-fireplace-surrounds"
+  title="Explore Our Stone Fireplace Surround Collection"
+  description="Browse a selection of custom stone fireplace surrounds manufactured for luxury residential and commercial projects."
+  />
+
+  <Applications />
+
+  <FAQ />
+
+  <FinalCTA />
+
+</BaseLayout>

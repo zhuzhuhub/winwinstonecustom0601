@@ -1,0 +1,49 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+import Hero from "../../components/category/Hero.astro";
+import Advantages from "../../components/category/Advantages.astro";
+import Customization from "../../components/category/Customization.astro";
+import FeaturedProducts from "../../components/category/FeaturedProducts.astro";
+import Applications from "../../components/category/Applications.astro";
+import FAQ from "../../components/category/FAQ.astro";
+import FinalCTA from "../../components/category/FinalCTA.astro";
+
+import { getCollection } from "astro:content";
+
+// 获取所有产品
+const products = await getCollection("products");
+
+// 过滤 Stone Tables 分类产品
+const stoneTables = products.filter(p => p.data.category === "stone-tables");
+---
+<BaseLayout
+  title="Custom Stone Tables Manufacturer"
+  description="Luxury custom stone dining tables, coffee tables and side tables manufactured for residential and commercial projects."
+>
+
+  <Hero
+  eyebrow="STONE TABLE MANUFACTURER"
+  title="Custom Stone Tables For Interior Projects"
+  description="Luxury dining tables, coffee tables, console tables and bespoke stone furniture manufactured for global projects."
+  backgroundImage="/images/categories/stone-tables-hero.jpg"
+  />
+
+  <Advantages />
+  
+  <Customization />
+
+  <FeaturedProducts
+  products={stoneTables}
+  category="stone-tables"
+  title="Explore Our Stone Table Collection"
+  description="Browse custom marble tables, coffee tables, dining tables and side tables."
+  />
+
+  <Applications />
+
+  <FAQ />
+
+  <FinalCTA />
+
+</BaseLayout>

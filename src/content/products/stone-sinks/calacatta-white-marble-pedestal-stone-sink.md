@@ -24,7 +24,7 @@ customization:
   
 moq: 1 Piece
 
-leadTime: 25-30 Days
+leadTime: 15-30 Days
 
 featuredImage: /images/products/stone-sinks/calacatta-white-marble-pedestal-stone-sink/cover.jpg
 

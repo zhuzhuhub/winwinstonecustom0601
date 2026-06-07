@@ -11,7 +11,7 @@ import ProductInquiryCTA from "../../components/product/ProductInquiryCTA.astro"
 export async function getStaticPaths() {
   const modules = import.meta.glob("../../content/products/**/*.md", { eager: true });
   return Object.keys(modules)
-    .filter(key => key.includes("stone-sinks"))
+    .filter(key => key.includes("stone-fireplace-surrounds"))
     .map(key => {
       const slug = key.split("/").pop()?.replace(".md", "");
       return { params: { slug } };
@@ -22,7 +22,7 @@ const slug = Astro.params.slug;
 
 // 顶层模块读取
 const allModules = import.meta.glob("../../content/products/**/*.md", { eager: true });
-const moduleKey = Object.keys(allModules).find(key => key.includes(`stone-sinks/${slug}`));
+const moduleKey = Object.keys(allModules).find(key => key.includes(`stone-fireplace-surrounds/${slug}`));
 
 if (!moduleKey) {
   throw Astro.redirect("/404");
@@ -57,13 +57,13 @@ function absUrl(path: string) {
 
 const breadcrumbs = [
   { name: 'Home', url: siteUrl + '/' },
-  { name: 'Stone Sinks', url: siteUrl + '/stone-sinks/' },
-  { name: title, url: `${siteUrl}/stone-sinks/${slug}` }
+  { name: 'Stone Fireplace Surrounds', url: siteUrl + '/stone-fireplace-surrounds/' },
+  { name: title, url: `${siteUrl}/stone-fireplace-surrounds/${slug}` }
 ];
 
 const productForLd = {
   name: title,
-  slug: `stone-sinks/${slug}`,
+  slug: `stone-fireplace-surrounds/${slug}`,
   image: absUrl(featuredImage),
   sku: frontmatter.sku || undefined,
   brand: frontmatter.brand || 'Win-Win Stone'
@@ -127,7 +127,7 @@ const productForLd = {
       <nav class="breadcrumb">
         <a href="/">Home</a>
         <span>/</span>
-        <a href="/stone-sinks/">Stone Sinks</a>
+        <a href="/stone-fireplace-surrounds/">Stone Fireplace Surrounds</a>
         <span>/</span>
         <span>{title}</span>
       </nav>

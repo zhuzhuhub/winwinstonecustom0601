@@ -1,0 +1,43 @@
+---
+const {
+  customization
+} = Astro.props;
+---
+
+<section class="product-customization">
+
+  <div class="container">
+
+    <div class="customization-header">
+
+      <h2>
+        Customization Options
+      </h2>
+
+      <p>
+        Every stone product can be tailored to meet your project requirements.
+      </p>
+
+    </div>
+
+    <div class="customization-grid">
+
+      {
+        customization?.map((item) => (
+
+          <div class="customization-card">
+
+            <span>✓</span>
+
+            <h3>{item}</h3>
+
+          </div>
+
+        ))
+      }
+
+    </div>
+
+  </div>
+
+</section>

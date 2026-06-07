@@ -1,0 +1,51 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+import Hero from "../../components/category/Hero.astro";
+import Advantages from "../../components/category/Advantages.astro";
+import Customization from "../../components/category/Customization.astro";
+import FeaturedProducts from "../../components/category/FeaturedProducts.astro";
+import Applications from "../../components/category/Applications.astro";
+import FAQ from "../../components/category/FAQ.astro";
+import FinalCTA from "../../components/category/FinalCTA.astro";
+
+import { getCollection } from "astro:content";
+
+// 获取所有产品
+const products = await getCollection("products");
+
+// 过滤 Stone Bathtubs 分类产品
+const stoneBathtubs = products.filter(
+  product => product.data.category === "stone-bathtubs"
+);
+---
+<BaseLayout
+  title="Custom Stone Bathtubs Manufacturer"
+  description="Luxury custom stone bathtubs manufactured for residential and commercial projects."
+>
+
+<Hero
+  eyebrow="STONE BATHTUB MANUFACTURER"
+  title="Custom Stone Bathtubs For Luxury Projects"
+  description="Luxury marble and natural stone bathtubs manufactured for villas, hotels, resorts and spa projects worldwide."
+  backgroundImage="/images/categories/stone-bathtubs-hero.jpg"
+/>
+
+  <Advantages />
+  
+  <Customization />
+
+  <FeaturedProducts
+  products={stoneBathtubs}
+  category="stone-bathtubs"
+  title="Explore Our Stone Bathtub Collection"
+  description="Luxury natural stone bathtubs manufactured for villas, hotels and spa projects."
+  />
+
+  <Applications />
+
+  <FAQ />
+
+  <FinalCTA />
+
+</BaseLayout>

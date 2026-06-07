@@ -1,0 +1,26 @@
+---
+import Button from "../Button.astro";
+
+const { productTitle, slug } = Astro.props;
+---
+
+<section class="product-inquiry-cta">
+  <div class="container">
+
+    <div class="cta-content">
+      <h2>Interested in this product?</h2>
+      <p>
+        Get a personalized quote or discuss your project with our experts.
+      </p>
+
+      <Button
+        href={`/contact/?product=${slug}`}
+        variant="primary"
+        size="large"
+      >
+        Request a Quote
+      </Button>
+    </div>
+
+  </div>
+</section>
