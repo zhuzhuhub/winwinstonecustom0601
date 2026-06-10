@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-
+import { customStoneFurnitureData } from "../../data/categories/custom-stone-furniture";
 import Hero from "../../components/category/Hero.astro";
 import Advantages from "../../components/category/Advantages.astro";
 import Customization from "../../components/category/Customization.astro";
@@ -29,7 +29,7 @@ const furnitureProducts =
 
   eyebrow="STONE FURNITURE MANUFACTURER"
 
-  title="Custom Stone Furniture For Luxury Projects"
+  title="Custom Stone Furniture"
 
   description="Premium marble, travertine and natural stone furniture manufactured for villas, hotels, resorts and commercial projects worldwide."
 
@@ -37,10 +37,12 @@ const furnitureProducts =
 
 />
 
-  <Advantages />
+  <Advantages
+    title={customStoneFurnitureData.advantages.title}
+    description={customStoneFurnitureData.advantages.description}
+    items={customStoneFurnitureData.advantages.items}
+  />
   
-  <Customization />
-
   <FeaturedProducts
   products={furnitureProducts}
   category="custom-stone-furniture"
@@ -48,10 +50,27 @@ const furnitureProducts =
   description="Browse a selection of custom stone furniture manufactured for luxury residential and commercial projects."
   />
 
-  <Applications />
+  <Customization
+    title={customStoneFurnitureData.customization.title}
+    description={customStoneFurnitureData.customization.description}
+    items={customStoneFurnitureData.customization.items}
+  />
 
-  <FAQ />
+  <Applications
+    title={customStoneFurnitureData.applications.title}
+    description={customStoneFurnitureData.applications.description}
+    items={customStoneFurnitureData.applications.items}
+  />
 
-  <FinalCTA />
+  <FAQ
+    title={customStoneFurnitureData.faq.title}
+    description={customStoneFurnitureData.faq.description}
+    items={customStoneFurnitureData.faq.items}
+  />
+
+  <FinalCTA
+    title={customStoneFurnitureData.cta.title}
+    description={customStoneFurnitureData.cta.description}
+  />
 
 </BaseLayout>

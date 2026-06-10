@@ -14,7 +14,7 @@ const {
   <div class="container">
 
     <SectionHeader
-      eyebrow="FEATURED PRODUCTS"
+    
       title={title}
       description={description}
     />
@@ -29,7 +29,7 @@ const {
             .pop();
 
         return (
-
+         
           <a
             href={`/${category}/${slug}/`}
             class="product-card"
@@ -47,13 +47,17 @@ const {
 
             <div class="product-content">
 
-              <h3>
-                {product.data.title}
-              </h3>
+               <h3>
+                 {product.data.title}
+               </h3>
 
-              <p>
-                {product.data.description}
-              </p>
+               <p>
+                 {product.data.description}
+               </p>
+
+               <span class="product-link">
+                 Explore →
+               </span>
 
             </div>
 

@@ -5,6 +5,27 @@ const {
   moq,
   leadTime
 } = Astro.props;
+
+const specs = [
+  {
+    label: "Material",
+    value: material
+  },
+  {
+    label: "Finish",
+    value: Array.isArray(finish)
+      ? finish.join(" / ")
+      : finish
+  },
+  {
+    label: "MOQ",
+    value: moq
+  },
+  {
+    label: "Lead Time",
+    value: leadTime
+  }
+];
 ---
 
 <section class="product-specifications">
@@ -14,40 +35,35 @@ const {
     <div class="specifications-header">
 
       <h2>
-        Specifications
+        Technical Specifications
       </h2>
 
       <p>
-        Key technical information for this custom stone product.
+        Essential product information for architects,
+        designers, contractors and project buyers.
       </p>
 
     </div>
 
-    <div class="specifications-grid">
+    <div class="specifications-table">
 
-      <div class="spec-item">
-        <span>Material</span>
-        <strong>{material}</strong>
-      </div>
+      {
+        specs.map((spec) => (
 
-      <div class="spec-item">
-        <span>Finish</span>
-        <strong>
-          {Array.isArray(finish)
-            ? finish.join(", ")
-            : finish}
-        </strong>
-      </div>
+          <div class="spec-row">
 
-      <div class="spec-item">
-        <span>MOQ</span>
-        <strong>{moq}</strong>
-      </div>
+            <div class="spec-label">
+              {spec.label}
+            </div>
 
-      <div class="spec-item">
-        <span>Lead Time</span>
-        <strong>{leadTime}</strong>
-      </div>
+            <div class="spec-value">
+              {spec.value}
+            </div>
+
+          </div>
+
+        ))
+      }
 
     </div>
 

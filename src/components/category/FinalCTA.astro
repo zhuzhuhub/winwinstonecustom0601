@@ -1,34 +1,33 @@
+---
+const {
+  title = "",
+  description = "",
+  buttonText = "Request A Quote",
+  buttonLink = "/contact/"
+} = Astro.props;
+---
+
 <section class="category-final-cta">
 
   <div class="container">
 
     <div class="cta-box">
 
-      <span class="cta-eyebrow">
-        START YOUR PROJECT
-      </span>
-
       <h2>
-        Looking For A Custom Stone Sink Manufacturer?
+        {title}
       </h2>
 
       <p>
-
-        From concept development to mass production,
-        our team helps architects, designers,
-        wholesalers, and project contractors
-        create custom stone sinks tailored
-        to their requirements.
-
+        {description}
       </p>
 
       <div class="cta-actions">
 
         <a
-          href="/contact/"
-          class="btn btn-primary"
+          href={buttonLink}
+          class="button button-primary button-large"
         >
-          Request A Quote
+          {buttonText}
         </a>
 
       </div>

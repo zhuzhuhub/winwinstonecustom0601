@@ -1,8 +1,19 @@
 ---
 const {
-  title,
-  description,
-  material
+ title,
+ description,
+
+ material,
+ moq,
+ leadTime,
+
+ featuredImage,
+ gallery = [],
+
+ categoryLabel,
+
+ heroBadges = []
+
 } = Astro.props;
 ---
 
@@ -10,38 +21,124 @@ const {
 
   <div class="container">
 
-    <div class="product-hero-content">
+    <div class="product-hero-grid">
 
+      <!-- Left Content -->
 
+      <div class="product-hero-content">
 
-      <h1>
-        {title}
-      </h1>
+        {
+          categoryLabel && (
+            <span class="product-eyebrow">
+              {categoryLabel}
+            </span>
+          )
+        }
 
-      <p>
-        {description}
-      </p>
+        <h1>
+          {title}
+        </h1>
 
-      <div class="product-badges">
+        <p class="product-description">
+          {description}
+        </p>
 
-        <span>OEM Available</span>
+        <div class="product-badges">
 
-        <span>MOQ From 1 Piece</span>
+          {heroBadges.map((badge) => (
 
-        <span>Global Shipping</span>
+            <span>{badge}</span>
 
-      </div>
+          ))}
 
-      {
-        material && (
-          <div class="product-material">
+        </div>
 
-            Material:
+        <div class="product-meta">
+
+          <div class="meta-card">
+
+            <span>Material</span>
+
             <strong>{material}</strong>
 
           </div>
-        )
-      }
+
+          <div class="meta-card">
+
+            <span>MOQ</span>
+
+            <strong>{moq}</strong>
+
+          </div>
+
+          <div class="meta-card">
+
+            <span>Lead Time</span>
+
+            <strong>{leadTime}</strong>
+
+          </div>
+
+        </div>
+
+        <div class="hero-actions">
+
+          <a
+            href="/contact/"
+            class="button button-primary button-large"
+         >
+            Request Quote
+         </a>
+
+       
+
+        </div>
+
+      </div>
+
+      <!-- Right Image -->
+
+      <div class="product-hero-image">
+
+       <a
+        href={featuredImage}
+        class="glightbox"
+        data-gallery="hero-gallery"
+       >
+
+        <img
+         src={featuredImage}
+         alt={title}
+        />
+
+       </a>
+
+       <div class="hero-thumbnails">
+
+        {
+          gallery
+            .slice(1,5)
+            .map((item) => (
+
+              <a
+               href={item.image}
+               class="glightbox"
+               data-gallery="hero-gallery"
+              >
+
+               <img
+                 src={item.image}
+                 alt={title}
+               />
+
+             </a>
+
+           ))
+        }
+
+      </div>
+
+    </div>
 
     </div>
 

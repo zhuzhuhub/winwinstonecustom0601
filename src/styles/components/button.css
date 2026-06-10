@@ -132,3 +132,37 @@
   }
 
 }
+
+.cta-actions .button-primary {
+
+  background: white;
+
+  color: var(--green);
+
+  border-color: white;
+}
+
+.cta-actions .button-primary:hover {
+
+  background: transparent;
+
+  color: white;
+
+  border-color: white;
+}
+
+.cta-actions .button-secondary {
+
+  background: transparent;
+
+  color: white;
+
+  border-color: rgba(255,255,255,.4);
+}
+
+.cta-actions .button-secondary:hover {
+
+  background: white;
+
+  color: var(--green);
+}

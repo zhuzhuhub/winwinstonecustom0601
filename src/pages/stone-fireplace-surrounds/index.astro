@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
+import { StoneFireplaceSurroundsData } from "../../data/categories/stone-fireplace-surrounds";
+
 import Hero from "../../components/category/Hero.astro";
 import Advantages from "../../components/category/Advantages.astro";
 import Customization from "../../components/category/Customization.astro";
@@ -24,14 +26,16 @@ const stoneFireplaceSurrounds = products.filter(p => p.data.category === "stone-
 
  <Hero
   eyebrow="FIREPLACE SURROUND MANUFACTURER"
-  title="Custom Marble Fireplace Surrounds"
+  title="Custom Fireplace Surrounds"
   description="Luxury marble fireplace surrounds manufactured for villas, hotels and high-end residential interiors."
   backgroundImage="/images/categories/fireplace-surrounds-hero.jpg"
 />
 
-  <Advantages />
-  
-  <Customization />
+ <Advantages
+    title={StoneFireplaceSurroundsData.advantages.title}
+    description={StoneFireplaceSurroundsData.advantages.description}
+    items={StoneFireplaceSurroundsData.advantages.items}
+  />
 
   <FeaturedProducts
   products={stoneFireplaceSurrounds}
@@ -39,11 +43,28 @@ const stoneFireplaceSurrounds = products.filter(p => p.data.category === "stone-
   title="Explore Our Stone Fireplace Surround Collection"
   description="Browse a selection of custom stone fireplace surrounds manufactured for luxury residential and commercial projects."
   />
+  
+  <Customization
+    title={StoneFireplaceSurroundsData.customization.title}
+    description={StoneFireplaceSurroundsData.customization.description}
+    items={StoneFireplaceSurroundsData.customization.items}
+  />
 
-  <Applications />
+  <Applications
+    title={StoneFireplaceSurroundsData.applications.title}
+    description={StoneFireplaceSurroundsData.applications.description}
+    items={StoneFireplaceSurroundsData.applications.items}
+  />
 
-  <FAQ />
+  <FAQ
+    title={StoneFireplaceSurroundsData.faq.title}
+    description={StoneFireplaceSurroundsData.faq.description}
+    items={StoneFireplaceSurroundsData.faq.items}
+  />
 
-  <FinalCTA />
+  <FinalCTA
+    title={StoneFireplaceSurroundsData.cta.title}
+    description={StoneFireplaceSurroundsData.cta.description}
+  />
 
 </BaseLayout>

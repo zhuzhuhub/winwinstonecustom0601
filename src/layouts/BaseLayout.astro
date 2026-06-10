@@ -6,6 +6,8 @@ import Footer from "../components/Footer.astro";
 
 import favicon from "../assets/favicon.png";
 
+import "glightbox/dist/css/glightbox.min.css";
+
 const {
   title = "WIN WIN STONE",
   description = "Custom stone furniture manufacturer",
@@ -65,8 +67,24 @@ const {
       <slot />
     </main>
 
-    <Footer />
+   <Footer />
 
-  </body>
+   <script is:inline src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+   <script is:inline>
+    window.addEventListener("load", () => {
+
+     if (window.GLightbox) {
+
+      GLightbox({
+        selector: ".glightbox"
+      });
+
+    }
+
+  });
+</script>
+
+</body>
 
 </html>

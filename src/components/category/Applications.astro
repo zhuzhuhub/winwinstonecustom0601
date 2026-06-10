@@ -1,5 +1,11 @@
 ---
 import SectionHeader from "../common/SectionHeader.astro";
+
+const {
+  title = "",
+  description = "",
+  items = []
+} = Astro.props;
 ---
 
 <section class="category-applications">
@@ -7,68 +13,41 @@ import SectionHeader from "../common/SectionHeader.astro";
   <div class="container">
 
     <SectionHeader
-      eyebrow="APPLICATIONS"
-      title="Suitable For Various Projects"
-      description="Our custom stone sinks are widely used in residential and commercial projects worldwide."
+      title={title}
+      description={description}
     />
 
     <div class="applications-grid">
 
-      <div class="application-card">
+      {items.map((item) => (
 
-        <h3>
-          Luxury Villas
-        </h3>
+        <div class="application-card">
 
-        <p>
-          Premium stone sinks designed for
-          high-end residential bathrooms and
-          bespoke interior projects.
-        </p>
+          <div class="application-image">
 
-      </div>
+            <img
+              src={item.image}
+              alt={item.title}
+              loading="lazy"
+            />
 
-      <div class="application-card">
+          </div>
 
-        <h3>
-          Hotels & Resorts
-        </h3>
+          <div class="application-content">
 
-        <p>
-          Durable and elegant solutions for
-          luxury hospitality developments and
-          guest bathroom spaces.
-        </p>
+            <h3>
+              {item.title}
+            </h3>
 
-      </div>
+            <p>
+              {item.description}
+            </p>
 
-      <div class="application-card">
+          </div>
 
-        <h3>
-          Apartments & Condominiums
-        </h3>
+        </div>
 
-        <p>
-          Custom sink solutions for modern
-          residential developments and
-          premium living environments.
-        </p>
-
-      </div>
-
-      <div class="application-card">
-
-        <h3>
-          Commercial Projects
-        </h3>
-
-        <p>
-          Stone sinks suitable for commercial
-          washrooms, clubs, spas, and
-          architectural projects.
-        </p>
-
-      </div>
+      ))}
 
     </div>
 

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
+import {stoneBathtubsData} from "../../data/categories/stone-bathtubs";
 import Hero from "../../components/category/Hero.astro";
 import Advantages from "../../components/category/Advantages.astro";
 import Customization from "../../components/category/Customization.astro";
@@ -26,26 +27,45 @@ const stoneBathtubs = products.filter(
 
 <Hero
   eyebrow="STONE BATHTUB MANUFACTURER"
-  title="Custom Stone Bathtubs For Luxury Projects"
+  title="Custom Stone Bathtubs"
   description="Luxury marble and natural stone bathtubs manufactured for villas, hotels, resorts and spa projects worldwide."
   backgroundImage="/images/categories/stone-bathtubs-hero.jpg"
 />
 
-  <Advantages />
+<Advantages
+  title={stoneBathtubsData.advantages.title}
+  description={stoneBathtubsData.advantages.description}
+  items={stoneBathtubsData.advantages.items}
+/>
   
-  <Customization />
-
-  <FeaturedProducts
+<FeaturedProducts
   products={stoneBathtubs}
   category="stone-bathtubs"
   title="Explore Our Stone Bathtub Collection"
   description="Luxury natural stone bathtubs manufactured for villas, hotels and spa projects."
-  />
+/>
+  
+<Customization
+  title={stoneBathtubsData.customization.title}
+  description={stoneBathtubsData.customization.description}
+  items={stoneBathtubsData.customization.items}
+/>
 
-  <Applications />
+<Applications
+  title={stoneBathtubsData.applications.title}
+  description={stoneBathtubsData.applications.description}
+  items={stoneBathtubsData.applications.items}
+/>
 
-  <FAQ />
+<FAQ
+  title={stoneBathtubsData.faq.title}
+  description={stoneBathtubsData.faq.description}
+  items={stoneBathtubsData.faq.items}
+/>
 
-  <FinalCTA />
+<FinalCTA
+  title={stoneBathtubsData.cta.title}
+  description={stoneBathtubsData.cta.description}
+/>
 
 </BaseLayout>

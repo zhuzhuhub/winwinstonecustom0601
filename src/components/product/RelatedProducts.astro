@@ -1,0 +1,84 @@
+---
+const {
+  products = [],
+  currentSlug = "",
+  category = ""
+} = Astro.props;
+
+const relatedProducts = products
+  .filter((product: any) => {
+
+    const slug =
+      product.file
+        ?.split("/")
+        .pop()
+        ?.replace(".md", "");
+
+    return slug !== currentSlug;
+
+  })
+  .slice(0, 3);
+---
+
+{
+  relatedProducts.length > 0 && (
+
+    <section class="related-products">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <h2>
+            Related Products
+          </h2>
+
+          <p>
+            Explore more custom stone products
+            from this collection.
+          </p>
+
+        </div>
+
+        <div class="related-grid">
+
+          {
+            relatedProducts.map((product: any) => {
+
+              const slug =
+                product.file
+                  ?.split("/")
+                  .pop()
+                  ?.replace(".md", "");
+
+              return (
+
+                <a
+                  href={`/${category}/${slug}/`}
+                  class="related-card"
+                >
+
+                  <img
+                    src={product.frontmatter.featuredImage}
+                    alt={product.frontmatter.title}
+                  />
+
+                  <h3>
+                    {product.frontmatter.title}
+                  </h3>
+
+                </a>
+
+              );
+
+            })
+          }
+
+        </div>
+
+      </div>
+
+    </section>
+
+  )
+}

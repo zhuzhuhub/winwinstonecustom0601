@@ -1,12 +1,19 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
+
 import Hero from "../../components/category/Hero.astro";
 import Advantages from "../../components/category/Advantages.astro";
+import { stoneTablesData } from "../../data/categories/stone-tables";
+
 import Customization from "../../components/category/Customization.astro";
+
 import FeaturedProducts from "../../components/category/FeaturedProducts.astro";
+
 import Applications from "../../components/category/Applications.astro";
+
 import FAQ from "../../components/category/FAQ.astro";
+
 import FinalCTA from "../../components/category/FinalCTA.astro";
 
 import { getCollection } from "astro:content";
@@ -24,26 +31,47 @@ const stoneTables = products.filter(p => p.data.category === "stone-tables");
 
   <Hero
   eyebrow="STONE TABLE MANUFACTURER"
-  title="Custom Stone Tables For Interior Projects"
+  title="Custom Stone Tables"
   description="Luxury dining tables, coffee tables, console tables and bespoke stone furniture manufactured for global projects."
   backgroundImage="/images/categories/stone-tables-hero.jpg"
   />
 
-  <Advantages />
+  <Advantages
+  title="Why Choose Our Custom Stone Tables"
+  description="Built for luxury residential, hospitality and commercial furniture projects."
+  items={stoneTablesData.advantages}
+  />
   
-  <Customization />
-
   <FeaturedProducts
   products={stoneTables}
   category="stone-tables"
   title="Explore Our Stone Table Collection"
   description="Browse custom marble tables, coffee tables, dining tables and side tables."
   />
+  
+  <Customization
+  title="Customization Options"
+  description="Tailor every detail of your stone table project."
+  items={stoneTablesData.customization}
+  />
+  
+  <Applications
+  title="Suitable For Various Projects"
+  description="Custom stone tables manufactured for luxury residential and commercial interiors."
+  items={stoneTablesData.applications}
+  />
 
-  <Applications />
+  <FAQ
+  title="Frequently Asked Questions"
+  description="Answers to common questions about custom stone table manufacturing."
+  items={stoneTablesData.faq}
+  />
 
-  <FAQ />
-
-  <FinalCTA />
+  <FinalCTA
+  title={stoneTablesData.cta.title}
+  description={stoneTablesData.cta.description}
+  buttonText={stoneTablesData.cta.buttonText}
+  buttonLink={stoneTablesData.cta.buttonLink}
+  />
 
 </BaseLayout>

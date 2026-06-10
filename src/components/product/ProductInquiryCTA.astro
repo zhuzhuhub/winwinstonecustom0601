@@ -1,26 +1,85 @@
 ---
 import Button from "../Button.astro";
 
-const { productTitle, slug } = Astro.props;
+const {
+  productTitle,
+  slug
+} = Astro.props;
 ---
 
 <section class="product-inquiry-cta">
+
   <div class="container">
 
-    <div class="cta-content">
-      <h2>Interested in this product?</h2>
-      <p>
-        Get a personalized quote or discuss your project with our experts.
-      </p>
+    <div class="cta-wrapper">
 
-      <Button
-        href={`/contact/?product=${slug}`}
-        variant="primary"
-        size="large"
-      >
-        Request a Quote
-      </Button>
+      <div class="cta-content">
+
+        <span class="cta-eyebrow">
+          FACTORY DIRECT
+        </span>
+
+        <h2>
+          Request Factory Pricing
+        </h2>
+
+        <p>
+          Get a custom quotation based on your project requirements,
+          material selection, dimensions and quantity.
+        </p>
+
+        <ul class="cta-benefits">
+
+          <li>OEM Manufacturing Support</li>
+
+          <li>Custom Sizes & Finishes</li>
+
+          <li>Low MOQ Available</li>
+
+          <li>Worldwide Shipping</li>
+
+        </ul>
+
+      </div>
+
+      <div class="cta-actions">
+
+       <Button
+         href={`/contact/?product=${slug}`}
+         variant="primary"
+         size="large"
+       >
+        Request A Quote
+       </Button>
+
+       <Button
+         href="https://wa.me/8613927192948"
+         variant="secondary"
+         size="large"
+       >
+        WhatsApp
+       </Button>
+
+       <Button
+         href="mailto:stone2lisa@outlook.com"
+         variant="secondary"
+         size="large"
+       >
+        Email
+       </Button>
+
+       <a
+        href="/download/win-win-stone-custom-stone-catalog-web.pdf"
+        download
+        class="button button-secondary button-large"
+       >
+        Download Catalog
+      </a>
+
+     </div>
+
     </div>
 
   </div>
+
 </section>

@@ -2,6 +2,7 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
 import Hero from "../../components/category/Hero.astro";
+import { stoneSinksData } from "../../data/categories/stone-sinks";
 import Advantages from "../../components/category/Advantages.astro";
 import Customization from "../../components/category/Customization.astro";
 import FeaturedProducts from "../../components/category/FeaturedProducts.astro";
@@ -16,6 +17,7 @@ const products = await getCollection("products");
 
 // 过滤 Stone Sinks 分类产品
 const stoneSinks = products.filter(p => p.data.category === "stone-sinks");
+
 ---
 <BaseLayout
   title="Custom Stone Sinks Manufacturer"
@@ -26,7 +28,7 @@ const stoneSinks = products.filter(p => p.data.category === "stone-sinks");
 
   eyebrow="STONE SINK MANUFACTURER"
 
-  title="Custom Stone Sinks For Luxury Projects"
+  title="Custom Stone Sinks"
 
   description="Premium marble, travertine and natural stone sinks manufactured for villas, hotels, resorts and commercial projects worldwide."
 
@@ -34,21 +36,40 @@ const stoneSinks = products.filter(p => p.data.category === "stone-sinks");
 
 />
 
-  <Advantages />
+  <Advantages
+  title={stoneSinksData.advantages.title}
+  description={stoneSinksData.advantages.description}
+  items={stoneSinksData.advantages.items}
+  />
   
-  <Customization />
-
   <FeaturedProducts
   products={stoneSinks}
   category="stone-sinks"
   title="Explore Our Stone Sink Collection"
   description="Browse a selection of custom stone sinks manufactured for luxury residential and commercial projects."
   />
+  
+ <Customization
+  title={stoneSinksData.customization.title}
+  description={stoneSinksData.customization.description}
+  items={stoneSinksData.customization.items}
+  />
 
-  <Applications />
+  <Applications
+  title={stoneSinksData.applications.title}
+  description={stoneSinksData.applications.description}
+  items={stoneSinksData.applications.items}
+  />
 
-  <FAQ />
+  <FAQ
+  title={stoneSinksData.faq.title}
+  description={stoneSinksData.faq.description}
+  items={stoneSinksData.faq.items}
+  />
 
-  <FinalCTA />
+ <FinalCTA
+  title={stoneSinksData.cta.title}
+  description={stoneSinksData.cta.description}
+ />
 
 </BaseLayout>

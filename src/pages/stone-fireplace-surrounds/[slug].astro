@@ -3,10 +3,9 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
 import ProductHero from "../../components/product/ProductHero.astro";
 import ProductSpecifications from "../../components/product/ProductSpecifications.astro";
-import ProductCustomization from "../../components/product/ProductCustomization.astro";
-import ProductApplications from "../../components/product/ProductApplications.astro";
 import ProductInquiryCTA from "../../components/product/ProductInquiryCTA.astro";
-
+import RelatedProducts from "../../components/product/RelatedProducts.astro";
+import ProductFeatures from "../../components/product/ProductFeatures.astro";
 // 动态生成路径
 export async function getStaticPaths() {
   const modules = import.meta.glob("../../content/products/**/*.md", { eager: true });
@@ -28,23 +27,32 @@ if (!moduleKey) {
   throw Astro.redirect("/404");
 }
 
-const module = allModules[moduleKey] as { frontmatter: any };
-const { frontmatter } = module;
+const module = allModules[moduleKey] as {frontmatter: any;Content: any;};
+
+const { frontmatter, Content } = module;
 
 // 解构 frontmatter，变量名统一
 const {
   title,
   description,
+
   featuredImage,
+  featureImage,
   gallery,
+
   seoTitle,
   seoDescription,
+
+  categoryLabel,
+  heroBadges,
+  keyFeatures,
+
   material,
   finish,
-  applications,
-  customization,
+
   moq,
-  leadtime
+  leadTime
+
 } = frontmatter;
 
 const siteUrl = import.meta.env.SITE || 'https://winwinstonecustom.com';
@@ -61,6 +69,10 @@ const breadcrumbs = [
   { name: title, url: `${siteUrl}/stone-fireplace-surrounds/${slug}` }
 ];
 
+const allProducts =
+  Object.values(allModules);
+
+
 const productForLd = {
   name: title,
   slug: `stone-fireplace-surrounds/${slug}`,
@@ -75,31 +87,101 @@ const productForLd = {
   description={seoDescription}
 >
 
-  <ProductHero
-    title={title}
-    description={description}
-    material={material}
+<ProductHero
+  title={title}
+  description={description}
+
+  material={material}
+
+  moq={moq}
+  leadTime={leadTime}
+
+  categoryLabel={categoryLabel}
+  heroBadges={heroBadges}
+
+  featuredImage={featuredImage}
+  gallery={gallery}
+/>
+
+<section class="product-page">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="/">Home</a>
+        <span>/</span>
+        <a href="/stone-fireplace-surrounds/">Stone Fireplace Surrounds</a>
+        <span>/</span>
+        <span>{title}</span>
+      </nav>
+
+      <div class="product-grid">
+        <div class="product-gallery">
+      <div class="gallery-header">
+
+
+       <h2>
+         Material Details & Project Views
+      </h2>
+
+      </div>
+
+
+
+     <div class="gallery-slider">
+
+      {
+       gallery?.map((item) => (
+
+      <a
+       href={item.image}
+       class="gallery-slide glightbox"
+       data-gallery="product-gallery"
+      >
+
+          <img
+            src={item.image}
+            alt={title}
+            loading="lazy"
+          />
+
+        </a>
+
+       ))
+      }
+
+      </div>
+
+    </div>
+
+        
+      </div>
+    </div>
+   </section>
+
+  <ProductFeatures
+    features={keyFeatures}
+    image={featureImage}
   />
+
 
   <ProductSpecifications
     material={material}
     finish={finish}
     moq={moq}
-    leadtime={leadtime}
+    leadTime={leadTime}
   />
-
-  <ProductCustomization
-    customization={customization}
-  />
-
-  <ProductApplications
-    applications={applications}
-  />
+ 
 
   <ProductInquiryCTA
     productTitle={title}
     slug={slug}
   />
+
+  <RelatedProducts
+    products={allProducts}
+    currentSlug={slug}
+    category="stone-fireplace-surrounds"
+  />
+
 
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
@@ -122,94 +204,7 @@ const productForLd = {
     url: `${siteUrl.replace(/\/$/, '')}/${productForLd.slug.replace(/^\//, '')}`
   })} />
 
-  <section class="product-page">
-    <div class="container">
-      <nav class="breadcrumb">
-        <a href="/">Home</a>
-        <span>/</span>
-        <a href="/stone-fireplace-surrounds/">Stone Fireplace Surrounds</a>
-        <span>/</span>
-        <span>{title}</span>
-      </nav>
 
-      <div class="product-grid">
-        <div class="product-gallery">
-          <img src={featuredImage} alt={title} />
-          <div class="gallery-grid">
-            {gallery?.map((image) => (
-              <img src={image} alt={title} />
-            ))}
-          </div>
-        </div>
-
-        <div class="product-content">
-          <h2>Product Gallery</h2>
-          <p>
-            Explore detailed views of this custom stone product,
-            including material texture, craftsmanship details,
-            and project applications.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
 
 </BaseLayout>
-
-<style>
-.product-page {
-  padding: 80px 0;
-}
-
-.breadcrumb {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 32px;
-  font-size: 14px;
-}
-
-.breadcrumb a {
-  color: var(--green);
-  text-decoration: none;
-}
-
-.product-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 48px;
-}
-
-.product-gallery img {
-  width: 100%;
-  display: block;
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  margin-top: 12px;
-}
-
-.product-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.product-content h2 {
-  margin-bottom: 20px;
-  font-size: 2rem;
-}
-
-.product-content p {
-  color: var(--muted);
-  line-height: 1.8;
-}
-
-.product-meta {
-  margin-top: 24px;
-  font-size: 14px;
-  color: rgba(0,0,0,.7);
-}
-</style>
+---

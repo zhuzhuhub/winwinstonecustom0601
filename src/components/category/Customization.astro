@@ -1,5 +1,11 @@
 ---
 import SectionHeader from "../common/SectionHeader.astro";
+
+const {
+  title = "Customization Options",
+  description = "",
+  items = []
+} = Astro.props;
 ---
 
 <section class="category-customization">
@@ -7,68 +13,27 @@ import SectionHeader from "../common/SectionHeader.astro";
   <div class="container">
 
     <SectionHeader
-      eyebrow="CUSTOM SOLUTIONS"
-      title="Customization Options"
-      description="Every stone sink can be customized to match your project requirements."
+      title={title}
+      description={description}
     />
 
     <div class="customization-grid">
 
-      <div class="custom-card">
+      {items.map((item) => (
 
-        <h3>
-          Size & Dimensions
-        </h3>
+        <div class="custom-card">
 
-        <p>
-          Custom width, depth, height,
-          basin dimensions, and installation
-          requirements.
-        </p>
+          <h3>
+            {item.title}
+          </h3>
 
-      </div>
+          <p>
+            {item.description}
+          </p>
 
-      <div class="custom-card">
+        </div>
 
-        <h3>
-          Stone Materials
-        </h3>
-
-        <p>
-          Marble, travertine, limestone,
-          granite, quartzite, and other
-          natural stones.
-        </p>
-
-      </div>
-
-      <div class="custom-card">
-
-        <h3>
-          Surface Finishes
-        </h3>
-
-        <p>
-          Polished, honed, brushed,
-          leathered, sandblasted,
-          and antique finishes.
-        </p>
-
-      </div>
-
-      <div class="custom-card">
-
-        <h3>
-          Design Details
-        </h3>
-
-        <p>
-          Fluted designs, edge profiles,
-          drain locations, and bespoke
-          decorative features.
-        </p>
-
-      </div>
+      ))}
 
     </div>
 
