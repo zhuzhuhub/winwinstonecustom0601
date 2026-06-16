@@ -42,7 +42,7 @@ keyFeatures:
 
 moq: 1 Piece
 
-leadtime: 15-30 Days
+leadTime: 25-35 Days
 
 featuredImage: /images/products/custom-stone-furniture/minimalist-luxury-custom-stone-island/cover.jpg
 

@@ -1,0 +1,280 @@
+---
+
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+import { getCollection } from "astro:content";
+
+import "../../styles/components/blog.css";
+
+import QuickSummary from "../../components/blog/QuickSummary.astro";
+import "../../styles/components/blog/blog-summary.css";
+
+import FAQ from "../../components/blog/FAQ.astro";
+import "../../styles/components/blog/blog-faq.css";
+
+
+import { marked } from "marked";
+
+
+export async function getStaticPaths() {
+
+ const posts = await getCollection("blog");
+
+  return posts.map(post => ({
+    params: {
+      slug: post.id
+    },
+    props: {
+      post
+    }
+  }));
+}
+
+const { post } = Astro.props;
+
+const { title,description,publishDate,category, featuredImage } = post.data;
+
+const articleBody = post.body;
+
+
+const articleHtml = marked.parse( articleBody );
+
+
+
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the best stone for a bathroom sink?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Marble remains one of the most popular materials for custom bathroom sinks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does marble require sealing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most marble sinks benefit from periodic sealing to reduce staining."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can stone sinks be customized?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dimensions, finishes and drain locations can all be customized."
+      }
+    }
+  ]
+};
+
+
+
+---
+
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify(faqSchema)}
+></script>
+
+<BaseLayout
+  title={title}
+  description={description}
+>
+
+
+<section class="blog-post">
+
+  <div class="container">
+
+    <nav class="breadcrumb">
+
+      <a href="/">Home</a>
+
+      <span>/</span>
+
+      <a href="/blog/">Blog</a>
+
+      <span>/</span>
+
+      <span>{title}</span>
+
+    </nav>
+
+    <header class="post-header">
+
+      <span class="post-category">
+        {category}
+      </span>
+
+      <h1>
+        {title}
+      </h1>
+
+      <p class="post-meta">
+
+        {new Date(publishDate).toLocaleDateString("en-US",{
+          year:"numeric",
+          month:"long",
+          day:"numeric"
+       })}
+
+       •
+
+       6 Min Read
+
+      </p>
+
+    </header>
+    
+    <img
+      class="featured-image"
+      src={featuredImage}
+      alt={title}
+    />
+
+    <QuickSummary />
+
+   <section class="post-layout">
+       <article class="post-content"> 
+          <div set:html={articleHtml} />
+          
+          <FAQ />
+           
+       </article>
+
+     <aside class="post-sidebar">
+
+    
+      <div class="sidebar-card toc-card">
+
+       <h3>
+        On This Page
+       </h3>
+
+       <ul class="toc-list">
+
+        <li>
+          <a href="#what-buyers-usually-compare-before-choosing-stone">
+           What Buyers Compare
+          </a>
+       </li>
+
+       <li>
+         <a href="#marble-travertine-quartzite-and-onyx-at-a-glance">
+           Material Comparison
+         </a>
+       </li>
+
+
+       <li>
+        <a href="#what-to-confirm-before-production-starts">
+          Production Checklist
+        </a>
+       </li>
+
+       <li>
+        <a href="#final-thoughts">
+          Final Thoughts
+        </a>
+       </li>
+
+    </ul>
+
+  </div>
+
+    
+      <div class="sidebar-card">
+
+       <h3>
+         Popular Categories
+       </h3>
+
+       <ul>
+
+         <li>
+           <a href="/stone-sinks/">
+             Stone Sinks
+           </a>
+         </li>
+
+         <li>
+           <a href="/stone-tables/">
+             Stone Tables
+           </a>
+         </li>
+
+         <li>
+           <a href="/stone-bathtubs/">
+             Stone Bathtubs
+           </a>
+         </li>
+
+       </ul>
+
+     </div>
+
+     <div class="sidebar-card author-trust">
+
+      <h3>
+       Author & Trust
+      </h3>
+
+      <p>
+        Win-Win Stone Team
+      </p>
+
+      <ul>
+
+       <li>15+ Years Industry Experience</li>
+
+       <li>OEM & ODM Manufacturing</li>
+
+       <li>Exported To 30+ Countries</li>
+
+       <li>Custom Stone Project Support</li>
+
+      </ul>
+
+    </div>
+
+    <div class="sidebar-card review-card">
+
+     <h3>
+      Free Stone Project Review
+     </h3>
+
+     <p>
+
+      Send your drawings,
+      dimensions or reference images.
+
+     </p>
+
+     <a
+      href="/contact/"
+      class="sidebar-button"
+     >
+
+      Request Review
+
+     </a>
+
+    </div>
+
+
+   </aside>
+
+
+</section>
+
+  </div>
+
+</section>
+
+</BaseLayout>

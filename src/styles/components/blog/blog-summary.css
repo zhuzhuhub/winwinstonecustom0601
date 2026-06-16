@@ -1,0 +1,33 @@
+.quick-summary{
+
+  padding:30px;
+
+  margin:50px 0;
+
+  border-radius:16px;
+
+  background:#f8faf9;
+
+  border:1px solid rgba(0,0,0,.06);
+}
+
+.quick-summary h2{
+
+  font-size:1.2rem;
+
+  margin-bottom:18px;
+}
+
+.quick-summary ul{
+
+  margin:0;
+
+  padding-left:20px;
+}
+
+.quick-summary li{
+
+  margin-bottom:10px;
+
+  line-height:1.7;
+}
