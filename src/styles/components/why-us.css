@@ -3,9 +3,25 @@
 ========================= */
 
 .why-advantages {
-  padding: 60px 0;               /* 上下间距紧凑 */
+  padding: 40px 0;               /* 上下间距紧凑 */
   background: #f9f9f9;           /* 可选，和背景区分 */
 }
+
+.why-advantages h2 {
+
+  max-width:1400px; 
+
+  text-align:left;
+
+
+}
+
+.why-advantages p{
+   max-width:1400px; 
+ 
+   text-align:left; 
+   
+  }
 
 .section-header {
 
@@ -37,7 +53,7 @@
 
 .section-header p {
 
-  max-width: 620px;
+  max-width: 800px;
 
   margin: 0 auto;
 
@@ -177,7 +193,8 @@
 ========================= */
 
 .advantage-card {
-
+  max-width: 1200px;
+  text-align:left;
   transition:
     transform .35s ease,
     box-shadow .35s ease;
@@ -197,8 +214,28 @@
 
 .why-customization {
 
-  padding: 60px 0;
+  padding: 40px 0;
 }
+
+.why-customization h2 {
+
+  max-width:1100px; 
+
+  text-align:left;
+
+  font-size:2rem;
+
+  line-height:1;
+
+  margin-bottom:4px;
+}
+
+.why-customization p{
+   max-width:1100px; 
+ 
+   text-align:left; 
+   
+  }
 
 .custom-grid {
 
@@ -287,10 +324,26 @@
 
 .how-we-work {
 
-  padding: 70px 0;
+  padding: 40px 0;
 
   background: #f9f9f9;
 }
+
+.how-we-work h2 {
+
+  max-width:1400px; 
+
+  text-align:left;
+
+
+}
+
+.how-we-work p{
+   max-width:1400px; 
+ 
+   text-align:left; 
+   
+  }
 
 .workflow-grid {
 
@@ -381,10 +434,27 @@
 
 .quality-process {
 
-  padding: 60px 0;
+  padding: 40px 0;
 
   background: #f9f9f9;
 }
+
+.quality-process h2 {
+
+  max-width:1200px; 
+
+  text-align:left;
+
+
+}
+
+.quality-process p{
+   max-width:1200px; 
+ 
+   text-align:left; 
+   
+  }
+
 
 .process-grid {
 
@@ -395,14 +465,14 @@
 
   gap: 24px;
 
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .process-step {
 
   position: relative;
 
-  padding: 30px;
+  padding: 10px;
 
   background: #fff;
 
@@ -474,8 +544,25 @@
 
 .global-export {
 
-  padding: 60px 0;
+  padding: 40px 0;
 }
+
+
+.global-export h2 {
+
+  max-width:1200px; 
+
+  text-align:left;
+
+
+}
+
+.global-export p{
+   max-width:1200px; 
+ 
+   text-align:left; 
+   
+  }
 
 .export-grid {
 
@@ -581,18 +668,17 @@
 .why-cta {
 
   padding:
-    60px 0
-    60px;
+    40px 0;
 }
 
 .cta-box {
 
-  max-width: 900px;
+  max-width: 1100px;
 
   margin: 0 auto;
 
   padding:
-    70px 50px;
+    60px 50px;
 
   text-align: center;
 

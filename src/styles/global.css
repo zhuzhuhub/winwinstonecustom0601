@@ -16,3 +16,28 @@
 @import "./components/product.css";
 @import "./components/category.css";
 @import "./components/blog.css";
+@import "./components/materials/materials.css";
+@import "./components/materials/material-detail.css";
+
+/* ======================================
+READING PROGRESS BAR
+====================================== */
+
+#reading-progress {
+
+  position: fixed;
+
+  top: 0;
+
+  left: 0;
+
+  width: 0;
+
+  height: 4px;
+
+  z-index: 9999;
+
+  background: #0f5e53;
+
+  transition: width .1s linear;
+}

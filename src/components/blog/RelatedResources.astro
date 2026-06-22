@@ -1,0 +1,24 @@
+---
+const { items = [] } = Astro.props;
+---
+
+<section class="related-resources">
+
+  <h2>Explore More Solutions</h2>
+
+  <p class="resource-intro">
+  Explore related stone collections,
+  materials and custom project solutions.
+</p>
+
+  <div class="resource-grid">
+
+    {items.map((item) => (
+      <a href={item.url} class="resource-card">
+        {item.title}
+      </a>
+    ))}
+
+  </div>
+
+</section>

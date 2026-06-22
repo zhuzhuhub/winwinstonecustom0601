@@ -12,7 +12,7 @@ material: Calacatta Marble
 finish:
   - Polished
   - Honed
-
+  - custom finished
 
 heroBadges:
   - OEM Available

@@ -1,37 +1,652 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import Button from "../../components/Button.astro";
+
 ---
 
 <BaseLayout
-  title="Materials"
-  description="Stone material information for marble, granite, travertine and more."
+  title="Natural Stone Materials"
+  description="Explore marble, travertine, granite, limestone and onyx materials for custom stone furniture, sinks, bathtubs and architectural projects."
 >
-  <section class="materials-overview">
-    <div class="container">
-      <nav class="breadcrumb">
-        <a href="/">Home</a>
-        <span>/</span>
-        <span>Materials</span>
-      </nav>
 
-      <h1>Materials</h1>
-      <p>Learn about the stone materials we work with and how to choose the right option for your project.</p>
+<section class="materials-hero">
 
-      <div class="materials-notice">
-        <p>这里可以作为材料百科入口，将来可通过 <code>src/content/materials</code> 来管理每种石材内容。</p>
-      </div>
+  <div class="container">
+
+    <nav class="breadcrumb">
+      <a href="/">Home</a>
+      <span>/</span>
+      <span>Materials</span>
+    </nav>
+
+    <div class="materials-hero-content">
+      <h1>
+        Natural Stone
+      </h1>
+      <p>
+        Discover premium natural stone materials used for custom sinks,
+        tables, bathtubs, fireplace surrounds and architectural projects.
+      </p>
+
     </div>
-  </section>
-</BaseLayout>
 
-<style>
-.materials-overview {
-  padding: 80px 0;
-}
-.materials-notice {
-  margin-top: 40px;
-  padding: 24px;
-  border: 1px solid rgba(0,0,0,.08);
-  background: rgba(0,0,0,.03);
-}
-</style>
+  </div>
+
+</section>
+
+
+<section class="why-stone">
+
+  <div class="container">
+
+    <div class="benefits-grid">
+
+      <div>
+        <h3>Unique Character</h3>
+        <p>
+          Every stone slab features one-of-a-kind patterns and textures.
+        </p>
+      </div>
+
+      <div>
+        <h3>Long-Term Durability</h3>
+        <p>
+          Natural stone remains beautiful and functional for decades.
+        </p>
+      </div>
+
+      <div>
+        <h3>Timeless Luxury</h3>
+        <p>
+          Preferred by architects and designers worldwide.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+<section class="featured-stones">
+
+  <div class="container">
+
+    <h2>
+      Featured Stone Collection
+    </h2>
+
+    <p class="section-intro">
+      Selected premium natural stones frequently specified for luxury residential,
+      hospitality and bespoke furniture projects.
+    </p>
+
+    <div class="stone-grid">
+
+      <article class="stone-card">
+
+        <img
+          src="/images/materials/featured-stones/bianca-calacatta.jpg"
+          alt="Bianca Calacatta Marble"
+        />
+
+        <h3>Bianca Calacatta</h3>
+
+      </article>
+
+      <a
+         class="stone-card"
+         href="/materials/calacatta-viola/"
+        >
+
+        <img
+          src="/images/materials/featured-stones/calacatta-viola.jpg"
+          alt="Calacatta Viola Marble"
+        />
+
+        <h3>Calacatta Viola</h3>
+
+      </a>
+
+      <article class="stone-card">
+
+        <img
+          src="/images/materials/featured-stones/beige-travertine.jpg"
+          alt="Beige Travertine"
+        />
+
+        <h3>Beige Travertine</h3>
+
+      </article>
+
+      <article class="stone-card">
+
+        <img
+          src="/images/materials/featured-stones/beige-limestone.jpg"
+          alt="Beige Limestone"
+        />
+
+        <h3>Beige Limestone</h3>
+
+      </article>
+
+      <article class="stone-card">
+
+        <img
+          src="/images/materials/featured-stones/green-onyx.jpg"
+          alt="Green Onyx"
+        />
+
+        <h3>Green Onyx</h3>
+
+      </article>
+
+      <article class="stone-card">
+
+        <img
+          src="/images/materials/featured-stones/blue-crystal.jpg"
+          alt="Blue Crystal Stone"
+        />
+
+        <h3>Blue Crystal</h3>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+<section class="materials-library">
+
+  <div class="container">
+
+    <h2>
+      Materials Library
+    </h2>
+    
+    <div class="materials-search">
+
+     <input
+      type="text"
+      id="materialSearch"
+      placeholder="Search materials..."
+     />
+
+    </div>
+
+    <div class="library-tags">
+
+     <button
+      class="active"
+      data-filter="all">
+      All
+     </button>
+
+     <button data-filter="marble">
+      Marble
+     </button>
+
+     <button data-filter="travertine">
+      Travertine
+     </button>
+
+     <button data-filter="limestone">
+      Limestone
+     </button>
+
+     <button data-filter="onyx">
+      Onyx
+     </button>
+
+     <button data-filter="crystal-stone">
+      Crystal Stone
+     </button>
+
+     <button data-filter="luxury-stone">
+      Luxury Stone
+     </button>
+
+    </div>
+
+
+    <p class="section-intro">
+      Explore a curated selection of natural stone materials
+      frequently used in custom furniture, bathroom and architectural projects.
+    </p>
+    
+    <p class="library-count">
+      14 Materials Available
+    </p>
+
+
+    <div class="library-grid">
+
+      <a class="library-card" data-category="marble"  href="#">
+
+        <img
+          src="/images/materials/library/bianca-calacatta.jpg"
+          alt="Bianca Calacatta"
+        />
+
+        <h3>Bianca Calacatta</h3>
+
+      </a>
+
+     <a class="library-card" data-category="limestone" href="#">
+
+        <img
+          src="/images/materials/library/beige-limestone.jpg"
+          alt="Beige Limestone"
+        />
+
+        <h3>Beige Limestone</h3>
+
+      </a>
+
+      <a class="library-card" data-category="travertine" href="#">
+
+        <img
+          src="/images/materials/library/beige-travertine.jpg"
+          alt="Beige Travertine"
+        />
+
+        <h3>Beige Travertine</h3>
+
+      </a>
+
+      <a class="library-card" data-category="marble" href="/materials/calacatta-viola/">
+
+        <img
+          src="/images/materials/library/calacatta-viola.jpg"
+          alt="Calacatta Viola"
+        />
+
+        <h3>Calacatta Viola</h3>
+
+      </a>
+
+      <a class="library-card" data-category="marble" href="#">
+
+        <img
+          src="/images/materials/library/serpeggiante.jpg"
+          alt="Serpeggiante"
+        />
+
+        <h3>Serpeggiante</h3>
+
+      </a>
+
+      <a class="library-card" data-category="crystal-stone" href="#">
+
+        <img
+          src="/images/materials/library/blue-crystal.jpg"
+          alt="Blue Crystal"
+        />
+
+        <h3>Blue Crystal</h3>
+
+      </a>
+
+      <a class="library-card" data-category="onyx" href="#">
+
+        <img
+          src="/images/materials/library/green-onyx.jpg"
+          alt="Green Onyx"
+        />
+
+        <h3>Green Onyx</h3>
+
+      </a>
+
+      <a class="library-card" data-category="crystal-stone" href="#">
+
+        <img
+          src="/images/materials/library/purple-crystal.jpg"
+          alt="Purple Crystal"
+        />
+
+        <h3>Purple Crystal</h3>
+
+      </a>
+
+      <a class="library-card" data-category="crystal-stone" href="#">
+
+        <img
+          src="/images/materials/library/white-crystal.jpg"
+          alt="White Crystal"
+        />
+
+        <h3>White Crystal</h3>
+
+      </a>
+
+      <a class="library-card" data-category="marble" href="#">
+
+        <img
+          src="/images/materials/library/rosso-levanto.jpg"
+          alt="Rosso Levanto"
+        />
+
+        <h3>Rosso Levanto</h3>
+
+      </a>
+
+      <a class="library-card" data-category="travertine" href="#">
+
+        <img
+          src="/images/materials/library/silver-travertine.jpg"
+          alt="Silver Travertine"
+        />
+
+        <h3>Silver Travertine</h3>
+
+      </a>
+
+      <a class="library-card" data-category="travertine" href="#">
+
+        <img
+          src="/images/materials/library/red-travertine.jpg"
+          alt="Red Travertine"
+        />
+
+        <h3>Red Travertine</h3>
+
+      </a>
+
+      <a class="library-card" data-category="marble" href="#">
+
+        <img
+          src="/images/materials/library/volakas-white.jpg"
+          alt="Volakas White"
+        />
+
+        <h3>Volakas White</h3>
+
+      </a>
+
+      <a class="library-card" data-category="marble" href="#">
+
+        <img
+          src="/images/materials/library/panda-white.jpg"
+          alt="Panda White"
+        />
+
+        <h3>Panda White</h3>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<script is:inline>
+
+ document.addEventListener("DOMContentLoaded", () => {
+
+  const buttons =
+    document.querySelectorAll(
+      ".library-tags button"
+    );
+
+  const cards =
+    document.querySelectorAll(
+      ".library-card"
+    );
+  
+  const searchInput =
+    document.getElementById(
+      "materialSearch"
+    );
+
+
+  buttons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+      const filter =
+        button.dataset.filter;
+
+      buttons.forEach(btn =>
+        btn.classList.remove("active")
+      );
+
+      button.classList.add("active");
+
+      cards.forEach(card => {
+
+        const category =
+          card.dataset.category;
+
+        if (
+          filter === "all" ||
+          category === filter
+        ) {
+
+          card.style.display = "block";
+
+        } else {
+
+          card.style.display = "none";
+
+        }
+
+      });
+
+    });
+
+  });
+
+  searchInput.addEventListener(
+  "input",
+  () => {
+
+    const keyword =
+      searchInput.value
+        .toLowerCase();
+
+    cards.forEach(card => {
+
+      const title =
+        card.querySelector("h3")
+          .textContent
+          .toLowerCase();
+
+      if (
+        title.includes(keyword)
+      ) {
+
+        card.style.display =
+          "block";
+
+      } else {
+
+        card.style.display =
+          "none";
+
+      }
+
+    });
+
+  }
+);
+
+});
+
+</script>
+
+
+<section class="applications">
+
+  <div class="container">
+
+    <h2>Applications Of Natural Stone</h2>
+
+    <div class="application-grid">
+
+      <a href="/stone-sinks/">
+        Luxury marble and travertine sinks
+      </a>
+
+      <a href="/stone-tables/">
+        Custom dining and coffee tables
+      </a>
+
+      <a href="/stone-bathtubs/">
+        Handcrafted monolithic bathtubs
+      </a>
+
+      <a href="/stone-fireplace-surrounds/">
+        Architectural stone fireplace solutions
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="materials-faq">
+
+  <div class="container">
+
+    <h2>
+      FAQ
+    </h2>
+
+    <p class="faq-intro">
+      Answers to common questions about natural stone materials,
+      applications and maintenance.
+    </p>
+
+    <div class="faq-list">
+
+      <details class="faq-item">
+
+        <summary>
+          What is the best stone for bathroom sinks?
+        </summary>
+
+        <p>
+          Marble, travertine and onyx are popular choices for luxury
+          bathroom sinks. The best option depends on the desired style,
+          maintenance requirements and project budget.
+        </p>
+
+      </details>
+
+      <details class="faq-item">
+
+        <summary>
+          Is quartzite more durable than marble?
+        </summary>
+
+        <p>
+          Yes. Quartzite is generally harder and more resistant to
+          scratches and etching than marble, making it suitable for
+          high-use surfaces.
+        </p>
+
+      </details>
+
+      <details class="faq-item">
+
+        <summary>
+          Does travertine require sealing?
+        </summary>
+
+        <p>
+          Yes. Travertine is a porous natural stone and should be sealed
+          periodically to help protect against moisture and staining.
+        </p>
+
+      </details>
+
+      <details class="faq-item">
+
+        <summary>
+          What is the most durable natural stone?
+        </summary>
+
+        <p>
+          Granite and quartzite are among the most durable natural stones,
+          offering excellent strength and long-term performance.
+        </p>
+
+      </details>
+
+      <details class="faq-item">
+
+        <summary>
+          Can natural stone be customized?
+        </summary>
+
+        <p>
+          Yes. Natural stone can be fabricated into custom sinks, tables,
+          bathtubs, fireplace surrounds and architectural elements in a
+          wide range of dimensions and finishes.
+        </p>
+
+      </details>
+
+      <details class="faq-item">
+
+        <summary>
+          Which stone is best for luxury furniture?
+        </summary>
+
+        <p>
+          Marble, travertine, onyx and premium quartzites are frequently
+          selected for luxury furniture because of their unique patterns
+          and architectural appeal.
+        </p>
+
+      </details>
+
+    </div>
+
+  </div>
+
+</section>
+<section class="materials-cta">
+
+  <div class="container">
+
+    <h2>Ready To Start Your Custom Stone Project?</h2>
+
+    <p>
+      Our specialists can help you select suitable materials,
+finishes and fabrication options for your project.
+
+    <Button
+      href="/contact/"
+      variant="primary"
+    >
+      Request A Quote
+    </Button>
+
+     <a
+      href="https://wa.me/8613927192948"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="whatsapp-button"
+    >
+      Chat on WhatsApp
+    </a>
+    
+  </div>
+
+</section>
+
+</BaseLayout>

@@ -52,15 +52,41 @@
 
 .faq-section{
 
+ margin-top:60px;
  border-top:
  1px solid rgba(0,0,0,.08);
 
  padding-top:40px;
 }
 
+.faq-section h2{
+
+  margin-bottom:24px;
+}
+
+
 .faq-item{
 
- padding:16px 20px;
+  border-bottom:
+  1px solid rgba(0,0,0,.08);
+
+  padding:18px 0;
+}
+
+.faq-item summary{
+
+  cursor:pointer;
+
+  font-weight:600;
+
+  list-style:none;
+}
+
+.faq-item p{
+
+  margin-top:12px;
+
+  color:#666;
 }
 
 .faq-question{

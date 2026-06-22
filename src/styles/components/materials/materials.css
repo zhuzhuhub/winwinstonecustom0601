@@ -1,0 +1,466 @@
+/* =====================================
+   Materials Hero
+===================================== */
+
+.materials-hero{
+  padding:50px 0 20px;
+}
+
+.materials-hero-content{
+  max-width:500px;
+  margin:0 auto;
+  text-align:center;
+}
+
+.materials-hero h1{
+
+  font-size:3rem;
+
+  white-space:nowrap;
+
+  line-height:1.05;
+
+  margin-bottom:10px;
+
+  text-align:center
+
+}
+
+.materials-hero-content p{
+  max-width:700px;
+  margin:0 auto;
+}
+
+
+/* =====================================
+   Featured Stone
+===================================== */
+
+.featured-stones{ padding:40px 0; }
+
+
+.featured-stones h2{
+  max-width:1100px; 
+ 
+  font-size:2rem;
+
+  line-height:1;
+
+  margin-bottom:4px;
+
+  text-align:left;
+}
+
+.section-intro{
+   max-width:1100px; 
+   margin:20px auto 0; 
+   text-align:left; 
+  }
+
+.stone-grid{ 
+   display:grid; 
+   grid-template-columns:repeat(3,1fr);
+   gap:40px;
+   margin-top:70px;
+ }
+
+ .stone-card{
+  text-decoration:none;
+  color:inherit;
+}
+
+.stone-card img{ 
+   width:100%; 
+   aspect-ratio:4/5; 
+   object-fit:cover;
+   border-radius:40px; 
+  }
+
+.stone-card h3{
+   margin-top:20px;
+   text-align:center;
+   font-size:1rem
+ }
+
+
+/* =====================================
+   Applications
+===================================== */
+.applications{
+  padding:40px 0;
+}
+
+.application-grid{
+
+  display:grid;
+  
+  grid-template-columns:
+  repeat(4,1fr);
+
+  gap:18px;
+
+  margin-top:40px;
+}
+
+.application-grid a{
+   padding:24px; 
+   border:1px solid rgba(0,0,0,.08); 
+  
+   text-decoration:none; 
+   color:inherit; 
+
+    min-height:100px;
+
+    border-radius:12px;
+
+    background:#fff;
+
+  }
+
+.applications h2{
+  max-width:1100px; 
+ 
+  font-size:2rem;
+
+  line-height:1;
+
+  margin-bottom:4px;
+
+  text-align:left;
+}
+/* =====================================
+   Materials Library
+===================================== */
+
+.materials-library{
+  padding:40px 0;
+}
+
+.materials-library h2{
+  
+
+  max-width:1100px; 
+ 
+  font-size:2rem;
+
+  line-height:1;
+
+  margin-bottom:4px;
+
+  text-align:left;
+}
+
+.materials-search{
+
+  max-width:500px;
+
+  margin:32px auto 0;
+
+}
+
+.materials-search input{
+
+  width:100%;
+
+  padding:14px 20px;
+
+  border:1px solid rgba(0,0,0,.12);
+
+  border-radius:999px;
+
+  font-size:1rem;
+
+  background:#fff;
+
+}
+
+.materials-search input:focus{
+
+  outline:none;
+
+  border-color:#0f5e53;
+
+}
+
+.library-grid{
+  display:grid;
+  grid-template-columns:repeat(8,1fr);
+  gap:18px;
+  margin-top:40px;
+}
+
+.library-card{
+  text-decoration:none;
+  color:inherit;
+}
+
+.library-card img{
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  border-radius:12px;
+}
+
+.library-card h3{
+  margin-top:16px;
+  text-align:center;
+  font-size:1rem;
+}
+
+
+.library-tags{
+
+  display:flex;
+
+  justify-content:center;
+
+  flex-wrap:wrap;
+
+  gap:12px;
+
+  margin-top:32px;
+
+}
+
+.library-tags{
+
+  display:flex;
+
+  justify-content:center;
+
+  flex-wrap:wrap;
+
+  gap:12px;
+
+  margin-top:28px;
+
+}
+
+.library-tags button{
+
+  border:none;
+
+  background:#fff;
+
+  padding:10px 20px;
+
+  border-radius:999px;
+
+  cursor:pointer;
+
+  border:1px solid rgba(0,0,0,.08);
+
+  transition:.3s;
+
+}
+
+.library-tags button.active{
+
+  background:#0f5e53;
+
+  color:#fff;
+
+}
+
+.library-tags span:hover{
+
+  background:#0f5e53;
+
+  color:#fff;
+
+}
+
+.library-count{
+
+  text-align:center;
+
+  margin-top:18px;
+
+  color:#666;
+
+  font-size:.95rem;
+
+}
+
+/* =====================================
+   Benefits
+===================================== */
+.why-stone{
+  padding:20px 0;
+}
+
+.why-stone h2{
+  text-align:left;
+  max-width:none;
+}
+
+.benefits-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:40px;
+  margin-top:40px;
+}
+/* =====================================
+   Materials FAQ
+===================================== */
+
+.materials-faq{
+  padding:80px 0;
+}
+
+.materials-faq h2{
+  text-align:center;
+  max-width:none;
+}
+
+.faq-intro{
+  max-width:760px;
+  margin:20px auto 0;
+  text-align:center;
+}
+
+.faq-list{
+  max-width:1000px;
+  margin:40px auto 0;
+}
+
+.faq-item{
+  border-bottom:1px solid rgba(0,0,0,.08);
+  padding:24px 0;
+}
+
+.faq-item summary{
+  cursor:pointer;
+  list-style:none;
+
+  font-size:1.1rem;
+  font-weight:600;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.faq-item summary::-webkit-details-marker{
+  display:none;
+}
+
+.faq-item summary::after{
+  content:"+";
+  font-size:1.5rem;
+}
+
+.faq-item[open] summary::after{
+  content:"−";
+}
+
+.faq-item p{
+  margin-top:18px;
+  line-height:1.9;
+  max-width:800px;
+}
+
+
+/* =====================================
+   CTA
+===================================== */
+.materials-cta{
+  padding:40px 0;
+}
+
+.materials-cta-box {
+
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  padding:
+    60px 50px;
+
+  text-align: left;
+
+  background: var(--green);
+
+  color: #fff;
+
+  border-radius: 24px;
+}
+
+
+
+
+
+.materials-cta h2{
+
+  max-width:1100px; 
+ 
+  font-size:2rem;
+
+  line-height:1s;
+
+  margin-bottom:4px;
+
+  text-align:left;
+}
+
+.materials-cta-actions {
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 18px;
+
+  flex-wrap: wrap;
+}
+
+
+/* =====================================
+   Mobile
+===================================== */
+
+@media (max-width:1200px){
+
+  .materials-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+  .library-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+
+}
+
+@media(max-width:768px){
+
+   .material-card{
+  grid-template-columns:1fr;
+  gap:20px;
+   }
+
+  .material-card img{
+  height:auto;
+  }
+
+  .materials-grid{
+    grid-template-columns:1fr;
+  }
+
+  .stone-grid{
+    grid-template-columns:1fr;
+  }
+
+
+  .application-grid{
+    grid-template-columns:1fr;
+  }
+
+  .benefits-grid{
+    grid-template-columns:1fr;
+  }
+  .library-grid{
+    grid-template-columns:1fr;
+  }
+
+}
+

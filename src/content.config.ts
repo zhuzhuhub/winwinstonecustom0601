@@ -20,7 +20,35 @@ const blog = defineCollection({
     publishDate: z.coerce.date(),
     category: z.string(),
     featuredImage: z.string(),
-    featured: z.boolean().optional()
+    featured: z.boolean().optional(),
+    
+
+     // ✅ V2.5新增：Summary
+    summary: z.array(
+        z.union([
+            z.string(), 
+            z.object({
+              text: z.string(),
+              anchor: z.string().optional()
+            })
+          ])
+        ).optional(),
+
+    // ✅ V2.5新增：FAQ
+    faq: z.array(
+      z.object({
+        question: z.string(),
+        answer: z.string()
+      })
+     ).optional(),
+
+    // ✅ V2.5新增：Related Resources
+    relatedResources: z.array(
+      z.object({
+        title: z.string(),
+        url: z.string()
+      })
+    ).optional(),
   })
 });
 

@@ -80,7 +80,7 @@ POST HERO
 
  font-size:1.8rem;
 
- line-height:1.25;
+ line-height:1.2;
 
  margin-top:42px;
 
@@ -88,7 +88,7 @@ POST HERO
 }
 
 .post-content h3 {
-
+  max-width: 680px;
   font-size: 1.3rem;
 
   margin-top: 24px;
@@ -97,6 +97,8 @@ POST HERO
 }
 
 .post-content p {
+
+  margin-bottom: 14px;
 
   line-height:1.75;
 
@@ -119,6 +121,18 @@ POST HERO
   margin: 24px 0 24px 24px;
 }
 
+
+.post-content h3 + p {
+
+  max-width: 680px;
+
+  line-height: 1.25;
+}
+
+.post-content h3 + ul {
+
+  max-width: 680px;
+}
 
 .post-content strong {
   color: #111;

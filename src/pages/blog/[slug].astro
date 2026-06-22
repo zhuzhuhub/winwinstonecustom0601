@@ -1,4 +1,5 @@
 ---
+import GithubSlugger from "github-slugger";
 
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
@@ -9,272 +10,282 @@ import "../../styles/components/blog.css";
 import QuickSummary from "../../components/blog/QuickSummary.astro";
 import "../../styles/components/blog/blog-summary.css";
 
-import FAQ from "../../components/blog/FAQ.astro";
+import AutoFAQ from "../../components/blog/AutoFAQ.astro";
 import "../../styles/components/blog/blog-faq.css";
 
+import RelatedResources from "../../components/blog/RelatedResources.astro";
 
 import { marked } from "marked";
 
-
+/* -------------------------
+   Get posts
+-------------------------- */
 export async function getStaticPaths() {
+  const posts = await getCollection("blog");
 
- const posts = await getCollection("blog");
-
-  return posts.map(post => ({
-    params: {
-      slug: post.id
-    },
-    props: {
-      post
-    }
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post }
   }));
 }
 
 const { post } = Astro.props;
 
-const { title,description,publishDate,category, featuredImage } = post.data;
+console.log("POST DATA:", post.data);
 
-const articleBody = post.body;
+/* -------------------------
+   Related posts
+-------------------------- */
+const allPosts = await getCollection("blog");
 
+const relatedPosts = allPosts
+  .filter((item) => item.id !== post.id)
+  .filter((item) => item.data.category === post.data.category)
+  .slice(0, 3);
 
-const articleHtml = marked.parse( articleBody );
+/* -------------------------
+   Basic data
+-------------------------- */
+const { title, description, publishDate, category, featuredImage } = post.data;
 
+const articleBody = post.body ?? "";
+const articleHtml = marked.parse(articleBody, {
+  headerIds: true,
+  headerPrefix: ""
+});
+/* -------------------------
+  FAQ
+-------------------------- */
 
+const faqItems = post.data.faq ?? [];
 
+/* -------------------------
+   TOC generation
+-------------------------- */
+import { marked } from "marked";
 
-const faqSchema = {
+const slugger = new GithubSlugger();
+
+marked.use({
+  headerIds: true,
+  headerPrefix: ""
+});
+
+const toc =
+  articleBody.match(/^##\s+(.+)$/gm)?.map((line) => {
+    const text = line.replace("##", "").trim();
+
+    return {
+      text,
+      id: slugger.slug(text)
+    };
+  }) ?? [];
+/* -------------------------
+   Schema
+-------------------------- */
+const faqSchema =
+  faqItems.length > 0
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faqItems.map((item) => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: item.answer
+          }
+        }))
+      }
+    : null;
+
+const authorSchema = {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is the best stone for a bathroom sink?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Marble remains one of the most popular materials for custom bathroom sinks."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does marble require sealing?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Most marble sinks benefit from periodic sealing to reduce staining."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can stone sinks be customized?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Dimensions, finishes and drain locations can all be customized."
-      }
-    }
-  ]
+  "@type": "Person",
+  name: "Win-Win Stone Team",
+  jobTitle: "Stone Manufacturing Consultant",
+  worksFor: {
+    "@type": "Organization",
+    name: "Win-Win Stone"
+  }
 };
 
-
-
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: title,
+  description,
+  datePublished: new Date(publishDate).toISOString(),
+  author: {
+    "@type": "Person",
+    name: "Win-Win Stone Team"
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Win-Win Stone"
+  },
+  image: featuredImage ? [featuredImage] : []
+};
 ---
 
-<script
-  type="application/ld+json"
-  set:html={JSON.stringify(faqSchema)}
-></script>
+<!-- Schema -->
+{faqSchema && (
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+)}
 
-<BaseLayout
-  title={title}
-  description={description}
->
+<script type="application/ld+json" set:html={JSON.stringify(authorSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
 
+<!-- Reading progress -->
+<div id="reading-progress"></div>
 
-<section class="blog-post">
+<script>
+  const progress = document.getElementById("reading-progress");
 
-  <div class="container">
+  window.addEventListener("scroll", () => {
+    const total =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
 
-    <nav class="breadcrumb">
+    const current = window.scrollY;
 
-      <a href="/">Home</a>
+    const percent = (current / total) * 100;
 
-      <span>/</span>
+    if (progress) {
+      progress.style.width = `${percent}%`;
+    }
+  });
+</script>
 
-      <a href="/blog/">Blog</a>
+<BaseLayout title={title} description={description}>
+  <section class="blog-post">
+    <div class="container">
 
-      <span>/</span>
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb">
+        <a href="/">Home</a>
+        <span>/</span>
+        <a href="/blog/">Blog</a>
+        <span>/</span>
+        <span>{title}</span>
+      </nav>
 
-      <span>{title}</span>
+      <!-- Header -->
+      <header class="post-header">
+        <span class="post-category">{category}</span>
+        <h1>{title}</h1>
 
-    </nav>
+        <p class="post-meta">
+          {new Date(publishDate).toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "long",
+            day: "numeric"
+          })}
+          <div class="."></div>
+          6 Min Read
+        </p>
+      </header>
 
-    <header class="post-header">
+      <!-- Featured Image -->
+      <img class="featured-image" src={featuredImage} alt={title} />
 
-      <span class="post-category">
-        {category}
-      </span>
+      <!-- Layout -->
+      <section class="post-layout">
 
-      <h1>
-        {title}
-      </h1>
+        <!-- MAIN -->
+        <article class="post-content">
 
-      <p class="post-meta">
+          <QuickSummary items={post.data.summary ?? []} />
 
-        {new Date(publishDate).toLocaleDateString("en-US",{
-          year:"numeric",
-          month:"long",
-          day:"numeric"
-       })}
-
-       •
-
-       6 Min Read
-
-      </p>
-
-    </header>
-    
-    <img
-      class="featured-image"
-      src={featuredImage}
-      alt={title}
-    />
-
-    <QuickSummary />
-
-   <section class="post-layout">
-       <article class="post-content"> 
           <div set:html={articleHtml} />
-          
-          <FAQ />
+
+          <!-- FAQ -->
+          {faqItems.length > 0 && (
+            <AutoFAQ items={faqItems} />
+          )}
+
+
+          <!-- Related Resources -->
+
+          {console.log("RELATED:", post.data.relatedResources)}
+
+         
            
-       </article>
+          <RelatedResources items={post.data.relatedResources ?? []} />
 
-     <aside class="post-sidebar">
+      
 
-    
-      <div class="sidebar-card toc-card">
+          <!-- Related Posts -->
+          {relatedPosts.length > 0 && (
+            <section class="related-posts">
+              <h2>Related Articles</h2>
 
-       <h3>
-        On This Page
-       </h3>
+              <div class="related-post-grid">
+                {relatedPosts.map((item) => (
+                  <a href={`/blog/${item.id}/`} class="related-post-card">
+                    <h3>{item.data.title}</h3>
+                    <p>{item.data.description}</p>
+                  </a>
+                ))}
+              </div>
+            </section>
+          )}
 
-       <ul class="toc-list">
+        </article>
 
-        <li>
-          <a href="#what-buyers-usually-compare-before-choosing-stone">
-           What Buyers Compare
-          </a>
-       </li>
+        <!-- SIDEBAR -->
+        <aside class="post-sidebar">
 
-       <li>
-         <a href="#marble-travertine-quartzite-and-onyx-at-a-glance">
-           Material Comparison
-         </a>
-       </li>
+          <!-- TOC -->
+          <div class="sidebar-card toc-card">
+            <h3>On This Page</h3>
+            <ul class="toc-list">
+              {toc.map((item) => (
+                <li>
+                  <a href={`#${item.id}`}>{item.text}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
 
+          <!-- Categories -->
+          <div class="sidebar-card">
+            <h3>Popular Categories</h3>
+            <ul>
+              <li><a href="/stone-sinks/">Stone Sinks</a></li>
+              <li><a href="/stone-tables/">Stone Tables</a></li>
+              <li><a href="/stone-bathtubs/">Stone Bathtubs</a></li>
+            </ul>
+          </div>
 
-       <li>
-        <a href="#what-to-confirm-before-production-starts">
-          Production Checklist
-        </a>
-       </li>
+          <!-- Trust -->
+          <div class="sidebar-card author-trust">
+            <h3>Author & Trust</h3>
+            <p>Win-Win Stone Team</p>
 
-       <li>
-        <a href="#final-thoughts">
-          Final Thoughts
-        </a>
-       </li>
+            <ul>
+              <li>15+ Years Industry Experience</li>
+              <li>OEM & ODM Manufacturing</li>
+              <li>Exported To 30+ Countries</li>
+              <li>Custom Stone Project Support</li>
+            </ul>
+          </div>
 
-    </ul>
+          <!-- CTA -->
+          <div class="sidebar-card review-card">
+            <h3>Free Stone Project Review</h3>
+            <p>
+              Send your drawings, dimensions or reference images.
+            </p>
 
-  </div>
+            <a href="/contact/" class="sidebar-button">
+              Request Review
+            </a>
+          </div>
 
-    
-      <div class="sidebar-card">
+        </aside>
 
-       <h3>
-         Popular Categories
-       </h3>
-
-       <ul>
-
-         <li>
-           <a href="/stone-sinks/">
-             Stone Sinks
-           </a>
-         </li>
-
-         <li>
-           <a href="/stone-tables/">
-             Stone Tables
-           </a>
-         </li>
-
-         <li>
-           <a href="/stone-bathtubs/">
-             Stone Bathtubs
-           </a>
-         </li>
-
-       </ul>
-
-     </div>
-
-     <div class="sidebar-card author-trust">
-
-      <h3>
-       Author & Trust
-      </h3>
-
-      <p>
-        Win-Win Stone Team
-      </p>
-
-      <ul>
-
-       <li>15+ Years Industry Experience</li>
-
-       <li>OEM & ODM Manufacturing</li>
-
-       <li>Exported To 30+ Countries</li>
-
-       <li>Custom Stone Project Support</li>
-
-      </ul>
-
+      </section>
     </div>
-
-    <div class="sidebar-card review-card">
-
-     <h3>
-      Free Stone Project Review
-     </h3>
-
-     <p>
-
-      Send your drawings,
-      dimensions or reference images.
-
-     </p>
-
-     <a
-      href="/contact/"
-      class="sidebar-button"
-     >
-
-      Request Review
-
-     </a>
-
-    </div>
-
-
-   </aside>
-
-
-</section>
-
-  </div>
-
-</section>
-
+  </section>
 </BaseLayout>

@@ -11,6 +11,35 @@ category: Stone Sinks
 featuredImage: /images/blog/how-to-choose-the-Best-Custom-Stone-Bathroom-Sink.jpg
 
 featured: true
+
+
+summary:
+  - text: Compare marble, travertine and quartzite
+    anchor: "#what-buyers-usually-compare-before-choosing-stone"
+
+  - text: Understand durability differences
+    anchor: "#marble-travertine-quartzite-onyx-and-luxury-stone-at-a-glance"
+
+  - text: Review fabrication checklist
+    anchor: "#what-to-confirm-before-production-starts"
+
+relatedResources:
+  - title: Explore Stone Sinks
+    url: /stone-sinks/
+
+  - title: Browse Materials
+    url: /materials/
+
+  - title: Request Custom Quote
+    url: /contact/
+
+faq:
+  - question: What is the best stone for bathroom sink?
+    answer: Marble is most popular for luxury sinks due to its aesthetics and workability.
+
+  - question: Is quartzite better than marble?
+    answer: Quartzite is more durable and resistant to scratching and etching.
+
 ---
 
 Choosing the right stone for a <a href="/stone-sinks/">
@@ -54,7 +83,7 @@ alt="Marble"
 
 <h3>
 <a href="/materials/marble/">
-Marble →
+Marble
 </a>
 </h3>
 
@@ -79,7 +108,7 @@ alt="Travertine"
 
 <h3>
 <a href="/materials/travertine/">
-Travertine →
+Travertine
 </a>
 </h3>
 
@@ -103,7 +132,7 @@ alt="Quartzite"
 
 <h3>
 <a href="/materials/quartzite/">
-Quartzite →
+Quartzite 
 </a>
 
 <p>
@@ -124,7 +153,7 @@ alt="Onyx"
 
 <h3>
 <a href="/materials/onyx">
-Onyx →
+Onyx
 </a>
 <p>
 Statement feature pieces
@@ -142,7 +171,7 @@ alt="Luxury Stone"
 <div class="material-info">
 <h3>
 <a href="/materials/">
-Luxury Stone →
+Luxury Stone 
 </a>
 <p>
 Premium contemporary interiors
@@ -278,17 +307,3 @@ Marble remains the preferred choice for luxury visual impact. Travertine creates
 
 By selecting the right material and confirming production details early, you can create a custom stone sink that performs beautifully for years.
 
-
-## Related Resources
-
--<a href="/products/stone-sinks/">
-Stone Sinks Collection
-</a>
-
--<a href="/blog/marble-vs-travertine-for-bathroom-sinks/">
-Marble vs Travertine for Bathroom Sinks
-</a>
-
--<a href="/contact/">
-Request a Custom Quote
-</a>

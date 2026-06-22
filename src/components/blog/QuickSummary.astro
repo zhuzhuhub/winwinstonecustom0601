@@ -1,30 +1,34 @@
+---
+const { items = [] } = Astro.props;
+---
+
 <section class="quick-summary">
 
-  <h2>
-    Key Takeaways
-  </h2>
+  <h2>Quick Summary</h2>
 
   <ul>
 
-    <li>
-      Marble offers the most luxurious appearance.
-    </li>
+    {items.map((item) => {
 
-    <li>
-      Travertine creates a warm architectural look.
-    </li>
+      // ✅ 兼容旧结构（string）
+      if (typeof item === "string") {
+        return (
+          <li>
+            {item}
+          </li>
+        );
+      }
 
-    <li>
-      Quartzite provides stronger durability.
-    </li>
+      // ✅ 新结构（object）
+      return (
+        <li>
+          <a href={item.anchor ?? "#"}>
+            {item.text ?? item}
+          </a>
+        </li>
+      );
 
-    <li>
-      Onyx works best for statement projects.
-    </li>
-
-    <li>
-      Always confirm slab photos before production.
-    </li>
+    })}
 
   </ul>
 
