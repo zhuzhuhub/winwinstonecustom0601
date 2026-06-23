@@ -238,13 +238,13 @@
 }
 
 .category-customization h2 {
-  max-width: 600px;
+  max-width: 1400px;
 
   align-items: left;
 }
 
 .category-customization p {
-  max-width: 600px;
+  max-width: 1400px;
 
   align-items: left;
 }
@@ -334,13 +334,13 @@
 }
 
 .category-applications h2 {
-  max-width: 600px;
+  max-width: 1400px;
 
   align-items: left;
 }
 
 .category-applications p {
-  max-width: 600px;
+  max-width: 1400px;
 
   align-items: left;
 }
@@ -492,6 +492,22 @@
   padding: 0px 0 0px;
 }
 
+.category-final-cta h2 {
+
+  max-width:1400px; 
+
+  text-align:left;
+
+
+}
+
+.category-final-cta p{
+   max-width:1400px; 
+ 
+   text-align:left; 
+   
+  }
+
 .cta-box {
 
    max-width: 900px;
@@ -573,7 +589,22 @@
 /* ===================================
    Featured Products
 =================================== */
+.featured-products {
 
+  padding: 40px 0;
+}
+
+.featured-products h2 {
+  max-width: 1400px;
+
+  align-items: left;
+}
+
+.featured-products p {
+  max-width: 1400px;
+
+  align-items: left;
+}
 .featured-products .container {
   padding: 0px;
   width: min(94%, 1600px);

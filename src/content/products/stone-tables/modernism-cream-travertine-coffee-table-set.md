@@ -1,18 +1,17 @@
 ---
-title: Minimalist Calacatta White Marble Side Table
+title: Modernism Travertine Coffee Table
 
-description: Custom luxury calacatta side table for residential and hospitality projects.
+description: Custom modernism cream travertine coffee table set for the living rooms and the sitting room.
 
 category: stone-tables
 
 categoryLabel: Custom Stone Table
 
-material: Calacatta marble
+material: cream travertine
 
 finish:
-  - Polished
-  - Honed
-  - Custom finished
+  - Polished 
+  - custom finished
 
 heroBadges:
   - OEM Available
@@ -25,9 +24,9 @@ keyFeatures:
     description: >
       Experience the perfect fusion of advanced CNC precision and master stonemason artistry with our custom stone pedestal basins. Each table is first shaped by cutting-edge machinery for flawless geometry, then meticulously hand-finished by skilled artisans to reveal natural veining and a silky-smooth surface. The result is a functional sculpture that elevates any luxury residential and hospitality projects.
 
-  - title: Premium Calacatta White Marble
+  - title: Premium Cream Travertine
     description: >
-      Every side table begins with nature’s finest raw materials. We rigorously select each block and slab—examining dimensions, vein patterns, and structural integrity to ensure nothing but premium quality. Whether you need consistent color tones or unique natural variations, our strict sourcing process guarantees beauty, durability, and value.
+      Every coffee table begins with nature’s finest raw materials.We rigorously select each block and slab—examining dimensions, vein patterns, and structural integrity to ensure nothing but premium quality. Whether you need consistent color tones or unique natural variations, our strict sourcing process guarantees beauty, durability, and value.
 
   - title: Fully Customizable Dimensions
     description: >
@@ -48,24 +47,22 @@ keyFeatures:
   
 moq: 1 Piece
 
-leadTime: 25-30 Days
+leadTime: 15-30 Days
 
-featuredImage: /images/products/stone-tables/minimalist-calacatta-white-side-table/cover.webp
-featureImage: /images/products/stone-tables/minimalist-calacatta-white-side-table/cover.webp
+featuredImage: /images/products/stone-tables/modernism-cream-travertine-coffee-table-set/cover.jpg
+featureImage: /images/products/stone-tables/modernism-cream-travertine-coffee-table-set/scene-02.jpg
 
 gallery:
-  - image: /images/products/stone-tables/minimalist-calacatta-white-side-table/cover.webp
-  - image: /images/products/stone-tables/minimalist-calacatta-white-side-table/detail-01.webp
-  - image: /images/products/stone-tables/minimalist-calacatta-white-side-table/detail-02.webp
-  - image: /images/products/stone-tables/minimalist-calacatta-white-side-table/detail-03.webp
-  - image: /images/products/stone-tables/minimalist-calacatta-white-side-table/detail-04.webp
-  - image: /images/products/stone-tables/minimalist-calacatta-white-side-table/scene-01.webp
-  - image: /images/products/stone-tables/minimalist-calacatta-white-side-table/scene-02.webp
+  - image: /images/products/stone-tables/modernism-cream-travertine-coffee-table-set/cover.jpg
+  - image: /images/products/stone-tables/modernism-cream-travertine-coffee-table-set/detail-01.jpg
+  - image: /images/products/stone-tables/modernism-cream-travertine-coffee-table-set/detail-02.jpg
+  - image: /images/products/stone-tables/modernism-cream-travertine-coffee-table-set/detail-03.jpg
+  - image: /images/products/stone-tables/modernism-cream-travertine-coffee-table-set/scene-01.jpg
+  - image: /images/products/stone-tables/modernism-cream-travertine-coffee-table-set/scene-02.jpg
 
 seoTitle: Custom Calacatta White Marble side tables Manufacturer
 
 seoDescription: Custom luxury marble side tables manufacturer for villas, hotels and high-end residential  projects.
-
 ---
 
 ## Product Overview
@@ -76,7 +73,7 @@ Ideal for luxury hotels, villas and high-end residential projects.
 
 ## Features
 
-- Natural marble texture
+- Natural travertine texture
 - Custom dimensions available
 - Multiple finish options
 - Suitable for luxury interiors
