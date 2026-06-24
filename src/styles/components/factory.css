@@ -691,3 +691,109 @@
   }
 
 }
+/* =========================
+   Factory CTA
+========================= */
+.factory-cta {
+
+  padding: 20px;
+}
+
+.factory-cta-box {
+
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  padding: 60px 50px;
+
+  text-align: center;
+
+  border-radius: 24px;
+ 
+  background: var(--green);
+}
+
+.factory-cta .eyebrow {
+
+  display: inline-block;
+
+  margin-bottom: 14px;
+
+  font-size: .85rem;
+
+  font-weight: 600;
+
+  letter-spacing: .08em;
+
+  text-transform: uppercase;
+
+  color: #2f5d50;
+}
+
+.factory-cta h2 {
+  max-width: 1100px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: clamp(2rem,4vw,3rem);
+
+}
+
+.factory-cta p {
+
+  max-width: 800px;
+
+  margin: 0 auto 32px;
+
+  color: #ffffff95;
+
+  line-height: 1.8;
+}
+
+.factory-cta-features {
+
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 16px;
+
+  margin-bottom: 36px;
+}
+
+.factory-cta-features span {
+
+  padding: 10px 18px;
+
+  border-radius: 999px;
+
+  background: white;
+
+  border: 1px solid rgba(0,0,0,.06);
+
+  font-size: .95rem;
+}
+
+.cta-actions {
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 18px;
+
+  flex-wrap: wrap;
+}
+
+
+@media (max-width:768px){
+
+  .factory-cta-box {
+
+    padding: 40px 24px;
+  }
+
+}
