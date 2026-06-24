@@ -1,18 +1,18 @@
 ---
-title: Freestanding Cylindrial Marble Pedestal Sink
+title: Freestanding Cylindrical Pedestal Sink
 
-description: Luxury custom marble freestanding cylindrial pedestal sink for bathroom projects.
+description: Luxury custom 100% natural marble freestanding cylindrical pedestal sink for luxury bathrooms.
 
 category: stone-sinks
 
 categoryLabel: Custom Stone Sink
 
-material: 100% Natural Marble
+material: 100% natural marble
 
 finish:
   - Polished
   - Honed
-
+  - custom finished
 
 heroBadges:
   - OEM Available
@@ -25,7 +25,7 @@ keyFeatures:
     description: >
       Experience the perfect fusion of advanced CNC precision and master stonemason artistry with our custom stone pedestal basins. Each sink is first shaped by cutting-edge machinery for flawless geometry, then meticulously hand-finished by skilled artisans to reveal natural veining and a silky-smooth surface. The result is a functional sculpture that elevates any luxury bathroom.
 
-  - title: Premium suitable Marble
+  - title: Premium natural White Marble
     description: >
       Every pedestal basin begins with nature’s finest raw materials. We rigorously select each block and slab—examining dimensions, vein patterns, and structural integrity to ensure nothing but premium quality. Whether you need consistent color tones or unique natural variations, our strict sourcing process guarantees beauty, durability, and value.
 
@@ -47,32 +47,33 @@ keyFeatures:
 
 moq: 1 Piece
 
-leadTime: 25-30 Days
+leadTime: 25-35 Days
 
-featuredImage: /images/products/stone-sinks/black-marble-freestanding-cylindrical-pedestal-sink/cover.jpg
+featuredImage: /images/products/stone-sinks/freestanding-cylindrical-natural-marble-pedestal-sink/cover.jpg
 
-featureImage: /images/products/stone-sinks/black-marble-freestanding-cylindrical-pedestal-sink/scene-01.jpg
+featureImage: /images/products/stone-sinks/freestanding-cylindrical-natural-marble-pedestal-sink/scene-01.jpg
 
 gallery:
 
-  - image: /images/products/stone-sinks/black-marble-freestanding-cylindrical-pedestal-sink/cover.jpg
+  - image: /images/products/stone-sinks/freestanding-cylindrical-natural-marble-pedestal-sink/cover.jpg
   
 
-  - image: /images/products/stone-sinks/black-marble-freestanding-cylindrical-pedestal-sink/detail-01.jpg
+  - image: /images/products/stone-sinks/freestanding-cylindrical-natural-marble-pedestal-sink/detail-01.jpg
   
-  - image: /images/products/stone-sinks/black-marble-freestanding-cylindrical-pedestal-sink/detail-02.jpg
-  
-
-  - image: /images/products/stone-sinks/black-marble-freestanding-cylindrical-pedestal-sink/detail-03.jpg
+  - image: /images/products/stone-sinks/freestanding-cylindrical-natural-marble-pedestal-sink/detail-02.jpg
   
 
-  - image: /images/products/stone-sinks/black-marble-freestanding-cylindrical-pedestal-sink/scene-01.jpg
+  - image: /images/products/stone-sinks/freestanding-cylindrical-natural-marble-pedestal-sink/detail-03.jpg
   
 
-  - image: /images/products/stone-sinks/black-marble-freestanding-cylindrical-pedestal-sink/scene-02.jpg
+  - image: /images/products/stone-sinks/freestanding-cylindrical-natural-marble-pedestal-sink/detail-04.jpg
+   
+
+  - image: /images/products/stone-sinks/freestanding-cylindrical-natural-marble-pedestal-sink/scene-01.jpg
+  
   
     
-seoTitle: Black Marble Freestanding Cylindrical Pedestal Sink Manufacturer
+seoTitle: Custom Natural Marble Cylinder Pedestal Sink Manufacturer
 
 seoDescription: Custom luxury marble pedestal sink manufacturer for villas, hotels and bathroom projects.
 
@@ -80,7 +81,7 @@ seoDescription: Custom luxury marble pedestal sink manufacturer for villas, hote
 
 ## Product Overview
 
-Custom stone sinks manufactured from premium 100% natural Marble.
+Custom stone sinks manufactured from premium natural White Marble.
 
 Ideal for luxury villas, hotels and high-end residential interiors.
 

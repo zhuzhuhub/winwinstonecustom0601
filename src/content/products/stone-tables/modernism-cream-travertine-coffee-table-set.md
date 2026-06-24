@@ -38,7 +38,7 @@ keyFeatures:
 
   - title: Luxury Project Ready
     description: >
-      Whether placed in a luxury villa, boutique hotel, spa bathroom, or premium residential interior, our bespoke stone side tables elevate the space with timeless elegance and natural beauty.
+      Whether placed in a luxury villa, boutique hotel, or premium residential interior, our bespoke stone side tables elevate the space with timeless elegance and natural beauty.
 
   - title: OEM & Global Support
     description: >

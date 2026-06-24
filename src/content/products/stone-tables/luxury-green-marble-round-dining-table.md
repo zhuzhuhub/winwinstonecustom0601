@@ -1,7 +1,7 @@
 ---
-title: Minimalist Calacatta White Marble Side Table
+title: Luxury Marble Round Dining Table
 
-description: Custom luxury calacatta side table for residential and hospitality projects.
+description: Custom luxury natural stone dining table for dining rooms and restaurants.
 
 category: stone-tables
 
@@ -25,9 +25,9 @@ keyFeatures:
     description: >
       Experience the perfect fusion of advanced CNC precision and master stonemason artistry with our custom stone pedestal basins. Each table is first shaped by cutting-edge machinery for flawless geometry, then meticulously hand-finished by skilled artisans to reveal natural veining and a silky-smooth surface. The result is a functional sculpture that elevates any luxury residential and hospitality projects.
 
-  - title: Premium suitable Marble
+  - title: Premium Suitable Natural Marble
     description: >
-      Every side table begins with nature’s finest raw materials. We rigorously select each block and slab—examining dimensions, vein patterns, and structural integrity to ensure nothing but premium quality. Whether you need consistent color tones or unique natural variations, our strict sourcing process guarantees beauty, durability, and value.
+      Every dining table begins with nature’s finest raw materials. We rigorously select each block and slab—examining dimensions, vein patterns, and structural integrity to ensure nothing but premium quality. Whether you need consistent color tones or unique natural variations, our strict sourcing process guarantees beauty, durability, and value.
 
   - title: Fully Customizable Dimensions
     description: >
@@ -39,7 +39,7 @@ keyFeatures:
 
   - title: Luxury Project Ready
     description: >
-      Whether placed in a luxury villa, boutique hotel, or premium residential interior, our bespoke stone side tables elevate the space with timeless elegance and natural beauty.
+      Whether placed in a luxury villa, boutique hotel, or premium residential interior, our bespoke stone dining tables elevate the space with timeless elegance and natural beauty.
 
   - title: OEM & Global Support
     description: >
@@ -50,17 +50,15 @@ moq: 1 Piece
 
 leadTime: 25-30 Days
 
-featuredImage: /images/products/stone-tables/minimalist-calacatta-white-side-table/cover.webp
-featureImage: /images/products/stone-tables/minimalist-calacatta-white-side-table/cover.webp
+featuredImage: /images/products/stone-tables/luxury-green-marble-round-dining-table/cover.jpg
+featureImage: /images/products/stone-tables/luxury-green-marble-round-dining-table/scene-01.jpg
 
 gallery:
-  - image: /images/products/stone-tables/minimalist-calacatta-white-side-table/cover.webp
-  - image: /images/products/stone-tables/minimalist-calacatta-white-side-table/detail-01.webp
-  - image: /images/products/stone-tables/minimalist-calacatta-white-side-table/detail-02.webp
-  - image: /images/products/stone-tables/minimalist-calacatta-white-side-table/detail-03.webp
-  - image: /images/products/stone-tables/minimalist-calacatta-white-side-table/detail-04.webp
-  - image: /images/products/stone-tables/minimalist-calacatta-white-side-table/scene-01.webp
-  - image: /images/products/stone-tables/minimalist-calacatta-white-side-table/scene-02.webp
+  - image: /images/products/stone-tables/luxury-green-marble-round-dining-table/cover.jpg
+  - image: /images/products/stone-tables/luxury-green-marble-round-dining-table/detail-01.jpg
+  - image: /images/products/stone-tables/luxury-green-marble-round-dining-table/detail-02.jpg
+  - image: /images/products/stone-tables/luxury-green-marble-round-dining-table/detail-03.jpg
+  - image: /images/products/stone-tables/minimalist-calacatta-white-side-table/scene-01.jpg
 
 seoTitle: Custom Calacatta White Marble side tables Manufacturer
 
@@ -70,7 +68,7 @@ seoDescription: Custom luxury marble side tables manufacturer for villas, hotels
 
 ## Product Overview
 
-Luxury custom marble side table crafted from natural Calacatta marble.
+Luxury custom marble side table crafted from natural marble.
 
 Ideal for luxury hotels, villas and high-end residential projects.
 

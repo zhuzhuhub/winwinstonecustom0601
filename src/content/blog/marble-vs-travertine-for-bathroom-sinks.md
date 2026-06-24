@@ -107,7 +107,7 @@ Travertine is often selected for projects that emphasize natural materials and u
 ## Marble vs Travertine Appearance Comparison
 
 ### Marble
-<a href="/materials/marble/">
+<a href="/materials/">
 Marble
 </a> typically creates a more dramatic and luxurious visual effect.
 
@@ -116,7 +116,7 @@ Characteristics: Bold veining / High visual contrast/Polished luxury appearance/
 Best for: Luxury residences/Boutique hotels/Premium powder rooms
 
 ### Travertine
-<a href="/materials/travertine/">
+<a href="/materials/">
 Travertine
 </a> creates a softer and more architectural atmosphere.
 

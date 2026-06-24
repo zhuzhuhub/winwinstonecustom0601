@@ -82,7 +82,7 @@ alt="Marble"
 <div class="material-info">
 
 <h3>
-<a href="/materials/marble/">
+<a href="/materials/">
 Marble
 </a>
 </h3>
@@ -107,7 +107,7 @@ alt="Travertine"
 <div class="material-info">
 
 <h3>
-<a href="/materials/travertine/">
+<a href="/materials/">
 Travertine
 </a>
 </h3>
@@ -131,7 +131,7 @@ alt="Quartzite"
 <div class="material-info">
 
 <h3>
-<a href="/materials/quartzite/">
+<a href="/materials/">
 Quartzite 
 </a>
 
@@ -152,7 +152,7 @@ alt="Onyx"
 <div class="material-info">
 
 <h3>
-<a href="/materials/onyx">
+<a href="/materials/">
 Onyx
 </a>
 <p>
