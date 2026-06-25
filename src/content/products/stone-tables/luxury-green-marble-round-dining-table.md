@@ -7,7 +7,7 @@ category: stone-tables
 
 categoryLabel: Custom Stone Table
 
-material: Calacatta marble
+material: 100% natural marble
 
 finish:
   - Polished
@@ -58,19 +58,19 @@ gallery:
   - image: /images/products/stone-tables/luxury-green-marble-round-dining-table/detail-01.jpg
   - image: /images/products/stone-tables/luxury-green-marble-round-dining-table/detail-02.jpg
   - image: /images/products/stone-tables/luxury-green-marble-round-dining-table/detail-03.jpg
-  - image: /images/products/stone-tables/minimalist-calacatta-white-side-table/scene-01.jpg
+  - image: /images/products/stone-tables/luxury-green-marble-round-dining-table/scene-01.jpg
 
-seoTitle: Custom Calacatta White Marble side tables Manufacturer
+seoTitle: Custom Natural Green Marble Round Dining Tables Manufacturer
 
-seoDescription: Custom luxury marble side tables manufacturer for villas, hotels and high-end residential  projects.
+seoDescription: Custom luxury green marble round dining tables manufacturer for villas, hotels and high-end residential  projects.
 
 ---
 
 ## Product Overview
 
-Luxury custom marble side table crafted from natural marble.
+Luxury custom marble dining table crafted from natural marble.
 
-Ideal for luxury hotels, villas and high-end residential projects.
+Ideal for villas, luxury hotels, villas and high-end residential projects.
 
 ## Features
 
