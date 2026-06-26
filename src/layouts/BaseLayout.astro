@@ -6,12 +6,54 @@ import Footer from "../components/Footer.astro";
 
 import favicon from "../assets/favicon.png";
 
+import ogImageDefault from "../assets/og-image.jpg";
+import logo from "../assets/logo.png";
+
 import "glightbox/dist/css/glightbox.min.css";
 
 const {
   title = "WIN WIN STONE",
   description = "Custom stone furniture manufacturer",
+  image = ogImageDefault.src,
 } = Astro.props;
+
+const site = "https://www.winwinstonecustom.com";
+
+const canonical =
+  new URL(Astro.url.pathname, site).toString();
+
+const ogImage =
+  image.startsWith("http")
+    ? image
+    : `${site}${image}`;
+
+const logoUrl = `${site}${logo.src}`;
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Win-Win Stone",
+  url: site,
+  logo: logoUrl,
+  description: "Custom stone furniture manufacturer specializing in marble, travertine, limestone, onyx and bespoke stone products.",
+  email: "info@winwinstonecustom.com",
+  sameAs: [
+    "https://www.youtube.com/@Winwinstone",
+    "https://www.instagram.com/winwinstonenick",
+    "https://www.tiktok.com/@winwinstone"
+  ]
+};
+
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Win-Win Stone",
+  url: site,
+  description: "Custom stone furniture manufacturer",
+  inLanguage: "en"
+};
+
 ---
 
 <!doctype html>
@@ -38,6 +80,77 @@ const {
       content={description}
     />
 
+
+
+    <link
+     rel="canonical"
+     href={canonical}
+    />
+
+    <meta
+     name="robots"
+     content="index, follow"
+   />
+
+    <meta
+     name="theme-color"
+     content="#ffffff"
+   />
+
+
+    <!-- Open Graph -->
+
+    <meta 
+     property="og:type" 
+     content="website"
+     />
+
+    <meta
+     property="og:title"
+     content={title}
+   />
+
+    <meta
+      property="og:description"
+      content={description}
+   />
+
+    <meta
+     property="og:url"
+     content={canonical}
+    />
+
+    <meta
+     property="og:image"
+     content={ogImage}
+   />
+
+    <meta
+     property="og:site_name"
+     content="Win-Win Stone"
+   />
+
+
+    <meta
+     name="twitter:card"
+     content="summary_large_image"
+   />
+
+    <meta
+     name="twitter:title"
+     content={title}
+   />
+
+    <meta
+     name="twitter:description"
+     content={description}
+   />
+
+    <meta
+     name="twitter:image"
+     content={ogImage}
+   />
+
     <!-- Favicon -->
 
     <link
@@ -60,6 +173,16 @@ const {
      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
      rel="stylesheet"
     />
+
+    <script
+     type="application/ld+json"
+     set:html={JSON.stringify(organizationSchema)}
+    />
+
+    <script
+     type="application/ld+json"
+     set:html={JSON.stringify(websiteSchema)}
+   />
 
   </head>
 

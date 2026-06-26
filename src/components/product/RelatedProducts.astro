@@ -11,13 +11,13 @@ const relatedProducts = products
     const slug =
       product.file
         ?.split("/")
-        .pop()
+        ?.pop()
         ?.replace(".md", "");
 
     return slug !== currentSlug;
 
   })
-  .slice(0, 3);
+  .slice(0, 4);
 ---
 
 {
@@ -30,12 +30,11 @@ const relatedProducts = products
         <div class="section-header">
 
           <h2>
-            Related Products
+            You May Also Like
           </h2>
 
           <p>
-            Explore more custom stone products
-            from this collection.
+            Explore more handcrafted natural stone products.
           </p>
 
         </div>
@@ -54,21 +53,30 @@ const relatedProducts = products
               return (
 
                 <a
-                  href={`/${category}/${slug}/`}
-                  class="related-card"
+                 href={`/${product.frontmatter.category}/${slug}/`}
+                 class="related-card"
                 >
 
-                  <img
-                    src={product.frontmatter.featuredImage}
-                    alt={product.frontmatter.title}
-                  />
+                <img
+                 src={product.frontmatter.featuredImage}
+                 alt={product.frontmatter.title}
+                 loading="lazy"
+                />
 
-                  <h3>
-                    {product.frontmatter.title}
-                  </h3>
+                <span 
+                 class="related-category">
+                 {product.frontmatter.categoryLabel}
+               </span>
 
-                </a>
+                <h3>
+                 {product.frontmatter.title}
+               </h3>
 
+                <span class="related-link">
+                 View Details →
+               </span>
+
+               </a>
               );
 
             })
