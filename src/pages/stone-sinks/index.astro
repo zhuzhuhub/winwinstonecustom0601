@@ -12,11 +12,38 @@ import FinalCTA from "../../components/category/FinalCTA.astro";
 
 import { getCollection } from "astro:content";
 
+import {
+  buildItemListSchema,
+  buildCollectionSchema,
+} from "../../lib/schema/category";
+
+const category = "stone-sinks";
+
+const siteUrl = (
+  import.meta.env.SITE ??
+  "https://www.winwinstonecustom.com"
+).replace(/\/$/, "");
+
 // 获取所有产品
 const products = await getCollection("products");
 
 // 过滤 Stone Sinks 分类产品
-const stoneSinks = products.filter(p => p.data.category === "stone-sinks");
+const stoneSinks = products.filter(
+  (p) => p.data.category === category
+);
+
+const itemListSchema = buildItemListSchema({
+  category,
+  products:stoneSinks,
+  baseUrl: siteUrl
+});
+
+const collectionSchema = buildCollectionSchema({
+  name: "Stone Sinks",
+  description:
+    "Luxury marble sinks, pedestal sinks, travertine sinks and custom natural stone bathroom basins.",
+  url: `${siteUrl}/stone-sinks/`,
+});
 
 ---
 <BaseLayout
@@ -71,5 +98,13 @@ const stoneSinks = products.filter(p => p.data.category === "stone-sinks");
   title={stoneSinksData.cta.title}
   description={stoneSinksData.cta.description}
  />
+
+
+<script type="application/ld+json" set:html={JSON.stringify(itemListSchema)} />
+
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify(collectionSchema)}
+/>
 
 </BaseLayout>

@@ -6,6 +6,9 @@ import ProductSpecifications from "../../components/product/ProductSpecification
 import ProductInquiryCTA from "../../components/product/ProductInquiryCTA.astro";
 import RelatedProducts from "../../components/product/RelatedProducts.astro";
 import ProductFeatures from "../../components/product/ProductFeatures.astro";
+
+import { buildProductSchema } from "../../lib/schema/product";
+
 // 动态生成路径
 export async function getStaticPaths() {
   const modules = import.meta.glob("../../content/products/**/*.md", { eager: true });
@@ -73,13 +76,27 @@ const allProducts =
   Object.values(allModules);
 
 
-const productForLd = {
-  name: title,
-  slug: `stone-bathtubs/${slug}`,
-  image: absUrl(featuredImage),
-  sku: frontmatter.sku || undefined,
-  brand: frontmatter.brand || 'Win-Win Stone'
-};
+const productSchema = buildProductSchema({
+  title,
+  description,
+
+  image: featuredImage
+    ? [
+        absUrl(featuredImage),
+        ...(gallery?.map((g) => absUrl(g.image)) ?? []),
+      ]
+    : undefined,
+
+  sku: frontmatter.sku,
+
+  brand: frontmatter.brand,
+
+  material,
+
+  category: categoryLabel,
+
+  url: `${siteUrl}/stone-bathtubs/${slug}/`,
+});
 ---
 
 <BaseLayout
@@ -194,16 +211,7 @@ const productForLd = {
     }))
   })} />
 
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: productForLd.name,
-    image: productForLd.image ? [productForLd.image] : undefined,
-    sku: productForLd.sku || undefined,
-    brand: productForLd.brand ? { "@type": "Brand", name: productForLd.brand } : undefined,
-    url: `${siteUrl.replace(/\/$/, '')}/${productForLd.slug.replace(/^\//, '')}`
-  })} />
-
+  <script type="application/ld+json" set:html={JSON.stringify(productSchema)} />
 
 
 </BaseLayout>

@@ -12,13 +12,40 @@ import FinalCTA from "../../components/category/FinalCTA.astro";
 
 import { getCollection } from "astro:content";
 
+import {
+  buildItemListSchema,
+  buildCollectionSchema,
+} from "../../lib/schema/category";
+
+
+const category = "stone-bathtubs";
+
+const siteUrl = (
+  import.meta.env.SITE ??
+  "https://www.winwinstonecustom.com"
+).replace(/\/$/, "");
+
 // 获取所有产品
 const products = await getCollection("products");
 
 // 过滤 Stone Bathtubs 分类产品
 const stoneBathtubs = products.filter(
-  product => product.data.category === "stone-bathtubs"
+  product => product.data.category === category
 );
+
+const itemListSchema = buildItemListSchema({
+  category,
+  products: stoneBathtubs,
+  baseUrl: siteUrl
+});
+
+const collectionSchema = buildCollectionSchema({
+  name: "Stone Bathtubs",
+  description:
+    "Luxury marble bathtubs, travertine bathtubs and custom natural stone bathtubs.",
+  url: `${siteUrl}/stone-bathtubs/`,
+});
+
 ---
 <BaseLayout
   title="Custom Stone Bathtubs Manufacturer"
@@ -67,5 +94,15 @@ const stoneBathtubs = products.filter(
   title={stoneBathtubsData.cta.title}
   description={stoneBathtubsData.cta.description}
 />
+
+ <script
+  type="application/ld+json"
+  set:html={JSON.stringify(itemListSchema)}
+  />
+
+  <script
+  type="application/ld+json"
+  set:html={JSON.stringify(collectionSchema)}
+  />
 
 </BaseLayout>

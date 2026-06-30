@@ -18,11 +18,40 @@ import FinalCTA from "../../components/category/FinalCTA.astro";
 
 import { getCollection } from "astro:content";
 
-// 获取所有产品
+import {
+  buildItemListSchema,
+  buildCollectionSchema,
+} from "../../lib/schema/category";
+
+
+const category = "stone-tables";
+
+const siteUrl = (
+  import.meta.env.SITE ??
+  "https://www.winwinstonecustom.com"
+).replace(/\/$/, "");
+
+  // 获取所有产品
 const products = await getCollection("products");
 
 // 过滤 Stone Tables 分类产品
-const stoneTables = products.filter(p => p.data.category === "stone-tables");
+const stoneTables = products.filter(
+  (p) => p.data.category === category
+);
+
+const itemListSchema = buildItemListSchema({
+  category,
+  products: stoneTables,
+  baseUrl: siteUrl
+});
+
+const collectionSchema = buildCollectionSchema({
+  name: "Stone Tables",
+  description:
+    "Luxury marble tables, travertine dining tables, luxury stone coffee tables,side tables and custom natural stone tables.",
+  url: `${siteUrl}/stone-tables/`,
+});
+
 ---
 <BaseLayout
   title="Custom Stone Tables Manufacturer"
@@ -73,5 +102,15 @@ const stoneTables = products.filter(p => p.data.category === "stone-tables");
   buttonText={stoneTablesData.cta.buttonText}
   buttonLink={stoneTablesData.cta.buttonLink}
   />
+
+  <script
+  type="application/ld+json"
+  set:html={JSON.stringify(itemListSchema)}
+  />
+
+  <script
+  type="application/ld+json"
+  set:html={JSON.stringify(collectionSchema)}
+/>
 
 </BaseLayout>

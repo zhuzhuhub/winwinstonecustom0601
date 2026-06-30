@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://winwinstonecustom.com/sitemap.xml
+Sitemap: https://wwww.winwinstonecustom.com/sitemap-index.xml

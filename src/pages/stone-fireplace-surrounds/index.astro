@@ -13,11 +13,38 @@ import FinalCTA from "../../components/category/FinalCTA.astro";
 
 import { getCollection } from "astro:content";
 
+import {
+  buildItemListSchema,
+  buildCollectionSchema,
+} from "../../lib/schema/category";
+
+
+const category = "stone-fireplace-surrounds";
+
+const siteUrl = (
+  import.meta.env.SITE ??
+  "https://www.winwinstonecustom.com"
+).replace(/\/$/, "");
+
 // 获取所有产品
 const products = await getCollection("products");
 
 // 过滤 Stone Fireplace Surrounds 分类产品
-const stoneFireplaceSurrounds = products.filter(p => p.data.category === "stone-fireplace-surrounds");
+const stoneFireplaceSurrounds = products.filter(p => p.data.category === category);
+
+const itemListSchema = buildItemListSchema({
+  category,
+  products: stoneFireplaceSurrounds,
+  baseUrl: siteUrl
+});
+
+const collectionSchema = buildCollectionSchema({
+  name: "Stone Fireplace Surrounds",
+  description:
+    "Luxury marble fireplace surrounds and custom natural stone fireplace surrounds.",
+  url: `${siteUrl}/stone-fireplace-surrounds/`,
+});
+
 ---
 <BaseLayout
   title="Custom Stone Fireplace Surrounds Manufacturer"
@@ -65,6 +92,16 @@ const stoneFireplaceSurrounds = products.filter(p => p.data.category === "stone-
   <FinalCTA
     title={StoneFireplaceSurroundsData.cta.title}
     description={StoneFireplaceSurroundsData.cta.description}
+  />
+
+  <script
+  type="application/ld+json"
+  set:html={JSON.stringify(itemListSchema)}
+  />
+
+  <script
+  type="application/ld+json"
+  set:html={JSON.stringify(collectionSchema)}
   />
 
 </BaseLayout>

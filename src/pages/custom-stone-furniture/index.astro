@@ -11,14 +11,40 @@ import FinalCTA from "../../components/category/FinalCTA.astro";
 
 import { getCollection } from "astro:content";
 
+import {
+  buildItemListSchema,
+  buildCollectionSchema,
+} from "../../lib/schema/category";
+
+const category = "custom-stone-furniture";
+
+const siteUrl = (
+  import.meta.env.SITE ??
+  "https://www.winwinstonecustom.com"
+).replace(/\/$/, "");
+
 // 获取所有产品
 const products = await getCollection("products");
 
 // 过滤 Custom Stone Furniture 分类产品
-const furnitureProducts =
+const customStoneFurniture =
   products.filter(
-    p => p.data.category === "custom-stone-furniture"
+    p => p.data.category === category
   );
+
+const itemListSchema = buildItemListSchema({
+  category,
+  products: customStoneFurniture,
+  baseUrl: siteUrl
+});
+
+const collectionSchema = buildCollectionSchema({
+  name: "Custom Stone Furniture",
+  description:
+    "Custom stone furniture from factory.",
+  url: `${siteUrl}/custom-stone-furniture/`,
+});
+
 ---
 <BaseLayout
   title="Custom Stone Furniture Manufacturer"
@@ -44,7 +70,7 @@ const furnitureProducts =
   />
   
   <FeaturedProducts
-  products={furnitureProducts}
+  products={customStoneFurniture}
   category="custom-stone-furniture"
   title="Explore Our Stone Furniture Collection"
   description="Browse a selection of custom stone furniture manufactured for luxury residential and commercial projects."
@@ -73,4 +99,14 @@ const furnitureProducts =
     description={customStoneFurnitureData.cta.description}
   />
 
+   <script
+    type="application/ld+json"
+    set:html={JSON.stringify(itemListSchema)}
+   />
+
+  <script
+   type="application/ld+json"
+   set:html={JSON.stringify(collectionSchema)}
+  />
+  
 </BaseLayout>

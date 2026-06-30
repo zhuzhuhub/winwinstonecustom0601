@@ -4,7 +4,7 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://winwinstonecustom.com",
+  site: "https://www.winwinstonecustom.com",
 
   integrations: [
     sitemap(),
