@@ -2,180 +2,291 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
 
+import {
+  buildCollectionSchema,
+  buildItemListSchema
+} from "../../lib/schema/article";
+
+const siteUrl =
+  import.meta.env.SITE ??
+  "https://www.winwinstonecustom.com";
+
 const posts = await getCollection("blog");
 
-const latestPosts = posts.slice(0, 3);
+/* 按发布时间倒序 */
+const sortedPosts = [...posts].sort((a, b) => {
+  return (
+    new Date(b.data.publishDate).getTime() -
+    new Date(a.data.publishDate).getTime()
+  );
+});
 
+/* Featured：前 3 篇 */
+const featuredPosts = sortedPosts.slice(0, 3);
+
+/* 全部文章 */
+const allPosts = sortedPosts;
+
+/* Schema */
+const collectionSchema = buildCollectionSchema({
+  name: "Win-Win Stone Blog",
+  description:
+    "Stone furniture articles, material guides, custom manufacturing insights, and natural stone project knowledge.",
+  url: `${siteUrl}/blog/`
+});
+
+const itemListSchema = buildItemListSchema({
+  category: "blog",
+  items: sortedPosts,
+  baseUrl: siteUrl
+});
+
+function formatDate(date) {
+  return new Date(date).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric"
+  });
+}
 ---
+
 <BaseLayout
-  title="Blog"
-  description="Stone furniture articles, materials knowledge, and design guides."
+  title="Stone Furniture Blog | Win-Win Stone"
+  description="Stone furniture articles, material guides, custom manufacturing insights, and natural stone design knowledge from Win-Win Stone."
+  url={`${siteUrl}/blog/`}
 >
 
-  <section class="blog-list">
+  <section class="blog-list-page">
+
+    <!-- Breadcrumb -->
     <div class="container">
       <nav class="breadcrumb">
         <a href="/">Home</a>
         <span>/</span>
         <span>Blog</span>
       </nav>
-      <section class="blog-hero">
+    </div>
 
-       <span class="eyebrow">
-          Stone Knowledge Center
-       </span>
+    <!-- Hero -->
+    <section class="blog-hero-v3">
+      <div class="container blog-hero-inner">
+        <div class="blog-hero-content">
+          <span class="eyebrow">STONE KNOWLEDGE CENTER</span>
 
-       <h1>
-          Stone Knowledge,Material Guides & Trends
-       </h1>
+          <h1>
+            Stone Knowledge, Material Guides
+            & Project Insights
+          </h1>
 
-       <p>
-          Expert resources covering stone furniture,
-          natural stone materials,
-          custom manufacturing,
-          and architectural applications.
-       </p>
+          <p>
+            Expert resources covering custom stone sinks, bathtubs,
+            tables, fireplace surrounds and architectural stonework —
+            built for wholesalers, designers, contractors and hotel projects.
+          </p>
 
-</section>
+          <div class="hero-actions">
+            <a href="#featured-guides" class="hero-button">
+              Explore Guides
+            </a>
 
-    <section class="blog-topics">
-
-
-    <h2 class="section-title">
-       Featured Guides
-    </h2>
-
-      <div class="topic-grid">
-
-      <a class="topic-card upcoming-guide">
-
-       <span class="guide-title">
-         Stone Table Design Guide
-       </span>
-
-       <span class="guide-link">
-         Coming Soon
-       </span>
-
-      </a>
-
-    <a
-      href="/blog/how-to-choose-the-right-stone-for-a-custom-bathroom-sink/"
-      class="topic-card"
-    >
-
-     <span class="guide-title">
-        Stone Sink Buying Guide
-     </span>
-
-     <span class="guide-link">
-       Read Article →
-     </span>
-
-    </a>
-
-
-   <a class="topic-card upcoming-guide">
-
-    <span class="guide-title">
-      OEM Stone Furniture Guide
-    </span>
-
-    <span class="guide-link">
-      Coming Soon
-    </span>
-
-   </a>
-
-  </div>
-
-</section>
-
-<section class="latest-posts">
-
-  <div class="section-heading">
-
-    <h2>Latest Articles</h2>
-
-  </div>
-
-  <div class="post-grid">
-
-    {latestPosts.map((post) => (
-
-      <article class="post-card">
-
-        <a href={`/blog/${post.id}/`}>
-
-          <img
-            src={post.data.featuredImage}
-            alt={post.data.title}
-          />
-
-          <div class="post-content">
-
-            <span class="post-category">
-              {post.data.category}
-            </span>
-
-            <h3>
-              {post.data.title}
-            </h3>
-
-            <p>
-              {post.data.description}
-            </p>
-
-            <span class="read-more">
-              Read Guide →
-            </span>
-
+            <a href="/contact/" class="hero-secondary">
+              Ask About Your Project
+            </a>
           </div>
+        </div>
 
-        </a>
+        <div class="blog-hero-side">
+          <div class="hero-side-card">
+            <h3>What You'll Find Here</h3>
 
-      </article>
+            <ul>
+              <li>Stone material comparison guides</li>
+              <li>Custom sink & bathtub buying advice</li>
+              <li>Hotel / villa project recommendations</li>
+              <li>OEM manufacturing and sourcing insights</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    ))}
+    <div class="container">
 
-  </div>
+      <!-- Featured Guides -->
+      <section class="featured-guides-v3" id="featured-guides">
+        <div class="section-heading">
+          <h2>Featured Guides</h2>
+          <p>
+            Start with our most practical stone buying and project planning articles.
+          </p>
+        </div>
 
-</section>
+        <div class="featured-guides-grid">
+          {featuredPosts.map((post, index) => (
+            <article class={`featured-guide-card ${index === 0 ? "featured-main" : ""}`}>
+              <a href={`/blog/${post.id}/`}>
+                <div class="featured-guide-image">
+                  <img
+                    src={post.data.featuredImage}
+                    alt={post.data.title}
+                    loading={index === 0 ? "eager" : "lazy"}
+                  />
+                </div>
 
-<section class="blog-cta">
+                <div class="featured-guide-content">
+                  <span class="post-category">
+                    {post.data.category}
+                  </span>
 
-  <h2>Need Custom Stone Products For Your Next Project?</h2>
+                  {index === 0 && (
+                    <span class="featured-label">
+                      Editor's Pick
+                    </span>
+                  )}
 
+                  <h3>{post.data.title}</h3>
 
-  <p>
-    From stone sinks and bathtubs to custom
-    furniture and architectural stonework,
-    our team helps architects, designers,
-    wholesalers and project buyers turn
-    concepts into finished products.
-  </p>
+                  <p>{post.data.description}</p>
 
-  <div class="cta-actions">
+                  <span class="read-more">
+                    Read Guide →
+                  </span>
+                </div>
+              </a>
+            </article>
+          ))}
+        </div>
+      </section>
 
-    <a
-      href="/contact/"
-      class="cta-button"
-    >
-      Request A Quote
-    </a>
+      <!-- Topic Filter Bar -->
+      <section class="blog-filter-bar" aria-label="Blog categories">
+        <div class="filter-scroll">
+          <a href="/blog/" class="filter-pill is-active">All Articles</a>
+          <a href="/stone-sinks/" class="filter-pill">Stone Sinks</a>
+          <a href="/stone-bathtubs/" class="filter-pill">Stone Bathtubs</a>
+          <a href="/stone-tables/" class="filter-pill">Stone Tables</a>
+          <a href="/custom-stone-furniture/" class="filter-pill">Custom Stone Furniture</a>
+        </div>
+      </section>
 
-    <a
-      href="/stone-sinks/"
-      class="cta-secondary"
-    >
-      View Stone Collections
-    </a>
+      <!-- Latest Articles -->
+      <section class="all-articles-v3">
+        <div class="section-heading">
+          <h2>Latest Articles</h2>
+          <p>
+            Explore our latest articles on stone sinks, stone furniture,
+            custom manufacturing and natural stone applications.
+          </p>
+        </div>
 
-  </div>
+        <div class="post-grid-v3">
+          {allPosts.map((post) => (
+            <article class="post-card-v3">
+              <a href={`/blog/${post.id}/`} class="post-card-link">
+                <div class="post-card-image">
+                  <img
+                    src={post.data.featuredImage}
+                    alt={post.data.title}
+                    loading="lazy"
+                  />
+                </div>
 
-</section>
+                <div class="post-card-content">
+                  <div class="post-meta">
+                    <span class="post-category">
+                      {post.data.category}
+                    </span>
+
+                    <span class="meta-dot" aria-hidden="true"></span>
+
+                    <span class="post-date">
+                      {formatDate(post.data.publishDate)}
+                    </span>
+                  </div>
+
+                  <h3>{post.data.title}</h3>
+
+                  <p>{post.data.description}</p>
+
+                  <span class="read-more">
+                    Read Guide →
+                  </span>
+                </div>
+              </a>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <!-- Product Category Links -->
+      <section class="blog-category-links">
+        <div class="section-heading">
+          <h2>Browse by Product Category</h2>
+          <p>
+            Explore our main stone product collections and related project solutions.
+          </p>
+        </div>
+
+        <div class="category-link-grid">
+          <a href="/stone-sinks/" class="category-link-card">
+            <h3>Stone Sinks</h3>
+            <p>Pedestal sinks, vessel sinks and custom bathroom basins.</p>
+          </a>
+
+          <a href="/stone-tables/" class="category-link-card">
+            <h3>Stone Tables</h3>
+            <p>Coffee tables, dining tables and side tables in natural stone.</p>
+          </a>
+
+          <a href="/stone-bathtubs/" class="category-link-card">
+            <h3>Stone Bathtubs</h3>
+            <p>Luxury freestanding stone bathtubs for villas and hotels.</p>
+          </a>
+
+          <a href="/stone-fireplace-surrounds/" class="category-link-card">
+            <h3>Stone Fireplace Surrounds</h3>
+            <p>Custom marble mantels and fireplace surrounds for interior projects.</p>
+          </a>
+
+          <a href="/custom-stone-furniture/" class="category-link-card">
+            <h3>Custom Stone Furniture</h3>
+            <p>OEM / ODM custom furniture and architectural stone solutions.</p>
+          </a>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="blog-cta-v3">
+        <h2>
+          Planning A Custom Stone Sink, Bathtub Or Furniture Project?
+        </h2>
+
+        <p>
+          Send us your drawings, dimensions, material references or project requirements.
+          We support OEM / ODM manufacturing, hotel and villa projects, and wholesale stone product sourcing.
+        </p>
+
+        <div class="cta-actions">
+          <a href="/contact/" class="cta-button">
+            Send Your Project Details
+          </a>
+
+          <a href="/stone-sinks/" class="cta-secondary">
+            Explore Stone Collections
+          </a>
+        </div>
+      </section>
 
     </div>
   </section>
-</BaseLayout>
 
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify(collectionSchema)}
+  />
+
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify(itemListSchema)}
+  />
+</BaseLayout>

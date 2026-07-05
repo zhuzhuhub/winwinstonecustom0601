@@ -17,6 +17,13 @@ import RelatedResources from "../../components/blog/RelatedResources.astro";
 
 import { marked } from "marked";
 
+
+import {
+  buildBlogPostingSchema,
+  buildFAQSchema,
+  buildBreadcrumbSchema
+} from "../../lib/schema/article";
+
 /* -------------------------
    Get posts
 -------------------------- */
@@ -31,7 +38,6 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 
-console.log("POST DATA:", post.data);
 
 /* -------------------------
    Related posts
@@ -46,13 +52,36 @@ const relatedPosts = allPosts
 /* -------------------------
    Basic data
 -------------------------- */
-const { title, description, publishDate, category, featuredImage } = post.data;
+const {
+  title,
+  description,
+  publishDate,
+  updatedDate,
+  category,
+  featuredImage,
+  tags
+} = post.data;
+
+const siteUrl =
+  import.meta.env.SITE ??
+  "https://www.winwinstonecustom.com";
+
+const postUrl = `${siteUrl.replace(/\/$/, "")}/blog/${post.id}/`;
+
+function absUrl(path) {
+  if (!path) return undefined;
+  if (/^https?:\/\//.test(path)) return path;
+  return `${siteUrl.replace(/\/$/, "")}${path.startsWith("/") ? path : `/${path}`}`;
+}
+
+const featuredImageAbs = absUrl(featuredImage);
 
 const articleBody = post.body ?? "";
 const articleHtml = marked.parse(articleBody, {
   headerIds: true,
   headerPrefix: ""
 });
+
 /* -------------------------
   FAQ
 -------------------------- */
@@ -62,7 +91,6 @@ const faqItems = post.data.faq ?? [];
 /* -------------------------
    TOC generation
 -------------------------- */
-import { marked } from "marked";
 
 const slugger = new GithubSlugger();
 
@@ -83,58 +111,46 @@ const toc =
 /* -------------------------
    Schema
 -------------------------- */
-const faqSchema =
-  faqItems.length > 0
-    ? {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        mainEntity: faqItems.map((item) => ({
-          "@type": "Question",
-          name: item.question,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: item.answer
-          }
-        }))
-      }
-    : null;
+const keywords = Array.isArray(tags) ? tags : [];
 
-const authorSchema = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  name: "Win-Win Stone Team",
-  jobTitle: "Stone Manufacturing Consultant",
-  worksFor: {
-    "@type": "Organization",
-    name: "Win-Win Stone"
-  }
-};
+const breadcrumbSchema = buildBreadcrumbSchema([
+  { name: "Home", url: `${siteUrl}/` },
+  { name: "Blog", url: `${siteUrl}/blog/` },
+  { name: title, url: postUrl }
+]);
 
-const articleSchema = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  headline: title,
+const faqSchema = buildFAQSchema(faqItems);
+
+const articleSchema = buildBlogPostingSchema({
+  title,
   description,
-  datePublished: new Date(publishDate).toISOString(),
-  author: {
-    "@type": "Person",
-    name: "Win-Win Stone Team"
-  },
-  publisher: {
-    "@type": "Organization",
-    name: "Win-Win Stone"
-  },
-  image: featuredImage ? [featuredImage] : []
-};
+  image: featuredImageAbs,
+  url: postUrl,
+  publishDate,
+  updatedDate,
+  category,
+  keywords
+});
+
 ---
 
 <!-- Schema -->
-{faqSchema && (
-  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
-)}
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify(breadcrumbSchema)}
+/>
 
-<script type="application/ld+json" set:html={JSON.stringify(authorSchema)} />
-<script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify(articleSchema)}
+/>
+
+{faqSchema && (
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify(faqSchema)}
+  />
+)}
 
 <!-- Reading progress -->
 <div id="reading-progress"></div>
@@ -157,7 +173,7 @@ const articleSchema = {
   });
 </script>
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} image={featuredImageAbs} >
   <section class="blog-post">
     <div class="container">
 
@@ -176,14 +192,16 @@ const articleSchema = {
         <h1>{title}</h1>
 
         <p class="post-meta">
-          {new Date(publishDate).toLocaleDateString("en-US", {
-            year: "numeric",
-            month: "long",
-            day: "numeric"
-          })}
-          <div class="."></div>
-          6 Min Read
-        </p>
+          <span>
+            {new Date(publishDate).toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "long",
+               day: "numeric"
+           })}
+         </span>
+         <span class="meta-dot" aria-hidden="true"></span>
+         <span>6 Min Read</span>
+       </p>
       </header>
 
       <!-- Featured Image -->
@@ -206,11 +224,7 @@ const articleSchema = {
 
 
           <!-- Related Resources -->
-
-          {console.log("RELATED:", post.data.relatedResources)}
-
-         
-           
+          
           <RelatedResources items={post.data.relatedResources ?? []} />
 
       
