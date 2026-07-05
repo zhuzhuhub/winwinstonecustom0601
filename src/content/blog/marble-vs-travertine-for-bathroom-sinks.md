@@ -50,6 +50,9 @@ relatedResources:
   - title: How to Choose the Right Stone for a Custom Bathroom Sink
     url: /blog/how-to-choose-the-right-stone-for-a-custom-bathroom-sink/
 
+  - title: "Marble Stone Bathtub Buying Guide for Luxury Villa and Hotel Projects"
+    url: "/blog/Marble Stone Bathtub Buying Guide for Luxury Villa and Hotel Projects/"
+
 ---
 
 When designing a luxury bathroom, choosing the right sink material is one of the most important decisions. Among natural stone options, marble and travertine remain two of the most popular choices for <a href="/stone-sinks/">
