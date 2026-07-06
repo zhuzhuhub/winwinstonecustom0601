@@ -1,0 +1,69 @@
+---
+const steps = [
+  {
+    number: "01",
+    title: "Share Your Requirements",
+    description:
+      "Send us product drawings, reference photos, dimensions, quantity, target material, and application details.",
+    tone: "tone-1"
+  },
+  {
+    number: "02",
+    title: "Technical Review & Feasibility Check",
+    description:
+      "We review structure, dimensions, stone suitability, finish options, and manufacturing feasibility before quoting.",
+    tone: "tone-2"
+  },
+  {
+    number: "03",
+    title: "Material / Finish Confirmation",
+    description:
+      "We confirm stone selection, finish direction, edge details, and other visible specifications for the project.",
+    tone: "tone-3"
+  },
+  {
+    number: "04",
+    title: "Sample / Shop Drawing / Approval",
+    description:
+      "If needed, we prepare samples, mockups, or shop drawings for confirmation before bulk production.",
+    tone: "tone-4"
+  },
+  {
+    number: "05",
+    title: "Production & Quality Control",
+    description:
+      "Orders move into production with in-process inspection, dimensional checks, and finishing review.",
+    tone: "tone-5"
+  },
+  {
+    number: "06",
+    title: "Packing & Delivery Arrangement",
+    description:
+      "Products are protected with export packaging and coordinated for shipping, loading, and delivery.",
+    tone: "tone-6"
+  }
+];
+---
+
+<section class="oem-workflow section">
+  <div class="container">
+    <div class="oem-section-heading">
+      <p class="oem-section-heading__eyebrow">OEM Project Workflow</p>
+      <h2>A Clear Process From Drawing To Production</h2>
+      <p>
+        Our workflow is designed to keep custom stone development clear,
+        manageable, and production-oriented from the first inquiry onward.
+      </p>
+    </div>
+
+    <div class="oem-workflow-grid">
+      {steps.map((step) => (
+        <article class={`oem-workflow-step ${step.tone}`}>
+          <span class="oem-workflow-step__number">{step.number}</span>
+          <h3>{step.title}</h3>
+          <p>{step.description}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

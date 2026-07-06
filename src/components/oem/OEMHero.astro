@@ -1,0 +1,97 @@
+---
+import Button from "../Button.astro";
+
+const supportItems = [
+  "Custom dimensions & technical review",
+  "Stone & finish selection guidance",
+  "Prototype / sample support",
+  "Export-ready packaging & shipping"
+];
+
+const trustItems = [
+  {
+    title: "OEM & ODM Experience",
+    description: "15+ years serving global brands and custom stone projects."
+  },
+  {
+    title: "Global Market Support",
+    description: "Exporting to Europe, North America, Australia, and beyond."
+  },
+  {
+    title: "Quality Assurance",
+    description: "Structured quality control from raw material review to final packing."
+  },
+  {
+    title: "Flexible MOQ",
+    description: "Suitable for both sample development and larger production orders."
+  }
+];
+---
+
+<section
+  class="oem-hero"
+  style="background-image: url('/images/oem/oem-hero.jpg');"
+>
+  <div class="oem-hero__overlay"></div>
+
+  <div class="container oem-hero__container">
+    <div class="oem-hero__main">
+      <div class="oem-hero__content">
+        <p class="oem-hero__eyebrow">
+          OEM & ODM Stone Manufacturing
+        </p>
+
+        <h1>
+          Custom Stone Products
+          For Brands, Wholesalers
+          And Project Buyers
+        </h1>
+
+        <p class="oem-hero__description">
+          We support OEM and made-to-order development for stone sinks,
+          tables, bathtubs, fireplace surrounds, and custom furniture pieces.
+          Share your drawings, dimensions, material preferences, or reference
+          images, and we’ll help turn them into production-ready products.
+        </p>
+
+        <div class="oem-hero__actions">
+          <Button
+            href="/contact/"
+            variant="primary"
+            size="large"
+          >
+            Request OEM Quote
+          </Button>
+
+          <a
+            href="https://wa.me/8613927192948"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="oem-hero__whatsapp"
+          >
+            Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <aside class="oem-hero__support-card">
+        <h2>We Can Help You With</h2>
+
+        <ul>
+          {supportItems.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+      </aside>
+    </div>
+
+    <div class="oem-hero__trust">
+      {trustItems.map((item) => (
+        <div class="oem-hero__trust-item">
+          <h3>{item.title}</h3>
+          <p>{item.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

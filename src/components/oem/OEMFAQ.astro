@@ -1,0 +1,58 @@
+---
+const faqs = [
+  {
+    question: "Can you manufacture based on drawings or reference images?",
+    answer:
+      "Yes. We can review technical drawings, rough sketches, and reference images to evaluate whether a product can be developed in natural stone and what adjustments may be needed for production."
+  },
+  {
+    question: "What information do you need to prepare an OEM quotation?",
+    answer:
+      "Ideally, please share the product type, dimensions, preferred stone, finish direction, quantity, destination market, and any drawings or reference photos you already have."
+  },
+  {
+    question: "Do you support custom sizes, stone selection, and finish changes?",
+    answer:
+      "Yes. Depending on the product type, we can usually adjust dimensions, stone options, finish treatments, edge details, and selected structural features."
+  },
+  {
+    question: "Can you provide samples or prototypes before bulk production?",
+    answer:
+      "For suitable OEM projects, we can discuss sample development, detail confirmation, or prototype support before moving into larger production."
+  },
+  {
+    question: "What is the usual lead time for custom OEM orders?",
+    answer:
+      "Lead time depends on the product complexity, quantity, stone selection, and current production schedule. We normally confirm an estimated timeline during quotation and technical review."
+  },
+  {
+    question: "Do you support private label packaging or project-specific packing requirements?",
+    answer:
+      "For suitable projects, we can discuss private label packing, shipping marks, labels, and other packaging requirements based on the destination market and order type."
+  }
+];
+---
+
+<section class="oem-faq section section--alt">
+  <div class="container">
+    <div class="oem-section-heading">
+      <p class="oem-section-heading__eyebrow">OEM FAQ</p>
+      <h2>
+        Questions Buyers Commonly Ask Before Starting A Custom Stone Project
+      </h2>
+      <p>
+        These answers are intended to help brands, wholesalers, and project
+        buyers understand how our OEM process works before sending an inquiry.
+      </p>
+    </div>
+
+    <div class="faq-list">
+      {faqs.map((faq) => (
+        <details class="faq-item">
+          <summary>{faq.question}</summary>
+          <p>{faq.answer}</p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>

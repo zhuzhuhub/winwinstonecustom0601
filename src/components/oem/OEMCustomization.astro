@@ -1,0 +1,86 @@
+---
+const customizationItems = [
+  {
+    title: "Dimensions & Proportions",
+    description:
+      "Products can be developed to match your target dimensions, installation requirements, spatial constraints, and overall design proportions.",
+    image: "/images/oem/customization/oem-dimensions.jpg",
+    alt: "Custom stone product dimensions and proportions"
+  },
+  {
+    title: "Stone Material Selection",
+    description:
+      "Choose from travertine, marble, limestone, onyx, and other natural stones based on appearance, application, durability, and project positioning.",
+    image: "/images/oem/customization/oem-material.jpg",
+    alt: "Stone material selection for OEM stone products"
+  },
+  {
+    title: "Surface Finish",
+    description:
+      "Polished, honed, brushed, leathered, fluted, and other surface treatments can be selected to suit the desired visual style and tactile effect.",
+    image: "/images/oem/customization/oem-finish.jpg",
+    alt: "Surface finish options for custom stone products"
+  },
+  {
+    title: "Edge Profiles & Details",
+    description:
+      "Edge shapes, corner detailing, bevels, grooves, and other crafted features can be refined to align with your product language and design intent.",
+    image: "/images/oem/customization/oem-edge.jpg",
+    alt: "Edge profile and crafted details for stone products"
+  },
+  {
+    title: "Functional Product Features",
+    description:
+      "Sink cutouts, drainage layouts, mounting structures, integrated basins, tabletop construction details, and other practical features can be adapted to project needs.",
+    image: "/images/oem/customization/oem-features.jpg",
+    alt: "Functional features for OEM stone sinks and furniture"
+  },
+  {
+    title: "Private Label & Packaging Support",
+    description:
+      "For suitable OEM projects, we can also coordinate branded labels, protective packaging methods, and export packing solutions based on shipment and market needs.",
+    image: "/images/oem/customization/oem-packaging.jpg",
+    alt: "Private label and packaging support for OEM stone projects"
+  }
+];
+---
+
+<section class="oem-customization section">
+  <div class="container">
+    <div class="oem-section-heading">
+      <p class="oem-section-heading__eyebrow">
+        What Can Be Customized
+      </p>
+
+      <h2>
+        Flexible OEM Development Across
+        Size, Stone, Finish And Product Details
+      </h2>
+
+      <p>
+        We work with project requirements, product drawings, and reference
+        samples to help adjust practical details that affect product appearance,
+        usability, installation, and packaging presentation.
+      </p>
+    </div>
+
+    <div class="oem-custom-grid">
+      {customizationItems.map((item) => (
+        <article class="oem-custom-card">
+          <div class="oem-custom-card__image">
+            <img
+              src={item.image}
+              alt={item.alt}
+              loading="lazy"
+            />
+          </div>
+
+          <div class="oem-custom-card__content">
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

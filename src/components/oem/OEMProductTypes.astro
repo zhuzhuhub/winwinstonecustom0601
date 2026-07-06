@@ -1,0 +1,80 @@
+---
+const productTypes = [
+  {
+    title: "Stone Sinks & Bathroom Products",
+    description:
+      "Custom stone sinks, basins, vanity tops, and other bathroom products tailored to your size, design, and market requirements.",
+    image: "/images/oem/projects/oem-sinks.jpg",
+    alt: "OEM stone sinks and bathroom products"
+  },
+  {
+    title: "Stone Tables & Furniture",
+    description:
+      "Dining tables, coffee tables, side tables, console tables, and other stone furniture pieces for residential and commercial interiors.",
+    image: "/images/oem/projects/oem-tables.jpg",
+    alt: "OEM stone tables and furniture"
+  },
+  {
+    title: "Stone Bathtubs & Bathroom Customization",
+    description:
+      "Freestanding stone bathtubs and custom bathroom solutions made to your dimensions, finish preferences, and project standards.",
+    image: "/images/oem/projects/oem-bathtubs.jpg",
+    alt: "OEM stone bathtubs and bathroom customization"
+  },
+  {
+    title: "Custom Stone Furniture & Architectural Pieces",
+    description:
+      "Benches, fireplace surrounds, plinths, countertops, wall cladding, and other bespoke stone elements for unique design and architectural projects.",
+    image: "/images/oem/projects/oem-furniture.jpg",
+    alt: "Custom stone furniture and architectural pieces"
+  }
+];
+---
+
+<section class="oem-product-types section section--alt">
+  <div class="container">
+    <div class="oem-section-heading">
+      <p class="oem-section-heading__eyebrow">
+        OEM Projects We Support
+      </p>
+
+      <h2>
+        OEM Stone Products We Can Develop
+        For Your Brand
+      </h2>
+
+      <p>
+        We support a wide range of custom stone products for bathrooms,
+        furniture collections, and architectural projects. Share your
+        ideas and requirements, and we’ll help bring them to life.
+      </p>
+    </div>
+
+    <div class="oem-project-grid">
+      {productTypes.map((item) => (
+        <article class="oem-project-card">
+          <div class="oem-project-card__image">
+            <img
+              src={item.image}
+              alt={item.alt}
+              loading="lazy"
+            />
+          </div>
+
+          <div class="oem-project-card__content">
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <div class="oem-project-note">
+      <p>
+        If you have a different product idea in stone, just send us your
+        drawings or reference images. We’ll review feasibility and provide
+        professional suggestions.
+      </p>
+    </div>
+  </div>
+</section>

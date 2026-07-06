@@ -1,0 +1,61 @@
+---
+const checklistItems = [
+  "Product type and intended application",
+  "Drawings, dimensions, or rough measurements",
+  "Reference photos, mood boards, or sketches",
+  "Preferred stone material or target visual effect",
+  "Surface finish, edge profile, and detail requirements",
+  "Estimated quantity and target order stage",
+  "Destination country or shipping requirements",
+  "Special packing, labeling, or project-specific requests"
+];
+---
+
+<section class="oem-quote-checklist section section--alt">
+  <div class="container">
+    <div class="oem-quote-checklist__grid">
+      <div class="oem-quote-checklist__media">
+        <img
+          src="/images/oem/oem-quote-checklist.jpg"
+          alt="OEM stone quotation checklist and drawing review"
+          loading="lazy"
+        />
+      </div>
+
+      <div class="oem-quote-checklist__content">
+        <div class="oem-section-heading oem-section-heading--compact">
+          <p class="oem-section-heading__eyebrow">
+            What To Send For An OEM Quote
+          </p>
+
+          <h2>
+            Share The Right Information
+            For A Faster And More Accurate
+            OEM Quotation
+          </h2>
+
+          <p>
+            The more clearly we understand your product idea, technical needs,
+            and shipping expectations, the easier it is to review feasibility,
+            recommend suitable solutions, and prepare a more useful quotation.
+          </p>
+        </div>
+
+        <div class="oem-quote-checklist__card">
+          <ul class="oem-quote-checklist__list">
+            {checklistItems.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="oem-quote-checklist__note">
+          Even if you don’t have complete technical drawings yet, you can still
+          send rough dimensions, reference images, target materials, or sample
+          ideas. We can help review the project and advise what additional
+          information would be useful for production evaluation.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
