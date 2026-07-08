@@ -1,61 +1,44 @@
 ---
 import SectionHeader from "../SectionHeader.astro";
+
+const faqs = [
+  {
+    question: "What is your MOQ?",
+    answer:
+      "MOQ can start from a single piece depending on the product."
+  },
+  {
+    question: "Can you customize dimensions?",
+    answer:
+      "Yes. Most products can be manufactured to custom sizes based on your project requirements."
+  },
+  {
+    question: "Do you ship worldwide?",
+    answer:
+      "Yes. We regularly export to Europe, North America, Australia, and other regions."
+  },
+  {
+    question: "How long is production?",
+    answer:
+      "Lead time depends on product complexity, stone selection, quantity, and the current production schedule."
+  }
+];
 ---
 
-<section class="contact-faq">
-
+<section class="contact-faq section">
   <div class="container">
-
     <SectionHeader
-      
       title="Frequently Asked Questions"
       description="Quick answers to common questions from architects, designers, distributors, and project buyers."
     />
 
     <div class="faq-list">
-
-      <div class="faq-item">
-
-        <h3>What is your MOQ?</h3>
-
-        <p>
-          MOQ can start from a single piece depending on the product.
-        </p>
-
-      </div>
-
-      <div class="faq-item">
-
-        <h3>Can you customize dimensions?</h3>
-
-        <p>
-          Yes. Most products can be manufactured to custom sizes.
-        </p>
-
-      </div>
-
-      <div class="faq-item">
-
-        <h3>Do you ship worldwide?</h3>
-
-        <p>
-          Yes. We regularly export to Europe, North America, Australia and other regions.
-        </p>
-
-      </div>
-
-      <div class="faq-item">
-
-        <h3>How long is production?</h3>
-
-        <p>
-          Lead time depends on product complexity and order quantity.
-        </p>
-
-      </div>
-
+      {faqs.map((faq) => (
+        <details class="faq-item">
+          <summary>{faq.question}</summary>
+          <p>{faq.answer}</p>
+        </details>
+      ))}
     </div>
-
   </div>
-
 </section>

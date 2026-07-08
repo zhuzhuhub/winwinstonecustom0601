@@ -1,621 +1,1158 @@
+/* =================================
+   Contact Page V2
+   Match Why Us / Factory style
+================================= */
+
+/* =========================
+   Shared section heading rhythm
+========================= */
+
+.contact-options .oem-section-heading,
+.inquiry-form-section .oem-section-heading,
+.contact-faq .oem-section-heading,
+.factory-snapshot .oem-section-heading,
+.contact-final-cta .oem-section-heading {
+  max-width: 820px;
+  margin-bottom: 28px;
+}
+
+.contact-options .oem-section-heading h2,
+.inquiry-form-section .oem-section-heading h2,
+.contact-faq .oem-section-heading h2,
+.factory-snapshot .oem-section-heading h2,
+.contact-final-cta .oem-section-heading h2,
+.contact-options h2,
+.inquiry-form-section h2,
+.contact-faq h2,
+.factory-snapshot-content h2,
+.contact-final-cta h2 {
+  max-width: 760px;
+  margin: 0 0 12px;
+  text-align: left;
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+}
+
+.contact-options .oem-section-heading p,
+.inquiry-form-section .oem-section-heading p,
+.contact-faq .oem-section-heading p,
+.factory-snapshot .oem-section-heading p,
+.contact-final-cta .oem-section-heading p,
+.contact-options > .container > p,
+.inquiry-form-section > .container > p,
+.contact-faq > .container > p,
+.contact-final-cta p {
+  max-width: 760px;
+  margin: 0;
+  text-align: left;
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.75;
+}
+
 /* =========================
    Contact Hero V2
 ========================= */
 
-.contact-hero{
-  padding:40px 0 30px;
-  
+.contact-hero {
+  padding: 36px 0 18px;
 }
 
-
-
 .contact-hero-grid {
-
   display: grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
-  gap: 30px;
-
+  grid-template-columns: minmax(0, 1fr) minmax(380px, 0.92fr);
+  gap: 44px;
   align-items: center;
 }
 
-.contact-hero-image img {
-
-  width: 100%;
-
-  display: block;
-
-  border-radius: 14px;
-
-  object-fit: cover;
-}
-.contact-highlights {
-
-  margin-top: 32px;
-
-  padding: 0;
-
-  list-style: none;
-}
-
-.contact-highlights li {
-
-  margin-bottom: 12px;
-
-  color: var(--green);
-
-  font-weight: 600;
-}
 .contact-hero-content {
-
-  max-width: 760px;
-
-  margin: 0 auto;
+  max-width: 700px;
+  margin: 0;
 }
 
 .contact-eyebrow {
-
   display: inline-block;
-
-  margin-bottom: 16px;
-
-  font-size: .85rem;
-
-  letter-spacing: 2px;
-
+  margin-bottom: 14px;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-
   color: var(--green);
-
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .contact-hero h1 {
-  max-width: 600px;
-
-  margin-bottom: 12px;
-
-  font-size: clamp(
-    2.8rem,
-    6vw,
-    5rem
-  );
-
-  line-height: 1.05;
+  max-width: 620px;
+  margin: 0 0 16px;
+  font-size: clamp(2.7rem, 5vw, 4.9rem);
+  line-height: 0.96;
+  letter-spacing: -0.045em;
+  color: var(--ink);
 }
 
 .contact-hero p {
-
-  margin-bottom: 18px;
-
+  max-width: 620px;
+  margin: 0 0 18px;
   color: var(--muted);
-
   line-height: 1.8;
+  font-size: 0.98rem;
 }
-@media (max-width:900px){
-
-  .contact-hero-grid {
-
-    grid-template-columns:1fr;
-  }
-
-  .contact-hero {
-
-    text-align:center;
-  }
-
-  .contact-highlights {
-
-    display:inline-block;
-
-    text-align:left;
-
-    margin-top: 14px;
-  }
- }
 
 .contact-actions {
-
   display: flex;
-
-  gap: 16px;
-
-  margin-top: 24px;
-
-  margin-bottom: 24px;
-
+  gap: 14px;
+  margin-top: 22px;
+  margin-bottom: 22px;
   flex-wrap: wrap;
 }
 
-@media (max-width:768px){
-
-  .contact-actions{
-
-    justify-content:center;
-  }
-
+.contact-highlights {
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
 }
+
+.contact-highlights li {
+  color: #2b5a4d;
+  font-weight: 600;
+  font-size: 0.94rem;
+  line-height: 1.45;
+}
+
+.contact-hero-image {
+  position: relative;
+}
+
+.contact-hero-image img {
+  width: 100%;
+  display: block;
+  border-radius: 24px;
+  object-fit: cover;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.12);
+}
+
 /* =========================
    Contact Options
 ========================= */
 
-.contact-options{
-  padding:10px 0;
+.contact-options {
+  padding: 18px 0 22px;
 }
-
-.contact-options h2 {
-
-  max-width:1400px; 
-
-  text-align:left;
-
-
-}
-
-.contact-options p{
-   max-width:1400px; 
- 
-   text-align:left; 
-   
-  }
-
 
 .contact-grid {
-
   display: grid;
-
-  grid-template-columns:
-    repeat(3,1fr);
-
-  gap: 30px;
- 
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
 }
 
 .contact-card {
-
-  padding:20px 20px;
-
-  transition:.3s;
-
-  border-radius: 14px;
-
-  border: 1px solid var(--line);
-
-  text-align: center;
-
+  padding: 28px 24px;
+  min-height: 170px;
+  border-radius: 20px;
+  border: 1px solid rgba(25, 35, 28, 0.08);
   background: #fff;
+  box-shadow: 0 10px 30px rgba(15, 23, 18, 0.05);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+  text-align: center;
 }
 
 .contact-card:hover {
-
-  transform:translateY(-6px);
-
-  box-shadow:
-  0 10px 30px rgba(0,0,0,.08);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(15, 23, 18, 0.08);
 }
 
 .contact-card h3 {
-
-  margin-bottom: 14px;
+  margin: 0 0 12px;
+  font-size: 1.5rem;
+  line-height: 1.1;
+  color: var(--ink);
 }
 
 .contact-card p {
-
-  margin-bottom: 20px;
-
+  margin: 0 0 18px;
   color: var(--muted);
-
-  line-height: 1.8;
+  line-height: 1.7;
+  font-size: 0.94rem;
 }
 
 .contact-card a,
 .contact-card span {
-
   color: var(--green);
-
-  font-weight: 600;
-
+  font-weight: 700;
   text-decoration: none;
-}
-
-@media (max-width:768px){
-
-  .contact-grid {
-
-    grid-template-columns:1fr;
-  }
-
-}
-/* =========================
-   Inquiry Form
-========================= */
-
-.inquiry-form-section{
-  padding:40px 0;
-}
-.inquiry-form {
-
-  max-width: 900px;
-
-  margin: 0 auto;
-}
-
-.inquiry-form-section h2 {
-
-  max-width:1400px; 
-
-  text-align:left;
-
-
-}
-
-.inquiry-form-section p{
-   max-width:1400px; 
- 
-   text-align:left; 
-   
-  }
-
-.form-grid {
-
-  display: grid;
-
-  grid-template-columns:
-    repeat(2,1fr);
-
-  gap: 24px;
-
-  margin-bottom: 24px;
-}
-
-.form-group {
-
-  display: flex;
-
-  flex-direction: column;
-}
-
-.form-group label {
-
-  margin-bottom: 8px;
-
-  font-weight: 600;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-
-  padding: 14px 16px;
-
-  border: 1px solid var(--line);
-
-  font: inherit;
-
-  border-radius: 14px;
-
-  background: #fff;
-}
-
-.form-group textarea {
-
-  resize: vertical;
-}
-
-.form-submit {
-
-  margin-top: 24px;
-
-  padding: 16px 36px;
-
-  border: none;
-
-  border-radius: 14px;
-
-  cursor: pointer;
-
-  background: var(--green);
-
-  color: #fff;
-
-  font-weight: 600;
-}
-
-@media (max-width:768px){
-
-  .form-grid {
-
-    grid-template-columns:1fr;
-  }
-
-}
-
-/* =========================
-   FAQ
-========================= */
-
-.contact-faq {
-
-  padding: 10px 0;
-}
-
-.contact-faq h2 {
-
-  max-width:1400px; 
-
-  text-align:left;
-
-}
-
-.contact-faq p{
-   max-width:1400px; 
- 
-   text-align:left; 
-   
-  }
-
-.faq-list {
- 
-  max-width: 800px;
-
-  margin: 0 auto;
-  text-align:left; 
-
-}
-
-.faq-item {
-
-  padding: 10px 0;
-
-  border-bottom: 1px solid var(--line);
-}
-
-.faq-item h3 {
-
-  margin-bottom: 0px;
-}
-
-.faq-item p {
-
-  margin: 0;
-
-  color: var(--muted);
-}
-/* =========================
-   Final CTA
-========================= */
-.contact-final-cta{
-  padding:20px 0 40px;
-}
-
-.contact-final-cta h2 {
-  max-width:1400px; 
-
-  text-align:left;
-  margin-bottom: 20px;
-}
-
-.contact-final-cta p {
-
-  margin-bottom: 30px;
-
-  color: var(--muted);
+  font-size: 0.95rem;
 }
 
 /* =========================
    Factory Snapshot
 ========================= */
-.factory-snapshot{
-  padding:40px 0;
+
+.factory-snapshot {
+  padding: 22px 0 22px;
 }
 
 .factory-snapshot-grid {
-
   display: grid;
-
-  grid-template-columns:
-    1.1fr 1fr;
-
-  gap: 40px;
-
-  align-items: center;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+  gap: 28px;
+  align-items: stretch;
 }
 
 .factory-snapshot-image img {
-
   width: 100%;
-
   height: 100%;
-
+  min-height: 360px;
   display: block;
-
   object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 22px 56px rgba(0, 0, 0, 0.08);
+}
 
-  border-radius: 12px;
+.factory-snapshot-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .factory-snapshot-content h2 {
-
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 
 .factory-snapshot-content p {
-
-  margin-bottom: 24px;
-
+  margin: 0 0 22px;
   color: var(--muted);
-
-  line-height: 1.9;
+  line-height: 1.8;
+  font-size: 0.98rem;
 }
 
 .factory-stats {
-
   display: grid;
-
-  grid-template-columns:
-    repeat(4,1fr);
-
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 12px;
-
-  margin-top: 16px;
+  margin-top: 4px;
 }
 
 .stat-item {
-
-  padding: 12px 10px;
-
+  padding: 14px 12px;
   background: #fff;
-
-  border: 1px solid var(--line);
-
+  border: 1px solid rgba(25, 35, 28, 0.08);
+  border-radius: 16px;
   text-align: center;
-
-  border-radius: 8px;
+  box-shadow: 0 8px 22px rgba(15, 23, 18, 0.04);
 }
 
 .stat-item strong {
-
   display: block;
-
-  margin-bottom: 4px;
-
-  font-size: 1.4rem;
-
+  margin-bottom: 5px;
+  font-size: 1.35rem;
   line-height: 1;
-
   color: var(--green);
 }
 
 .stat-item span {
-
   color: var(--muted);
-
   display: block;
-
-  font-size: .78rem;
-
-  line-height: 1.4;
+  font-size: 0.78rem;
+  line-height: 1.35;
 }
 
-@media (max-width:900px){
-
-  .factory-snapshot-grid {
-
-    grid-template-columns:1fr;
-  }
-
-  .factory-stats {
-
-    grid-template-columns:
-      repeat(2,1fr);
-  }
-
-}
 /* =========================
-   Inquiry Layout
+   Inquiry Form
 ========================= */
 
+.inquiry-form-section {
+  padding: 22px 0 24px;
+}
+
 .inquiry-layout {
-
   display: grid;
-
-  grid-template-columns: 2.3fr 0.9fr;
-
-  gap: 40px;
-
+  grid-template-columns: minmax(0, 2.15fr) minmax(280px, 0.9fr);
+  gap: 30px;
   align-items: start;
 }
 
-.inquiry-sidebar {
+.inquiry-form {
+  max-width: none;
+  margin: 0;
+}
 
-  padding: 24px;
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 18px;
+}
 
-  max-width: 360px;
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
 
-  margin: 0 auto;
+.form-group label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--ink);
+}
 
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 13px 16px;
+  border: 1px solid rgba(25, 35, 28, 0.1);
+  font: inherit;
+  border-radius: 14px;
   background: #fff;
+  color: var(--ink);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
 
-  border: 1px solid var(--line);
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: rgba(31, 80, 66, 0.35);
+  box-shadow: 0 0 0 4px rgba(31, 80, 66, 0.08);
+}
 
-  border-radius: 12px;
+.form-group textarea {
+  resize: vertical;
+  min-height: 180px;
+}
 
+.form-submit {
+  margin-top: 6px;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  background: var(--green);
+  color: #fff;
+  font-weight: 700;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.form-submit:hover {
+  transform: translateY(-1px);
+  opacity: 0.96;
+}
+
+/* =========================
+   Inquiry Sidebar
+========================= */
+
+.inquiry-sidebar {
+  padding: 26px 24px;
+  max-width: 100%;
+  margin: 0;
+  background: #fff;
+  border: 1px solid rgba(25, 35, 28, 0.08);
+  border-radius: 22px;
+  box-shadow: 0 18px 44px rgba(15, 23, 18, 0.06);
   position: sticky;
-
-  top: 120px;
+  top: 116px;
 }
 
 .inquiry-sidebar h3 {
+  margin: 0 0 16px;
+  font-size: 2rem;
+  line-height: 1.04;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+}
 
-  margin-bottom: 20px;
+.inquiry-sidebar p {
+  margin: 0 0 18px;
+  color: var(--muted);
+  line-height: 1.75;
+  font-size: 0.94rem;
 }
 
 .inquiry-sidebar ul {
-
   padding: 0;
-
   margin: 0;
-
   list-style: none;
 }
 
-.inquiry-sidebar li {
-
-  margin-bottom: 14px;
-
-  line-height: 1.6;
-
+.inquiry-sidebar li,
+.sidebar-benefits li {
+  margin-bottom: 10px;
+  line-height: 1.55;
   color: var(--muted);
+  font-size: 0.93rem;
 }
 
-@media (max-width:900px){
-
-  .inquiry-layout {
-
-    grid-template-columns:1fr;
-  }
-
-  .inquiry-sidebar {
-
-    position: static;
-  }
-
-}
 .sidebar-contact {
-
-margin-top: 24px;
-
-padding-top: 24px;
-
-border-top: 1px solid var(--line);
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(25, 35, 28, 0.08);
 }
 
 .sidebar-contact-item {
-
-margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .sidebar-contact-item strong {
-
-display: block;
-
-margin-bottom: 4px;
-
-font-size: .9rem;
-
-color: var(--ink);
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.88rem;
+  color: var(--ink);
 }
 
 .sidebar-contact-item span {
-
-color: var(--muted);
-
-font-size: .9rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
-.sidebar-benefits li {
+/* =========================
+   Final CTA
+========================= */
 
-margin-bottom: 10px;
+.contact-final-cta {
+  padding: 18px 0 40px;
+}
+
+.contact-final-cta h2 {
+  max-width: 760px;
+  text-align: left;
+  margin-bottom: 12px;
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.contact-final-cta p {
+  max-width: 760px;
+  margin-bottom: 24px;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 1100px) {
+  .contact-hero-grid,
+  .factory-snapshot-grid,
+  .inquiry-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .factory-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .inquiry-sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-hero {
+    padding-top: 24px;
+  }
+
+  .contact-hero-content {
+    max-width: none;
+  }
+
+  .contact-hero h1 {
+    max-width: 100%;
+  }
+
+  .contact-hero p {
+    max-width: 100%;
+  }
+
+  .contact-hero-image img {
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-hero {
+    padding: 20px 0 12px;
+  }
+
+  .contact-options,
+  .factory-snapshot,
+  .inquiry-form-section,
+  .contact-final-cta {
+    padding-top: 16px;
+    padding-bottom: 18px;
+  }
+
+  .contact-actions {
+    justify-content: flex-start;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .factory-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contact-card,
+  .faq-item,
+  .inquiry-sidebar {
+    border-radius: 18px;
+  }
+
+  .factory-snapshot-image img {
+    min-height: 260px;
+    border-radius: 18px;
+  }
+}
+
+@media (max-width: 560px) {
+  .contact-hero h1,
+  .contact-options h2,
+  .factory-snapshot-content h2,
+  .inquiry-form-section h2,
+  .contact-faq h2,
+  .contact-final-cta h2 {
+    font-size: clamp(1.9rem, 8vw, 2.5rem);
+  }
+
+  .factory-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact-card {
+    min-height: auto;
+  }
+
+  .inquiry-sidebar {
+    padding: 22px 18px;
+  }
+}
+
+/* =================================
+   Contact V2 – Phase 2 Patch
+   解决：
+   1) Hero 右图高度与左侧文字不匹配
+   2) Multiple Ways To Reach Us 标题/说明靠左
+   4) Tell Us About Your Project 标题/说明靠左
+   5) FAQ 改成折叠式
+================================= */
+
+/* =========================
+   1) Hero 右图高度匹配左侧文案区
+========================= */
+/* 控制右侧图片区整体高度，更接近左侧文案总高度 */
+.contact-hero-image {
+  height: 100%;
+}
+
+/* 左侧文字区域略收紧，避免左边过高 */
+.contact-hero-content {
+  padding-top: 10px;
+}
+
+.contact-hero h1 {
+  margin-bottom: 14px;
+}
+
+.contact-hero p {
+  margin-bottom: 16px;
+}
+
+.contact-actions {
+  margin-top: 20px;
+  margin-bottom: 18px;
+}
+
+.contact-highlights {
+  margin-top: 16px;
+  gap: 8px;
+}
+
+/* =========================
+   5) FAQ 改成折叠式
+========================= */
+
+/* FAQ 区块标题保持靠左 */
+.contact-faq .container > h2,
+.contact-faq .container > p {
+  max-width: 760px;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: left;
+}
+
+.contact-faq .container > h2 {
+  margin-bottom: 12px;
+}
+
+.contact-faq .container > p {
+  margin-bottom: 24px;
+}
+
+/* FAQ 列表宽度放宽并靠左 */
+.contact-faq .faq-list {
+  max-width: 980px;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+/* 折叠卡片外观 */
+.contact-faq .faq-item {
+  background: #fff;
+  border: 1px solid rgba(25, 35, 28, 0.08);
+  border-radius: 18px;
+  box-shadow: 0 10px 28px rgba(15, 23, 18, 0.04);
+  padding: 0;
+  overflow: hidden;
+}
+
+/* 如果 FAQ 组件已经改成 <details class="faq-item"> 的结构，这套样式直接生效 */
+.contact-faq .faq-item summary {
+  position: relative;
+  list-style: none;
+  cursor: pointer;
+  padding: 18px 54px 18px 20px;
+  margin: 0;
+  font-size: 1.02rem;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--ink);
+}
+
+.contact-faq .faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+/* 右侧 + / - 图标 */
+.contact-faq .faq-item summary::before,
+.contact-faq .faq-item summary::after {
+  content: "";
+  position: absolute;
+  right: 22px;
+  top: 50%;
+  width: 12px;
+  height: 2px;
+  background: var(--ink);
+  transform: translateY(-50%);
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  border-radius: 999px;
+}
+
+.contact-faq .faq-item summary::after {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.contact-faq .faq-item[open] summary::after {
+  opacity: 0;
+  transform: translateY(-50%) rotate(90deg) scaleX(0.3);
+}
+
+/* 展开内容 */
+.contact-faq .faq-item p {
+  margin: 0;
+  padding: 0 20px 18px;
+  color: var(--muted);
+  line-height: 1.75;
+  font-size: 0.94rem;
+}
+
+/* 如果你 FAQ 组件还保留的是旧结构（h3 + p），先隐藏旧的底边视觉 */
+.contact-faq .faq-item h3 {
+  margin: 0;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 1100px) {
+  .contact-hero-image img {
+    height: 480px;
+    max-height: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .contact-hero-grid {
+    align-items: initial;
+  }
+
+  .contact-hero-content {
+    padding-top: 0;
+  }
+
+  .contact-hero-image img {
+    height: 360px;
+    min-height: 360px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-hero-image img {
+    height: 300px;
+    min-height: 300px;
+    border-radius: 18px;
+  }
+
+  .contact-faq .faq-item summary {
+    padding: 16px 48px 16px 18px;
+    font-size: 0.98rem;
+  }
+
+  .contact-faq .faq-item p {
+    padding: 0 18px 16px;
+  }
+}
+
+
+/* =================================
+   Contact V2 – Phase 3 Patch
+   修复：
+   1) Hero 顶部被 header 遮住
+   2) Contact Options / Inquiry / FAQ 标题区真正左对齐
+================================= */
+
+/* =========================
+   1) Hero 顶部避开固定 Header
+========================= */
+
+/* 整个 Contact Hero 往下让出 header 空间 */
+.contact-hero {
+  padding-top: 96px !important;
+  padding-bottom: 18px;
+}
+
+/* Hero 两列顶部对齐 */
+.contact-hero-grid {
+  align-items: start !important;
+}
+
+/* 左侧内容不要再额外往上顶 */
+.contact-hero-content {
+  padding-top: 0 !important;
+}
+
+/* 右图高度保留，但不要再造成顶部遮挡感 */
+.contact-hero-image img {
+  display: block;
+  width: 100%;
+  height: clamp(420px, 48vw, 620px);
+  min-height: 420px;
+  max-height: 620px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* =========================
+   2) 统一三个模块标题区为 Why Us / Factory 风格
+   - 靠左
+   - 固定宽度
+   - 与卡片区之间保留统一间距
+========================= */
+
+/* 模块标题容器：不要被全局 section heading 样式干扰 */
+.contact-options .container > h2,
+.contact-options .container > p,
+.inquiry-form-section .container > h2,
+.inquiry-form-section .container > p,
+.contact-faq .container > h2,
+.contact-faq .container > p {
+  text-align: left !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
+
+/* H2 */
+.contact-options .container > h2,
+.inquiry-form-section .container > h2,
+.contact-faq .container > h2 {
+  max-width: 760px;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 12px !important;
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+}
+
+/* 描述文字 */
+.contact-options .container > p,
+.inquiry-form-section .container > p,
+.contact-faq .container > p {
+  max-width: 760px;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 26px !important;
+  font-size: 0.98rem;
+  line-height: 1.75;
+  color: var(--muted);
+}
+
+/* =========================
+   3) 如果这三个模块里标题上方还有 section heading 包裹，
+   也一并强制左对齐（防止不同组件写法不一致）
+========================= */
+
+.contact-options .oem-section-heading,
+.inquiry-form-section .oem-section-heading,
+.contact-faq .oem-section-heading,
+.contact-options .why-section-heading,
+.inquiry-form-section .why-section-heading,
+.contact-faq .why-section-heading {
+  max-width: 760px !important;
+  margin: 0 0 26px 0 !important;
+  text-align: left !important;
+}
+
+.contact-options .oem-section-heading h2,
+.inquiry-form-section .oem-section-heading h2,
+.contact-faq .oem-section-heading h2,
+.contact-options .why-section-heading h2,
+.inquiry-form-section .why-section-heading h2,
+.contact-faq .why-section-heading h2 {
+  max-width: 760px !important;
+  margin: 0 0 12px !important;
+  text-align: left !important;
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.contact-options .oem-section-heading p,
+.inquiry-form-section .oem-section-heading p,
+.contact-faq .oem-section-heading p,
+.contact-options .why-section-heading p,
+.inquiry-form-section .why-section-heading p,
+.contact-faq .why-section-heading p {
+  max-width: 760px !important;
+  margin: 0 !important;
+  text-align: left !important;
+  line-height: 1.75;
+  color: var(--muted);
+}
+
+/* =========================
+   4) FAQ 列表与标题区的间距再统一
+========================= */
+
+.contact-faq .faq-list {
+  margin-top: 0 !important;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 1100px) {
+  .contact-hero {
+    padding-top: 88px !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .contact-hero {
+    padding-top: 76px !important;
+  }
+
+  .contact-hero-image img {
+    height: 360px;
+    min-height: 360px;
+    max-height: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-hero {
+    padding-top: 68px !important;
+    padding-bottom: 12px;
+  }
+
+  .contact-options .container > h2,
+  .inquiry-form-section .container > h2,
+  .contact-faq .container > h2,
+  .contact-options .oem-section-heading h2,
+  .inquiry-form-section .oem-section-heading h2,
+  .contact-faq .oem-section-heading h2,
+  .contact-options .why-section-heading h2,
+  .inquiry-form-section .why-section-heading h2,
+  .contact-faq .why-section-heading h2 {
+    font-size: clamp(1.9rem, 8vw, 2.5rem);
+  }
+
+  .contact-hero-image img {
+    height: 300px;
+    min-height: 300px;
+  }
+}
+
+/* =========================================================
+   Contact V2 Phase 2.1
+   解决：
+   1) Hero 顶部被 header 遮挡
+   2) ContactOptions / InquiryForm / FAQ 的 SectionHeader 左对齐
+   3) FAQ 折叠样式统一
+========================================================= */
+
+/* =========================
+   1) Hero 顶部避开固定 Header
+========================= */
+.contact-hero {
+  padding-top: 110px;
+}
+
+@media (max-width: 991px) {
+  .contact-hero {
+    padding-top: 96px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-hero {
+    padding-top: 88px;
+  }
+}
+
+/* Hero 左右整体再贴近一点，和 Why Us / Factory 更统一 */
+.contact-hero-grid {
+  align-items: stretch;
+}
+
+.contact-hero-content {
+  max-width: 640px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-hero h1 {
+  max-width: 560px;
+  margin-bottom: 16px;
+  font-size: clamp(2.5rem, 5vw, 4.4rem);
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+}
+
+.contact-hero p {
+  max-width: 560px;
+  margin-bottom: 20px;
+  line-height: 1.75;
+}
+
+.contact-hero-image {
+  height: 100%;
+}
+
+.contact-hero-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  object-fit: cover;
+  border-radius: 24px;
+}
+
+@media (max-width: 991px) {
+  .contact-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .contact-hero-content {
+    max-width: 100%;
+  }
+
+  .contact-hero h1,
+  .contact-hero p {
+    max-width: 100%;
+  }
+
+  .contact-hero-image img {
+    min-height: 380px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-hero {
+    padding-bottom: 18px;
+  }
+
+  .contact-hero h1 {
+    font-size: clamp(2.2rem, 9vw, 3.3rem);
+  }
+
+  .contact-hero-image img {
+    min-height: 280px;
+    border-radius: 18px;
+  }
+}
+
+/* =========================
+   2) Contact 页面里 SectionHeader 统一成左对齐
+   适用模块：
+   - ContactOptions
+   - InquiryForm
+   - FAQ
+========================= */
+
+/* 外层标题区 */
+.contact-options .section-header,
+.inquiry-form-section .section-header,
+.contact-faq .section-header {
+  max-width: 760px;
+  margin: 0 0 24px 0;
+  text-align: left;
+}
+
+/* H2 */
+.contact-options .section-header h2,
+.inquiry-form-section .section-header h2,
+.contact-faq .section-header h2 {
+  max-width: 720px;
+  margin: 0 0 10px 0;
+  text-align: left;
+  font-size: clamp(2rem, 3vw, 3rem);
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+}
+
+/* 说明文字 */
+.contact-options .section-header p,
+.inquiry-form-section .section-header p,
+.contact-faq .section-header p {
+  max-width: 680px;
+  margin: 0;
+  text-align: left;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+/* 模块间距再收紧一点 */
+.contact-options,
+.inquiry-form-section,
+.contact-faq {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+/* =========================
+   3) Contact Options 卡片区微调
+========================= */
+.contact-grid {
+  align-items: stretch;
+}
+
+.contact-card {
+  min-height: 210px;
+  padding: 24px 22px;
+  border-radius: 18px;
+  box-shadow: var(--shadow-soft);
+}
+
+.contact-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+}
+
+.contact-card p {
+  margin-bottom: 16px;
+  line-height: 1.7;
+}
+
+/* =========================
+   4) Inquiry 标题 + 表单布局微调
+========================= */
+.inquiry-layout {
+  align-items: start;
+}
+
+.inquiry-form {
+  max-width: 100%;
+  margin: 0;
+}
+
+.inquiry-form-wrap {
+  min-width: 0;
+}
+
+/* =========================
+   5) FAQ 折叠式样式统一
+========================= */
+.contact-faq .faq-list {
+  max-width: 100%;
+  margin: 0;
+  display: grid;
+  gap: 14px;
+}
+
+.contact-faq .faq-item {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 0 20px;
+  box-shadow: var(--shadow-soft);
+}
+
+.contact-faq .faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  position: relative;
+  padding: 18px 34px 18px 0;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--ink);
+}
+
+.contact-faq .faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+
+
+.contact-faq .faq-item p {
+  margin: 0;
+  padding: 0 0 18px;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+/* =========================
+   6) 移动端收尾
+========================= */
+@media (max-width: 767px) {
+  .contact-options .section-header,
+  .inquiry-form-section .section-header,
+  .contact-faq .section-header {
+    margin-bottom: 18px;
+  }
+
+  .contact-options .section-header h2,
+  .inquiry-form-section .section-header h2,
+  .contact-faq .section-header h2 {
+    font-size: clamp(1.8rem, 8vw, 2.4rem);
+  }
+
+  .contact-card {
+    min-height: auto;
+  }
+
+  .contact-faq .faq-item {
+    padding: 0 16px;
+  }
+
+  .contact-faq .faq-item summary {
+    padding: 16px 28px 16px 0;
+  }
 }
