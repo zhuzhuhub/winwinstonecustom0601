@@ -1,799 +1,1156 @@
-/* =================================
-   Factory Hero
-================================= */
+/* =========================================================
+   FACTORY PAGE V2
+   Style goal:
+   - Match OEM / Why Us visual language
+   - Keep current Factory page structure unchanged
+   - Unify hero / section headings / cards / CTA
+========================================================= */
+
+/* =========================================================
+   SHARED SECTION RHYTHM
+========================================================= */
+
+.factory-overview,
+.production-facility,
+.manufacturing-process,
+.packaging-logistics,
+.materials-section,
+.factory-cta {
+  position: relative;
+}
+
+.factory-overview,
+.production-facility,
+.manufacturing-process,
+.packaging-logistics,
+.materials-section {
+  padding: 72px 0;
+}
+
+.packaging-logistics {
+  background: #f6f3ee;
+}
+
+.materials-section {
+  background: #fff;
+}
+
+/* =========================================================
+   SHARED HEADING SYSTEM
+   Works with your current structure:
+   <section>
+     <div class="container">
+       <SectionHeader /> or h2 + p
+========================================================= */
+
+.factory-overview h2,
+.production-facility h2,
+.manufacturing-process h2,
+.packaging-logistics h2,
+.materials-section h2 {
+  max-width: 760px;
+  margin: 0 0 14px;
+  text-align: left;
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.factory-overview > .container > p,
+.production-facility > .container > p,
+.manufacturing-process > .container > p,
+.packaging-logistics > .container > p,
+.materials-section > .container > p {
+  max-width: 780px;
+  margin: 0;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #666;
+}
+
+/* 如果模块里标题下面还有额外介绍段落，也统一一下 */
+.factory-overview p,
+.production-facility p,
+.manufacturing-process p,
+.packaging-logistics p,
+.materials-section p {
+  text-align: left;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
 
 .factory-hero {
-
   position: relative;
-
-  min-height: 600px;
-
+  min-height: 700px;
   display: flex;
-
   align-items: center;
-
   background-size: cover;
-
   background-position: center;
-
   overflow: hidden;
+  padding: 140px 0 84px;
 }
 
 .factory-overlay {
-
   position: absolute;
-
   inset: 0;
-
-   background:
+  background:
     linear-gradient(
       90deg,
-      rgba(0,0,0,.85),
-      rgba(0,0,0,.50)
+      rgba(12, 16, 14, 0.78) 0%,
+      rgba(12, 16, 14, 0.56) 42%,
+      rgba(12, 16, 14, 0.22) 100%
     );
 }
 
 .factory-container {
-
   position: relative;
-
   z-index: 2;
 }
 
 .factory-content {
-
-  max-width: 800px;
-
+  max-width: 760px;
   color: #fff;
 }
 
 .factory-eyebrow {
-
   display: inline-block;
-
-  margin-bottom: 18px;
-
-  letter-spacing: 2px;
-
-  font-size: .85rem;
-
+  margin-bottom: 16px;
+  font-size: 0.8rem;
+  line-height: 1;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-
-  font-weight: 600;
+  font-weight: 700;
+  color: rgba(255,255,255,.82);
 }
 
 .factory-content h1 {
-
-  max-width: 850px;
-
-  font-size: clamp(2.8rem, 4.8vw, 4.8rem);
-
-  line-height: 1;
-
-  letter-spacing: -0.035em;
-
-  font-weight: 800;
-
-  color: white;
+  max-width: 720px;
+  margin: 0 0 20px;
+  font-size: clamp(2.8rem, 5vw, 4.9rem);
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+  font-weight: 700;
+  color: #fff;
 }
 
 .factory-description {
-
-  max-width: 800px;
-
+  max-width: 760px;
+  margin: 0 0 28px;
   color: rgba(255,255,255,.88);
-
-  margin-bottom: 30px;
-
-  font-size: 1.1rem;
-
-  line-height: 1.9;
+  font-size: 1.04rem;
+  line-height: 1.85;
 }
 
 .factory-actions {
-
-  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 34px;
 }
 
 .factory-points {
-
   display: flex;
-
   flex-wrap: wrap;
-
-  gap: 24px;
+  gap: 12px;
+  max-width: 920px;
 }
 
 .factory-points div {
-
-  font-size: .95rem;
-
-  opacity: .95;
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.10);
+  border: 1px solid rgba(255,255,255,.18);
+  backdrop-filter: blur(6px);
+  font-size: 0.92rem;
+  line-height: 1.35;
+  color: rgba(255,255,255,.96);
+  opacity: 1;
 }
 
-@media (max-width:768px){
+/* =========================================================
+   SHARED CARD SYSTEM
+========================================================= */
 
-  .factory-hero {
-
-    min-height: 620px;
-  }
-
-  .factory-points {
-
-    flex-direction: column;
-
-    gap: 12px;
-  }
-
-}
-/* =========================
-   Factory Overview Stats
-========================= */
-
-.factory-overview {
-
-  padding: 40px 0;
+.factory-item,
+.facility-card,
+.logistics-card,
+.selection-card,
+.material-card,
+.process-step {
+  border-radius: 18px;
+  border: 1px solid rgba(18, 22, 20, 0.07);
+  box-shadow: 0 10px 28px rgba(16, 24, 20, 0.04);
+  transition:
+    transform .28s ease,
+    box-shadow .28s ease,
+    border-color .28s ease;
 }
 
-
-.factory-overview h2 {
-
-  max-width:1400px; 
-
-  text-align:left;
-
-
+.factory-item:hover,
+.facility-card:hover,
+.logistics-card:hover,
+.selection-card:hover,
+.material-card:hover,
+.process-step:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 42px rgba(16, 24, 20, 0.08);
+  border-color: rgba(18, 22, 20, 0.10);
 }
 
-.factory-overview p{
-   max-width:1400px; 
- 
-   text-align:left; 
-   
-  }
+/* =========================================================
+   FACTORY OVERVIEW
+========================================================= */
+
 .factory-grid {
-
   display: grid;
-
-  grid-template-columns: repeat(4, 1fr);
-
-  gap: 30px;
-
-  margin-top: 60px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 34px;
 }
 
 .factory-item {
-
   background: #fff;
-
-  border-radius: 18px;
-
   overflow: hidden;
-
-  border: 1px solid rgba(0,0,0,.06);
-
-  transition: all .3s ease;
-}
-
-.factory-item:hover {
-
-  transform: translateY(-6px);
 }
 
 .factory-item img {
-
   width: 100%;
-
-  height: 220px;
-
+  height: 210px;
   object-fit: cover;
-
   display: block;
 }
 
-.factory-content {
-
-  padding: 28px;
+.factory-item .factory-content {
+  padding: 22px 20px 22px;
+  max-width: none;
+  color: var(--ink);
 }
 
-.factory-content h3 {
-
-  margin-bottom: 14px;
-
-  font-size: 1.35rem;
+.factory-item .factory-content h3 {
+  margin: 0 0 10px;
+  font-size: 1.18rem;
+  line-height: 1.25;
+  color: var(--ink);
 }
 
-.factory-content p {
-
+.factory-item .factory-content p {
+  margin: 0;
   color: #666;
-
-  line-height: 1.8;
-
-  font-size: .95rem;
+  line-height: 1.72;
+  font-size: 0.95rem;
 }
 
-/* Tablet */
-
-@media (max-width: 1100px) {
-
-  .factory-grid {
-
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-}
-
-/* Mobile */
-
-@media (max-width: 768px) {
-
-  .factory-grid {
-
-    grid-template-columns: 1fr;
-  }
-
-}
-/* =========================
-   Production Facility
-========================= */
+/* =========================================================
+   PRODUCTION FACILITY
+========================================================= */
 
 .production-facility {
-
-  padding: 40px 0;
+  background: #fff;
 }
-
-.production-facility h2 {
-
-  max-width:1400px; 
-
-  text-align:left;
-
-
-}
-
-.production-facility p{
-   max-width:1400px; 
- 
-   text-align:left; 
-   
-  }
 
 .facility-grid {
-
   display: grid;
-
-  grid-template-columns:
-    repeat(4,1fr);
-
-  gap: 30px;
-
-  margin-top: 60px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 34px;
 }
 
 .facility-card {
-
   background: #fff;
-
-  border-radius: 18px;
-
   overflow: hidden;
-
-  border: 1px solid rgba(0,0,0,.06);
-
-  transition: .3s ease;
-}
-
-.facility-card:hover {
-
-  transform: translateY(-6px);
 }
 
 .facility-card img {
-
   width: 100%;
-
-  height: 280px;
-
+  height: 230px;
   object-fit: cover;
-
   display: block;
 }
 
 .facility-content {
-
-  padding: 24px;
+  padding: 20px 20px 22px;
 }
 
 .facility-content h3 {
-
-  margin-bottom: 12px;
-
-  font-size: 1.2rem;
-
-  line-height: 1.3;
+  margin: 0 0 10px;
+  font-size: 1.14rem;
+  line-height: 1.28;
+  color: var(--ink);
 }
 
 .facility-content p {
-
+  margin: 0;
   color: #666;
-
-  line-height: 1.8;
-
-  font-size: .95rem;
+  line-height: 1.72;
+  font-size: 0.94rem;
 }
 
-
-@media (max-width: 1100px) {
-
-  .facility-grid {
-
-    grid-template-columns: repeat(2,1fr);
-  }
-
-}
-
-@media (max-width: 768px) {
-
-  .facility-grid {
-
-    grid-template-columns: 1fr;
-  }
-
-}
-
-/* =========================
-   Manufacturing Process
-========================= */
+/* =========================================================
+   MANUFACTURING PROCESS
+========================================================= */
 
 .manufacturing-process {
-
-  padding: 40px 0;
+  background: #f6f3ee;
 }
 
-.manufacturing-process h2 {
-
-  max-width:1400px; 
-
-  text-align:left;
-
-
-}
-
-.manufacturing-process p{
-   max-width:1400px; 
- 
-   text-align:left; 
-   
-  }
 .process-grid {
-
   display: grid;
-
-  grid-template-columns:
-    repeat(4,1fr);
-
-  gap: 20px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 34px;
 }
 
 .process-step {
-
-  padding: 20px;
-
-  border: 1px solid var(--line);
-
-  background: #fff;
-
   position: relative;
+  padding: 24px 22px 22px;
+  background: #fff;
+  min-height: 180px;
 }
 
 .process-number {
-
-  display: block;
-
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 54px;
+  height: 34px;
+  padding: 0 12px;
   margin-bottom: 16px;
-
-  font-size: .85rem;
-
-  letter-spacing: 2px;
-
+  border-radius: 999px;
+  background: #f4efe5;
   color: var(--green);
-
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
   font-weight: 700;
 }
 
 .process-step h3 {
-
-  margin-bottom: 14px;
+  margin: 0 0 10px;
+  font-size: 1.22rem;
+  line-height: 1.2;
+  color: var(--ink);
 }
 
 .process-step p {
-
   margin: 0;
-
-  color: var(--muted);
-
-  line-height: 1.8;
+  color: #666;
+  line-height: 1.72;
+  font-size: 0.95rem;
 }
 
-@media (max-width:900px){
-
-  .process-grid {
-
-    grid-template-columns:
-      repeat(2,1fr);
-  }
-
-}
-
-@media (max-width:600px){
-
-  .process-grid {
-
-    grid-template-columns:1fr;
-  }
-
-}
-/* =========================
-   Packaging Logistic
-========================= */
-.packaging-logistics {
-
-  padding: 40px 0;
-
-  background: #f8f6f2;
-}
-
-.packaging-logistics h2 {
-
-  max-width:1400px; 
-
-  text-align:left;
-
-
-}
-
-.packaging-logistics p{
-   max-width:1400px; 
- 
-   text-align:left; 
-   
-  }
+/* =========================================================
+   PACKAGING & LOGISTICS
+========================================================= */
 
 .logistics-grid {
-
   display: grid;
-
-  grid-template-columns: repeat(4,1fr);
-
-  gap: 30px;
-
-  margin-top: 60px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 34px;
 }
 
 .logistics-card {
-
   background: #fff;
-
-  border-radius: 18px;
-
   overflow: hidden;
-
-  border: 1px solid rgba(0,0,0,.06);
-
-  transition: .3s ease;
-}
-
-.logistics-card:hover {
-
-  transform: translateY(-6px);
 }
 
 .logistics-card img {
-
   width: 100%;
-
-  height: 240px;
-
+  height: 210px;
   object-fit: cover;
-
   display: block;
 }
 
 .logistics-content {
-
-  padding: 24px;
+  padding: 20px 20px 22px;
 }
 
 .logistics-content h3 {
-
-  margin-bottom: 12px;
-
-  font-size: 1.2rem;
-
-  line-height: 1.3;
+  margin: 0 0 10px;
+  font-size: 1.12rem;
+  line-height: 1.28;
+  color: var(--ink);
 }
 
 .logistics-content p {
-
+  margin: 0;
   color: #666;
-
-  line-height: 1.8;
-
-  font-size: .95rem;
+  line-height: 1.72;
+  font-size: 0.94rem;
 }
 
-@media (max-width:1100px){
-
-  .logistics-grid{
-
-    grid-template-columns:repeat(2,1fr);
-  }
-
-}
-
-@media (max-width:768px){
-
-  .logistics-grid{
-
-    grid-template-columns:1fr;
-  }
-
-}
-
-
-/* =========================
-   Materials Section
-========================= */
-
-.materials-section {
-
-  padding: 40px 0;
-}
-
-.materials-section h2 {
-
-  max-width:1400px; 
-
-  text-align:left;
-
-
-}
-
-.materials-section p{
-   max-width:1400px; 
- 
-   text-align:left; 
-   
-  }
+/* =========================================================
+   MATERIALS SECTION
+========================================================= */
 
 .material-selection-grid {
-
   display: grid;
-
-  grid-template-columns: repeat(5,1fr);
-
-  gap: 24px;
-
-  margin-top: 30px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 34px;
 }
 
 .selection-card {
-
-  padding: 32px;
-
+  padding: 24px 22px 22px;
   background: #fff;
-
-  border-radius: 16px;
-
-  border: 1px solid rgba(0,0,0,.06);
+  min-height: 190px;
 }
 
 .selection-card h3 {
-
-  margin-bottom: 14px;
+  margin: 0 0 10px;
+  font-size: 1.16rem;
+  line-height: 1.22;
+  color: var(--ink);
 }
 
 .selection-card p {
-
+  margin: 0;
   color: #666;
-
-  line-height: 1.8;
+  line-height: 1.72;
+  font-size: 0.95rem;
 }
 
 .materials-library {
-
-  margin-top: 20px;
+  margin-top: 52px;
 }
 
 .materials-library h3 {
-
+  margin: 0 0 22px;
   text-align: center;
-
-  margin-bottom: 40px;
+  font-size: 1.7rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--ink);
 }
 
 .materials-grid {
-
   display: grid;
-
-  grid-template-columns: repeat(4,1fr);
-
-  gap: 30px;
-
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 18px;
 }
-
 
 .material-card {
-
   display: block;
-
   text-decoration: none;
-
   color: inherit;
-
   overflow: hidden;
-
-  border-radius: 18px;
-
   background: #fff;
-
-  transition: all .3s ease;
-}
-
-.material-card:hover {
-
-  transform: translateY(-6px);
 }
 
 .material-card img {
-
   width: 100%;
-
-  aspect-ratio: 4/5;
-
+  aspect-ratio: 1 / 1;
   object-fit: cover;
-
   display: block;
 }
 
 .material-card span {
-
   display: block;
-
-  padding: 20px;
-
+  padding: 14px 14px 16px;
   text-align: center;
-
   font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.35;
+  color: var(--ink);
 }
 
 .disabled {
-
-  opacity: .75;
+  opacity: .92;
 }
 
-@media (max-width:1100px){
+/* =========================================================
+   CTA
+========================================================= */
 
-  .material-selection-grid,
-  .materials-grid{
-
-    grid-template-columns:repeat(2,1fr);
-  }
-
-}
-
-@media (max-width:768px){
-
-  .material-selection-grid,
-  .materials-grid{
-
-    grid-template-columns:1fr;
-  }
-
-}
-/* =========================
-   Factory CTA
-========================= */
 .factory-cta {
-
-  padding: 20px;
+  padding: 26px 0 78px;
+  background: #fff;
 }
 
 .factory-cta-box {
-
-  max-width: 1100px;
-
+  max-width: 1120px;
   margin: 0 auto;
-
-  padding: 60px 50px;
-
+  padding: 48px 46px;
   text-align: center;
-
   border-radius: 24px;
- 
   background: var(--green);
+  color: #fff;
+  box-shadow: 0 18px 46px rgba(16, 24, 20, 0.10);
 }
 
 .factory-cta .eyebrow {
-
   display: inline-block;
-
-  margin-bottom: 14px;
-
-  font-size: .85rem;
-
-  font-weight: 600;
-
-  letter-spacing: .08em;
-
+  margin-bottom: 12px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-
-  color: #2f5d50;
+  color: rgba(255,255,255,.72);
 }
 
 .factory-cta h2 {
-  max-width: 1100px;
+  max-width: 780px;
+  margin: 0 auto 16px;
   text-align: center;
-  margin-bottom: 20px;
   color: #fff;
-  font-size: clamp(2rem,4vw,3rem);
-
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+  font-weight: 700;
 }
 
 .factory-cta p {
-
-  max-width: 800px;
-
-  margin: 0 auto 32px;
-
-  color: #ffffff95;
-
+  max-width: 760px;
+  margin: 0 auto 26px;
+  color: rgba(255,255,255,.88);
   line-height: 1.8;
+  font-size: 1rem;
 }
 
 .factory-cta-features {
-
   display: flex;
-
   justify-content: center;
-
   flex-wrap: wrap;
-
-  gap: 16px;
-
-  margin-bottom: 36px;
+  gap: 10px;
+  margin-bottom: 26px;
 }
 
 .factory-cta-features span {
-
-  padding: 10px 18px;
-
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 9px 16px;
   border-radius: 999px;
-
-  background: white;
-
-  border: 1px solid rgba(0,0,0,.06);
-
-  font-size: .95rem;
+  background: rgba(255,255,255,.96);
+  border: 1px solid rgba(0,0,0,.05);
+  font-size: 0.92rem;
+  line-height: 1.2;
+  color: var(--ink);
 }
 
 .cta-actions {
-
   display: flex;
-
   justify-content: center;
-
-  gap: 18px;
-
+  gap: 14px;
   flex-wrap: wrap;
 }
 
+/* =========================================================
+   RESPONSIVE
+========================================================= */
 
-@media (max-width:768px){
-
-  .factory-cta-box {
-
-    padding: 40px 24px;
+@media (max-width: 1200px) {
+  .factory-grid,
+  .facility-grid,
+  .logistics-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .materials-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1024px) {
+  .factory-hero {
+    min-height: 660px;
+    padding: 132px 0 76px;
+  }
+
+  .factory-content h1 {
+    max-width: 760px;
+  }
+
+  .process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .material-selection-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .factory-overview,
+  .production-facility,
+  .manufacturing-process,
+  .packaging-logistics,
+  .materials-section {
+    padding: 58px 0;
+  }
+
+  .factory-hero {
+    min-height: auto;
+    padding: 124px 0 64px;
+  }
+
+  .factory-content h1 {
+    font-size: clamp(2.2rem, 10vw, 3.3rem);
+    line-height: 1.02;
+  }
+
+  .factory-description {
+    font-size: 0.98rem;
+    line-height: 1.8;
+  }
+
+  .factory-actions {
+    margin-bottom: 24px;
+  }
+
+  .factory-points {
+    gap: 10px;
+  }
+
+  .factory-points div {
+    min-height: 36px;
+    padding: 8px 14px;
+    font-size: 0.88rem;
+  }
+
+  .factory-overview h2,
+  .production-facility h2,
+  .manufacturing-process h2,
+  .packaging-logistics h2,
+  .materials-section h2 {
+    font-size: clamp(1.8rem, 8vw, 2.4rem);
+  }
+
+  .factory-grid,
+  .facility-grid,
+  .logistics-grid,
+  .process-grid,
+  .material-selection-grid,
+  .materials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .factory-item img,
+  .facility-card img,
+  .logistics-card img {
+    height: 220px;
+  }
+
+  .materials-library {
+    margin-top: 42px;
+  }
+
+  .materials-library h3 {
+    font-size: 1.45rem;
+    margin-bottom: 18px;
+  }
+
+  .factory-cta {
+    padding: 18px 0 60px;
+  }
+
+  .factory-cta-box {
+    padding: 40px 24px;
+    border-radius: 22px;
+  }
+
+  .factory-cta h2 {
+    max-width: 100%;
+    font-size: clamp(1.8rem, 8vw, 2.4rem);
+  }
+
+  .factory-cta p {
+    font-size: 0.96rem;
+    line-height: 1.75;
+  }
+}
+
+@media (max-width: 520px) {
+  .factory-item .factory-content,
+  .facility-content,
+  .logistics-content,
+  .selection-card,
+  .process-step {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .factory-item img,
+  .facility-card img,
+  .logistics-card img {
+    height: 210px;
+  }
+
+  .process-step {
+    min-height: auto;
+  }
+
+  .selection-card {
+    min-height: auto;
+  }
+}
+
+
+
+/* =========================================================
+   FACTORY V2 PHASE 2 PATCH
+   Goal:
+   1) Compress overall vertical rhythm
+   2) Make all H2 / intro text smaller and truly left-aligned
+========================================================= */
+
+/* =========================================================
+   1) SECTION SPACING — 整页压缩
+========================================================= */
+
+.factory-overview,
+.production-facility,
+.manufacturing-process,
+.packaging-logistics,
+.materials-section {
+  padding: 52px 0;
+}
+
+.factory-cta {
+  padding: 18px 0 56px;
+}
+
+/* =========================================================
+   2) SHARED HEADING SYSTEM — 标题更小、更靠左、更紧凑
+========================================================= */
+
+.factory-overview h2,
+.production-facility h2,
+.manufacturing-process h2,
+.packaging-logistics h2,
+.materials-section h2 {
+  max-width: 660px;
+  width: 100%;
+  margin: 0 0 10px 0 !important;
+  text-align: left !important;
+  font-size: clamp(1.8rem, 2.5vw, 2.55rem);
+  line-height: 1.06;
+  letter-spacing: -0.028em;
+}
+
+.factory-overview > .container > p,
+.production-facility > .container > p,
+.manufacturing-process > .container > p,
+.packaging-logistics > .container > p,
+.materials-section > .container > p {
+  max-width: 760px;
+  width: 100%;
+  margin: 0 !important;
+  text-align: left !important;
+  font-size: 0.96rem;
+  line-height: 1.72;
+  color: #666;
+}
+
+/* 防止某些组件内部段落把标题区挤散 */
+.factory-overview .container > *:first-child,
+.production-facility .container > *:first-child,
+.manufacturing-process .container > *:first-child,
+.packaging-logistics .container > *:first-child,
+.materials-section .container > *:first-child {
+  text-align: left;
+}
+
+/* 如果你用的是统一标题组件，也一起压一下 */
+.factory-overview .section-header,
+.production-facility .section-header,
+.manufacturing-process .section-header,
+.packaging-logistics .section-header,
+.materials-section .section-header {
+  max-width: 760px;
+  margin: 0 0 24px 0 !important;
+  text-align: left !important;
+}
+
+.factory-overview .section-header h2,
+.production-facility .section-header h2,
+.manufacturing-process .section-header h2,
+.packaging-logistics .section-header h2,
+.materials-section .section-header h2 {
+  max-width: 660px;
+  margin: 0 0 10px 0 !important;
+  text-align: left !important;
+  font-size: clamp(1.8rem, 2.5vw, 2.55rem);
+  line-height: 1.06;
+}
+
+.factory-overview .section-header p,
+.production-facility .section-header p,
+.manufacturing-process .section-header p,
+.packaging-logistics .section-header p,
+.materials-section .section-header p {
+  max-width: 760px;
+  margin: 0 !important;
+  text-align: left !important;
+  font-size: 0.96rem;
+  line-height: 1.72;
+}
+
+/* =========================================================
+   3) HERO — 高度压缩 + 文字更集中
+========================================================= */
+
+.factory-hero {
+  min-height: 560px;
+  padding: 118px 0 56px;
+}
+
+.factory-content {
+  max-width: 690px;
+}
+
+.factory-content h1 {
+  max-width: 620px;
+  margin: 0 0 16px;
+  font-size: clamp(2.35rem, 4vw, 4rem);
+  line-height: 0.98;
+}
+
+.factory-description {
+  max-width: 680px;
+  margin: 0 0 22px;
+  font-size: 0.98rem;
+  line-height: 1.75;
+}
+
+.factory-actions {
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.factory-points {
+  gap: 10px;
+  max-width: 780px;
+}
+
+.factory-points div {
+  min-height: 34px;
+  padding: 7px 13px;
+  font-size: 0.84rem;
+  line-height: 1.25;
+}
+
+/* =========================================================
+   4) GRID SPACING — 模块内容更紧凑
+========================================================= */
+
+.factory-grid,
+.facility-grid,
+.logistics-grid {
+  gap: 18px;
+  margin-top: 26px;
+}
+
+.process-grid,
+.material-selection-grid,
+.materials-grid {
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.materials-library {
+  margin-top: 40px;
+}
+
+.materials-library h3 {
+  margin-bottom: 18px;
+  font-size: 1.45rem;
+}
+
+/* =========================================================
+   5) CARD SYSTEM — 卡片整体压缩
+========================================================= */
+
+.factory-item,
+.facility-card,
+.logistics-card,
+.selection-card,
+.material-card,
+.process-step {
+  border-radius: 16px;
+}
+
+/* ---- Overview cards ---- */
+.factory-item img {
+  height: 170px;
+}
+
+.factory-item .factory-content {
+  padding: 16px 16px 18px;
+}
+
+.factory-item .factory-content h3 {
+  margin: 0 0 8px;
+  font-size: 1.02rem;
+  line-height: 1.24;
+}
+
+.factory-item .factory-content p {
+  font-size: 0.9rem;
+  line-height: 1.62;
+}
+
+/* ---- Production Facility cards ---- */
+.facility-card img {
+  height: 185px;
+}
+
+.facility-content {
+  padding: 16px 16px 18px;
+}
+
+.facility-content h3 {
+  margin: 0 0 8px;
+  font-size: 1.02rem;
+  line-height: 1.24;
+}
+
+.facility-content p {
+  font-size: 0.9rem;
+  line-height: 1.62;
+}
+
+/* ---- Packaging cards ---- */
+.logistics-card img {
+  height: 170px;
+}
+
+.logistics-content {
+  padding: 16px 16px 18px;
+}
+
+.logistics-content h3 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+  line-height: 1.24;
+}
+
+.logistics-content p {
+  font-size: 0.9rem;
+  line-height: 1.62;
+}
+
+/* =========================================================
+   6) MANUFACTURING PROCESS — 更紧凑、更像 Why Us
+========================================================= */
+
+.process-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.process-step {
+  padding: 18px 18px 18px;
+  min-height: 145px;
+  background: #fff;
+}
+
+.process-number {
+  min-width: 48px;
+  height: 30px;
+  margin-bottom: 12px;
+  padding: 0 10px;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+}
+
+.process-step h3 {
+  margin: 0 0 8px;
+  font-size: 1.06rem;
+  line-height: 1.2;
+}
+
+.process-step p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   7) MATERIAL SELECTION + MATERIAL LIBRARY — 压缩
+========================================================= */
+
+.selection-card {
+  min-height: 150px;
+  padding: 18px 18px 18px;
+}
+
+.selection-card h3 {
+  margin: 0 0 8px;
+  font-size: 1.04rem;
+  line-height: 1.2;
+}
+
+.selection-card p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.material-card span {
+  padding: 11px 12px 13px;
+  font-size: 0.88rem;
+  line-height: 1.3;
+}
+
+/* =========================================================
+   8) CTA — 再压缩一点，贴近 Why Us
+========================================================= */
+
+.factory-cta-box {
+  max-width: 1040px;
+  padding: 38px 34px;
+  border-radius: 22px;
+}
+
+.factory-cta .eyebrow {
+  margin-bottom: 10px;
+  font-size: 0.74rem;
+}
+
+.factory-cta h2 {
+  max-width: 700px;
+  margin: 0 auto 12px;
+  font-size: clamp(1.85rem, 2.7vw, 2.6rem);
+  line-height: 1.08;
+}
+
+.factory-cta p {
+  max-width: 720px;
+  margin: 0 auto 20px;
+  font-size: 0.96rem;
+  line-height: 1.72;
+}
+
+.factory-cta-features {
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.factory-cta-features span {
+  min-height: 34px;
+  padding: 7px 12px;
+  font-size: 0.84rem;
+}
+
+.cta-actions {
+  gap: 12px;
+}
+
+/* =========================================================
+   9) RESPONSIVE PATCH
+========================================================= */
+
+@media (max-width: 1024px) {
+  .factory-hero {
+    min-height: 520px;
+    padding: 112px 0 52px;
+  }
+
+  .factory-content h1 {
+    max-width: 680px;
+    font-size: clamp(2.1rem, 5vw, 3.4rem);
+  }
+
+  .factory-overview,
+  .production-facility,
+  .manufacturing-process,
+  .packaging-logistics,
+  .materials-section {
+    padding: 46px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .factory-hero {
+    min-height: auto;
+    padding: 108px 0 46px;
+  }
+
+  .factory-content h1 {
+    max-width: 100%;
+    font-size: clamp(2rem, 9vw, 2.9rem);
+    line-height: 1.02;
+  }
+
+  .factory-description {
+    font-size: 0.95rem;
+    line-height: 1.72;
+  }
+
+  .factory-overview,
+  .production-facility,
+  .manufacturing-process,
+  .packaging-logistics,
+  .materials-section {
+    padding: 42px 0;
+  }
+
+  .factory-overview h2,
+  .production-facility h2,
+  .manufacturing-process h2,
+  .packaging-logistics h2,
+  .materials-section h2,
+  .factory-overview .section-header h2,
+  .production-facility .section-header h2,
+  .manufacturing-process .section-header h2,
+  .packaging-logistics .section-header h2,
+  .materials-section .section-header h2 {
+    font-size: clamp(1.6rem, 7vw, 2.1rem);
+  }
+
+  .factory-grid,
+  .facility-grid,
+  .logistics-grid,
+  .process-grid,
+  .material-selection-grid,
+  .materials-grid {
+    gap: 14px;
+  }
+
+  .factory-item img,
+  .facility-card img,
+  .logistics-card img {
+    height: 210px;
+  }
+
+  .factory-cta {
+    padding: 16px 0 48px;
+  }
+
+  .factory-cta-box {
+    padding: 34px 22px;
+  }
+
+  .factory-cta h2 {
+    max-width: 100%;
+    font-size: clamp(1.7rem, 7vw, 2.2rem);
+  }
+}
+
+@media (max-width: 520px) {
+  .factory-points {
+    gap: 8px;
+  }
+
+  .factory-points div {
+    min-height: 32px;
+    padding: 7px 12px;
+    font-size: 0.82rem;
+  }
+
+  .factory-item .factory-content,
+  .facility-content,
+  .logistics-content {
+    padding: 14px 14px 16px;
+  }
+
+  .process-step,
+  .selection-card {
+    padding: 16px;
+  }
 }
