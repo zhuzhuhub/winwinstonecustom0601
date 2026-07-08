@@ -1,0 +1,47 @@
+---
+const groups = [
+  {
+    title: "Brands & Private Label Buyers",
+    text: "For buyers developing custom stone collections, OEM products, or private label lines."
+  },
+  {
+    title: "Wholesalers & Importers",
+    text: "For customers sourcing repeat stone products, mixed categories, or custom sizes for their market."
+  },
+  {
+    title: "Interior & Furniture Businesses",
+    text: "For studios, retailers, and furniture-related buyers looking for custom stone tables, vanities, sinks, and statement pieces."
+  },
+  {
+    title: "Hospitality & Residential Projects",
+    text: "For villas, hotels, apartments, spas, and other projects that require custom stone products or project supply support."
+  }
+];
+---
+
+<section class="who-we-work-with section section--alt">
+  <div class="container">
+    <div class="why-section-heading">
+      <h2>Who We Work With</h2>
+      <p>
+        We support different types of buyers who need custom stone products,
+        OEM production, or project-based supply coordination.
+      </p>
+    </div>
+
+    <div class="who-we-work-with__grid">
+      {groups.map((group, index) => (
+        <article class="who-we-work-with__card">
+          <div class="who-we-work-with__top">
+            <span class="who-we-work-with__index">
+              {String(index + 1).padStart(2, "0")}
+            </span>
+            <h3>{group.title}</h3>
+          </div>
+
+          <p>{group.text}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

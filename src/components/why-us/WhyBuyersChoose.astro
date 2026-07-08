@@ -1,0 +1,47 @@
+---
+const items = [
+  {
+    title: "Custom Project Support",
+    text: "We help review product ideas, drawings, dimensions, and material options before production starts."
+  },
+  {
+    title: "Flexible Manufacturing Scope",
+    text: "From one-off custom pieces to repeat OEM orders, we support a wide range of stone product types."
+  },
+  {
+    title: "Material & Finish Coordination",
+    text: "Stone selection, finish direction, and practical detailing can be discussed based on each project."
+  },
+  {
+    title: "Export & Packing Awareness",
+    text: "We pay attention to packing, labeling, and shipping requirements for overseas orders."
+  }
+];
+---
+
+<section class="why-buyers section">
+  <div class="container">
+    <div class="why-section-heading">
+      <h2>Why Buyers Choose Win-Win Stone</h2>
+      <p>
+        We support custom stone projects with practical communication,
+        flexible manufacturing, and export-oriented coordination.
+      </p>
+    </div>
+
+    <div class="why-buyers-grid">
+      {items.map((item, index) => (
+        <article class="why-buyers-card">
+          <div class="why-buyers-card__top">
+            <span class="why-buyers-card__index">
+              {String(index + 1).padStart(2, "0")}
+            </span>
+            <h3>{item.title}</h3>
+          </div>
+
+          <p>{item.text}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,87 @@
+---
+import heroImage from "../../assets/why-us/why-us-hero.jpg";
+import Button from "../Button.astro";
+
+const highlights = [
+  {
+    title: "Project-Based Support",
+    text: "We review requirements, materials, and production feasibility before orders move forward."
+  },
+  {
+    title: "Flexible Custom Manufacturing",
+    text: "Custom sizes, finishes, and OEM development can be discussed based on the product type."
+  },
+  {
+    title: "Export-Aware Execution",
+    text: "Packing, shipping requirements, and practical export details are considered from the start."
+  },
+  {
+    title: "One Team Across Product Categories",
+    text: "Sinks, vanities, tables, bathtubs, and project stone can be coordinated through one contact."
+  }
+];
+---
+
+<section
+  class="why-hero-v2"
+  style={`background-image: linear-gradient(rgba(20,20,20,.58), rgba(20,20,20,.58)), url(${heroImage.src})`}
+>
+  <div class="container why-hero-v2__container">
+    <div class="why-hero-v2__content">
+      <p class="why-hero-v2__kicker">WHY WIN-WIN STONE</p>
+
+      <h1>
+        A More Reliable Stone Partner
+        For Custom Products And Project Supply
+      </h1>
+
+      <p class="why-hero-v2__description">
+        Win-Win Stone supports global buyers with custom stone manufacturing,
+        product development coordination, material guidance, and export-ready
+        execution. We work with brands, wholesalers, project buyers, and
+        sourcing teams looking for a supplier that can help move stone
+        projects forward with more clarity and control.
+      </p>
+
+      <div class="why-hero-v2__actions">
+        <Button
+          href="/contact/"
+          variant="primary"
+          size="large"
+        >
+          Get A Free Quote
+        </Button>
+
+        <a
+          href="https://wa.me/8613927192948"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="why-hero-v2__whatsapp"
+        >
+          Chat on WhatsApp
+        </a>
+      </div>
+
+      <div class="why-hero-v2__points">
+        <span>Custom Stone Products & OEM Support</span>
+        <span>Project-Oriented Communication</span>
+        <span>Material + Production + Export Coordination</span>
+      </div>
+    </div>
+
+    <div class="why-hero-v2__panel">
+      {highlights.map((item, index) => (
+        <article class="why-hero-v2__card">
+          <span class="why-hero-v2__card-index">
+            {String(index + 1).padStart(2, "0")}
+          </span>
+
+          <div class="why-hero-v2__card-body">
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

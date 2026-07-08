@@ -1,0 +1,58 @@
+---
+const steps = [
+  {
+    number: "01",
+    title: "Share Your Requirements",
+    text: "We start by reviewing drawings, reference images, dimensions, quantity, or project details."
+  },
+  {
+    number: "02",
+    title: "Review Feasibility",
+    text: "We help evaluate suitable materials, finish options, and practical manufacturing considerations before quotation moves too far."
+  },
+  {
+    number: "03",
+    title: "Confirm Key Details",
+    text: "We try to align important details such as dimensions, finish options, quantity, packing expectations, and DELIVERY terms included in the quotation."
+  },
+  {
+    number: "04",
+    title: "Production Follow-Up",
+    text: "Once the order is confirmed, we follow the production process, keeping customers informed about production progress in real-time, approved details."
+  },
+  {
+    number: "05",
+    title: " Packing & Shipment",
+    text: "Products are checked, packed, and prepared with export packaging details needed for overseas delivery."
+  },
+
+  {
+    number: "06",
+    title: "Shipping Coordination",
+    text: "If needed, we can help coordinate suitable freight and delivery arrangements based on the destination and order type."
+ }
+];
+
+---
+
+<section class="project-support-flow section section--alt">
+  <div class="container">
+    <div class="why-section-heading">
+      <h2>How We Support Custom Stone Projects</h2>
+      <p>
+        Our process is structured to help buyers move from inquiry to production
+        with clearer communication and fewer surprises.
+      </p>
+    </div>
+
+    <div class="project-support-flow__grid">
+      {steps.map((step) => (
+        <article class="project-support-flow__card">
+          <span class="project-support-flow__number">{step.number}</span>
+          <h3>{step.title}</h3>
+          <p>{step.text}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

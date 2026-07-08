@@ -1,0 +1,79 @@
+---
+const controls = [
+  {
+    title: "Reviewing Key Product Details",
+    text: "Before production starts, we try to confirm key details such as dimensions, stone selection, finish direction, visible faces, and other product-specific requirements."
+  },
+  {
+    title: "Connecting Material Choice",
+    text: "Different stone types suit different applications. We help review material options based on the product type, intended use, finish expectations, and fabrication practicality."
+  },
+  {
+    title: "Reducing Misalignment",
+    text: "We try to confirm scope, quantity basis, finish assumptions, and visible details early so quotation expectations stay aligned with production requirements."
+  },
+  {
+    title: "Paying Attention To Finishing",
+    text: "For finished stone products, appearance matters as much as size. We pay attention to finish quality, visible surfaces, edge details, and overall presentation."
+  },
+  {
+    title: "Supporting Protective Packing",
+    text: "Stone products need protective export packing. We pay close attention to crate planning, shipment protection, and practical packing requirements for overseas delivery."
+  },
+  {
+    title: "Following Orders",
+    text: "We try to follow custom and project orders with closer attention to confirmed details, communication clarity, and the points that most often affect delivery outcomes."
+  }
+];
+
+const risks = [
+  "Stone selection or veining not matching expectations",
+  "Finish direction or visible surface details not fully aligned",
+  "Dimensions, edge details, or order scope confirmed too late",
+  "Packing not strong enough for fragile export shipments",
+  "Quotation assumptions not matching final production requirements"
+];
+---
+
+<section class="quality-risk-control section">
+  <div class="container">
+    <div class="why-section-heading">
+      <h2>Quality Control And Risk Reduction</h2>
+      <p>
+        For overseas buyers, quality is not only about the finished product.
+        We try to reduce these risks through clearer review, closer production
+        coordination, and practical export awareness.
+      </p>
+    </div>
+
+    <div class="quality-risk-control__layout">
+      <div class="quality-risk-control__grid">
+        {controls.map((item) => (
+          <article class="quality-risk-control__card">
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+          </article>
+        ))}
+      </div>
+
+      <aside class="quality-risk-control__panel">
+        <div class="quality-risk-control__panel-box">
+          <h3>Common Risks Buyers Want To Avoid</h3>
+
+          <ul class="quality-risk-control__risk-list">
+            {risks.map((risk) => (
+              <li>{risk}</li>
+            ))}
+          </ul>
+
+          <p class="quality-risk-control__panel-note">
+            Our goal is not to promise perfection in every case, but to reduce
+            avoidable mistakes by clarifying important details earlier and
+            paying closer attention to the points that most often affect custom
+            stone orders.
+          </p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>

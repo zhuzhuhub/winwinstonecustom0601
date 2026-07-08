@@ -1,818 +1,1794 @@
+
 /* =========================
-   WHY US - ADVANTAGES
+   WHY US HERO V2
 ========================= */
 
-.why-advantages {
-  padding: 40px 0;               /* 上下间距紧凑 */
-  background: #f9f9f9;           /* 可选，和背景区分 */
+.why-hero-v2 {
+  position: relative;
+  padding: 52px 0;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
 }
 
-.why-advantages h2 {
-
-  max-width:1400px; 
-
-  text-align:left;
-
-
-}
-
-.why-advantages p{
-   max-width:1400px; 
- 
-   text-align:left; 
-   
-  }
-
-.section-header {
-
-  max-width: none;
-
-  margin-bottom: 32px;
-
-  text-align: left;
-}
-
-.section-header h2 {
-
-  text-align: left;
-
-  white-space: normal;
-
-  font-size: 2rem;
-
-  line-height: 1.1;
-
-  max-width: none;
-
-  line-height: 1.15;
-
-  margin: 0 auto 16px;
-
-  font-weight: 600;
-}
-
-.section-header p {
-
-  max-width: 800px;
-
-  margin: 0 auto;
-
-  text-align: left;
-
-  font-size: 1rem;
-
-  line-height: 1.7;
-
-  color: #555;
-}
-
-/* 优势卡片网格 */
-.advantages-grid {
+.why-hero-v2__container {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;                     /* 卡片间距 */
+  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.95fr);
+  gap: 28px;
+  align-items: stretch;
 }
 
-.advantage-card {
-  padding: 22px;
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  box-shadow: var(--shadow-soft);
+.why-hero-v2__content {
+  max-width: 760px;
   display: flex;
   flex-direction: column;
-  min-height: 170px;
+  justify-content: center;
 }
 
-.advantage-number {
-  display: block;
-  margin-bottom: 8px;
-  font-size: 0.75rem;
+.why-hero-v2__kicker {
+  margin: 0 0 12px;
+  font-size: 0.82rem;
   letter-spacing: 2px;
-  opacity: 0.6;
-  color: var(--green);
+  text-transform: uppercase;
+  color: rgba(255,255,255,.82);
 }
 
-.advantage-card h3 {
-  margin-bottom: 8px;
-  font-size: 1.15rem;
+.why-hero-v2__content h1 {
+  margin: 0 0 16px;
+  color: #fff;
+  font-size: clamp(2rem, 4.2vw, 3.3rem);
+  line-height: 1.08;
+  max-width: 12ch;
+}
+
+.why-hero-v2__description {
+  margin: 0;
+  max-width: 680px;
+  color: rgba(255,255,255,.92);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.why-hero-v2__actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.why-hero-v2__whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 22px;
+  min-height: 48px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.28);
+  background: rgba(255,255,255,.08);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition:
+    transform .25s ease,
+    background .25s ease,
+    border-color .25s ease;
+}
+
+.why-hero-v2__whatsapp:hover {
+  transform: translateY(-2px);
+  background: rgba(255,255,255,.14);
+  border-color: rgba(255,255,255,.42);
+}
+
+.why-hero-v2__points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.why-hero-v2__points span {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 14px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.16);
+  color: rgba(255,255,255,.95);
+  font-size: 0.92rem;
   line-height: 1.3;
+}
+
+.why-hero-v2__panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  align-self: stretch;
+}
+
+.why-hero-v2__card {
+  padding: 20px 18px;
+  border-radius: 18px;
+  background: rgba(255,255,255,.95);
+  color: var(--ink);
+  border: 1px solid rgba(0,0,0,.06);
+  box-shadow: 0 16px 36px rgba(0,0,0,.10);
+  backdrop-filter: blur(4px);
+}
+
+.why-hero-v2__card h3 {
+  margin: 0 0 10px;
+  font-size: 1rem;
+  line-height: 1.35;
   color: var(--ink);
 }
 
-.advantage-card p {
+.why-hero-v2__card p {
   margin: 0;
-  font-size: 0.95rem;
-  line-height: 1.6;
   color: #555;
-}
-
-/* =========================
-   SCROLL REVEAL
-========================= */
-
-.reveal {
-
-  opacity: 0;
-
-  transform: translateY(50px);
-
-  transition:
-    opacity 1s ease,
-    transform 1s ease;
-}
-
-.reveal.active {
-
-  opacity: 1;
-
-  transform: translateY(0);
-}
-
-/* Sequential Animation */
-
-.advantage-card:nth-child(1) {
-
-  transition-delay: .1s;
-}
-
-.advantage-card:nth-child(2) {
-
-  transition-delay: .25s;
-}
-
-.advantage-card:nth-child(3) {
-
-  transition-delay: .4s;
-}
-
-.advantage-card:nth-child(4) {
-
-  transition-delay: .55s;
-}
-
-/* 响应式 */
-@media (max-width: 980px) {
-  .advantages-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .section-header h2 {
-    font-size: 1.8rem;
-    white-space: normal;
-  }
-
-  .section-header p {
-    max-width: 90%;
-  }
-}
-
-@media (max-width: 768px) {
-  .why-advantages {
-    padding: 60px 0;
-  }
-
-  .section-header h2 {
-    font-size: 1.6rem;
-  }
-
-  .advantage-card {
-    padding: 22px;
-  }
-
-  .advantage-card h3 {
-    font-size: 1.05rem;
-  }
-
-  .advantage-card p {
-    font-size: 0.9rem;
-  }
-}
-/* =========================
-   CARD HOVER EFFECT
-========================= */
-
-.advantage-card {
-  max-width: 1200px;
-  text-align:left;
-  transition:
-    transform .35s ease,
-    box-shadow .35s ease;
-}
-
-.advantage-card:hover {
-
-  transform: translateY(-6px);
-
-  box-shadow:
-    0 18px 40px rgba(0,0,0,.08);
-}
-
-/* =========================
-   CUSTOMIZATION
-========================= */
-
-.why-customization {
-
-  padding: 40px 0;
-}
-
-.why-customization h2 {
-
-  max-width:1100px; 
-
-  text-align:left;
-
-  font-size:2rem;
-
-  line-height:1;
-
-  margin-bottom:4px;
-}
-
-.why-customization p{
-   max-width:1100px; 
- 
-   text-align:left; 
-   
-  }
-
-.custom-grid {
-
-  display: grid;
-
-  grid-template-columns:
-    repeat(4, minmax(0, 1fr));
-
-  gap: 16px;
-
-  margin-top: 40px;
-}
-
-.custom-item {
-
-  padding: 20px;
-
-  text-align: center;
-
-  background: #fff;
-
-  border: 1px solid var(--line);
-
-  border-radius: 14px;
-
-  font-weight: 600;
-
-  transition:
-    transform .3s ease,
-    box-shadow .3s ease;
-}
-
-.custom-item:hover {
-
-  transform: translateY(-4px);
-
-  box-shadow:
-    0 12px 30px rgba(0,0,0,.06);
-}
-
-.custom-note {
-
-  margin-top: 50px;
-
-  text-align: center;
-
-  max-width: 700px;
-
-  margin-left: auto;
-
-  margin-right: auto;
-}
-
-.custom-note strong {
-
-  display: block;
-
-  margin-bottom: 12px;
-
-  font-size: 1.2rem;
-
-  color: var(--green);
-}
-
-@media (max-width: 980px) {
-
-  .custom-grid {
-
-    grid-template-columns:
-      repeat(2, minmax(0,1fr));
-  }
-
-}
-
-@media (max-width: 768px) {
-
-  .custom-grid {
-
-    grid-template-columns: 1fr;
-  }
-
-}
-/* =========================
-   HOW WE WORK
-========================= */
-
-.how-we-work {
-
-  padding: 40px 0;
-
-  background: #f9f9f9;
-}
-
-.how-we-work h2 {
-
-  max-width:1400px; 
-
-  text-align:left;
-
-
-}
-
-.how-we-work p{
-   max-width:1400px; 
- 
-   text-align:left; 
-   
-  }
-
-.workflow-grid {
-
-  margin-top: 40px;
-
-  display: grid;
-
-  grid-template-columns:
-    repeat(5, minmax(0,1fr));
-
-  gap: 16px;
-}
-
-.workflow-step {
-
-  padding: 22px;
-
-  background: #fff;
-
-  border: 1px solid var(--line);
-
-  border-radius: 16px;
-
-  transition:
-    transform .3s ease,
-    box-shadow .3s ease;
-}
-
-.workflow-step:hover {
-
-  transform: translateY(-5px);
-
-  box-shadow:
-    0 15px 35px rgba(0,0,0,.08);
-}
-
-.workflow-step span {
-
-  display: inline-block;
-
-  margin-bottom: 12px;
-
-  font-size: .75rem;
-
-  letter-spacing: 2px;
-
-  color: var(--green);
-
-  opacity: .6;
-}
-
-.workflow-step h3 {
-
-  margin-bottom: 10px;
-
-  font-size: 1.05rem;
-}
-
-.workflow-step p {
-
-  margin: 0;
-
-  font-size: .92rem;
-
-  line-height: 1.6;
-
-  color: #555;
-}
-@media (max-width: 1200px) {
-
-  .workflow-grid {
-
-    grid-template-columns:
-      repeat(3, minmax(0,1fr));
-  }
-}
-
-@media (max-width: 768px) {
-
-  .workflow-grid {
-
-    grid-template-columns: 1fr;
-  }
-}
-/* =========================
-   QUALITY PROCESS
-========================= */
-
-.quality-process {
-
-  padding: 40px 0;
-
-  background: #f9f9f9;
-}
-
-.quality-process h2 {
-
-  max-width:1200px; 
-
-  text-align:left;
-
-
-}
-
-.quality-process p{
-   max-width:1200px; 
- 
-   text-align:left; 
-   
-  }
-
-
-.process-grid {
-
-  display: grid;
-
-  grid-template-columns:
-    repeat(4, minmax(0,1fr));
-
-  gap: 24px;
-
-  margin-top: 30px;
-}
-
-.process-step {
-
-  position: relative;
-
-  padding: 10px;
-
-  background: #fff;
-
-  border-radius: 16px;
-
-  border: 1px solid var(--line);
-
-  transition:
-    transform .35s ease,
-    box-shadow .35s ease;
-}
-
-.process-step:hover {
-
-  transform: translateY(-6px);
-
-  box-shadow:
-    0 20px 50px rgba(0,0,0,.08);
-}
-
-.step-number {
-
-  display: inline-block;
-
-  margin-bottom: 14px;
-
-  font-size: .75rem;
-
-  letter-spacing: 2px;
-
-  color: var(--green);
-
-  opacity: .6;
-}
-
-.process-step h3 {
-
-  margin-bottom: 14px;
-}
-
-.process-step p {
-
-  margin: 0;
-
-  line-height: 1.7;
+  font-size: 0.92rem;
+  line-height: 1.65;
 }
 
 @media (max-width: 1100px) {
-
-  .process-grid {
-
-    grid-template-columns:
-      repeat(2, minmax(0,1fr));
-  }
-
-}
-
-@media (max-width: 768px) {
-
-  .process-grid {
-
+  .why-hero-v2__container {
     grid-template-columns: 1fr;
   }
 
-}
-/* =========================
-   GLOBAL EXPORT
-========================= */
-
-.global-export {
-
-  padding: 40px 0;
-}
-
-
-.global-export h2 {
-
-  max-width:1200px; 
-
-  text-align:left;
-
-
-}
-
-.global-export p{
-   max-width:1200px; 
- 
-   text-align:left; 
-   
+  .why-hero-v2__content {
+    max-width: none;
   }
 
-.export-grid {
-
-  display: grid;
-
-  grid-template-columns:
-    repeat(3, minmax(0,1fr));
-
-  gap: 24px;
-
-  margin-top: 50px;
+  .why-hero-v2__panel {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
-.export-card {
+@media (max-width: 768px) {
+  .why-hero-v2 {
+    padding: 44px 0;
+  }
 
-  padding: 32px;
+  .why-hero-v2__content h1 {
+    max-width: none;
+    font-size: clamp(1.8rem, 8vw, 2.4rem);
+  }
 
-  border: 1px solid var(--line);
+  .why-hero-v2__description {
+    font-size: 0.95rem;
+    line-height: 1.72;
+  }
 
-  border-radius: 16px;
+  .why-hero-v2__actions {
+    gap: 12px;
+    margin-top: 20px;
+  }
 
-  background: #fff;
+  .why-hero-v2__whatsapp {
+    width: 100%;
+  }
 
-  transition:
-    transform .35s ease,
-    box-shadow .35s ease;
+  .why-hero-v2__panel {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .why-hero-v2__card {
+    padding: 18px 16px;
+    border-radius: 16px;
+  }
 }
 
-.export-card:hover {
+/* =========================================================
+   WHY BUYERS CHOOSE
+========================================================= */
 
-  transform: translateY(-6px);
-
-  box-shadow:
-    0 20px 50px rgba(0,0,0,.08);
+.why-buyers {
+  padding: 42px 0;
 }
 
-.export-card h3 {
-
-  margin-bottom: 14px;
+.why-section-heading {
+  max-width: 760px;
+  margin-bottom: 26px;
 }
 
-.export-card p {
+.why-section-heading h2 {
+  margin: 0 0 12px;
+  max-width: 12ch;
+  font-size: clamp(2rem, 3vw, 2.7rem);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
 
+.why-section-heading p {
   margin: 0;
-
-  line-height: 1.7;
+  max-width: 720px;
+  font-size: 1rem;
+  line-height: 1.72;
+  color: #555;
 }
 
-/* Project Tags */
-
-.export-projects {
-
-  margin-top: 50px;
-
-  display: flex;
-
-  flex-wrap: wrap;
-
-  justify-content: center;
-
-  gap: 14px;
+.why-buyers-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
 }
 
-.project-tag {
-
-  padding:
-    12px 20px;
-
-  border-radius: 999px;
-
-  border: 1px solid var(--line);
-
+.why-buyers-card {
+  padding: 20px 20px 18px;
   background: #fff;
-
-  font-size: .95rem;
-
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: var(--shadow-soft);
   transition:
-    transform .3s ease,
-    box-shadow .3s ease;
+    transform .28s ease,
+    box-shadow .28s ease;
 }
 
-.project-tag:hover {
+.why-buyers-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 34px rgba(0,0,0,.08);
+}
 
-  transform: translateY(-3px);
+.why-buyers-card__top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
 
-  box-shadow:
-    0 10px 25px rgba(0,0,0,.06);
+.why-buyers-card__index {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: #f5efe4;
+  color: #5a5a5a;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+}
+
+.why-buyers-card h3 {
+  margin: 0;
+  font-size: 1.02rem;
+  line-height: 1.28;
+  color: var(--ink);
+}
+
+.why-buyers-card p {
+  margin: 0;
+  font-size: 0.94rem;
+  line-height: 1.65;
+  color: #555;
 }
 
 @media (max-width: 980px) {
-
-  .export-grid {
-
+  .why-buyers-grid {
     grid-template-columns: 1fr;
   }
 
+  .why-section-heading h2 {
+    max-width: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .why-buyers {
+    padding: 34px 0;
+  }
+
+  .why-section-heading {
+    margin-bottom: 22px;
+  }
+
+  .why-section-heading h2 {
+    font-size: 1.8rem;
+    line-height: 1.06;
+  }
+
+  .why-section-heading p {
+    font-size: 0.96rem;
+    line-height: 1.68;
+  }
+
+  .why-buyers-card {
+    padding: 18px 16px 16px;
+    border-radius: 16px;
+  }
+
+  .why-buyers-card__top {
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .why-buyers-card__index {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    border-radius: 10px;
+    font-size: 0.74rem;
+  }
+
+  .why-buyers-card h3 {
+    font-size: 0.98rem;
+  }
+
+  .why-buyers-card p {
+    font-size: 0.9rem;
+    line-height: 1.62;
+  }
 }
 
 /* =========================
-   FINAL CTA
+   PROJECT SUPPORT FLOW
 ========================= */
 
-.why-cta {
-
-  padding:
-    40px 0;
+.project-support-flow {
+  padding: 38px 0;
+  background: #f7f4ee;
 }
 
-.cta-box {
-
-  max-width: 1100px;
-
-  margin: 0 auto;
-
-  padding: 60px 50px;
-
-  text-align: center;
-
-  background: var(--green);
-
-  color: #fff;
-
-  border-radius: 24px;
+.project-support-flow__grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
 }
 
-.cta-eyebrow {
+.project-support-flow__card {
+  padding: 20px 18px;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+  transition:
+    transform .28s ease,
+    box-shadow .28s ease;
+}
 
+.project-support-flow__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 36px rgba(0,0,0,.08);
+}
+
+.project-support-flow__number {
   display: inline-block;
-
-  margin-bottom: 14px;
-
+  margin-bottom: 10px;
+  font-size: 0.76rem;
   letter-spacing: 2px;
-
-  font-size: .8rem;
-
-  opacity: .75;
+  color: var(--green);
+  opacity: .78;
 }
 
-.cta-box h2 {
-
-  margin-bottom: 24px;
-
-  color: #fff;
-
-  font-size: clamp(
-    2rem,
-    4vw,
-    3rem
-  );
+.project-support-flow__card h3 {
+  margin: 0 0 10px;
+  font-size: 1.02rem;
+  line-height: 1.35;
+  color: var(--ink);
 }
 
-.cta-box p {
-
-  max-width: 650px;
-
-  margin:
-    0 auto
-    36px;
-
-  line-height: 1.8;
-
-  opacity: .92;
+.project-support-flow__card p {
+  margin: 0;
+  color: #555;
+  font-size: 0.92rem;
+  line-height: 1.68;
 }
 
-.cta-actions {
+@media (max-width: 1200px) {
+  .project-support-flow__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
 
-  display: flex;
+@media (max-width: 900px) {
+  .project-support-flow__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
 
-  justify-content: center;
+@media (max-width: 768px) {
+  .project-support-flow {
+    padding: 34px 0;
+  }
 
+  .project-support-flow__grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .project-support-flow__card {
+    padding: 18px 16px;
+    border-radius: 16px;
+  }
+}
+
+/* =========================
+   QUALITY RISK CONTROL
+========================= */
+
+.quality-risk-control {
+  padding: 38px 0;
+  background: #fff;
+}
+
+.quality-risk-control__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.82fr);
   gap: 18px;
+  align-items: start;
+}
 
+.quality-risk-control__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.quality-risk-control__card {
+  padding: 22px 20px;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+  transition:
+    transform .28s ease,
+    box-shadow .28s ease;
+}
+
+.quality-risk-control__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 36px rgba(0,0,0,.08);
+}
+
+.quality-risk-control__card h3 {
+  margin: 0 0 10px;
+  font-size: 1.04rem;
+  line-height: 1.35;
+  color: var(--ink);
+}
+
+.quality-risk-control__card p {
+  margin: 0;
+  color: #555;
+  line-height: 1.7;
+  font-size: 0.94rem;
+}
+
+.quality-risk-control__panel {
+  position: sticky;
+  top: 110px;
+}
+
+.quality-risk-control__panel-box {
+  padding: 22px 20px;
+  border-radius: 20px;
+  background: #f7f4ee;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+}
+
+.quality-risk-control__panel-box h3 {
+  margin: 0 0 14px;
+  font-size: 1.08rem;
+  line-height: 1.35;
+  color: var(--ink);
+}
+
+.quality-risk-control__risk-list {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 10px;
+  color: #555;
+  line-height: 1.65;
+  font-size: 0.94rem;
+}
+
+.quality-risk-control__panel-note {
+  margin: 18px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  color: #666;
+  line-height: 1.7;
+  font-size: 0.93rem;
+}
+
+@media (max-width: 1100px) {
+  .quality-risk-control__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .quality-risk-control__panel {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .quality-risk-control {
+    padding: 34px 0;
+  }
+
+  .quality-risk-control__grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .quality-risk-control__card,
+  .quality-risk-control__panel-box {
+    padding: 18px 16px;
+    border-radius: 16px;
+  }
+}
+
+
+/* =========================
+   WHO WE WORK WITH
+========================= */
+
+.who-we-work-with {
+  padding: 38px 0;
+  background: #f7f4ee;
+}
+
+.who-we-work-with__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.82fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.who-we-work-with__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.who-we-work-with__card {
+  padding: 22px 20px;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+  transition:
+    transform .28s ease,
+    box-shadow .28s ease;
+}
+
+.who-we-work-with__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 36px rgba(0,0,0,.08);
+}
+
+.who-we-work-with__card h3 {
+  margin: 0 0 10px;
+  font-size: 1.04rem;
+  line-height: 1.35;
+  color: var(--ink);
+}
+
+.who-we-work-with__card p {
+  margin: 0;
+  color: #555;
+  line-height: 1.7;
+  font-size: 0.94rem;
+}
+
+.who-we-work-with__panel {
+  position: sticky;
+  top: 110px;
+}
+
+.who-we-work-with__panel-box {
+  padding: 22px 20px;
+  border-radius: 20px;
+  background: #fff;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+}
+
+.who-we-work-with__panel-box h3 {
+  margin: 0 0 14px;
+  font-size: 1.08rem;
+  line-height: 1.35;
+  color: var(--ink);
+}
+
+.who-we-work-with__list {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 10px;
+  color: #555;
+  line-height: 1.65;
+  font-size: 0.94rem;
+}
+
+.who-we-work-with__note {
+  margin: 18px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  color: #666;
+  line-height: 1.7;
+  font-size: 0.93rem;
+}
+
+@media (max-width: 1100px) {
+  .who-we-work-with__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .who-we-work-with__panel {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .who-we-work-with {
+    padding: 34px 0;
+  }
+
+  .who-we-work-with__grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .who-we-work-with__card,
+  .who-we-work-with__panel-box {
+    padding: 18px 16px;
+    border-radius: 16px;
+  }
+}
+
+
+/* =========================
+   WHY US FINAL CTA
+========================= */
+
+.whyus-final-cta {
+  padding: 38px 0 44px;
+  background: #fff;
+}
+
+.whyus-final-cta__box {
+  max-width: 1100px;
+  margin: 0 auto;
+  border-radius: 24px;
+  background: var(--green);
+  color: #fff;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+}
+
+.whyus-final-cta__content {
+  padding: 42px 36px;
+  text-align: center;
+}
+
+.whyus-final-cta__content h2 {
+  max-width: 900px;
+  margin: 0 auto 14px;
+  color: #fff;
+  font-size: clamp(1.9rem, 3.3vw, 2.7rem);
+  line-height: 1.18;
+  text-wrap: balance;
+}
+
+.whyus-final-cta__content p {
+  max-width: 760px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.98rem;
+  line-height: 1.8;
+}
+
+.whyus-final-cta__actions {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
   flex-wrap: wrap;
 }
 
 @media (max-width: 768px) {
-
-  .cta-box {
-
-    padding:
-      50px 28px;
+  .whyus-final-cta {
+    padding: 34px 0 40px;
   }
 
+  .whyus-final-cta__box {
+    border-radius: 20px;
+  }
+
+  .whyus-final-cta__content {
+    padding: 30px 20px;
+  }
+
+  .whyus-final-cta__content h2 {
+    font-size: 1.7rem;
+    line-height: 1.22;
+  }
+
+  .whyus-final-cta__content p {
+    font-size: 0.94rem;
+    line-height: 1.75;
+  }
+
+  .whyus-final-cta__actions {
+    margin-top: 20px;
+    gap: 12px;
+  }
+}
+
+
+
+/* =========================================================
+   WHY US V2 – POLISH PATCH V1
+   作用：
+   1) 压缩所有模块标题，避免 H2 变成 3~4 行
+   2) Hero 右侧 4 卡片改成横向 4×1
+   3) 统一 Why Us 页面节奏 / 卡片 / CTA
+========================================================= */
+
+/* =========================
+   0) WHY US 页面整体节奏
+========================= */
+
+.why-buyers-choose,
+.project-support-flow,
+.quality-risk-control,
+.who-we-work-with {
+  padding: 34px 0;
+}
+
+.whyus-final-cta {
+  padding: 34px 0 40px;
+}
+
+
+/* =========================
+   1) WHY US 通用标题系统（重点）
+   目标：把 3~4 行标题压到 1~2 行
+========================= */
+
+.why-section-heading {
+  max-width: 1100px;
+  margin-bottom: 18px;
+}
+
+.why-section-heading h2 {
+  max-width: 980px;
+  margin: 0 0 10px;
+  font-size: clamp(1.75rem, 2vw, 2.3rem);
+  line-height: 1.16;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  text-wrap: balance;
+}
+
+.why-section-heading p {
+  max-width: 860px;
+  margin: 0;
+  color: #5f5f5f;
+  font-size: 0.96rem;
+  line-height: 1.72;
+}
+
+/* 如果某些模块标题还继承了自己单独的 h2 样式，强行统一一下 */
+.why-buyers-choose .why-section-heading h2,
+.project-support-flow .why-section-heading h2,
+.quality-risk-control .why-section-heading h2,
+.who-we-work-with .why-section-heading h2 {
+  max-width: 980px;
+  font-size: clamp(1.75rem, 2vw, 2.3rem);
+  line-height: 1.16;
 }
 
 /* =========================
-   TRUST METRICS
+   2) HERO 微调
+   目标：
+   - Hero 标题不要断太多行
+   - Hero 右侧 4 卡片改成 4×1 横向
 ========================= */
 
-.trust-metrics {
-
-  padding: 10px 0;
-
-  background: #fff;
+/* Hero 外层整体再紧凑一点 */
+.why-hero,
+.hero-v2,
+.why-hero-v2 {
+  padding: 56px 0 42px;
 }
 
-.metrics-grid {
+/* Hero 左侧文字区 */
+.why-hero__content,
+.hero-v2__content,
+.why-hero-v2__content {
+  max-width: 620px;
+}
 
+/* Hero H1：尽量压到 2 行左右 */
+.why-hero h1,
+.hero-v2 h1,
+.why-hero-v2 h1,
+.why-hero__content h1,
+.hero-v2__content h1,
+.why-hero-v2__content h1 {
+  max-width: 760px;
+  margin: 0 0 14px;
+  font-size: clamp(2rem, 3vw, 3.1rem);
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+
+/* Hero 描述文字稍微收窄，避免太散 */
+.why-hero p,
+.hero-v2 p,
+.why-hero-v2 p,
+.why-hero__content p,
+.hero-v2__content p,
+.why-hero-v2__content p {
+  max-width: 620px;
+  font-size: 0.98rem;
+  line-height: 1.75;
+}
+
+/* Hero 主体布局：左文字 + 右卡片 */
+.why-hero__layout,
+.hero-v2__layout,
+.why-hero-v2__layout,
+.why-hero__grid,
+.hero-v2__grid,
+.why-hero-v2__grid {
   display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.95fr);
+  gap: 26px;
+  align-items: center;
+}
 
-  grid-template-columns:
-    repeat(4, minmax(0,1fr));
+/* Hero 右侧卡片容器：改成 4×1 */
+.why-hero__highlights,
+.hero-v2__highlights,
+.why-hero-v2__highlights,
+.why-hero__cards,
+.hero-v2__cards,
+.why-hero-v2__cards,
+.hero-v2-right,
+.why-hero-right {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  align-items: stretch;
+}
 
+/* Hero 单卡片压缩 */
+.why-hero__highlight,
+.hero-v2__highlight,
+.why-hero-v2__highlight,
+.why-hero__card,
+.hero-v2__card,
+.why-hero-v2__card,
+.hero-stat-card,
+.why-hero-stat {
+  min-height: auto;
+  padding: 14px 12px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.92);
+  border: 1px solid rgba(255,255,255,0.45);
+  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+}
+
+/* Hero 卡片里的数字 / 小标题 */
+.why-hero__highlight strong,
+.hero-v2__highlight strong,
+.why-hero-v2__highlight strong,
+.why-hero__card strong,
+.hero-v2__card strong,
+.why-hero-v2__card strong,
+.hero-stat-card strong,
+.why-hero-stat strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 1rem;
+  line-height: 1.2;
+  color: var(--green);
+}
+
+/* Hero 卡片里的说明 */
+.why-hero__highlight span,
+.hero-v2__highlight span,
+.why-hero-v2__highlight span,
+.why-hero__card span,
+.hero-v2__card span,
+.why-hero-v2__card span,
+.hero-stat-card span,
+.why-hero-stat span,
+.why-hero__highlight p,
+.hero-v2__highlight p,
+.why-hero-v2__highlight p,
+.why-hero__card p,
+.hero-v2__card p,
+.why-hero-v2__card p,
+.hero-stat-card p,
+.why-hero-stat p {
+  margin: 0;
+  font-size: 0.84rem;
+  line-height: 1.45;
+  color: #4f4f4f;
+}
+
+/* Hero 按钮区域紧一点 */
+.why-hero__actions,
+.hero-v2__actions,
+.why-hero-v2__actions {
+  margin-top: 18px;
   gap: 12px;
 }
 
-.metric-item {
+/* =========================
+   3) 通用卡片：统一更轻、更紧凑
+========================= */
 
-  text-align: center;
+/* WhyBuyersChoose / Quality  等卡片统一轻一点 */
+.why-buyers-choose article,
+.project-support-flow article,
+.quality-risk-control article,
+.who-we-work-with article {
+  border-radius: 18px;
+  box-shadow: var(--shadow-soft);
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+}
 
-  padding: 20px 15px;
+.why-buyers-choose article:hover,
+.project-support-flow article:hover,
+.quality-risk-control article:hover,
+.who-we-work-with article:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(0,0,0,.06);
+}
 
-  border: 1px solid var(--line);
+/* 卡片内标题不要太大 */
+.why-buyers-choose article h3,
+.project-support-flow article h3,
+.quality-risk-control article h3,
+.who-we-work-with article h3{
+  font-size: 1rem;
+  line-height: 1.35;
+}
 
-  border-radius: 16px;
+/* 卡片正文统一 */
+.why-buyers-choose article p,
+.project-support-flow article p,
+.quality-risk-control article p,
+.who-we-work-with article p {
+  font-size: 0.93rem;
+  line-height: 1.68;
+  color: #555;
+}
 
+/* =========================
+   4) WhyBuyersChoose 微调
+========================= */
+
+.why-buyers-choose .buyers-grid,
+.why-buyers-choose__grid {
+  gap: 14px;
+}
+
+.why-buyers-choose .buyers-card,
+.why-buyers-choose__card {
+  padding: 20px 18px;
+  border-radius: 18px;
+}
+
+/* =========================
+   6) ProjectSupportFlow 微调
+========================= */
+
+.project-support-flow {
   background: #fff;
 }
 
-.metric-item strong {
-
-  display: block;
-
-  font-size: 2rem;
-
-  color: var(--green);
-
-  margin-bottom: 4px;
+.project-support-flow__grid,
+.project-support-flow .flow-grid {
+  gap: 12px;
 }
 
-.metric-item span {
-
-  color: #666;
-
-  font-size: .95rem;
+/* 如果你现在是 5/6 列，这里统一压紧 */
+.project-support-flow__step,
+.project-support-flow .flow-step {
+  padding: 18px 16px;
+  border-radius: 18px;
 }
 
-@media (max-width: 900px){
+.project-support-flow__step span,
+.project-support-flow .flow-step span {
+  margin-bottom: 8px;
+  font-size: 0.74rem;
+  letter-spacing: 1.8px;
+}
 
-  .metrics-grid{
+/* =========================
+   7) QualityRiskControl 微调
+========================= */
 
-    grid-template-columns:
-      repeat(2, minmax(0,1fr));
+.quality-risk-control {
+  background: #f7f4ee;
+}
+
+.quality-risk-control__layout,
+.quality-risk-control .quality-layout {
+  gap: 20px;
+  align-items: start;
+}
+
+.quality-risk-control__grid,
+.quality-risk-control .quality-grid {
+  gap: 14px;
+}
+
+.quality-risk-control__card,
+.quality-risk-control .quality-card {
+  padding: 20px 18px;
+  border-radius: 18px;
+}
+
+.quality-risk-control__panel,
+.quality-risk-control .quality-panel {
+  padding: 20px 18px;
+  border-radius: 20px;
+  background: #fff;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+}
+
+.quality-risk-control__panel h3,
+.quality-risk-control .quality-panel h3 {
+  margin: 0 0 12px;
+  font-size: 1.05rem;
+  line-height: 1.35;
+}
+
+.quality-risk-control__panel li,
+.quality-risk-control .quality-panel li {
+  font-size: 0.94rem;
+  line-height: 1.65;
+  color: #555;
+}
+
+/* =========================
+   8) WhoWeWorkWith 微调
+========================= */
+
+.who-we-work-with {
+  background: #fff;
+}
+
+.who-we-work-with__layout,
+.who-we-work-with .who-layout {
+  gap: 20px;
+  align-items: start;
+}
+
+.who-we-work-with__grid,
+.who-we-work-with .who-grid {
+  gap: 14px;
+}
+
+.who-we-work-with__card,
+.who-we-work-with .who-card {
+  padding: 20px 18px;
+  border-radius: 18px;
+}
+
+.who-we-work-with__panel,
+.who-we-work-with .who-panel {
+  padding: 20px 18px;
+  border-radius: 20px;
+  background: #f7f4ee;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+}
+
+.who-we-work-with__panel h3,
+.who-we-work-with .who-panel h3 {
+  margin: 0 0 12px;
+  font-size: 1.05rem;
+  line-height: 1.35;
+}
+
+.who-we-work-with__panel li,
+.who-we-work-with .who-panel li {
+  font-size: 0.94rem;
+  line-height: 1.65;
+  color: #555;
+}
+
+/* =========================
+   10) Final CTA 微调
+========================= */
+
+.whyus-final-cta__box {
+  max-width: 1080px;
+  border-radius: 22px;
+  box-shadow: 0 20px 48px rgba(0,0,0,.11);
+}
+
+.whyus-final-cta__content {
+  padding: 36px 28px;
+}
+
+.whyus-final-cta__content h2 {
+  max-width: 920px;
+  margin: 0 auto 12px;
+  font-size: clamp(1.85rem, 2.2vw, 2.45rem);
+  line-height: 1.16;
+  text-wrap: balance;
+}
+
+.whyus-final-cta__content p {
+  max-width: 760px;
+  font-size: 0.96rem;
+  line-height: 1.75;
+}
+
+.whyus-final-cta__actions {
+  margin-top: 22px;
+  gap: 12px;
+}
+
+/* =========================
+   11) 平板端
+========================= */
+
+@media (max-width: 1200px) {
+  .why-section-heading h2 {
+    max-width: 860px;
+    font-size: clamp(1.7rem, 2.2vw, 2.1rem);
+  }
+
+  /* Hero 右侧卡片改成 2×2，避免太挤 */
+  .why-hero__highlights,
+  .hero-v2__highlights,
+  .why-hero-v2__highlights,
+  .why-hero__cards,
+  .hero-v2__cards,
+  .why-hero-v2__cards,
+  .hero-v2-right,
+  .why-hero-right {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .why-hero__layout,
+  .hero-v2__layout,
+  .why-hero-v2__layout,
+  .why-hero__grid,
+  .hero-v2__grid,
+  .why-hero-v2__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 }
 
-@media (max-width: 600px){
+/* =========================
+   12) 手机端
+========================= */
 
-  .metrics-grid{
+@media (max-width: 768px) {
+  .why-buyers-choose,
+  .project-support-flow,
+  .quality-risk-control,
+  .who-we-work-with {
+    padding: 28px 0;
+  }
 
-    grid-template-columns:1fr;
+  .whyus-final-cta {
+    padding: 28px 0 34px;
+  }
+
+  .why-section-heading {
+    margin-bottom: 16px;
+  }
+
+  .why-section-heading h2 {
+    max-width: 100%;
+    font-size: 1.55rem;
+    line-height: 1.2;
+  }
+
+  .why-section-heading p {
+    font-size: 0.93rem;
+    line-height: 1.68;
+  }
+
+  .why-hero,
+  .hero-v2,
+  .why-hero-v2 {
+    padding: 44px 0 32px;
+  }
+
+  .why-hero h1,
+  .hero-v2 h1,
+  .why-hero-v2 h1,
+  .why-hero__content h1,
+  .hero-v2__content h1,
+  .why-hero-v2__content h1 {
+    font-size: 1.9rem;
+    line-height: 1.12;
+  }
+
+  /* 手机端 Hero 卡片改成 2×2 */
+  .why-hero__highlights,
+  .hero-v2__highlights,
+  .why-hero-v2__highlights,
+  .why-hero__cards,
+  .hero-v2__cards,
+  .why-hero-v2__cards,
+  .hero-v2-right,
+  .why-hero-right {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .why-hero__highlight,
+  .hero-v2__highlight,
+  .why-hero-v2__highlight,
+  .why-hero__card,
+  .hero-v2__card,
+  .why-hero-v2__card,
+  .hero-stat-card,
+  .why-hero-stat {
+    padding: 14px 12px;
+  }
+
+  .project-start-checklist__intro-box {
+    padding: 18px 16px 18px 18px;
+  }
+
+  .whyus-final-cta__content {
+    padding: 28px 18px;
+  }
+
+  .whyus-final-cta__content h2 {
+    font-size: 1.65rem;
+    line-height: 1.2;
+  }
+}
+
+/* =========================================================
+   WHY US HERO V2 – PRECISE FIX
+   目标：
+   1) Hero 标题压缩，不要 3~4 行太碎
+   2) 右侧 4 卡片改成 4 行竖排长卡片（1列×4行）
+   3) Hero 整体高度更紧凑
+========================================================= */
+
+.why-hero-v2 {
+
+  position: relative;
+  padding: 58px 0 42px;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+.why-hero-v2__container {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(340px, 0.9fr);
+  gap: 28px;
+  align-items: center;
+}
+
+.why-hero-v2__content {
+  max-width: 700px;
+}
+
+.why-hero-v2__kicker {
+  margin: 0 0 10px;
+  font-size: 0.78rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color: rgba(255,255,255,.82);
+}
+
+.why-hero-v2 h1 {
+  max-width: 780px;
+  margin: 0 0 14px;
+  font-size: clamp(2rem, 3vw, 3.05rem);
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  color: #fff;
+  text-wrap: balance;
+}
+
+.why-hero-v2__description {
+  max-width: 620px;
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.78;
+  color: rgba(255,255,255,.92);
+}
+
+.why-hero-v2__actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.why-hero-v2__points {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.why-hero-v2__points span {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 14px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.18);
+  backdrop-filter: blur(6px);
+  font-size: 0.88rem;
+  line-height: 1.35;
+  color: rgba(255,255,255,.95);
+}
+
+/* =========================
+   右侧 4 个竖排长卡片
+========================= */
+
+.why-hero-v2__panel {
+  display: grid;
+  grid-template-columns: 1fr;   /* 关键：1列 */
+  gap: 8px;
+  align-self: stretch;
+}
+
+.why-hero-v2__card {
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr);
+  gap: 14px;
+  align-items: start;
+  padding: 16px 14px;
+  min-height: auto;
+  border-radius: 14px;
+  background: rgba(255,255,255,.94);
+  border: 1px solid rgba(255,255,255,.45);
+  box-shadow: 0 14px 30px rgba(0,0,0,.10);
+  color: var(--ink);
+}
+
+.why-hero-v2__card-index {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  min-height: 54px;
+  border-radius: 14px;
+  background: #f5efe3;
+  color: var(--green);
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.why-hero-v2__card-body h3 {
+  margin: 0 0 6px;
+  font-size: 1rem;
+  line-height: 1.34;
+  color: var(--ink);
+}
+
+.why-hero-v2__card-body p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.62;
+  color: #555;
+}
+
+/* 按钮样式如果你原来没单独写，这里顺手兜住 */
+.why-hero-v2__whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 20px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.22);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background .25s ease, transform .25s ease;
+}
+
+.why-hero-v2__whatsapp:hover {
+  background: rgba(255,255,255,.18);
+  transform: translateY(-2px);
+}
+
+/* =========================
+   平板端
+========================= */
+
+@media (max-width: 1200px) {
+  .why-hero-v2 {
+    padding: 52px 0 38px;
+  }
+
+  .why-hero-v2__container {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .why-hero-v2__content {
+    max-width: 100%;
+  }
+
+  .why-hero-v2 h1 {
+    max-width: 760px;
+    font-size: clamp(1.95rem, 4vw, 2.7rem);
+  }
+
+  .why-hero-v2__description {
+    max-width: 760px;
+  }
+
+  /* 平板以下仍保持 1列4行，更符合你现在的设计意图 */
+  .why-hero-v2__panel {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   手机端
+========================= */
+
+@media (max-width: 768px) {
+  .why-hero-v2 {
+    padding: 42px 0 30px;
+  }
+
+  .why-hero-v2 h1 {
+    font-size: 1.9rem;
+    line-height: 1.12;
+  }
+
+  .why-hero-v2__description {
+    font-size: 0.95rem;
+    line-height: 1.72;
+  }
+
+  .why-hero-v2__actions {
+    margin-top: 18px;
+    gap: 10px;
+  }
+
+  .why-hero-v2__points {
+    margin-top: 16px;
+    gap: 8px;
+  }
+
+  .why-hero-v2__points span {
+    padding: 8px 12px;
+    font-size: 0.82rem;
+  }
+
+  .why-hero-v2__card {
+    grid-template-columns: 46px minmax(0, 1fr);
+    gap: 12px;
+    padding: 14px 14px;
+    border-radius: 16px;
+  }
+
+  .why-hero-v2__card-index {
+    width: 46px;
+    min-height: 46px;
+    border-radius: 12px;
+    font-size: 0.78rem;
+  }
+
+  .why-hero-v2__card-body h3 {
+    font-size: 0.96rem;
+  }
+
+  .why-hero-v2__card-body p {
+    font-size: 0.88rem;
+    line-height: 1.58;
+  }
+}
+
+/* =========================================================
+   WHY HERO V2 – HEADER OVERLAY FIX
+   目标：
+   1) Hero 整体下移，避开固定 Header
+   2) 左侧 H1 和右侧第1张卡都不再被遮挡
+========================================================= */
+
+/* Hero 整体往下让出 header 空间 */
+.why-hero-v2 {
+  padding-top: 132px;
+  padding-bottom: 52px;
+}
+
+/* Hero 内部内容从顶部开始排，不要垂直居中 */
+.why-hero-v2__container {
+  align-items: start;
+}
+
+/* 左侧内容也从顶部开始 */
+.why-hero-v2__content {
+  padding-top: 6px;
+}
+
+/* 右侧卡片列不要贴顶 */
+.why-hero-v2__panel {
+  align-self: start;
+  margin-top: 6px;
+}
+
+/* 如果你还想顺手把卡片再压一点，用下面这组 */
+.why-hero-v2__panel {
+  gap: 8px;
+}
+
+.why-hero-v2__card {
+  min-height: 62px;
+  padding: 8px 12px;
+}
+
+.why-hero-v2__card-body h3 {
+  margin-bottom: 2px;
+  font-size: 0.9rem;
+  line-height: 1.2;
+}
+
+.why-hero-v2__card-body p {
+  font-size: 0.8rem;
+  line-height: 1.35;
+}
+
+/* 平板端 */
+@media (max-width: 1200px) {
+  .why-hero-v2 {
+    padding-top: 118px;
+    padding-bottom: 44px;
+  }
+}
+
+/* 手机端 */
+@media (max-width: 768px) {
+  .why-hero-v2 {
+    padding-top: 108px;
+    padding-bottom: 34px;
+  }
+
+  .why-hero-v2__content {
+    padding-top: 0;
+  }
+
+  .why-hero-v2__panel {
+    margin-top: 2px;
+  }
+}
+
+
+/* =========================================================
+   WHY US – WHO WE WORK WITH
+========================================================= */
+
+.who-we-work-with {
+  padding: 42px 0;
+  background: #f8f6f1;
+}
+
+.who-we-work-with__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.who-we-work-with__card {
+  padding: 20px 20px 18px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: var(--shadow-soft);
+  transition:
+    transform .28s ease,
+    box-shadow .28s ease;
+}
+
+.who-we-work-with__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 34px rgba(0,0,0,.08);
+}
+
+.who-we-work-with__top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.who-we-work-with__index {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: #f5efe4;
+  color: #5a5a5a;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+}
+
+.who-we-work-with__card h3 {
+  margin: 0;
+  font-size: 1.02rem;
+  line-height: 1.28;
+  color: var(--ink);
+}
+
+.who-we-work-with__card p {
+  margin: 0;
+  font-size: 0.94rem;
+  line-height: 1.65;
+  color: #555;
+}
+
+/* =========================================================
+   WHY US – FINAL CTA
+========================================================= */
+
+.why-final-cta {
+  padding: 42px 0 54px;
+}
+
+.why-final-cta__box {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) auto;
+  align-items: center;
+  gap: 28px;
+  padding: 34px 36px;
+  background: linear-gradient(135deg, #1f5f52 0%, #17483e 100%);
+  border-radius: 24px;
+  color: #fff;
+  box-shadow: 0 18px 44px rgba(0,0,0,.12);
+}
+
+.why-final-cta__content h2 {
+  margin: 0 0 12px;
+  max-width: 18ch;
+  font-size: clamp(2rem, 2.7vw, 2.5rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+.why-final-cta__content p {
+  margin: 0;
+  max-width: 720px;
+  font-size: 0.98rem;
+  line-height: 1.75;
+  color: rgba(255,255,255,.92);
+}
+
+.why-final-cta__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 220px;
+}
+
+.why-final-cta__actions :global(.btn),
+.why-final-cta__whatsapp {
+  width: 100%;
+  justify-content: center;
+}
+
+.why-final-cta__whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 22px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.28);
+  background: rgba(255,255,255,.08);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition:
+    transform .25s ease,
+    background .25s ease,
+    border-color .25s ease;
+}
+
+.why-final-cta__whatsapp:hover {
+  transform: translateY(-2px);
+  background: rgba(255,255,255,.14);
+  border-color: rgba(255,255,255,.38);
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 980px) {
+  .who-we-work-with__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-final-cta__box {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .why-final-cta__actions {
+    min-width: 0;
+    width: 100%;
+    max-width: 360px;
+  }
+}
+
+@media (max-width: 768px) {
+  .who-we-work-with {
+    padding: 34px 0;
+  }
+
+  .who-we-work-with__card {
+    padding: 18px 16px 16px;
+    border-radius: 16px;
+  }
+
+  .who-we-work-with__index {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    border-radius: 10px;
+    font-size: 0.74rem;
+  }
+
+  .who-we-work-with__card h3 {
+    font-size: 0.98rem;
+  }
+
+  .who-we-work-with__card p {
+    font-size: 0.9rem;
+    line-height: 1.62;
+  }
+
+  .why-final-cta {
+    padding: 34px 0 46px;
+  }
+
+  .why-final-cta__box {
+    gap: 22px;
+    padding: 26px 20px;
+    border-radius: 20px;
+  }
+
+  .why-final-cta__content h2 {
+    font-size: 1.8rem;
+    line-height: 1.06;
+    max-width: none;
+  }
+
+  .why-final-cta__content p {
+    font-size: 0.94rem;
+    line-height: 1.68;
+  }
+
+  .why-final-cta__actions {
+    max-width: none;
   }
 }
