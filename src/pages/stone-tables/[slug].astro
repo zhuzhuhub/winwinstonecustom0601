@@ -42,6 +42,8 @@ const {
 
   featuredImage,
   featureImage,
+  featureVideo,
+  featureVideoPoster,
   gallery,
 
   seoTitle,
@@ -137,15 +139,13 @@ const productSchema = buildProductSchema({
 
       <div class="product-grid">
         <div class="product-gallery">
-      <div class="gallery-header">
-
-
-       <h2>
-         Material Details & Project Views
-      </h2>
-
-      </div>
-
+            
+          <div class="section-header product-section-header gallery-section-header">
+           <h2>Material Details & Project Views</h2>
+            <p class="lead">
+              Explore detail shots, material close-ups, and project-oriented images of this custom stone sink design.
+            </p>
+          </div>
 
 
      <div class="gallery-slider">
@@ -179,9 +179,11 @@ const productSchema = buildProductSchema({
     </div>
    </section>
 
-  <ProductFeatures
+   <ProductFeatures
     features={keyFeatures}
     image={featureImage}
+    video={featureVideo}
+    videoPoster={featureVideoPoster}
   />
 
 

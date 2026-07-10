@@ -9,34 +9,19 @@ const {
 ---
 
 <section class="category-faq">
-
   <div class="container">
-
     <SectionHeader
       title={title}
       description={description}
     />
 
     <div class="faq-list">
-
       {items.map((item) => (
-
-        <div class="faq-item">
-
-          <h3>
-            {item.question}
-          </h3>
-
-          <p>
-            {item.answer}
-          </p>
-
-        </div>
-
+        <details class="faq-item">
+          <summary>{item.question}</summary>
+          <p>{item.answer}</p>
+        </details>
       ))}
-
     </div>
-
   </div>
-
 </section>

@@ -1,59 +1,75 @@
 ---
 const {
   features = [],
-  image = ""
+  image = "",
+  video = "",
+  videoPoster = ""
 } = Astro.props;
+
+const hasVideo = typeof video === "string" && video.trim().length > 0;
+
+const hasImage = typeof image === "string" && image.trim().length > 0;
+
 ---
 
 <section class="product-features-v2">
-
   <div class="container">
 
-    <div class="features-header">
-
-
-      <h2>
-        Why Choose This Stone Product
-      </h2>
-
+    <div class="section-header product-section-header">
+      <h2>Why Choose This Stone Product</h2>
+      <p>
+        Designed for luxury residential projects, hospitality interiors,
+        and custom stone applications where material quality, detailing,
+        and manufacturing consistency matter.
+      </p>
     </div>
 
     <div class="features-layout">
 
       <div class="features-content">
-
         {
-          features.map((item) => (
+          features.map((item, index) => (
+            <article class="feature-row">
+              <div class="feature-index">
+                {String(index + 1).padStart(2, "0")}
+              </div>
 
-            <div class="feature-row">
-
-              <h3>
-                {item.title}
-              </h3>
-
-              <p>
-                {item.description}
-              </p>
-
-            </div>
-
+              <div class="feature-copy">
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </div>
+            </article>
           ))
         }
-
       </div>
 
-      <div class="feature-image">
-
-        <img
-          src={image}
-          alt="Product Feature"
-          loading="lazy"
-        />
-
+      <div class="feature-media">
+        {
+          hasVideo ? (
+            <div class="feature-video-wrap">
+              <video
+                class="feature-video"
+                controls
+                playsinline
+                preload="metadata"
+                poster={videoPoster || image}
+              >
+                <source src={video} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          ) : hasImage ?(
+            <div class="feature-image-wrap">
+              <img
+                src={image}
+                alt="Stone product feature presentation"
+                loading="lazy"
+              />
+            </div>
+          ) : null
+        }
       </div>
 
     </div>
-
   </div>
-
 </section>
