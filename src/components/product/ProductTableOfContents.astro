@@ -1,0 +1,27 @@
+---
+const { items = [] } = Astro.props;
+---
+
+<nav class="product-toc">
+
+  <h3>On This Page</h3>
+
+  <ol>
+
+    {
+      items.map((item) => (
+
+        <li>
+
+          <a href={`#${item.id}`}>
+            {item.title}
+          </a>
+
+        </li>
+
+      ))
+    }
+
+  </ol>
+
+</nav>

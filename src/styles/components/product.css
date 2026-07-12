@@ -277,7 +277,7 @@
 }
 
 .features-header {
-  max-width: 860px;
+  max-width: 1200px;
   margin-bottom: 34px;
   text-align: left;
 }
@@ -302,7 +302,7 @@
 .features-layout {
   display: grid;
   grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.92fr);
-  gap: 56px;
+  gap: 30px;
   align-items: start;
 }
 
@@ -314,8 +314,24 @@
 }
 
 .feature-row {
+  display:flex;
+  align-items:flex-start;
+  gap:20px;
   padding: 24px 0;
   border-bottom: 1px solid var(--line);
+}
+
+.feature-icon{ 
+  width:36px;
+  height:36px; 
+  flex:none; 
+  border-radius:50%; 
+  background:#eef5f1;
+  color:var(--green);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
 }
 
 .feature-row:first-child {
@@ -954,4 +970,244 @@
     font-size: 0.95rem;
     line-height: 1.75;
   }
+}
+
+
+/* =====================================================
+   Product Rich Content
+===================================================== */
+
+.product-content {
+  padding: 40px 0;
+  border-top: 1px solid var(--color-border, #e5e5e5);
+}
+
+.product-content .container {
+  max-width: 1400px;
+}
+
+.product-content-header {
+  margin-bottom: 2.5rem;
+}
+
+.product-content-header h2 {
+  margin-bottom: .75rem;
+}
+
+.product-content-header p {
+  color: var(--color-text-light, #666);
+  line-height: 1.8;
+}
+
+.product-prose {
+  line-height: 1.9;
+}
+
+.product-prose h2 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: clamp(1.7rem, 2vw, 2rem);
+}
+
+.product-prose h3 {
+  margin-top: 1rem;
+  margin-bottom: .75rem;
+}
+
+.product-prose p {
+  margin: .75rem 0;
+}
+
+.product-prose ul,
+.product-prose ol {
+  margin: 1rem 0 1rem 1.5rem;
+}
+
+.product-prose li {
+  margin-bottom: .5rem;
+}
+
+.product-prose strong {
+  font-weight: 600;
+}
+
+.product-prose img {
+  width: 100%;
+  border-radius: 16px;
+  margin: 2rem 0;
+}
+
+.product-prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+}
+
+.product-prose th,
+.product-prose td {
+  border: 1px solid #ddd;
+  padding: .75rem;
+}
+
+@media (max-width: 768px) {
+
+  .product-content {
+    padding: 50px 0;
+  }
+
+}
+
+
+/* ===================================
+   Product Table Of Contents
+=================================== */
+
+.product-toc {
+  margin: 0 0 3rem;
+  padding: 1.5rem 2rem;
+  background: #faf8f4;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+
+.product-toc h3 {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.product-toc ol {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.product-toc li {
+  margin: .55rem 0;
+}
+
+.product-toc a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color .25s ease;
+}
+
+.product-toc a:hover {
+  color: var(--green);
+}
+
+
+/* ======================================================
+   Product Related Resources
+====================================================== */
+
+.product-related-resources{
+    padding:40px 0;
+    background:#faf8f4;
+    border-top:1px solid var(--line);
+}
+
+.product-related-resources .container{
+    width:min(94%,1400px);
+}
+
+.resource-grid{
+
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:28px;
+
+}
+
+.resource-card{
+
+    display:flex;
+    flex-direction:column;
+
+    padding:20px;
+
+    background:#fff;
+
+    border:1px solid rgba(0,0,0,.06);
+
+    border-radius:24px;
+
+    text-decoration:none;
+
+    color:inherit;
+
+    transition:.35s ease;
+
+    min-height:260px;
+
+}
+
+.resource-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 20px 50px rgba(0,0,0,.08);
+
+}
+
+.resource-type{
+
+    display:inline-flex;
+
+    padding:6px 14px;
+
+    border-radius:999px;
+
+    background:#f2f2f2;
+
+    font-size:.72rem;
+
+    letter-spacing:.12em;
+
+    text-transform:uppercase;
+
+    font-weight:600;
+
+    color:var(--green);
+
+}
+
+.resource-card-body{
+
+    margin-top:28px;
+
+    flex:1;
+
+}
+
+.resource-card h3{
+
+    margin:0 0 14px;
+
+    font-size:1.45rem;
+
+    line-height:1.25;
+
+}
+
+.resource-card p{
+
+    color:var(--muted);
+
+    line-height:1.8;
+
+}
+
+.resource-card-footer{
+
+    margin-top:30px;
+
+}
+
+.resource-link{
+
+    font-weight:600;
+
+    color:var(--green);
+
 }

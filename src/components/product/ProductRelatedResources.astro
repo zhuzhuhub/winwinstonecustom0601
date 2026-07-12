@@ -1,0 +1,75 @@
+---
+const { resources = [] } = Astro.props;
+---
+
+{
+  resources.length > 0 && (
+
+<section class="product-related-resources">
+
+  <div class="container">
+
+    <div class="section-header product-section-header">
+
+      <h2>Related Resources</h2>
+
+      <p>
+        Learn more about natural stone materials,
+        custom manufacturing and project solutions.
+      </p>
+
+    </div>
+
+    <div class="resource-grid">
+
+      {
+        resources.map((item) => (
+
+         <a
+            href={item.href}
+            class="resource-card"
+          >
+
+          <div class="resource-card-top">
+
+             <span class="resource-type">
+               {item.type}
+             </span>
+
+          </div>
+
+          <div class="resource-card-body">
+
+            <h3>
+              {item.title}
+            </h3>
+
+            <p>
+              {item.description}
+            </p>
+
+          </div>
+
+          <div class="resource-card-footer">
+
+             <span class="resource-link">
+
+               Learn More →
+
+             </span>
+
+          </div>
+
+        </a>
+
+        ))
+      }
+
+    </div>
+
+  </div>
+
+</section>
+
+)
+}

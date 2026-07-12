@@ -7,6 +7,8 @@ import ProductInquiryCTA from "../../components/product/ProductInquiryCTA.astro"
 import RelatedProducts from "../../components/product/RelatedProducts.astro";
 import ProductFeatures from "../../components/product/ProductFeatures.astro";
 
+import ProductTableOfContents from "../../components/product/ProductTableOfContents.astro";
+import ProductRelatedResources from "../../components/product/ProductRelatedResources.astro";
 
 import { buildProductSchema } from "../../lib/schema/product";
 
@@ -51,6 +53,10 @@ const {
 
   categoryLabel,
   heroBadges,
+
+  featureHeading,
+  featureDescription,
+
   keyFeatures,
 
   material,
@@ -60,6 +66,8 @@ const {
   leadTime
 
 } = frontmatter;
+
+
 
 const siteUrl = import.meta.env.SITE || 'https://www.winwinstonecustom.com';
 
@@ -100,6 +108,72 @@ const productSchema = buildProductSchema({
   url: `${siteUrl}/stone-sinks/${slug}/`,
 });
 
+const tocItems = [
+  {
+    id: "product-overview",
+    title: "Product Overview",
+  },
+  {
+    id: "available-stone-materials",
+    title: "Available Stone Materials",
+  },
+  {
+    id: "surface-finish-options",
+    title: "Surface Finish Options",
+  },
+  {
+    id: "custom-manufacturing-options",
+    title: "Custom Manufacturing Options",
+  },
+  {
+    id: "recommended-applications",
+    title: "Recommended Applications",
+  },
+  {
+    id: "packaging-global-shipping",
+    title: "Packaging & Global Shipping",
+  },
+  {
+    id: "why-work-with-win-win-stone",
+    title: "Why Work With Win-Win Stone",
+  },
+];
+
+const relatedResources = [
+
+  {
+    type: "Blog",
+    title: "How to Choose the Right Stone Sink",
+    description:
+      "Learn how to choose materials, finishes and sink styles for luxury bathroom projects.",
+    href: "/blog/how-to-choose-the-right-stone-for-a-custom-bathroom-sink/",
+  },
+
+  {
+    type: "Material",
+    title: "Natural Marble Collection",
+    description:
+      "Explore premium marble materials available for custom sink manufacturing.",
+    href: "/materials/",
+  },
+
+  {
+    type: "OEM",
+    title: "Custom OEM Manufacturing",
+    description:
+      "Discover our OEM & ODM production capabilities for global projects.",
+    href: "/oem-odm/",
+  },
+
+  {
+    type: "Factory",
+    title: "Inside Our Stone Factory",
+    description:
+      "See how every natural stone product is handcrafted by experienced artisans.",
+    href: "/factory/",
+  }
+
+];
 
 ---
 
@@ -181,11 +255,13 @@ const productSchema = buildProductSchema({
    </section>
 
   <ProductFeatures
+    heading={featureHeading}
+    description={featureDescription}
     features={keyFeatures}
     image={featureImage}
     video={featureVideo}
     videoPoster={featureVideoPoster}
-  />
+/>
 
 
   <ProductSpecifications
@@ -195,6 +271,36 @@ const productSchema = buildProductSchema({
     leadTime={leadTime}
   />
  
+  <section class="product-content">
+
+   <div class="container">
+     <div class="product-content-header">
+
+      <h2>Product Details</h2>
+
+      <p>
+       Learn more about the design, craftsmanship,
+       customization options, and applications
+       of this custom natural stone sink.
+      </p>
+
+     </div>
+
+     <ProductTableOfContents items={tocItems} />
+
+     <article class="product-prose">
+
+       <Content />
+
+    </article>
+
+  </div>
+
+</section>
+
+  <ProductRelatedResources
+    resources={relatedResources}
+  />
 
   <ProductInquiryCTA
     productTitle={title}

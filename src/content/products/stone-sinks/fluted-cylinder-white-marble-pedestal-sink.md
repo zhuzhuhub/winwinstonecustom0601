@@ -19,31 +19,39 @@ heroBadges:
   - MOQ From 1 Piece
   - Global Shipping
 
+featureHeading: Why Choose This Natural Stone Sink
+
+featureDescription: >
+  Designed for luxury residential, hospitality and custom
+  bathroom projects where premium natural stone,
+  craftsmanship and customization matter.
+
+
 keyFeatures:
 
   - title: Handcrafted by Skilled Stone Artisans
     description: >
-      Experience the perfect fusion of advanced CNC precision and master stonemason artistry with our custom stone pedestal basins. Each sink is first shaped by cutting-edge machinery for flawless geometry, then meticulously hand-finished by skilled artisans to reveal natural veining and a silky-smooth surface. The result is a functional sculpture that elevates any luxury bathroom.
+        Experience the perfect fusion of advanced CNC precision and master stonemason artistry with our custom stone pedestal basins. 
 
   - title: Premium natural White Marble
     description: >
-      Every pedestal basin begins with nature’s finest raw materials. We rigorously select each block and slab—examining dimensions, vein patterns, and structural integrity to ensure nothing but premium quality. Whether you need consistent color tones or unique natural variations, our strict sourcing process guarantees beauty, durability, and value.
+      Every natral stone basin begins with nature’s finest raw materials.  Whether you need consistent color tones or unique natural variations, our strict sourcing process guarantees beauty, durability, and value.
 
   - title: Fully Customizable Dimensions
     description: >
-      Every space is unique, and so should be your stone pedestal basin. We offer full design and size customization to match your exact specifications. From overall dimensions to edge profiles and drain placement, every detail is tailored to your vision.
+      Every space is unique, and so should be your stone pedestal basin. 
 
   - title: Multiple Surface Finishes
     description: >
-      Choose from polished, honed, brushed, or custom finishes to perfectly match your project's aesthetic. Each surface treatment creates a distinct character, from sleek luxury to organic warmth.
+       Each surface treatment creates a distinct character, from sleek luxury to organic warmth.
 
   - title: Luxury Project Ready
     description: >
-      Whether placed in a luxury villa, boutique hotel, spa bathroom, or premium residential interior, our bespoke stone pedestal basins elevate the space with timeless elegance and natural beauty.
+      Our bespoke stone pedestal basins elevate the space with timeless elegance and natural beauty.
 
   - title: OEM & Global Support
     description: >
-      From China to Singapore, New York, London, and Dubai, our custom stone products are delivered worldwide. We provide secure packaging, international shipping, and project support for architects, contractors, and distributors.
+      Professional OEM manufacturing, export packaging and worldwide shipping for distributors and project buyers.
 
 moq: 1 Piece
 
@@ -81,19 +89,71 @@ seoDescription: Custom luxury marble pedestal sink manufacturer for villas, hote
 
 ---
 
-## Product Overview
+### Product Overview
 
-Custom stone sinks manufactured from premium natural White Marble.
+Our freestanding cylindrical pedestal sink is handcrafted from carefully selected natural marble, combining timeless aesthetics with exceptional durability. Designed for luxury residential and commercial interiors, each basin showcases the unique veining and texture of genuine natural stone, making every piece one of a kind.
 
-Ideal for luxury villas, hotels and high-end residential interiors.
+Suitable for villas, boutique hotels, spa projects, luxury apartments and premium bathrooms, this custom pedestal sink delivers both functionality and architectural elegance.
 
-## Features
+### Available Stone Materials
 
-- Natural marble veining
-- Custom dimensions available
-- Multiple finish options
-- Luxury interior applications
+We manufacture this pedestal sink in a wide range of premium natural stones, including:
 
-## OEM & Custom Service
+- Marble
+- Travertine
+- Limestone
+- onyx
+- luxury stone
 
-We provide full OEM and project customization support for architects, designers and contractors worldwide.
+Additional materials can be selected according to your project requirements.
+
+### Surface Finish Options
+
+Different surface finishes create completely different visual experiences.
+
+Available finishes include:
+
+- Polished
+- Honed
+- Leathered
+- Custom Finish
+
+Each finish is carefully processed to highlight the natural beauty of the selected stone while meeting the functional requirements of your project.
+
+### Custom Manufacturing Options
+
+Every project is different, so every sink can be customized.
+
+Customization options include:
+
+- Overall dimensions
+- Basin depth
+- Drain position
+- Edge profile
+- Stone selection
+- Surface finish
+- Logo engraving
+- OEM production
+
+### Recommended Applications
+
+This custom marble pedestal sink is widely used in:
+
+- Luxury Villas
+- Boutique Hotels
+- Spa & Wellness Centers
+- High-end Apartments
+- Designer Bathrooms
+- Commercial Projects
+
+### Packaging & Global Shipping
+
+Each sink is carefully protected using foam, reinforced wooden crates and export-grade packaging to ensure safe international transportation.
+
+We have extensive experience shipping natural stone products worldwide for wholesalers, architects, contractors ,and project developers.
+
+### Why Work With Win-Win Stone
+
+Win-Win Stone specializes in custom natural stone manufacturing with extensive OEM and ODM experience.
+
+From raw material selection to CNC machining, hand finishing, quality inspection and global logistics, every step is carefully controlled to deliver consistent quality for international projects.

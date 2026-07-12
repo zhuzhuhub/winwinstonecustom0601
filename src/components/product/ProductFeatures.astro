@@ -1,9 +1,18 @@
 ---
 const {
+
+  heading = "Why Choose This Stone Product",
+
+  description = "",
+
   features = [],
+
   image = "",
+
   video = "",
+
   videoPoster = ""
+
 } = Astro.props;
 
 const hasVideo = typeof video === "string" && video.trim().length > 0;
@@ -16,11 +25,9 @@ const hasImage = typeof image === "string" && image.trim().length > 0;
   <div class="container">
 
     <div class="section-header product-section-header">
-      <h2>Why Choose This Stone Product</h2>
+      <h2>{heading}</h2>
       <p>
-        Designed for luxury residential projects, hospitality interiors,
-        and custom stone applications where material quality, detailing,
-        and manufacturing consistency matter.
+        {description}
       </p>
     </div>
 
@@ -30,10 +37,9 @@ const hasImage = typeof image === "string" && image.trim().length > 0;
         {
           features.map((item, index) => (
             <article class="feature-row">
-              <div class="feature-index">
-                {String(index + 1).padStart(2, "0")}
+              <div class="feature-icon">
+                  ✓
               </div>
-
               <div class="feature-copy">
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>

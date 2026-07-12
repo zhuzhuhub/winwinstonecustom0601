@@ -18,23 +18,31 @@ heroBadges:
   - MOQ From 1 Piece
   - Global Shipping
 
+featureHeading: Why Choose This Coffee Table Set
+
+featureDescription: >
+  Designed for luxury residential, hospitality and custom
+  projects where premium natural stone,
+  craftsmanship and customization matter.
+
+
 keyFeatures:
 
   - title: Handcrafted by Skilled Stone Artisans
     description: >
-      Experience the perfect fusion of advanced CNC precision and master stonemason artistry with our custom stone pedestal basins. Each table is first shaped by cutting-edge machinery for flawless geometry, then meticulously hand-finished by skilled artisans to reveal natural veining and a silky-smooth surface. The result is a functional sculpture that elevates any luxury residential and hospitality projects.
+      Each table is first shaped by cutting-edge machinery for flawless geometry, then meticulously hand-finished by skilled artisans to reveal natural veining and a silky-smooth surface.
 
   - title: Premium Cream Travertine
     description: >
-      Every coffee table begins with nature’s finest raw materials.We rigorously select each block and slab—examining dimensions, vein patterns, and structural integrity to ensure nothing but premium quality. Whether you need consistent color tones or unique natural variations, our strict sourcing process guarantees beauty, durability, and value.
+      Every coffee table begins with nature’s finest raw materials.Our strict sourcing process guarantees beauty, durability, and value.
 
-  - title: Fully Customizable Dimensions
+  - title: Fully Customizable
     description: >
-      Every space is unique, and so should be your stone table. We offer full design and size customization to match your exact specifications. From overall dimensions to edge profiles and drain placement, every detail is tailored to your vision.
+      Every space is unique, and so should be your stone table. Every detail is tailored to your vision.
 
   - title: Multiple Surface Finishes
     description: >
-      Choose from polished, honed, brushed, or custom finishes to perfectly match your project's aesthetic. Each surface treatment creates a distinct character, from sleek luxury to organic warmth.
+      Choose from polished, honed, brushed, or custom finishes to perfectly match your project's aesthetic. 
 
   - title: Luxury Project Ready
     description: >
@@ -42,12 +50,12 @@ keyFeatures:
 
   - title: OEM & Global Support
     description: >
-      From China to Singapore, New York, London, and Dubai, our custom stone products are delivered worldwide. We provide secure packaging, international shipping, and project support for architects, contractors, and distributors.
+      Professional OEM manufacturing, export packaging and worldwide shipping for distributors and project buyers.
 
   
 moq: 1 Piece
 
-leadTime: 15-30 Days
+leadTime: 30-35 Days
 
 featuredImage: /images/products/stone-tables/modernism-cream-travertine-coffee-table-set/cover.jpg
 featureImage: /images/products/stone-tables/modernism-cream-travertine-coffee-table-set/scene-02.jpg
@@ -60,24 +68,69 @@ gallery:
   - image: /images/products/stone-tables/modernism-cream-travertine-coffee-table-set/scene-01.jpg
   - image: /images/products/stone-tables/modernism-cream-travertine-coffee-table-set/scene-02.jpg
 
-seoTitle: Custom Calacatta White Marble side tables Manufacturer
+seoTitle: Custom Travertine Coffee Tables Manufacturer
 
-seoDescription: Custom luxury marble side tables manufacturer for villas, hotels and high-end residential  projects.
+seoDescription: Custom travertine coffee tables manufacturer for villas, hotels and high-end residential  projects.
 ---
 
-## Product Overview
+### Product Overview
 
-Luxury custom marble side table crafted from natural Calacatta marble.
+Our coffee table is handcrafted from carefully selected natural travertine, combining timeless aesthetics with exceptional durability. Designed for luxury residential and commercial interiors, each dining table showcases the unique veining and texture of genuine natural stone, making every piece one of a kind.
 
-Ideal for luxury hotels, villas and high-end residential projects.
+Suitable for villas, boutique hotels, and luxury apartments , this custom coffee table delivers both functionality and architectural elegance.
 
-## Features
+### Available Stone Materials
 
-- Natural travertine texture
-- Custom dimensions available
-- Multiple finish options
-- Suitable for luxury interiors
+We manufacture this coffee table in a wide range of premium natural stones, including:
 
-## OEM & Custom Service
+- Marble
+- Travertine
+- Limestone
+- onyx
+- luxury stone
 
-We provide full OEM and custom manufacturing support based on drawings, sketches and project requirements.
+Additional materials can be selected according to your project requirements.
+
+### Surface Finish Options
+
+Different surface finishes create completely different visual experiences.
+
+Available finishes include:
+
+- Polished
+- Custom Finish
+
+Each finish is carefully processed to highlight the natural beauty of the selected stone while meeting the functional requirements of your project.
+
+### Custom Manufacturing Options
+
+Every project is different, so every table can be customized.
+
+Customization options include:
+
+- Overall dimensions & design
+- Edge profile
+- Stone selection
+- Surface finish
+- Logo engraving
+- OEM production
+
+### Recommended Applications
+
+This custom marble pedestal sink is widely used in:
+
+- Luxury Villas
+- Boutique Hotels
+- Commercial Projects
+
+### Packaging & Global Shipping
+
+Each sink is carefully protected using foam, reinforced wooden crates and export-grade packaging to ensure safe international transportation.
+
+We have extensive experience shipping natural stone products worldwide for wholesalers, architects, contractors ,and project developers.
+
+### Why Work With Win-Win Stone
+
+Win-Win Stone specializes in custom natural stone manufacturing with extensive OEM and ODM experience.
+
+From raw material selection to CNC machining, hand finishing, quality inspection and global logistics, every step is carefully controlled to deliver consistent quality for international projects.

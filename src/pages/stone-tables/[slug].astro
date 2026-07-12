@@ -7,6 +7,8 @@ import ProductInquiryCTA from "../../components/product/ProductInquiryCTA.astro"
 import RelatedProducts from "../../components/product/RelatedProducts.astro";
 import ProductFeatures from "../../components/product/ProductFeatures.astro";
 
+import ProductTableOfContents from "../../components/product/ProductTableOfContents.astro";
+import ProductRelatedResources from "../../components/product/ProductRelatedResources.astro";
 
 import { buildProductSchema } from "../../lib/schema/product";
 
@@ -51,6 +53,10 @@ const {
 
   categoryLabel,
   heroBadges,
+
+  featureHeading,
+  featureDescription,
+
   keyFeatures,
 
   material,
@@ -100,6 +106,73 @@ const productSchema = buildProductSchema({
   url: `${siteUrl}/stone-tables/${slug}/`,
 });
 
+const tocItems = [
+  {
+    id: "product-overview",
+    title: "Product Overview",
+  },
+  {
+    id: "available-stone-materials",
+    title: "Available Stone Materials",
+  },
+  {
+    id: "surface-finish-options",
+    title: "Surface Finish Options",
+  },
+  {
+    id: "custom-manufacturing-options",
+    title: "Custom Manufacturing Options",
+  },
+  {
+    id: "recommended-applications",
+    title: "Recommended Applications",
+  },
+  {
+    id: "packaging-global-shipping",
+    title: "Packaging & Global Shipping",
+  },
+  {
+    id: "why-work-with-win-win-stone",
+    title: "Why Work With Win-Win Stone",
+  },
+];
+
+const relatedResources = [
+
+  {
+    type: "Blog",
+    title: "How to Choose the Right Stone Table",
+    description:
+      "Learn how to choose materials, finishes and table styles for spaces.",
+    href: "/blog/how-to-custom-stone-dining-tables-for-hospitality-and-villa-projects/",
+  },
+
+  {
+    type: "Material",
+    title: "Natural Marble Collection",
+    description:
+      "Explore premium marble materials available for custom table manufacturing.",
+    href: "/materials/",
+  },
+
+  {
+    type: "OEM",
+    title: "Custom OEM Manufacturing",
+    description:
+      "Discover our OEM & ODM production capabilities for global projects.",
+    href: "/oem-odm/",
+  },
+
+  {
+    type: "Factory",
+    title: "Inside Our Stone Factory",
+    description:
+      "See how every natural stone product is handcrafted by experienced artisans.",
+    href: "/factory/",
+  }
+
+];
+
 ---
 
 <BaseLayout
@@ -143,7 +216,7 @@ const productSchema = buildProductSchema({
           <div class="section-header product-section-header gallery-section-header">
            <h2>Material Details & Project Views</h2>
             <p class="lead">
-              Explore detail shots, material close-ups, and project-oriented images of this custom stone sink design.
+              Explore detail shots, material close-ups, and project-oriented images of this custom stone table design.
             </p>
           </div>
 
@@ -184,6 +257,8 @@ const productSchema = buildProductSchema({
     image={featureImage}
     video={featureVideo}
     videoPoster={featureVideoPoster}
+    heading={featureHeading}
+    description={featureDescription}
   />
 
 
@@ -194,7 +269,37 @@ const productSchema = buildProductSchema({
     leadTime={leadTime}
   />
  
+  <section class="product-content">
 
+   <div class="container">
+     <div class="product-content-header">
+
+      <h2>Product Details</h2>
+
+      <p>
+       Learn more about the design, craftsmanship,
+       customization options, and applications
+       of this custom natural stone table.
+      </p>
+
+     </div>
+
+     <ProductTableOfContents items={tocItems} />
+
+     <article class="product-prose">
+
+       <Content />
+
+    </article>
+
+  </div>
+
+</section>
+
+  <ProductRelatedResources
+    resources={relatedResources}
+  />
+  
   <ProductInquiryCTA
     productTitle={title}
     slug={slug}
