@@ -12,12 +12,18 @@ material: Natural Stone and wood
 finish:
   - Polished
   - Honed
-  - Leathered
+  - custom finished
 
 heroBadges:
   - OEM Available
   - MOQ From 1 Piece
   - Global Shipping
+
+featureHeading: Why Choose This Custom Stone Island
+
+featureDescription: >
+  Designed for luxury residential, hospitality and custom
+  projects where premium natural stone, craftsmanship and customization matter.
 
 keyFeatures:
 
@@ -42,7 +48,7 @@ keyFeatures:
 
 moq: 1 Piece
 
-leadTime: 25-35 Days
+leadTime: 30-35 Days
 
 featuredImage: /images/products/custom-stone-furniture/minimalist-luxury-custom-stone-island/cover.jpg
 
@@ -60,19 +66,69 @@ seoTitle: Custom Stone Island Manufacturer
 seoDescription: Luxury custom stone islands manufacturer with OEM service.
 ---
 
-## Product Overview
 
-Custom stone island manufactured from premium natural stone materials.
+### Product Overview
 
-Suitable for luxury kitchens, villas, hotels and high-end residential projects.
+Our stone island table is handcrafted from carefully selected natural marble, combining timeless aesthetics with exceptional durability. Designed for luxury residential and commercial interiors, each island table showcases the unique veining and texture of genuine natural stone, making every piece one of a kind.
 
-## Features
+Suitable for villas, boutique hotels, spa projects, and luxury apartments , this custom pedestal sink delivers both functionality and architectural elegance.
 
-- Custom dimensions available
-- Premium natural stone
-- Multiple finish options
-- Luxury interior applications
+### Available Stone Materials
 
-## OEM & Custom Service
+We manufacture this marble island table in a wide range of premium natural stones, including:
 
-We provide full OEM and project customization support for architects, designers and contractors worldwide.
+- Marble
+- Travertine
+- Limestone
+- onyx
+- luxury stone
+
+Additional materials can be selected according to your project requirements.
+
+### Surface Finish Options
+
+Different surface finishes create completely different visual experiences.
+
+Available finishes include:
+
+- Polished
+- Honed
+- Leathered
+- Custom Finish
+
+Each finish is carefully processed to highlight the natural beauty of the selected stone while meeting the functional requirements of your project.
+
+### Custom Manufacturing Options
+
+Every project is different, so every stone art can be customized.
+
+Customization options include:
+
+- Overall dimensions & design
+- Edge profile
+- Stone selection
+- Surface finish
+- Logo engraving
+- OEM production
+
+### Recommended Applications
+
+This custom marble firplace surround is widely used in:
+
+- Luxury Villas
+- Boutique Hotels
+- Spa & Wellness Centers
+- High-end Apartments
+- Commercial Projects
+
+### Packaging & Global Shipping
+
+Each sink is carefully protected using foam, reinforced wooden crates and export-grade packaging to ensure safe international transportation.
+
+We have extensive experience shipping natural stone products worldwide for wholesalers, architects, contractors ,and project developers.
+
+### Why Work With Win-Win Stone
+
+Win-Win Stone specializes in custom natural stone manufacturing with extensive OEM and ODM experience.
+
+From raw material selection to CNC machining, hand finishing, quality inspection and global logistics, every step is carefully controlled to deliver consistent quality for international projects.

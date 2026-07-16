@@ -18,23 +18,30 @@ heroBadges:
   - MOQ From 1 Piece
   - Global Shipping
 
+featureHeading: Why Choose This Stone Bathtub 
+
+featureDescription: >
+  Designed for luxury residential, hospitality and custom
+  bathroom projects where premium natural stone,
+  craftsmanship and customization matter.
+
 keyFeatures:
 
   - title: Handcrafted by Skilled Stone Artisans
     description: >
-      Experience the perfect fusion of advanced CNC precision and master stonemason artistry with our custom stone pedestal basins. Each bathtub is first shaped by cutting-edge machinery for flawless geometry, then meticulously hand-finished by skilled artisans to reveal natural veining and a silky-smooth surface. The result is a functional sculpture that elevates any luxury bathroom.
+     Each bathtub is first shaped by advanced CNC for flawless geometry, then meticulously hand-finished by skilled artisans to reveal natural veining and a silky-smooth surface. 
 
-  - title: Premium Calacatta White Marble
+  - title: Premium natural Marble
     description: >
-      Every 100% natural stone bathtub begins with nature’s finest raw materials. We rigorously select each block and slab—examining dimensions, vein patterns, and structural integrity to ensure nothing but premium quality. Whether you need consistent color tones or unique natural variations, our strict sourcing process guarantees beauty, durability, and value.
+      Every 100% natural stone bathtub begins with nature’s finest raw materials. 
 
   - title: Fully Customizable Dimensions
     description: >
-      Every space is unique, and so should be your stone bathtub. We offer full design and size customization to match your exact specifications. From overall dimensions to edge profiles and drain placement, every detail is tailored to your vision.
+      Every space is unique, and so should be your stone bathtub.
 
   - title: Multiple Surface Finishes
     description: >
-      Choose from polished, honed, or custom finishes to perfectly match your project's aesthetic. Each surface treatment creates a distinct character, from sleek luxury to organic warmth.
+      Each surface treatment creates a distinct character, from sleek luxury to organic warmth.
 
   - title: Luxury Project Ready
     description: >
@@ -42,7 +49,7 @@ keyFeatures:
 
   - title: OEM & Global Support
     description: >
-      From China to Singapore, New York, London, and Dubai, our custom stone products are delivered worldwide. We provide secure packaging, international shipping, and project support for architects, contractors, and distributors.
+      Professional OEM manufacturing, export packaging and worldwide shipping for distributors and project buyers.
 
 moq: 1 Piece
 
@@ -65,19 +72,71 @@ seoTitle: Custom Luxury Stone Bathtub Manufacturer
 seoDescription: Custom natural stone bathtub manufacturer for luxury villas, hotels and spa projects.
 ---
 
-## Product Overview
+### Product Overview
 
-Luxury handcrafted stone bathtub manufactured from premium natural stone materials.
+Our freestanding stone bathtub is handcrafted from carefully selected natural marble, combining timeless aesthetics with exceptional durability. Designed for luxury residential and commercial interiors, each basin showcases the unique veining and texture of genuine natural stone, making every piece one of a kind.
 
-Suitable for luxury residential and hospitality projects worldwide.
+Suitable for villas, boutique hotels, spa projects, luxury apartments and premium bathrooms, this custom pedestal sink delivers both functionality and architectural elegance.
 
-## Features
+### Available Stone Materials
 
-- Custom dimensions
-- Premium natural stone
-- Hand-finished craftsmanship
-- Luxury interior applications
+We manufacture this luxury stone bathtub in a wide range of premium natural stones, including:
 
-## OEM & Custom Service
+- Marble
+- Travertine
+- Limestone
+- onyx
+- luxury stone
 
-We provide full OEM and custom manufacturing support based on drawings and project requirements.
+Additional materials can be selected according to your project requirements.
+
+### Surface Finish Options
+
+Different surface finishes create completely different visual experiences.
+
+Available finishes include:
+
+- Polished
+- Honed
+- Leathered
+- Custom Finish
+
+Each finish is carefully processed to highlight the natural beauty of the selected stone while meeting the functional requirements of your project.
+
+### Custom Manufacturing Options
+
+Every project is different, so every sink can be customized.
+
+Customization options include:
+
+- Overall dimensions
+- Bathtub depth
+- Drain position
+- Edge profile
+- Stone selection
+- Surface finish
+- Logo engraving
+- OEM production
+
+### Recommended Applications
+
+This custom marble pedestal sink is widely used in:
+
+- Luxury Villas
+- Boutique Hotels
+- Spa & Wellness Centers
+- High-end Apartments
+- Designer Bathrooms
+- Commercial Projects
+
+### Packaging & Global Shipping
+
+Each sink is carefully protected using foam, reinforced wooden crates and export-grade packaging to ensure safe international transportation.
+
+We have extensive experience shipping natural stone products worldwide for wholesalers, architects, contractors ,and project developers.
+
+### Why Work With Win-Win Stone
+
+Win-Win Stone specializes in custom natural stone manufacturing with extensive OEM and ODM experience.
+
+From raw material selection to CNC machining, hand finishing, quality inspection and global logistics, every step is carefully controlled to deliver consistent quality for international projects.
