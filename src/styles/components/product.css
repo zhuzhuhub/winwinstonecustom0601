@@ -368,7 +368,8 @@
 .feature-image video {
   width: 100%;
   display: block;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 9 / 16;
+  max-height:680px;
   object-fit: cover;
   border-radius: 24px;
   box-shadow: 0 20px 60px rgba(0,0,0,.08);
@@ -378,6 +379,20 @@
 /* 预留未来视频样式：如果你以后在这里放 <video> 也能直接用 */
 .feature-image video {
   controls-color: initial;
+}
+
+.feature-video {
+
+ width:100%;
+
+ max-height:680px;
+
+ aspect-ratio:9 / 16;
+
+ object-fit:cover;
+
+ border-radius:24px;
+
 }
 
 /* =====================
