@@ -3,31 +3,31 @@ export const stoneSinksData = {
   advantages: {
     title: "Why Choose Our Custom Stone Sinks",
     description:
-      "Designed for luxury bathrooms, hospitality projects, wholesalers, and custom architectural developments.",
+      "Designed for luxury bathrooms, hospitality projects, interior brands, designers and OEM stone sink buyers worldwide.",
 
     items: [
       {
         title: "Premium Natural Stone",
         description:
-          "Marble, travertine, limestone, granite and other carefully selected natural stones."
+          "Premium marble, travertine, limestone and other natural stones selected for luxury bathroom and architectural projects."
       },
 
       {
         title: "Fully Customizable",
         description:
-          "Custom basin dimensions, sink depth, drain location, edge profiles and installation methods."
+          "Custom basin dimensions, sink depth, drain location, edge profiles, shapes and installation methods."
       },
 
       {
         title: "Handcrafted Manufacturing",
         description:
-          "Produced by experienced craftsmen with strict quality control and finishing standards."
+          "Experienced craftsmen combine traditional stone processing with strict quality control and finishing standards."
       },
 
       {
-        title: "Global Export Experience",
+        title: "Global OEM Project Experience",
         description:
-          "Trusted supplier for villas, hotels, resorts and commercial projects worldwide."
+          "Supporting villas, hotels, resorts, designers and commercial projects with international export experience."
       }
     ]
   },
@@ -35,19 +35,19 @@ export const stoneSinksData = {
   customization: {
     title: "Customization Options",
     description:
-      "Every stone sink can be tailored to match your project requirements.",
+      "Every custom stone sink can be tailored with flexible dimensions, materials, finishes and design details to meet your project requirements.",
 
     items: [
       {
         title: "Sink Dimensions",
         description:
-          "Custom width, depth, height and basin proportions."
+          "Custom width, depth, height, basin proportions and drainage configurations."
       },
 
       {
         title: "Stone Materials",
         description:
-          "Marble, travertine, limestone, granite, quartzite and more."
+          "Marble, travertine, limestone, granite, quartzite and other premium natural stones."
       },
 
       {
@@ -65,23 +65,23 @@ export const stoneSinksData = {
   },
 
   applications: {
-    title: "Suitable For Various Projects",
+    title: "Custom Stone Sink Applications",
     description:
-      "Custom stone sinks are widely used across luxury residential and hospitality environments.",
+      "Custom stone sinks are designed for luxury villas, hotels, resorts, spas and architectural interior projects worldwide.",
 
     items: [
       {
         image: "/images/applications/stone-sinks/luxury-villa.jpg",
         title: "Luxury Villas",
         description:
-          "Bespoke bathroom sink solutions for high-end residential projects."
+         "Bespoke marble and natural stone sink solutions for high-end residential bathroom projects."
       },
 
       {
         image: "/images/applications/stone-sinks/boutique-hotel.jpg",
         title: "Hotels & Resorts",
         description:
-          "Premium natural stone sinks for hospitality developments."
+          "Premium stone basin solutions for luxury hotels, resorts and hospitality developments."
       },
 
       {
@@ -95,7 +95,7 @@ export const stoneSinksData = {
         image: "/images/applications/stone-sinks/commercial-project.jpg",
         title: "Commercial Projects",
         description:
-          "Suitable for clubs, public spaces and architectural developments."
+         "Suitable for restaurants, clubs, public spaces and commercial architectural developments."
       }
     ]
   },
@@ -106,6 +106,12 @@ export const stoneSinksData = {
       "Answers to common questions about custom stone sink manufacturing.",
 
     items: [
+       {
+        question: "Can stone sinks be customized?",
+        answer:
+          "Yes. We customize stone sinks in different sizes, shapes, materials and finishes according to project requirements."
+      },
+
       {
         question: "Can you manufacture custom sink sizes?",
         answer:
@@ -118,10 +124,16 @@ export const stoneSinksData = {
           "Marble, travertine, limestone, granite, quartzite and many other natural stones."
       },
 
-      {
+       {
         question: "What is the production lead time?",
         answer:
           "Typically 20–35 days depending on quantity and complexity."
+      },
+
+      {
+        question: "What is the minimum order quantity for custom stone sinks?",
+        answer:
+          "MOQ depends on the design, material and project requirements. We support both prototype samples and bulk OEM production."
       },
 
       {
@@ -135,6 +147,6 @@ export const stoneSinksData = {
   cta: {
     title: "Start Your Custom Stone Sink Project",
     description:
-      "Contact our team for material recommendations, drawings, quotations and production support."
+      "Contact our team for stone selection, drawings review, quotations and OEM production support for your custom sink project."
   }
 };
