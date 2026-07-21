@@ -3,31 +3,31 @@ export const stoneBathtubsData = {
   advantages: {
     title: "Why Choose Our Custom Stone Bathtubs",
     description:
-      "Designed for luxury villas, hospitality developments and premium wellness spaces.",
+      "Designed for luxury villas, hotels, resorts, spas and premium architectural projects worldwide.",
 
     items: [
       {
         title: "Premium Natural Stone",
         description:
-          "Manufactured from carefully selected marble, travertine, limestone and other natural stones."
+          "Manufactured from carefully selected marble, travertine, limestone and other premium natural stones for luxury bathroom projects."
       },
 
       {
         title: "Fully Customizable",
         description:
-          "Custom dimensions, tub depth, edge profiles and drainage systems available."
+          "Custom dimensions, shapes, depth, edge profiles and drainage systems available."
       },
 
       {
-        title: "Handcrafted Excellence",
+        title: "Craftsmanship & Quality Control",
         description:
-          "Every bathtub is sculpted and finished by experienced stone craftsmen."
+          "Every bathtub is carefully shaped, finished and inspected by experienced stone craftsmen."
       },
 
       {
-        title: "Global Project Experience",
+        title: "Global OEM Project Experience",
         description:
-          "Trusted by architects, designers and luxury developers worldwide."
+         "Trusted by architects, designers and luxury developers for international hospitality and residential projects."
       }
     ]
   },
@@ -35,13 +35,13 @@ export const stoneBathtubsData = {
   customization: {
     title: "Customization Options",
     description:
-      "Every stone bathtub can be tailored to fit your project requirements.",
+      "Every custom stone bathtub can be tailored with flexible dimensions, materials, finishes and design details.",
 
     items: [
       {
         title: "Bathtub Dimensions",
         description:
-          "Custom length, width, depth and overall proportions."
+          "Custom length, width, height, depth and overall bathtub proportions."
       },
 
       {
@@ -59,15 +59,15 @@ export const stoneBathtubsData = {
       {
         title: "Design Details",
         description:
-          "Freestanding tubs, integrated overflow systems and bespoke design features."
+         "Freestanding tubs, integrated overflow systems, curved designs and bespoke architectural details."
       }
     ]
   },
 
   applications: {
-    title: "Suitable For Various Projects",
+    title: "Custom Stone Bathtub Applications",
     description:
-      "Custom stone bathtubs are widely used in luxury hospitality and residential developments.",
+      "Custom stone bathtubs are designed for luxury villas, hotels, resorts, spas and high-end residential developments.",
 
     items: [
       {
@@ -119,9 +119,15 @@ export const stoneBathtubsData = {
       },
 
       {
+        question:"Are travertine bathtubs available for custom projects?",
+        answer:
+          "Yes. We manufacture custom travertine bathtubs with different sizes, shapes and finishes for luxury residential, hotel and spa projects."
+      },
+
+      {
         question: "What is the production lead time?",
         answer:
-          "Typically 25–45 days depending on project complexity and quantity."
+          "Typically 35–45 days depending on project complexity and quantity."
       },
 
       {
