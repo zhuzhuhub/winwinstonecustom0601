@@ -9,21 +9,21 @@ export const stoneTablesData = {
     },
 
     {
-      title: "Large Slab Fabrication",
+      title: "Large Slab Stone Fabrication",
       description:
-        "Experienced fabrication of oversized tabletops for hospitality and residential projects."
+        "Experienced fabrication of oversized marble and stone tabletops for hospitality and residential projects."
     },
 
     {
-      title: "Premium Material Selection",
+      title: "Premium Marble & Stone Selection",
       description:
-        "Marble, travertine, limestone and engineered stone options available."
+        "Marble, travertine, limestone, quartzite and other premium natural stone options available."
     },
 
     {
-      title: "Global Export Experience",
+      title: "Global OEM Project Experience",
       description:
-        "Reliable packing and export solutions for wholesalers, retailers and project contractors."
+       "Reliable production, packing and export solutions for wholesalers, retailers, designers and project contractors."
     }
 
   ],
@@ -32,13 +32,13 @@ export const stoneTablesData = {
   {
     title: "Stone Material",
     description:
-      "Choose from marble, travertine, limestone, quartzite and other natural stones."
+      "Choose from premium marble, travertine, limestone, quartzite and other natural stones."
   },
 
   {
     title: "Table Dimensions",
     description:
-      "Customize tabletop diameter, length, width, height and thickness."
+      "Customize tabletop diameter, length, width, height, thickness and overall proportions."
   },
 
   {
@@ -60,7 +60,7 @@ export const stoneTablesData = {
   {
     title: "Luxury Villas",
     description:
-      "Bespoke stone dining tables and coffee tables designed for luxury residential interiors.",
+      "Bespoke marble dining tables and coffee tables designed for luxury residential interiors.",
     image:
       "/images/applications/stone-tables/luxury-villa.jpg"
   },
@@ -84,7 +84,7 @@ export const stoneTablesData = {
   {
     title: "Commercial Projects",
     description:
-      "Stone furniture manufactured for lounges, reception areas and public spaces.",
+      "Custom stone furniture manufactured for lounges, reception areas and public spaces.",
     image:
       "/images/applications/stone-tables/commercial-project.jpg"
   }
@@ -92,6 +92,13 @@ export const stoneTablesData = {
   ],
 
   faq: [
+   {
+     question:
+        "Can you manufacture custom marble dining tables?",
+
+      answer:
+        "Yes. We produce custom marble dining tables in different sizes, shapes and designs according to drawings and project requirements."
+  },
 
   {
     question:
@@ -136,7 +143,7 @@ export const stoneTablesData = {
     "Start Your Custom Stone Table Project",
 
   description:
-    "Work directly with our manufacturing team to develop custom marble dining tables, coffee tables, side tables and bespoke stone furniture for residential and commercial projects.",
+    "Work directly with our manufacturing team to develop custom marble dining tables, travertine tables, coffee tables and bespoke stone furniture for global projects.",
 
   buttonText:
     "Request A Stone Table Quote",
