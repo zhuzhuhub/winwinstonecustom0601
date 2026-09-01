@@ -85,6 +85,7 @@ const allProducts =
   Object.values(allModules);
 
 
+
 const productSchema = buildProductSchema({
   title,
   description,
@@ -102,9 +103,14 @@ const productSchema = buildProductSchema({
 
   material,
 
+  finish,
+
   category: categoryLabel,
 
-  url: `${siteUrl}/custom-stone-furniture/${slug}/`,
+  moq,
+  leadTime,
+
+  url: `${siteUrl}/stone-sinks/${slug}/`,
 });
 
 const tocItems = [

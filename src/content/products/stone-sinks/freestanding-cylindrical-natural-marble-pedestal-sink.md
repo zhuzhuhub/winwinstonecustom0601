@@ -1,7 +1,7 @@
 ---
-title: Freestanding Cylindrical Pedestal Sink
+title: Freestanding Cylindrical Natural Marble Pedestal Sink
 
-description: Luxury custom 100% natural marble freestanding cylindrical pedestal sink for luxury bathrooms.
+description: Custom freestanding natural marble pedestal sink manufactured for luxury bathrooms, villas, hotels and hospitality projects with OEM production support.
 
 category: stone-sinks
 
@@ -80,29 +80,41 @@ gallery:
   
   
     
-seoTitle: Custom Natural Marble Cylinder Pedestal Sink Manufacturer
+seoTitle: Freestanding Marble Pedestal Sink | Custom Natural Stone Basin OEM
 
-seoDescription: Custom luxury marble pedestal sink manufacturer for villas, hotels and bathroom projects.
+seoDescription: Custom freestanding marble pedestal sink handcrafted from natural stone for luxury villas, hotels and residential bathrooms. OEM manufacturing available.
+
+focusKeyword:
+  freestanding marble pedestal sink
+
+secondaryKeywords:
+  - natural stone pedestal sink
+  - custom marble sink
+  - luxury bathroom basin
+  - OEM stone sink
 
 ---
 
 ### Product Overview
 
-Our freestanding cylindrical pedestal sink is handcrafted from carefully selected natural marble, combining timeless aesthetics with exceptional durability. Designed for luxury residential and commercial interiors, each basin showcases the unique veining and texture of genuine natural stone, making every piece one of a kind.
+Our freestanding natural marble pedestal sink is a custom stone basin designed for luxury bathrooms, villas, hotels and hospitality projects.
 
-Suitable for villas, boutique hotels, spa projects, luxury apartments and premium bathrooms, this custom pedestal sink delivers both functionality and architectural elegance.
+Handcrafted from carefully selected natural marble, this cylindrical pedestal sink combines timeless stone aesthetics with modern manufacturing precision.
 
-### Available Stone Materials
+Each sink can be customized in dimensions, stone materials, surface finishes and design details to meet different residential and commercial project requirements.
 
-We manufacture this pedestal sink in a wide range of premium natural stones, including:
+### Available Natural Stone Materials
+
+This custom marble pedestal sink can be manufactured using various premium natural stones, including:
 
 - Marble
 - Travertine
 - Limestone
-- onyx
-- luxury stone
+- Onyx
+- Granite
+- Quartzite
 
-Additional materials can be selected according to your project requirements.
+Different stones provide unique colors, textures and natural patterns for luxury interior applications.
 
 ### Surface Finish Options
 
@@ -119,38 +131,81 @@ Each finish is carefully processed to highlight the natural beauty of the select
 
 ### Custom Manufacturing Options
 
-Every project is different, so every sink can be customized.
+Every project has different requirements. We provide flexible customization for:
 
-Customization options include:
-
-- Overall dimensions
+- Sink dimensions
 - Basin depth
 - Drain position
-- Edge profile
+- Edge profiles
 - Stone selection
 - Surface finish
 - Logo engraving
-- OEM production
+- OEM private label production
 
-### Recommended Applications
+Our team can manufacture stone sinks according to drawings, samples or project specifications.
 
-This custom marble pedestal sink is widely used in:
+### Recommended Applications for Custom Stone Sinks
 
-- Luxury Villas
-- Boutique Hotels
-- Spa & Wellness Centers
-- High-end Apartments
-- Designer Bathrooms
-- Commercial Projects
+This natural marble pedestal sink is suitable for:
+
+- Luxury villas
+- Boutique hotels
+- Resort bathrooms
+- Spa and wellness centers
+- High-end apartments
+- Designer residential projects
+- Commercial interiors
+
+### Technical Information
+
+Product Type:
+Freestanding Stone Pedestal Sink
+
+Material:
+100% Natural Marble
+
+Finish:
+Polished, Honed, Custom Finish
+
+Customization:
+Available
+
+MOQ:
+1 Piece
+
+Production Lead Time:
+25-35 Days
 
 ### Packaging & Global Shipping
 
-Each sink is carefully protected using foam, reinforced wooden crates and export-grade packaging to ensure safe international transportation.
+Every stone sink is protected with export-grade packaging including reinforced wooden crates, foam protection and moisture-resistant materials.
 
-We have extensive experience shipping natural stone products worldwide for wholesalers, architects, contractors ,and project developers.
+With extensive international shipping experience, we support distributors, designers, contractors and project developers worldwide.
 
 ### Why Work With Win-Win Stone
 
 Win-Win Stone specializes in custom natural stone manufacturing with extensive OEM and ODM experience.
 
 From raw material selection to CNC machining, hand finishing, quality inspection and global logistics, every step is carefully controlled to deliver consistent quality for international projects.
+
+### Frequently Asked Questions
+
+#### Can this marble pedestal sink be customized?
+
+Yes. We can customize dimensions, basin depth, drain position, stone material and surface finish according to project requirements.
+
+#### What stone materials are available?
+
+This pedestal sink can be manufactured using marble, travertine, limestone, onyx and other natural stones.
+
+#### Can you produce OEM stone sinks?
+
+Yes. We support OEM and ODM manufacturing for distributors, designers and international projects.
+
+#### What is the production lead time?
+
+Production usually takes 25–35 days depending on design complexity and order quantity.
+
+#### Can you ship internationally?
+
+Yes. We provide export packaging and global shipping support for stone products.

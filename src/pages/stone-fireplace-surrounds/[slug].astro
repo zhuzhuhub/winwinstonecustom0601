@@ -84,7 +84,6 @@ const breadcrumbs = [
 const allProducts =
   Object.values(allModules);
 
-
 const productSchema = buildProductSchema({
   title,
   description,
@@ -102,9 +101,14 @@ const productSchema = buildProductSchema({
 
   material,
 
+  finish,
+
   category: categoryLabel,
 
-  url: `${siteUrl}/stone-fireplace-surrounds/${slug}/`,
+  moq,
+  leadTime,
+
+  url: `${siteUrl}/stone-sinks/${slug}/`,
 });
 
 const tocItems = [
