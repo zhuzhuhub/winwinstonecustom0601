@@ -67,7 +67,7 @@ gallery:
   - image: /images/products/stone-tables/luxury-green-marble-round-dining-table/detail-03.jpg
   - image: /images/products/stone-tables/luxury-green-marble-round-dining-table/scene-01.jpg
 
-seoTitle: Custom Natural Green Marble Round Dining Tables Manufacturer
+seoTitle: Custom Natural Green Marble Round Dining Tables Manufacturer | Win-Win Stone
 
 seoDescription: Custom luxury green marble round dining tables manufacturer for villas, hotels and high-end residential  projects.
 
@@ -119,7 +119,7 @@ Customization options include:
 
 ### Recommended Applications
 
-This custom marble pedestal sink is widely used in:
+This custom luxury green marble round dining table is suitable for:
 
 - Luxury Villas
 - Boutique Hotels
@@ -127,7 +127,7 @@ This custom marble pedestal sink is widely used in:
 
 ### Packaging & Global Shipping
 
-Each sink is carefully protected using foam, reinforced wooden crates and export-grade packaging to ensure safe international transportation.
+Each dining table is carefully protected using foam, reinforced wooden crates and export-grade packaging to ensure safe international transportation.
 
 We have extensive experience shipping natural stone products worldwide for wholesalers, architects, contractors ,and project developers.
 

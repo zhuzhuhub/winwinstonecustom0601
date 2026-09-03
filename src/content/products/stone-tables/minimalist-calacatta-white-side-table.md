@@ -70,7 +70,7 @@ gallery:
   - image: /images/products/stone-tables/minimalist-calacatta-white-side-table/scene-01.webp
   - image: /images/products/stone-tables/minimalist-calacatta-white-side-table/scene-02.webp
 
-seoTitle: Custom Calacatta White Marble side tables Manufacturer
+seoTitle: Custom Calacatta White Marble side tables Manufacturer | Win-Win Stone
 
 seoDescription: Custom luxury marble side tables manufacturer for villas, hotels and high-end residential  projects.
 
@@ -86,6 +86,7 @@ Suitable for villas, boutique hotels, and luxury apartments , this custom table 
 
 We manufacture this side table in a wide range of premium natural stones, including:
 
+- calacatta white 
 - Marble
 - Travertine
 - Limestone
@@ -122,7 +123,7 @@ Customization options include:
 
 ### Recommended Applications
 
-This custom marble pedestal sink is widely used in:
+This minimalist calacatta white side table is widely used in:
 
 - Luxury Villas
 - Boutique Hotels
@@ -130,7 +131,7 @@ This custom marble pedestal sink is widely used in:
 
 ### Packaging & Global Shipping
 
-Each sink is carefully protected using foam, reinforced wooden crates and export-grade packaging to ensure safe international transportation.
+Each side table is carefully protected using foam, reinforced wooden crates and export-grade packaging to ensure safe international transportation.
 
 We have extensive experience shipping natural stone products worldwide for wholesalers, architects, contractors ,and project developers.
 

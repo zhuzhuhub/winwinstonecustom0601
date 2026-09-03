@@ -68,7 +68,7 @@ gallery:
   - image: /images/products/stone-tables/modernism-cream-travertine-coffee-table-set/scene-01.jpg
   - image: /images/products/stone-tables/modernism-cream-travertine-coffee-table-set/scene-02.jpg
 
-seoTitle: Custom Travertine Coffee Tables Manufacturer
+seoTitle: Custom Travertine Coffee Tables Manufacturer | Win-Win Stone
 
 seoDescription: Custom travertine coffee tables manufacturer for villas, hotels and high-end residential  projects.
 ---
@@ -83,11 +83,12 @@ Suitable for villas, boutique hotels, and luxury apartments , this custom coffee
 
 We manufacture this coffee table in a wide range of premium natural stones, including:
 
+- Cream travertine
 - Marble
 - Travertine
 - Limestone
-- onyx
-- luxury stone
+- Onyx
+- Luxury stone
 
 Additional materials can be selected according to your project requirements.
 
@@ -117,7 +118,7 @@ Customization options include:
 
 ### Recommended Applications
 
-This custom marble pedestal sink is widely used in:
+This custom modernism cream travertine coffee table is widely used in:
 
 - Luxury Villas
 - Boutique Hotels
@@ -125,7 +126,7 @@ This custom marble pedestal sink is widely used in:
 
 ### Packaging & Global Shipping
 
-Each sink is carefully protected using foam, reinforced wooden crates and export-grade packaging to ensure safe international transportation.
+Each coffee table is carefully protected using foam, reinforced wooden crates and export-grade packaging to ensure safe international transportation.
 
 We have extensive experience shipping natural stone products worldwide for wholesalers, architects, contractors ,and project developers.
 
