@@ -67,18 +67,20 @@ const {
 
 } = frontmatter;
 
-const siteUrl = import.meta.env.SITE || 'https://winwinstonecustom.com';
+const siteUrl = import.meta.env.SITE || 'https://www.winwinstonecustom.com';
 
 function absUrl(path: string) {
   if (!path) return undefined;
   if (/^https?:\/\//.test(path)) return path;
-  return siteUrl.replace(/\/$/, '') + (path.startsWith('/') ? path : '/' + path);
+  return (
+    siteUrl.replace(/\/$/, '') + (path.startsWith('/') ? path : '/' + path)
+  );
 }
 
 const breadcrumbs = [
   { name: 'Home', url: siteUrl + '/' },
   { name: 'Stone Bathtubs', url: siteUrl + '/stone-bathtubs/' },
-  { name: title, url: `${siteUrl}/stone-bathtubs/${slug}` }
+  { name: title, url: `${siteUrl}/stone-bathtubs/${slug}/` }
 ];
 
 const allProducts =
@@ -93,7 +95,7 @@ const productSchema = buildProductSchema({
     ? [
         absUrl(featuredImage),
         ...(gallery?.map((g) => absUrl(g.image)) ?? []),
-      ]
+      ].filter(Boolean)
     : undefined,
 
   sku: frontmatter.sku,
@@ -109,7 +111,7 @@ const productSchema = buildProductSchema({
   moq,
   leadTime,
 
-  url: `${siteUrl}/stone-sinks/${slug}/`,
+  url: `${siteUrl}/stone-bathtubs/${slug}/`,
 });
 
 const tocItems = [
@@ -146,18 +148,10 @@ const tocItems = [
 const relatedResources = [
 
   {
-    type: "Blog",
-    title: "How to Choose the Right Stone Sink",
-    description:
-      "Learn how to choose materials, finishes and sink styles for luxury bathroom projects.",
-    href: "/blog/how-to-choose-the-right-stone-for-a-custom-bathroom-sink/",
-  },
-
-  {
     type: "Material",
     title: "Natural Marble Collection",
     description:
-      "Explore premium marble materials available for custom sink manufacturing.",
+      "Explore premium marble materials available for  custom bathtub manufacturing and luxury bathroom projects.",
     href: "/materials/",
   },
 
@@ -173,7 +167,7 @@ const relatedResources = [
     type: "Factory",
     title: "Inside Our Stone Factory",
     description:
-      "See how every natural stone product is handcrafted by experienced artisans.",
+      "See how natural stone products are crafted by experienced artisans for international projects.",
     href: "/factory/",
   }
 
@@ -182,9 +176,8 @@ const relatedResources = [
 ---
 
 <BaseLayout
-  title={seoTitle}
-  description={seoDescription}
-
+  title={seoTitle || title}
+  description={seoDescription || description} 
   image={featuredImage}
 >
 

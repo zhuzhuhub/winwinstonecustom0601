@@ -78,7 +78,7 @@ function absUrl(path: string) {
 const breadcrumbs = [
   { name: 'Home', url: siteUrl + '/' },
   { name: 'Stone Tables', url: siteUrl + '/stone-tables/' },
-  { name: title, url: `${siteUrl}/stone-tables/${slug}` }
+  { name: title, url: `${siteUrl}/stone-tables/${slug}/` }
 ];
 
 const allProducts =
@@ -92,7 +92,7 @@ const productSchema = buildProductSchema({
     ? [
         absUrl(featuredImage),
         ...(gallery?.map((g) => absUrl(g.image)) ?? []),
-      ]
+      ].filter(Boolean)
     : undefined,
 
   sku: frontmatter.sku,
@@ -108,7 +108,7 @@ const productSchema = buildProductSchema({
   moq,
   leadTime,
 
-  url: `${siteUrl}/stone-sinks/${slug}/`,
+  url: `${siteUrl}/stone-tables/${slug}/`,
 });
 
 const tocItems = [
@@ -181,9 +181,8 @@ const relatedResources = [
 ---
 
 <BaseLayout
-  title={seoTitle}
-  description={seoDescription}
-
+  title={seoTitle || title}
+  description={seoDescription || description}
   image={featuredImage}
 
   >

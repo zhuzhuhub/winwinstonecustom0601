@@ -67,18 +67,20 @@ const {
 
 } = frontmatter;
 
-const siteUrl = import.meta.env.SITE || 'https://wwww.winwinstonecustom.com';
+const siteUrl = import.meta.env.SITE || 'https://www.winwinstonecustom.com';
 
 function absUrl(path: string) {
   if (!path) return undefined;
   if (/^https?:\/\//.test(path)) return path;
-  return siteUrl.replace(/\/$/, '') + (path.startsWith('/') ? path : '/' + path);
+  return (
+    siteUrl.replace(/\/$/, '') + (path.startsWith('/') ? path : '/' + path)
+  );
 }
 
 const breadcrumbs = [
   { name: 'Home', url: siteUrl + '/' },
   { name: 'Custom Stone Furniture', url: siteUrl + '/custom-stone-furniture/' },
-  { name: title, url: `${siteUrl}/custom-stone-furniture/${slug}` }
+  { name: title, url: `${siteUrl}/custom-stone-furniture/${slug}/` }
 ];
 
 const allProducts =
@@ -94,7 +96,7 @@ const productSchema = buildProductSchema({
     ? [
         absUrl(featuredImage),
         ...(gallery?.map((g) => absUrl(g.image)) ?? []),
-      ]
+      ].filter(Boolean)
     : undefined,
 
   sku: frontmatter.sku,
@@ -110,7 +112,7 @@ const productSchema = buildProductSchema({
   moq,
   leadTime,
 
-  url: `${siteUrl}/stone-sinks/${slug}/`,
+  url: `${siteUrl}/custom-stone-furniture/${slug}/`,
 });
 
 const tocItems = [
@@ -146,19 +148,12 @@ const tocItems = [
 
 const relatedResources = [
 
-  {
-    type: "Blog",
-    title: "How to Choose the Right Stone for Custom Furniture",
-    description:
-      "Learn how to choose materials, finishes and styles for luxury custom stone furniture.",
-    href: "/blog/",
-  },
 
   {
     type: "Material",
     title: "Natural Marble Collection",
     description:
-      "Explore premium marble materials available for custom sink manufacturing.",
+      "Explore premium marble materials available for custom furniture manufacturing.",
     href: "/materials/",
   },
 
@@ -166,7 +161,7 @@ const relatedResources = [
     type: "OEM",
     title: "Custom OEM Manufacturing",
     description:
-      "Discover our OEM & ODM production capabilities for global projects.",
+      "Discover our OEM & ODM production capabilities for bespoke stone furniture and international projects.",
     href: "/oem-odm/",
   },
 
@@ -174,7 +169,7 @@ const relatedResources = [
     type: "Factory",
     title: "Inside Our Stone Factory",
     description:
-      "See how every natural stone product is handcrafted by experienced artisans.",
+       "See how custom stone furniture is crafted by experienced artisans for global residential and commercial projects.",
     href: "/factory/",
   }
 
@@ -183,8 +178,9 @@ const relatedResources = [
 ---
 
 <BaseLayout
-  title={seoTitle}
-  description={seoDescription}
+  title={seoTitle || title}
+  description={seoDescription || description}
+  image={featuredImage}
 >
 
 <ProductHero
@@ -331,4 +327,4 @@ const relatedResources = [
 
 
 </BaseLayout>
----
+

@@ -74,13 +74,15 @@ const siteUrl = import.meta.env.SITE || 'https://www.winwinstonecustom.com';
 function absUrl(path: string) {
   if (!path) return undefined;
   if (/^https?:\/\//.test(path)) return path;
-  return siteUrl.replace(/\/$/, '') + (path.startsWith('/') ? path : '/' + path);
+  return (
+    siteUrl.replace(/\/$/, '') + (path.startsWith('/') ? path : '/' + path)
+  );
 }
 
 const breadcrumbs = [
   { name: 'Home', url: siteUrl + '/' },
   { name: 'Stone Sinks', url: siteUrl + '/stone-sinks/' },
-  { name: title, url: `${siteUrl}/stone-sinks/${slug}` }
+  { name: title, url: `${siteUrl}/stone-sinks/${slug}/` }
 ];
 
 const allProducts =
@@ -94,7 +96,8 @@ const productSchema = buildProductSchema({
     ? [
         absUrl(featuredImage),
         ...(gallery?.map((g) => absUrl(g.image)) ?? []),
-      ]
+      ].filter(Boolean)
+
     : undefined,
 
   sku: frontmatter.sku,
@@ -183,9 +186,8 @@ const relatedResources = [
 ---
 
 <BaseLayout
-  title={seoTitle}
-  description={seoDescription}
-
+  title={seoTitle || title}
+  description={seoDescription || description}
   image={featuredImage}
   
 >
