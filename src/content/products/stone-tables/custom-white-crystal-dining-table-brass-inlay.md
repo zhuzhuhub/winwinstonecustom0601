@@ -182,7 +182,7 @@ of the final dining table, from soft and luminous translucent surfaces to
 more dramatic veining and stronger architectural textures.
 
 For more material options, explore our  <a href="/materials/">
-Natural Stone Materials
+**Natural Stone Materials**
 </a>.
 
 ---
@@ -240,7 +240,7 @@ solution based on the selected materials, dimensions and structural
 requirements.
 
 For custom manufacturing support, visit our  <a href="/oem-odm/">
-OEM & ODM Services
+**OEM & ODM Services**
 </a>.
 
 ---
@@ -318,5 +318,5 @@ stone furniture or other luxury natural stone products, our manufacturing
 team can support projects from concept development through production.
 
 Learn more about our  <a href="/factory/">
-Stone Manufacturing Capabilities
+**Stone Manufacturing Capabilities**
 </a>.
