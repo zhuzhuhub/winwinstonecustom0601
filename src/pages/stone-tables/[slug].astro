@@ -27,7 +27,7 @@ const slug = Astro.params.slug;
 
 // 顶层模块读取
 const allModules = import.meta.glob("../../content/products/**/*.md", { eager: true });
-const moduleKey = Object.keys(allModules).find(key => key.includes(`stone-tables/${slug}`));
+const moduleKey = Object.keys(allModules).find(key => key.includes(`stone-tables/${slug}.md`));
 
 if (!moduleKey) {
   throw Astro.redirect("/404");
