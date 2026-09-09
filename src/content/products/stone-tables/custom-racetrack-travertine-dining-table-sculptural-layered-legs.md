@@ -197,7 +197,6 @@ Available finish options may include:
 - Honed
 - Polished
 - Brushed
-- Leathered
 - Custom Finish
 
 A honed finish can emphasize the natural and understated character of travertine, creating a soft matte appearance that works well with contemporary interiors.
