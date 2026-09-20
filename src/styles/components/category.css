@@ -248,6 +248,76 @@
 }
 
 /* =====================
+   Product Pagination
+===================== */
+
+.product-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 48px;
+}
+
+.pagination-pages {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pagination-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 42px;
+  height: 42px;
+  padding: 0 14px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1;
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.pagination-link:hover {
+  border-color: var(--green);
+  color: var(--green);
+  transform: translateY(-2px);
+}
+
+.pagination-number.is-active {
+  background: var(--green);
+  border-color: var(--green);
+  color: #fff;
+}
+
+.pagination-number.is-active:hover {
+  color: #fff;
+  transform: none;
+}
+
+.pagination-prev,
+.pagination-next {
+  min-width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  letter-spacing: 0.02em;
+}
+
+.pagination-prev:hover,
+.pagination-next:hover {
+  transform: translateX(0);
+}
+
+/* =====================
    Category Customization
 ===================== */
 
@@ -577,5 +647,27 @@
   .cta-box p {
     font-size: 0.96rem;
     margin-bottom: 24px;
+  }
+
+    .product-pagination {
+    margin-top: 36px;
+    gap: 8px;
+  }
+
+  .pagination-pages {
+    gap: 6px;
+  }
+
+  .pagination-link {
+    min-width: 40px;
+    height: 40px;
+    padding: 0 12px;
+    font-size: 0.84rem;
+  }
+
+  .pagination-prev,
+  .pagination-next {
+    padding-left: 12px;
+    padding-right: 12px;
   }
 }

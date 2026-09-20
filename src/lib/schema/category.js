@@ -1,7 +1,8 @@
 export function buildItemListSchema({
   category,
   products,
-  baseUrl
+  baseUrl,
+  startPosition = 1,
 }) {
   return {
     "@context": "https://schema.org",
@@ -12,7 +13,7 @@ export function buildItemListSchema({
     itemListElement: products.map((product, index) => ({
       "@type": "ListItem",
 
-      position: index + 1,
+      position: index + startPosition,
 
       url:
         `${baseUrl}/${category}/${product.id.split("/").pop()}/`,

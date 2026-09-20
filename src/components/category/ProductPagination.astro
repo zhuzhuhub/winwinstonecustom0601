@@ -1,0 +1,67 @@
+---
+const {
+  currentPage = 1,
+  totalPages = 1,
+  category = "",
+} = Astro.props;
+
+const getPageUrl = (page) => {
+  if (page === 1) {
+    return `/${category}/`;
+  }
+
+  return `/${category}/page/${page}/`;
+};
+
+const pages = Array.from(
+  { length: totalPages },
+  (_, index) => index + 1
+);
+---
+
+{totalPages > 1 && (
+  <nav
+    class="product-pagination"
+    aria-label="Product pagination"
+  >
+
+    {currentPage > 1 && (
+      <a
+        href={getPageUrl(currentPage - 1)}
+        class="pagination-link pagination-prev"
+        aria-label="Previous page"
+      >
+        ← Previous
+      </a>
+    )}
+
+    <div class="pagination-pages">
+
+      {pages.map((page) => (
+        <a
+          href={getPageUrl(page)}
+          class:list={[
+            "pagination-link",
+            "pagination-number",
+            { "is-active": page === currentPage },
+          ]}
+          aria-current={page === currentPage ? "page" : undefined}
+        >
+          {page}
+        </a>
+      ))}
+
+    </div>
+
+    {currentPage < totalPages && (
+      <a
+        href={getPageUrl(currentPage + 1)}
+        class="pagination-link pagination-next"
+        aria-label="Next page"
+      >
+        Next →
+      </a>
+    )}
+
+  </nav>
+)}

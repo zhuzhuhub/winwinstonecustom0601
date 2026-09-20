@@ -1,11 +1,14 @@
 ---
 import SectionHeader from "../common/SectionHeader.astro";
+import ProductPagination from "../category/ProductPagination.astro";
 
 const {
   products = [],
   category = "",
   title = "Featured Products",
-  description = "Browse our custom stone products."
+  description = "Browse our custom stone products.",
+  currentPage = 1,
+  totalPages = 1,
 } = Astro.props;
 ---
 
@@ -14,7 +17,6 @@ const {
   <div class="container">
 
     <SectionHeader
-    
       title={title}
       description={description}
     />
@@ -29,7 +31,7 @@ const {
             .pop();
 
         return (
-         
+
           <a
             href={`/${category}/${slug}/`}
             class="product-card"
@@ -47,17 +49,17 @@ const {
 
             <div class="product-content">
 
-               <h3>
-                 {product.data.title}
-               </h3>
+              <h3>
+                {product.data.title}
+              </h3>
 
-               <p>
-                 {product.data.description}
-               </p>
+              <p>
+                {product.data.description}
+              </p>
 
-               <span class="product-link">
-                 Explore →
-               </span>
+              <span class="product-link">
+                Explore →
+              </span>
 
             </div>
 
@@ -68,6 +70,14 @@ const {
       })}
 
     </div>
+
+    {totalPages > 1 && (
+      <ProductPagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        category={category}
+      />
+    )}
 
   </div>
 

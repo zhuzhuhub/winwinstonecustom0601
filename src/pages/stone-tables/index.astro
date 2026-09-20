@@ -39,10 +39,24 @@ const stoneTables = products.filter(
   (p) => p.data.category === category
 );
 
+const productsPerPage = 12;
+
+const totalPages = Math.ceil(
+  stoneTables.length / productsPerPage
+);
+
+const currentPage = 1;
+
+const paginatedProducts = stoneTables.slice(
+  0,
+  productsPerPage
+);
+
 const itemListSchema = buildItemListSchema({
   category,
-  products: stoneTables,
-  baseUrl: siteUrl
+  products: paginatedProducts,
+  baseUrl: siteUrl,
+  startPosition: 1
 });
 
 const collectionSchema = buildCollectionSchema({
@@ -72,10 +86,12 @@ const collectionSchema = buildCollectionSchema({
   />
   
   <FeaturedProducts
-  products={stoneTables}
+  products={paginatedProducts}
   category="stone-tables"
   title="Custom Marble & Stone Table Collection"
   description="Explore custom marble dining tables, travertine coffee tables and natural stone furniture designed for luxury interiors."
+  currentPage={currentPage}
+  totalPages={totalPages}
   />
   
   <Customization

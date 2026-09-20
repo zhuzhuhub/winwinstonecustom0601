@@ -1,0 +1,123 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Hero from "../../../components/category/Hero.astro";
+import FeaturedProducts from "../../../components/category/FeaturedProducts.astro";
+import FinalCTA from "../../../components/category/FinalCTA.astro";
+import { stoneTablesData } from "../../../data/categories/stone-tables";
+import { getCollection } from "astro:content";
+import {
+  buildItemListSchema,
+  buildCollectionSchema,
+} from "../../../lib/schema/category";
+
+const category = "stone-tables";
+const productsPerPage = 12;
+
+export async function getStaticPaths() {
+  const category = "stone-tables";
+  const productsPerPage = 12;
+
+  const products = await getCollection("products");
+
+  const stoneTables = products.filter(
+    (p) => p.data.category === category
+  );
+
+  const totalPages = Math.ceil(
+    stoneTables.length / productsPerPage
+  );
+
+  return Array.from(
+    { length: Math.max(totalPages - 1, 0) },
+    (_, index) => ({
+      params: {
+        page: String(index + 2),
+      },
+    })
+  );
+}
+
+const siteUrl = (
+  import.meta.env.SITE ??
+  "https://www.winwinstonecustom.com"
+).replace(/\/$/, "");
+
+const products = await getCollection("products");
+
+const stoneTables = products.filter(
+  (p) => p.data.category === category
+);
+
+const totalPages = Math.ceil(
+  stoneTables.length / productsPerPage
+);
+
+const currentPage = Number(Astro.params.page);
+
+const startIndex =
+  (currentPage - 1) * productsPerPage;
+
+const endIndex =
+  startIndex + productsPerPage;
+
+const paginatedProducts =
+  stoneTables.slice(startIndex, endIndex);
+
+const itemListSchema = buildItemListSchema({
+  category,
+  products: paginatedProducts,
+  baseUrl: siteUrl,
+  startPosition: startIndex + 1,
+});
+
+const collectionSchema = buildCollectionSchema({
+  name: `Custom Stone Tables - Page ${currentPage}`,
+  description:
+    "Custom marble dining tables, travertine coffee tables, console tables and natural stone furniture for luxury residential, hospitality and commercial projects.",
+  url: `${siteUrl}/stone-tables/page/${currentPage}/`,
+});
+
+const pageTitle =
+  `Custom Stone Tables & Dining Tables | Page ${currentPage}`;
+
+const pageDescription =
+  `Explore custom marble dining tables, travertine coffee tables, console tables and natural stone furniture for luxury interiors. Page ${currentPage} of our stone table collection.`;
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+>
+  <Hero
+    eyebrow="CUSTOM STONE TABLE COLLECTION"
+    title="Custom Marble & Stone Tables"
+    description="Explore custom marble and travertine dining tables, coffee tables, console tables and bespoke natural stone furniture for luxury residential, hospitality and commercial projects."
+    backgroundImage="/images/categories/stone-tables-hero.jpg"
+  />
+
+  <FeaturedProducts
+    products={paginatedProducts}
+    category="stone-tables"
+    title="Custom Marble & Stone Table Collection"
+    description="Explore custom marble dining tables, travertine coffee tables and natural stone furniture designed for luxury interiors."
+    currentPage={currentPage}
+    totalPages={totalPages}
+  />
+
+  <FinalCTA
+    title={stoneTablesData.cta.title}
+    description={stoneTablesData.cta.description}
+    buttonText={stoneTablesData.cta.buttonText}
+    buttonLink={stoneTablesData.cta.buttonLink}
+  />
+
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify(itemListSchema)}
+  />
+
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify(collectionSchema)}
+  />
+</BaseLayout>
