@@ -96,7 +96,7 @@ featuredImage: "/images/products/stone-tables/custom-dark-green-marble-console-t
 
 featureImage: "/images/products/stone-tables/custom-dark-green-marble-console-table-sculpted-monolithic-base/custom-dark-green-marble-console-table-entryway.jpg"
 
-featureVideo: ""
+featureVideo: "/images/products/stone-tables/custom-dark-green-marble-console-table-sculpted-monolithic-base/custom-calacatta-black-marble-console-table-in factory.mp4"
 
 featureVideoPoster: ""
 
