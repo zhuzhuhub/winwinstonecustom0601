@@ -7,15 +7,37 @@ const { items = [] } = Astro.props;
   <h2>Explore More Solutions</h2>
 
   <p class="resource-intro">
-  Explore related stone collections,
-  materials and custom project solutions.
-</p>
+    Explore related stone collections,
+    materials and custom project solutions.
+  </p>
 
   <div class="resource-grid">
 
     {items.map((item) => (
       <a href={item.url} class="resource-card">
-        {item.title}
+
+        {item.image && (
+          <div class="resource-card-image">
+            <img
+              src={item.image}
+              alt={item.title}
+              loading="lazy"
+            />
+          </div>
+        )}
+
+        <div class="resource-card-content">
+
+          <h3>
+            {item.title}
+          </h3>
+
+          <span class="resource-card-link">
+            Explore more
+          </span>
+
+        </div>
+
       </a>
     ))}
 

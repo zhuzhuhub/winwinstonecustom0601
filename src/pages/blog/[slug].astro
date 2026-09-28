@@ -49,6 +49,43 @@ const relatedPosts = allPosts
   .filter((item) => item.data.category === post.data.category)
   .slice(0, 3);
 
+
+ /* -------------------------
+   Related resource images
+-------------------------- */
+
+const resourceImageMap = {
+  "/stone-tables/": "/images/categories/stone-tables-hero.jpg",
+
+  "/stone-sinks/": "/images/categories/stone-sinks-hero.jpg",
+
+  "/stone-bathtubs/": "/images/categories/stone-bathtubs-hero.jpg",
+
+  "/stone-fireplace-surrounds/": "/images/categories/fireplace-surrounds-hero.jpg",
+
+  "/custom-stone-furniture/": "/images/categories/custom-stone-furniture-hero.jpg",
+
+  "/oem-odm/": "/images/oem/oem-hero.jpg",
+
+  "/contact/": "/images/factory/contact-hero.jpg"
+};
+
+const blogResourceImages = new Map(
+  allPosts.map((item) => [
+    `/blog/${item.id}/`,
+    item.data.featuredImage
+  ])
+);
+
+const relatedResources = (post.data.relatedResources ?? []).map((item) => ({
+  ...item,
+  image:
+    blogResourceImages.get(item.url) ??
+    resourceImageMap[item.url] ??
+    null
+}));
+
+
 /* -------------------------
    Basic data
 -------------------------- */
@@ -225,7 +262,7 @@ const articleSchema = buildBlogPostingSchema({
 
           <!-- Related Resources -->
           
-          <RelatedResources items={post.data.relatedResources ?? []} />
+          <RelatedResources items={relatedResources} />
 
       
 
