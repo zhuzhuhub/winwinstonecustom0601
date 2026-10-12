@@ -2,91 +2,134 @@
 const {
   products = [],
   currentSlug = "",
-  category = ""
+  category = "",
+  currentMaterial = ""
 } = Astro.props;
 
-const relatedProducts = products
+// 统一文本格式，避免大小写和空格影响匹配
+const normalize = (value: unknown) =>
+  String(value ?? "").trim().toLowerCase();
+
+// 将 Markdown 模块转换成推荐组件需要的数据
+const candidates = products
+  .map((product: any) => {
+    const frontmatter = product.frontmatter ?? {};
+
+    const file = product.file ?? product.id ?? "";
+
+    const slug = file
+      .split("/")
+      .pop()
+      ?.replace(/\.md$/, "");
+
+    const productCategory = frontmatter.category ?? "";
+    const material = frontmatter.material ?? "";
+
+    return {
+      slug,
+      file,
+      frontmatter,
+      category: productCategory,
+      material,
+      title: frontmatter.title ?? "",
+      image:
+        frontmatter.featuredImage ??
+        frontmatter.featureImage ??
+        "",
+    };
+  })
   .filter((product: any) => {
+    // 排除无效数据
+    if (!product.slug || !product.category || !product.title) {
+      return false;
+    }
 
-    const slug =
-      product.file
-        ?.split("/")
-        ?.pop()
-        ?.replace(".md", "");
+    // 只排除当前分类下的当前产品
+    return !(
+      product.slug === currentSlug &&
+      normalize(product.category) === normalize(category)
+    );
+  });
 
-    return slug !== currentSlug;
+// 按相关程度排序
+const relatedProducts = candidates
+  .map((product: any) => {
+    const sameCategory =
+      normalize(product.category) === normalize(category);
 
+    const sameMaterial =
+      normalize(product.material) !== "" &&
+      normalize(product.material) === normalize(currentMaterial);
+      
+    let score = 0;
+
+    // 同分类优先级最高
+    if (sameCategory) {
+      score += 100;
+    }
+
+    // 相同石材作为第二优先级
+    if (sameMaterial) {
+      score += 30;
+    }
+
+    return {
+      ...product,
+      score
+    };
+  })
+  .sort((a: any, b: any) => {
+    if (b.score !== a.score) {
+      return b.score - a.score;
+    }
+
+    // 同优先级时按标题排序，减少推荐顺序波动
+    return a.title.localeCompare(b.title);
   })
   .slice(0, 4);
 ---
 
 {
   relatedProducts.length > 0 && (
-
     <section class="related-products">
-
       <div class="container">
-
         <div class="section-header">
-
-          <h2>
-            You May Also Like
-          </h2>
+          <h2>You May Also Like</h2>
 
           <p>
             Explore more handcrafted natural stone products.
           </p>
-
         </div>
 
         <div class="related-grid">
-
-          {
-            relatedProducts.map((product: any) => {
-
-              const slug =
-                product.file
-                  ?.split("/")
-                  .pop()
-                  ?.replace(".md", "");
-
-              return (
-
-                <a
-                 href={`/${product.frontmatter.category}/${slug}/`}
-                 class="related-card"
-                >
-
+          {relatedProducts.map((product: any) => (
+            <a
+              href={`/${product.category}/${product.slug}/`}
+              class="related-card"
+              key={`${product.category}-${product.slug}`}
+            >
+              {product.image && (
                 <img
-                 src={product.frontmatter.featuredImage}
-                 alt={product.frontmatter.title}
-                 loading="lazy"
+                  src={product.image}
+                  alt={product.title}
+                  loading="lazy"
                 />
+              )}
 
-                <span 
-                 class="related-category">
-                 {product.frontmatter.categoryLabel}
-               </span>
+              <span class="related-category">
+                {product.frontmatter.categoryLabel ??
+                  product.category}
+              </span>
 
-                <h3>
-                 {product.frontmatter.title}
-               </h3>
+              <h3>{product.title}</h3>
 
-                <span class="related-link">
-                 View Details →
-               </span>
-
-               </a>
-              );
-
-            })
-          }
-
+              <span class="related-link">
+                View Details →
+              </span>
+            </a>
+          ))}
         </div>
-
       </div>
-
     </section>
-
   )
 }

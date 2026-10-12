@@ -1,0 +1,54 @@
+---
+const {
+  faqs = []
+} = Astro.props;
+
+if (!faqs || faqs.length === 0) {
+  return;
+}
+---
+
+<section class="product-faq">
+  <div class="container">
+
+    <div class="product-section-header">
+      <h2>Frequently Asked Questions</h2>
+
+      <p class="lead">
+        Answers to common questions about customization,
+        materials, manufacturing, shipping and project requirements.
+      </p>
+    </div>
+
+    <div class="faq-list">
+
+      {faqs.map((faq) => (
+        <details class="faq-item">
+          <summary>
+            <span>{faq.question}</span>
+            
+          </summary>
+
+          <div class="faq-answer">
+            <p>{faq.answer}</p>
+          </div>
+        </details>
+      ))}
+
+    </div>
+
+  </div>
+</section>
+
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((faq) => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  }))
+})} />
