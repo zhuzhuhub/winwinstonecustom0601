@@ -254,3 +254,81 @@ POST HERO
     font-size: 0.92rem;
   }
 }
+
+
+
+
+
+/* =========================
+   Marble Comparison Table
+========================= */
+
+.marble-comparison-table {
+  width: 100%;
+  max-width: 100%;
+  margin: 28px 0 36px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.marble-comparison-table table {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.marble-comparison-table th,
+.marble-comparison-table td {
+  padding: 16px 14px;
+  border: 1px solid #e5e5e5;
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+.marble-comparison-table th {
+  background: #f6f5f2;
+  font-weight: 600;
+}
+
+.marble-comparison-table td:first-child {
+  font-weight: 500;
+}
+
+.marble-comparison-table td img {
+  display: block;
+  width: 100%;
+  min-width: 120px;
+  max-width: 190px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.marble-comparison-table tbody tr:nth-child(even) {
+  background: #fafafa;
+}
+
+@media (max-width: 768px) {
+  .marble-comparison-table {
+    margin: 20px 0 28px;
+  }
+
+  .marble-comparison-table table {
+    min-width: 900px;
+    font-size: 13px;
+  }
+
+  .marble-comparison-table th,
+  .marble-comparison-table td {
+    padding: 12px;
+  }
+
+  .marble-comparison-table td img {
+    min-width: 120px;
+    max-width: 160px;
+  }
+}

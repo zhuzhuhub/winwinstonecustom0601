@@ -30,7 +30,7 @@ if (!faqs || faqs.length === 0) {
           </summary>
 
           <div class="faq-answer">
-            <p>{faq.answer}</p>
+            <p set:html={faq.answer} />
           </div>
         </details>
       ))}

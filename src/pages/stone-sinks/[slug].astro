@@ -7,6 +7,8 @@ import ProductInquiryCTA from "../../components/product/ProductInquiryCTA.astro"
 import RelatedProducts from "../../components/product/RelatedProducts.astro";
 import ProductFeatures from "../../components/product/ProductFeatures.astro";
 
+import FAQ from "../../components/product/FAQ.astro";
+
 import ProductTableOfContents from "../../components/product/ProductTableOfContents.astro";
 import ProductRelatedResources from "../../components/product/ProductRelatedResources.astro";
 
@@ -56,6 +58,8 @@ const {
 
   featureHeading,
   featureDescription,
+
+  faqs,
 
   keyFeatures,
 
@@ -304,6 +308,10 @@ const relatedResources = [
   </div>
 
 </section>
+
+{faqs?.length > 0 && (
+  <FAQ faqs={faqs} />
+ )}
 
   <ProductRelatedResources
     resources={relatedResources}
