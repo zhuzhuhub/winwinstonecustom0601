@@ -109,26 +109,6 @@ export function buildProductSchema({
 
 
 
-    offers: {
-
-      "@type": "Offer",
-
-      availability:
-        "https://schema.org/InStock",
-
-      url,
-
-      seller: {
-
-        "@type": "Organization",
-
-        name: "Win-Win Stone",
-
-      },
-
-    },
-
-
     url,
 
   };

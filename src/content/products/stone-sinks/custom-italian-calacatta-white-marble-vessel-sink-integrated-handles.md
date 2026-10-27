@@ -239,7 +239,7 @@ concept.
 
 ### Italian Calacatta Marble and Natural Stone Character
 
-<a href="/materials/calacatta/">**Italian Calacatta white marble**</a>Italian Calacatta white marble is valued for its light background and
+<a href="/materials/calacatta/">**Italian Calacatta white marble**</a> is valued for its light background and
 distinctive natural veining. Because marble is a natural material, the
 pattern and tonal variation differ between slabs.
 
