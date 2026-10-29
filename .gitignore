@@ -28,3 +28,7 @@ pnpm-debug.log*
 /image-optimization-output/
 /image-optimization-output-webp/
 /image-optimization-report.csv
+
+# Reusable image optimization work folders
+/image-to-optimize/
+/image-optimization-preview/
