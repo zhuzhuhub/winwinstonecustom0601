@@ -57,7 +57,7 @@ const hasImage = typeof image === "string" && image.trim().length > 0;
                 class="feature-video"
                 controls
                 playsinline
-                preload="metadata"
+                preload="none"
                 poster={videoPoster || image}
               >
                 <source src={video} type="video/mp4" />

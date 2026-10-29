@@ -17,5 +17,8 @@
     "github-slugger": "^2.0.0",
     "glightbox": "^3.3.1",
     "marked": "^18.0.5"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.5"
   }
 }

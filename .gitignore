@@ -22,3 +22,9 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+
+# image optimization temporary output
+/image-optimization-output/
+/image-optimization-output-webp/
+/image-optimization-report.csv
