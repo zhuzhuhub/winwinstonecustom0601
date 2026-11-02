@@ -13,7 +13,6 @@ import FAQ from "../../components/product/FAQ.astro";
 import ProductTableOfContents from "../../components/product/ProductTableOfContents.astro";
 import ProductRelatedResources from "../../components/product/ProductRelatedResources.astro";
 
-import { buildProductSchema } from "../../lib/schema/product";
 
 // 动态生成路径
 export async function getStaticPaths() {
@@ -92,33 +91,6 @@ const allProducts =
   Object.values(allModules);
 
 
-
-const productSchema = buildProductSchema({
-  title,
-  description,
-
-  image: featuredImage
-    ? [
-        absUrl(featuredImage),
-        ...(gallery?.map((g) => absUrl(g.image)) ?? []),
-      ].filter(Boolean)
-    : undefined,
-
-  sku: frontmatter.sku,
-
-  brand: frontmatter.brand,
-
-  material,
-
-  finish,
-
-  category: categoryLabel,
-
-  moq,
-  leadTime,
-
-  url: `${siteUrl}/custom-stone-furniture/${slug}/`,
-});
 
 const tocItems = [
   {
@@ -333,7 +305,6 @@ const relatedResources = [
     }))
   })} />
 
-  <script type="application/ld+json" set:html={JSON.stringify(productSchema)} />
 
 
 </BaseLayout>
