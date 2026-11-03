@@ -1,7 +1,10 @@
 ---
 title: Modern Calacatta White Marble Fireplace Surround
 
-description: Luxury custom calacatta white marble fireplace surround for villas, hotels and luxury residential projects.
+description: >
+  Custom Calacatta White Marble fireplace surrounds with made-to-measure
+  stone components, on-site installation or complete finished units.
+  Designed for luxury villas, hotels and bespoke interior projects.
 
 category: stone-fireplace-surrounds
 
@@ -12,47 +15,58 @@ material: Calacatta White Marble
 finish:
   - Polished
   - Honed
-  - custom finished
+  - Custom Finish
 
 heroBadges:
   - OEM Available
   - MOQ From 1 Piece
   - Global Shipping
 
-featureHeading: Why Choose This Marble Fireplace Surround
+featureHeading: Custom Marble Fireplace Surround Manufacturing
 
 featureDescription: >
-  Designed for luxury residential, hospitality and custom
-  spaces where premium natural stone,
-  craftsmanship and customization matter.
-
+  From custom stone components for existing fireplace structures to
+  complete finished fireplace surrounds, we provide flexible manufacturing
+  and delivery solutions based on your architectural design and site conditions.
 
 keyFeatures:
-
-  - title: Handcrafted by Skilled Stone Artisans
+  - title: Custom Fabrication for Existing Fireplace Structures
     description: >
-     Experience the perfect fusion of advanced cutting machinery and master stonemason artistry with our custom stone pedestal basins. The result is a functional sculpture that elevates any luxury space.
+      If the fireplace structure is already built on site, we can manufacture
+      custom-sized marble components according to site measurements and
+      project drawings. The individual stone pieces are prepared for
+      transportation and assembled or installed on site.
 
-  - title: Premium Calacatta White Marble
+  - title: Complete Fireplace Surround Manufacturing
     description: >
-     Whether you need consistent color tones or unique natural variations, our strict sourcing process guarantees beauty, durability, and value.
+      If there is no existing fireplace structure, we can manufacture
+      a complete finished fireplace surround according to the approved design.
+      Depending on the design requirements, an internal metal support frame
+      can also be incorporated to provide structural support.
 
-  - title: Fully Customizable Dimensions
+  - title: Flexible Transportation and Installation
     description: >
-     We offer full design and size customization to match your exact specifications. 
+      Choose between separately packed stone components for on-site assembly
+      or complete-unit transportation, depending on the design, dimensions,
+      site conditions and shipping requirements.
 
-  - title: Multiple Surface Finishes
+  - title: Carefully Selected Calacatta White Marble
     description: >
-       Each surface treatment creates a distinct character, from sleek luxury to organic warmth.
+      Made from selected natural Calacatta White Marble, each piece features
+      distinctive veining and natural tonal variations. Material selection
+      can be coordinated with your preferred appearance and project needs.
 
-  - title: Luxury Project Ready
+  - title: Precision Processing and Hand Finishing
     description: >
-      Whether placed in a luxury villa, boutique hotel, or premium residential interior, our bespoke stone arts elevate the space with timeless elegance and natural beauty.
+      Combining precision stone processing with skilled hand finishing,
+      we focus on accurate dimensions, refined edges and carefully finished
+      surfaces throughout the manufacturing process.
 
-  - title: OEM & Global Support
+  - title: OEM and International Project Support
     description: >
-       We provide secure packaging, international shipping, and project support for architects, contractors, and distributors.
-
+      We coordinate material sourcing, custom production, quality inspection,
+      export packaging and international shipping for wholesalers, designers,
+      contractors and project developers.
 
 moq: 1 Piece
 
@@ -60,83 +74,168 @@ leadTime: 20-30 Days
 
 featuredImage: /images/products/stone-fireplace-surrounds/modern-calacatta-white-marble-fireplace-surround/cover.jpg
 
+featuredImageAlt: Modern Calacatta White Marble custom fireplace surround
+
 featureImage: /images/products/stone-fireplace-surrounds/modern-calacatta-white-marble-fireplace-surround/scene-01.jpg
 
+featureImageAlt: Calacatta White Marble fireplace surround in a luxury interior
+
 gallery:
- - image: /images/products/stone-fireplace-surrounds/modern-calacatta-white-marble-fireplace-surround/cover.jpg
- - image: /images/products/stone-fireplace-surrounds/modern-calacatta-white-marble-fireplace-surround/detail-01.jpg
- - image: /images/products/stone-fireplace-surrounds/modern-calacatta-white-marble-fireplace-surround/detail-02.jpg
- - image: /images/products/stone-fireplace-surrounds/modern-calacatta-white-marble-fireplace-surround/detail-03.jpg
- - image: /images/products/stone-fireplace-surrounds/modern-calacatta-white-marble-fireplace-surround/detail-04.jpg
- - image: /images/products/stone-fireplace-surrounds/modern-calacatta-white-marble-fireplace-surround/scene-01.jpg
+  - image: /images/products/stone-fireplace-surrounds/modern-calacatta-white-marble-fireplace-surround/cover.jpg
+    alt: Modern Calacatta White Marble fireplace surround custom stone design
+  - image: /images/products/stone-fireplace-surrounds/modern-calacatta-white-marble-fireplace-surround/detail-01.jpg
+    alt: Close-up detail of natural Calacatta White Marble veining
+  - image: /images/products/stone-fireplace-surrounds/modern-calacatta-white-marble-fireplace-surround/detail-02.jpg
+    alt: Calacatta White Marble fireplace surround stone finishing detail
+  - image: /images/products/stone-fireplace-surrounds/modern-calacatta-white-marble-fireplace-surround/detail-03.jpg
+    alt: Custom marble fireplace surround craftsmanship and edge detail
+  - image: /images/products/stone-fireplace-surrounds/modern-calacatta-white-marble-fireplace-surround/detail-04.jpg
+    alt: Natural marble surface and fabrication detail of fireplace surround
+  - image: /images/products/stone-fireplace-surrounds/modern-calacatta-white-marble-fireplace-surround/scene-01.jpg
+    alt: Modern marble fireplace surround installed in a luxury interior
 
-seoTitle: Custom Marble Fireplace Surround Manufacturer
+seoTitle: Custom Marble Fireplace Surround Manufacturer | Win-Win Stone
 
-seoDescription: Luxury marble fireplace surrounds manufactured for villas, hotels and bespoke interior projects.
+seoDescription: >
+  Custom Calacatta White Marble fireplace surrounds for villas and hotels.
+  Choose custom stone components with on-site installation or complete
+  finished units with optional internal metal support.
+
 ---
 
 ### Product Overview
 
-Our stone fireplace surround is handcrafted from carefully selected natural marble, combining timeless aesthetics with exceptional durability. Designed for luxury residential and commercial interiors, each one showcases the unique veining and texture of genuine natural stone, making every piece one of a kind.
+This modern Calacatta White Marble fireplace surround is designed for luxury residential interiors, hospitality spaces and bespoke architectural projects.
 
-Suitable for villas, boutique hotels, spa projects,and luxury apartments, this custom pedestal sink delivers both functionality and architectural elegance.
+Featuring the distinctive natural veining of Calacatta White Marble, it creates an elegant focal point while bringing the character and texture of natural stone into the interior.
 
-### Available Stone Materials
+Unlike standard ready-made fireplace products, our custom marble fireplace surrounds are manufactured according to individual project requirements. We can produce separate stone components for an existing fireplace structure or manufacture a complete finished surround when no supporting structure is available on site.
 
-We manufacture this marble fireplace surround in a wide range of premium natural stones, including:
+From material selection and dimensional customization to manufacturing, packaging and installation coordination, we help customers develop stone fireplace solutions based on their architectural drawings and actual site conditions.
 
-- Marble
+### Two Custom Manufacturing and Installation Solutions
+
+Different projects have different construction conditions. We offer two main approaches to custom fireplace surround production.
+
+#### Option 1: Custom Stone Components for Existing Fireplace Structures
+
+For projects where the fireplace structure or supporting base has already been constructed, we can manufacture marble components according to the actual site dimensions and approved design drawings.
+
+The process generally includes:
+
+- Reviewing architectural drawings and fireplace dimensions
+- Confirming measurements and relevant site conditions
+- Custom cutting and processing of individual stone components
+- Protective packaging and separate transportation
+- On-site assembly and installation according to the project requirements
+
+This approach allows the natural stone surround to be customized to an existing architectural structure rather than requiring a completely new fireplace unit.
+
+Accurate site measurements and coordination with the installation team are important before production begins.
+
+#### Option 2: Complete Finished Fireplace Surround
+
+For projects without an existing fireplace structure, we can manufacture a complete finished fireplace surround according to the approved design.
+
+Depending on the design and structural requirements, an internal metal support frame can be incorporated into the finished unit to provide additional support.
+
+This solution is suitable for projects that require a more integrated finished product rather than separate stone components assembled around an existing structure.
+
+Before production, the design, overall dimensions, internal support requirements, transportation method and installation conditions should be confirmed together.
+
+#### Transportation Options
+
+Depending on the product dimensions, construction conditions and shipping requirements, two transportation approaches can be considered:
+
+- **Separate Component Transportation:** Individual stone components are packed separately and transported to the project site for assembly and installation.
+- **Complete Unit Transportation:** A finished fireplace surround is transported as an integrated unit when its dimensions, weight, packaging and shipping conditions allow.
+
+The final transportation method should be confirmed during the design and production planning stage.
+
+### Calacatta White Marble and Material Selection
+
+Calacatta White Marble is valued for its light background and distinctive natural veining. Each block has its own pattern and tonal characteristics, making every finished fireplace surround visually unique.
+
+Depending on your project requirements, we can also discuss other natural stone options, including:
+
+- Calacatta and other white marble varieties
 - Travertine
 - Limestone
-- onyx
-- luxury stone
+- Onyx
+- Other selected natural stones
 
-Additional materials can be selected according to your project requirements.
+If you have a preferred stone appearance, reference photograph or material sample, you can share it with us before production.
 
 ### Surface Finish Options
 
-Different surface finishes create completely different visual experiences.
+The surface finish influences the appearance and tactile character of a natural marble fireplace surround.
 
-Available finishes include:
+Available options include:
 
-- Polished
-- Honed
-- Leathered
-- Custom Finish
+- **Polished:** A smooth surface with a refined sheen that highlights the stone's natural pattern.
+- **Honed:** A smooth, matte appearance for a more understated interior style.
+- **Custom Finish:** Other surface treatments can be discussed according to the selected stone and project design.
 
-Each finish is carefully processed to highlight the natural beauty of the selected stone while meeting the functional requirements of your project.
+Finish availability should be confirmed according to the selected material and specific design requirements.
 
-### Custom Manufacturing Options
+### Custom Fireplace Surround Manufacturing
 
-Every project is different, so every stone art can be customized.
+Every fireplace project has its own architectural dimensions and construction conditions. We support made-to-order stone manufacturing based on customer drawings, measurements and reference images.
 
-Customization options include:
+Customization can include:
 
-- Overall dimensions & design
-- Edge profile
-- Stone selection
-- Surface finish
-- Logo engraving
-- OEM production
+- Overall dimensions and fireplace surround design
+- Individual stone component dimensions
+- Stone material and color selection
+- Surface finish and edge profiles
+- Component configuration and assembly requirements
+- Optional internal metal support frame, where required by the design
+- Packaging and transportation planning
+- OEM production for brands and project orders
+
+For an accurate quotation, we recommend providing architectural drawings, site measurements, reference images and estimated order quantities.
 
 ### Recommended Applications
 
-This custom marble firplace surround is widely used in:
+Custom marble fireplace surrounds can be specified for:
 
-- Luxury Villas
-- Boutique Hotels
-- Spa & Wellness Centers
-- High-end Apartments
-- Commercial Projects
+- Luxury villas and private residences
+- High-end apartments and penthouses
+- Boutique hotels and hospitality interiors
+- Residential renovation projects
+- Bespoke architectural and interior design projects
 
-### Packaging & Global Shipping
+The design, material and installation approach can be coordinated with the overall interior concept and actual construction conditions.
 
-Each sink is carefully protected using foam, reinforced wooden crates and export-grade packaging to ensure safe international transportation.
+### Packaging and Global Shipping
 
-We have extensive experience shipping natural stone products worldwide for wholesalers, architects, contractors ,and project developers.
+Natural stone requires careful protection during international transportation.
+
+For separately transported components, we use protective foam, reinforced wooden crates and export-grade packaging to help protect individual stone pieces during handling and shipping.
+
+For complete finished units, packaging and transportation arrangements need to take into account the overall dimensions, weight, internal support structure and destination requirements.
+
+We coordinate suitable packaging and international shipping arrangements according to the approved product design and delivery method.
 
 ### Why Work With Win-Win Stone
 
-Win-Win Stone specializes in custom natural stone manufacturing with extensive OEM and ODM experience.
+Win-Win Stone is a Yunfu-based natural stone sourcing and export team with more than 15 years of stone industry experience.
 
-From raw material selection to CNC machining, hand finishing, quality inspection and global logistics, every step is carefully controlled to deliver consistent quality for international projects.
+Working with specialized manufacturing resources in China's stone production base, we coordinate material selection, production processing, hand finishing, quality inspection and international logistics.
+
+For custom marble fireplace surrounds, we help customers evaluate different manufacturing and delivery approaches according to their drawings, site conditions and project requirements.
+
+Whether you need custom stone components for an existing fireplace structure or a complete finished fireplace surround, our team can coordinate a suitable production solution for your project.
+
+### Request a Custom Fireplace Surround Quote
+
+To help us evaluate your project, please share:
+
+- Architectural drawings or reference images
+- Overall fireplace dimensions
+- Whether an existing fireplace structure is already available
+- Your preferred stone material and surface finish
+- Whether you prefer separate components or a complete finished unit
+- Project location and estimated order quantity
+
+Our team can review your requirements and discuss the appropriate stone fabrication, support and transportation arrangements.

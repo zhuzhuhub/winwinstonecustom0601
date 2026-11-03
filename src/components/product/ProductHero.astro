@@ -1,20 +1,25 @@
 ---
 const {
- title,
- description,
+  title,
+  description,
 
- material,
- moq,
- leadTime,
+  material,
+  moq,
+  leadTime,
 
- featuredImage,
- gallery = [],
+  featuredImage,
+  featuredImageAlt,
+  gallery = [],
 
- categoryLabel,
+  categoryLabel,
 
- heroBadges = []
+  heroBadges = []
 
 } = Astro.props;
+
+const mainImageAlt = featuredImageAlt || title;
+
+const thumbnailGallery = gallery.slice(1, 5);
 ---
 
 <section class="product-hero">
@@ -86,18 +91,18 @@ const {
           <a
             href="/contact/"
             class="button button-primary button-large"
-         >
+          >
             Request Quote
-         </a>
+          </a>
 
-         <a
-          href="https://wa.me/8613927192948"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="whatsapp-button"
-         >
-          Chat on WhatsApp
-         </a>
+          <a
+            href="https://wa.me/8613927192948"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="whatsapp-button"
+          >
+            Chat on WhatsApp
+          </a>
 
         </div>
 
@@ -107,45 +112,43 @@ const {
 
       <div class="product-hero-image">
 
-       <a
-        href={featuredImage}
-        class="glightbox"
-        data-gallery="hero-gallery"
-       >
+        <a
+          href={featuredImage}
+          class="glightbox"
+          data-gallery="hero-gallery"
+        >
 
-        <img
-         src={featuredImage}
-         alt={title}
-        />
+          <img
+            src={featuredImage}
+            alt={mainImageAlt}
+          />
 
-       </a>
+        </a>
 
-       <div class="hero-thumbnails">
+        <div class="hero-thumbnails">
 
-        {
-          gallery
-            .slice(1,5)
-            .map((item) => (
+          {
+            thumbnailGallery.map((item) => (
 
               <a
-               href={item.image}
-               class="glightbox"
-               data-gallery="hero-gallery"
+                href={item.image}
+                class="glightbox"
+                data-gallery="hero-gallery"
               >
 
-               <img
-                 src={item.image}
-                 alt={title}
-               />
+                <img
+                  src={item.image}
+                  alt={item.alt || title}
+                />
 
-             </a>
+              </a>
 
-           ))
-        }
+            ))
+          }
+
+        </div>
 
       </div>
-
-    </div>
 
     </div>
 

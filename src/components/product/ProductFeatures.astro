@@ -1,24 +1,20 @@
 ---
 const {
-
   heading = "Why Choose This Stone Product",
-
   description = "",
-
   features = [],
-
   image = "",
-
+  imageAlt = "",
   video = "",
-
   videoPoster = ""
-
 } = Astro.props;
 
 const hasVideo = typeof video === "string" && video.trim().length > 0;
 
 const hasImage = typeof image === "string" && image.trim().length > 0;
 
+const featureImageAlt =
+  imageAlt || `${heading} - natural stone product details`;
 ---
 
 <section class="product-features-v2">
@@ -38,7 +34,7 @@ const hasImage = typeof image === "string" && image.trim().length > 0;
           features.map((item, index) => (
             <article class="feature-row">
               <div class="feature-icon">
-                  ✓
+                ✓
               </div>
               <div class="feature-copy">
                 <h3>{item.title}</h3>
@@ -64,11 +60,11 @@ const hasImage = typeof image === "string" && image.trim().length > 0;
                 Your browser does not support the video tag.
               </video>
             </div>
-          ) : hasImage ?(
+          ) : hasImage ? (
             <div class="feature-image-wrap">
               <img
                 src={image}
-                alt="Stone product feature presentation"
+                alt={featureImageAlt}
                 loading="lazy"
               />
             </div>
