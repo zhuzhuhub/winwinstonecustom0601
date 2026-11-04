@@ -91,8 +91,10 @@ moq: "1 Piece"
 leadTime: "25–35 Days"
 
 featuredImage: "/images/products/stone-tables/custom-white-marble-dining-table-pink-veining-geometric-base/custom-white-marble-dining-table-pink-veining-geometric-base.jpg"
+featuredImageAlt: "Custom white marble dining table with natural pink veining and a two-part geometric stone base"
 
 featureImage: "/images/products/stone-tables/custom-white-marble-dining-table-pink-veining-geometric-base/white-marble-dining-table-pink-veining-contemporary-dining-room.jpg"
+imageAlt: "Pink veined white marble dining table with an elongated racetrack top in a contemporary dining room"
 
 featureVideo: ""
 featureVideoPoster: ""
@@ -102,13 +104,13 @@ gallery:
     alt: "Custom white marble dining table with pink veining and geometric stone base"
 
   - image: "/images/products/stone-tables/custom-white-marble-dining-table-pink-veining-geometric-base/pink-veined-marble-dining-table-racetrack-top.jpg"
-    alt: "Custom white marble dining table with pink veining"
+    alt: "Elongated racetrack-shaped white marble tabletop with natural pink veining"
 
   - image: "/images/products/stone-tables/custom-white-marble-dining-table-pink-veining-geometric-base/geometric-marble-dining-table-base-detail.jpg"
     alt: "Custom geometric marble dining table with pink veining"
 
   - image: "/images/products/stone-tables/custom-white-marble-dining-table-pink-veining-geometric-base/white-marble-dining-table-pink-veining-detail.jpg"
-    alt: "Custom white marble dining table with pink veining"
+    alt: "Close-up of natural pink and warm-toned veining across white marble"
 
   - image: "/images/products/stone-tables/custom-white-marble-dining-table-pink-veining-geometric-base/pink-veined-marble-dining-table-geometric-stone-base.jpg"
     alt: "Custom pink veined marble dining table with geometric stone base"

@@ -92,9 +92,11 @@ moq: "1 Piece"
 
 leadTime: "25–35 Days"
 
-featuredImage: "/images/products/stone-sinks/custom-natural-white-jade-vessel-sink/custom-translucent- natural-stone-vessel-sink.jpg"
+featuredImage: "/images/products/stone-sinks/custom-natural-white-jade-vessel-sink/custom-translucent-natural-stone-vessel-sink.jpg"
+featuredImageAlt: "Custom natural white jade rectangular vessel sink with translucent stone character"
 
 featureImage: "/images/products/stone-sinks/custom-natural-white-jade-vessel-sink/custom-natural-white-jade-vessel-sink-for-luxury-bathroom.jpg"
+imageAlt: "Natural white jade vessel sink with a minimalist rectangular design in a luxury bathroom"
 
 featureVideo: "/images/products/stone-sinks/custom-natural-white-jade-vessel-sink/custom-natural-white-jade-vessel-sink-polishing.mp4"
 
@@ -103,22 +105,22 @@ featureVideoPoster: "/images/products/stone-sinks/custom-natural-white-jade-vess
 gallery:
 
   - image: "/images/products/stone-sinks/custom-natural-white-jade-vessel-sink/custom-natural-white-jade-vessel-sink.jpg"
-    alt: "Custom natural white jade rectangular vessel sink"
+    alt: "Custom natural white jade rectangular vessel sink with a one-piece stone design"
 
   - image: "/images/products/stone-sinks/custom-natural-white-jade-vessel-sink/natural-white-jade-rectangular-vessel-sink-front.jpg"
     alt: "Natural white jade rectangular vessel sink front view"
 
   - image: "/images/products/stone-sinks/custom-natural-white-jade-vessel-sink/natural-white-jade-rectangular-vessel-sink-inside.jpg"
-    alt: "Natural white jade rectangular vessel sink inside view"
+    alt: "Interior basin view of a natural white jade rectangular vessel sink"
 
   - image: "/images/products/stone-sinks/custom-natural-white-jade-vessel-sink/natural-white-jade-vessel-sink-natural-veining.jpg"
-    alt: "Natural white jade rectangular vessel sink with natural veining"
+    alt: "Natural mineral veining and translucent character of white jade stone"
 
   - image: "/images/products/stone-sinks/custom-natural-white-jade-vessel-sink/white-jade-stone-vessel-sink-side-view.jpg"
     alt: "Natural white jade stone vessel sink side view"
 
-  - image: "/images/products/stone-sinks/custom-natural-white-jade-vessel-sink/custom-translucent- natural-stone-vessel-sink.jpg"
-    alt: "Custom translucent natural stone vessel sink"
+  - image: "/images/products/stone-sinks/custom-natural-white-jade-vessel-sink/custom-translucent-natural-stone-vessel-sink.jpg"
+    alt: "Translucent natural white jade vessel sink showing its luminous stone character"
 
   - image: "/images/products/stone-sinks/custom-natural-white-jade-vessel-sink/custom-natural-white-jade-vessel-sink-for-luxury-bathroom.jpg"
     alt: "Custom natural white jade vessel sink for luxury bathroom"
@@ -364,4 +366,3 @@ Learn more about our
 **Stone Manufacturing Capabilities**
 </a>
 and custom production process.
-

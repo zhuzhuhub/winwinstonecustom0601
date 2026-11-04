@@ -57,29 +57,31 @@ moq: 1 Piece
 leadTime: 25-35 Days
 
 featuredImage: /images/products/stone-sinks/freestanding-cylindrical-natural-marble-pedestal-sink/cover.jpg
+featuredImageAlt: "Freestanding cylindrical natural marble pedestal sink with a sculptural stone design"
 
 featureImage: /images/products/stone-sinks/freestanding-cylindrical-natural-marble-pedestal-sink/scene-01.jpg
+imageAlt: "Natural marble cylindrical pedestal sink in a luxury bathroom interior"
 
 gallery:
 
   - image: /images/products/stone-sinks/freestanding-cylindrical-natural-marble-pedestal-sink/cover.jpg
-  
+    alt: "Freestanding cylindrical natural marble pedestal sink with a sculptural stone design"
 
   - image: /images/products/stone-sinks/freestanding-cylindrical-natural-marble-pedestal-sink/detail-01.jpg
-  
+    alt: "Close-up of the natural marble texture and veining on a cylindrical pedestal sink"
+
   - image: /images/products/stone-sinks/freestanding-cylindrical-natural-marble-pedestal-sink/detail-02.jpg
-  
+    alt: "Detail of the cylindrical natural marble pedestal and basin construction"
 
   - image: /images/products/stone-sinks/freestanding-cylindrical-natural-marble-pedestal-sink/detail-03.jpg
-  
+    alt: "Natural marble surface finish and craftsmanship detail of a freestanding pedestal sink"
 
   - image: /images/products/stone-sinks/freestanding-cylindrical-natural-marble-pedestal-sink/detail-04.jpg
-   
+    alt: "Sculptural cylindrical form of a custom natural marble pedestal basin"
 
   - image: /images/products/stone-sinks/freestanding-cylindrical-natural-marble-pedestal-sink/scene-01.jpg
-  
-  
-    
+    alt: "Freestanding natural marble cylindrical pedestal sink in a luxury bathroom setting"
+     
 seoTitle: Freestanding Marble Pedestal Sink | Custom Natural Stone Basin OEM
 
 seoDescription: Custom freestanding marble pedestal sink handcrafted from natural stone for luxury villas, hotels and residential bathrooms. OEM manufacturing available.

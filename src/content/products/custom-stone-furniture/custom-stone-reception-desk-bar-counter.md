@@ -75,8 +75,10 @@ moq: "1 Piece"
 leadTime: "35–60 Days"
 
 featuredImage: "/images/products/custom-stone-furniture/custom-stone-reception-desk-bar-counter/custom-stone-reception-desk-bar-counter.jpg"
+featuredImageAlt: "Custom natural stone reception desk and bar counter with a sculptural commercial design"
 
 featureImage: "/images/products/custom-stone-furniture/custom-stone-reception-desk-bar-counter/custom-stone-reception-desk-bar-counter.jpg"
+imageAlt: "Custom stone reception desk featuring precision-fabricated natural stone panels for commercial interiors"
 
 featureVideo: "/images/products/custom-stone-furniture/custom-stone-reception-desk-bar-counter/custom-stone-reception-desk-bar-counter-processing.mp4"
 featureVideoPoster: "/images/products/custom-stone-furniture/custom-stone-reception-desk-bar-counter/prefabricated-stone-reception-desk-factory-assembly.jpg"
@@ -89,22 +91,22 @@ gallery:
     alt: "Factory fabricated custom stone reception desk for commercial projects"
 
   - image: "/images/products/custom-stone-furniture/custom-stone-reception-desk-bar-counter/custom-stone-reception-desk-bar-counter-side-view.jpg"
-    alt: "The side view of custom natural stone reception desk and bar counter"
+    alt: "Side view of a custom natural stone reception desk showing its overall structure"
 
   - image: "/images/products/custom-stone-furniture/custom-stone-reception-desk-bar-counter/custom-stone-reception-desk-curved-counter.jpg"
-    alt: "Custom natural stone reception desk curved counter"
+    alt: "Curved natural stone reception counter with a custom sculptural design"
 
   - image: "/images/products/custom-stone-furniture/custom-stone-reception-desk-bar-counter/custom-stone-reception-desk-project-fabrication.jpg"
-    alt: "Custom natural stone reception desk project fabrication"
+    alt: "Project-specific fabrication of a large custom stone reception desk"
 
   - image: "/images/products/custom-stone-furniture/custom-stone-reception-desk-bar-counter/prefabricated-stone-reception-desk-factory-assembly.jpg"
-    alt: "Prefabricated stone reception desk in the factory assembly"
+    alt: "Prefabricated stone reception desk modules during factory assembly"
 
   - image: "/images/products/custom-stone-furniture/custom-stone-reception-desk-bar-counter/custom-stone-reception-counter-structural-frame.jpg"
-    alt: "Custom stone reception counter structural frame"
+    alt: "Structural frame of a custom stone reception counter"
 
   - image: "/images/products/custom-stone-furniture/custom-stone-reception-desk-bar-counter/custom-stone-bar-counter-commercial-project.jpg"
-    alt: "Custom stone bar counter for commercial projects"
+    alt: "Custom natural stone bar counter for a commercial hospitality project"
 
 
 faqs:
@@ -183,8 +185,10 @@ This custom stone reception desk and bar counter is designed for projects
 where standard furniture cannot meet the required dimensions, shape,
 material or architectural design.
 
-Unlike a conventional stone table, this product is developed as a
-**project-based custom stone furniture solution**.
+Unlike conventional stone furniture, this product is developed as a
+project-specific reception counter, with its dimensions, structure,
+materials and fabrication details tailored to the requirements of each
+commercial interior.
 The overall design can be developed according to project drawings,
 architectural requirements, target dimensions, functional requirements and
 installation conditions.
@@ -372,10 +376,14 @@ areas, brand environments and architectural interiors.
 ## Custom Stone Bar Counter
 
 The same project-based fabrication approach can also be applied to custom
-stone bar counters.
-Depending on the design, a stone bar counter can be developed.
-For commercial hospitality projects, the bar counter can be developed as
-part of a larger stone furniture package.
+natural stone bar counters.
+
+Depending on the project requirements, bar counters can be developed with
+custom dimensions, curved profiles, integrated stone details and
+project-specific configurations.
+
+For hotels, restaurants and hospitality interiors, custom stone bar counters
+can also be manufactured as part of a coordinated stone furniture package.
 
 ---
 
@@ -521,4 +529,3 @@ initial design requirements through fabrication and export preparation.
 
 Rather than treating a large reception desk as a simple furniture item, we
 approach it as a complete custom stone manufacturing project.
-

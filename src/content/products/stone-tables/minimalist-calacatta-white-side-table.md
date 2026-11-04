@@ -59,16 +59,32 @@ moq: 1 Piece
 leadTime: 25-30 Days
 
 featuredImage: /images/products/stone-tables/minimalist-calacatta-white-side-table/cover.webp
+featuredImageAlt: "Minimalist Calacatta white marble side table with a clean design and natural stone veining"
+
 featureImage: /images/products/stone-tables/minimalist-calacatta-white-side-table/cover.webp
+imageAlt: "Custom Calacatta white marble side table showcasing its natural veining and minimalist design"
 
 gallery:
   - image: /images/products/stone-tables/minimalist-calacatta-white-side-table/cover.webp
+    alt: "Minimalist Calacatta white marble side table with a clean design and natural stone veining"
+
   - image: /images/products/stone-tables/minimalist-calacatta-white-side-table/detail-01.webp
+    alt: "Close-up of natural veining on a Calacatta white marble side table"
+
   - image: /images/products/stone-tables/minimalist-calacatta-white-side-table/detail-02.webp
+    alt: "Detail of the marble surface and craftsmanship on a minimalist Calacatta side table"
+
   - image: /images/products/stone-tables/minimalist-calacatta-white-side-table/detail-03.webp
+    alt: "Close-up of the stone construction and finish of a Calacatta white marble side table"
+
   - image: /images/products/stone-tables/minimalist-calacatta-white-side-table/detail-04.webp
+    alt: "Natural Calacatta white marble texture and surface detail"
+
   - image: /images/products/stone-tables/minimalist-calacatta-white-side-table/scene-01.webp
+    alt: "Minimalist Calacatta white marble side table in a contemporary interior"
+
   - image: /images/products/stone-tables/minimalist-calacatta-white-side-table/scene-02.webp
+    alt: "Custom white marble side table styled in an elegant residential space"
 
 seoTitle: Custom Calacatta White Marble side tables Manufacturer | Win-Win Stone
 

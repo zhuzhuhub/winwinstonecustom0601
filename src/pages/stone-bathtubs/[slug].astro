@@ -42,7 +42,11 @@ const {
   description,
 
   featuredImage,
+  featuredImageAlt, 
+
   featureImage,
+  imageAlt,
+  
   featureVideo,
   featureVideoPoster,
   gallery,
@@ -166,6 +170,7 @@ const relatedResources = [
   heroBadges={heroBadges}
 
   featuredImage={featuredImage}
+  featuredImageAlt={featuredImageAlt}
   gallery={gallery}
 />
 
@@ -225,10 +230,10 @@ const relatedResources = [
     description={featureDescription}
     features={keyFeatures}
     image={featureImage}
+    imageAlt={imageAlt}
     video={featureVideo}
     videoPoster={featureVideoPoster}
   />
-
 
   <ProductSpecifications
     material={material}
@@ -292,7 +297,5 @@ const relatedResources = [
       item: b.url
     }))
   })} />
-
-
 
 </BaseLayout>

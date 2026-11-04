@@ -10,7 +10,7 @@ description: >
 
 category: stone-tables
 categoryLabel: "Stone Tables"
-material: "Natural Italian White Marble (Zhonghua White)"
+material: "Natural Italian venatino marble (Zhonghua White)"
 
 finish:
   - "Polished"
@@ -92,7 +92,11 @@ leadTime: "25–35 Days"
 
 featuredImage: "/images/products/stone-tables/custom-italian-white-marble-round-dining-table-rotating-center/custom-italian-white-marble-round-dining-table-rotating-center.jpg"
 
+featuredImageAlt: "Custom Italian white marble round dining table with two-tier rotating center and sculpted solid-stone base"
+
 featureImage: "/images/products/stone-tables/custom-italian-white-marble-round-dining-table-rotating-center/italian-white-marble-dining-table-for-luxury-dining-room.jpg"
+
+imageAlt: "Italian white marble dining table with natural grey veining and sculpted stone base"
 
 featureVideo: "/images/products/stone-tables/custom-italian-white-marble-round-dining-table-rotating-center/italian-white-marble-dining-table-carved-stone-base-processing.mp4"
 featureVideoPoster: ""
@@ -105,16 +109,16 @@ gallery:
     alt: "Custom Italian white marble round dining table with carved stone base"
 
   - image: "/images/products/stone-tables/custom-italian-white-marble-round-dining-table-rotating-center/italian-white-marble-dining-table-rotating-center-detail.jpg"
-    alt: "Custom Italian venatino marble round dining table with rotating center "
+    alt: "Close-up of the manually rotating center on an Italian white marble round dining table"
 
   - image: "/images/products/stone-tables/custom-italian-white-marble-round-dining-table-rotating-center/two-tier-round-marble-dining-table-rotating-center.jpg"
-    alt: "Custom two tier round marble dining table with rotating center"
+    alt: "Two-tier circular white marble dining tabletop with a raised rotating center"
 
   - image: "/images/products/stone-tables/custom-italian-white-marble-round-dining-table-rotating-center/carved-solid-stone-dining-table-base.jpg"
     alt: "Custom carved solid stone dining table base"
 
   - image: "/images/products/stone-tables/custom-italian-white-marble-round-dining-table-rotating-center/carved-solid-stone-dining-table-base-detail.jpg"
-    alt: "Custom carved solid stone dining table base with holder"
+    alt: "Close-up of the carved solid-stone base on a round Italian white marble dining table"
 
   - image: "/images/products/stone-tables/custom-italian-white-marble-round-dining-table-rotating-center/italian-white-marble-dining-table-for-luxury-dining-room.jpg"
     alt: "Custom Italian white marble dining table for luxury dining room"

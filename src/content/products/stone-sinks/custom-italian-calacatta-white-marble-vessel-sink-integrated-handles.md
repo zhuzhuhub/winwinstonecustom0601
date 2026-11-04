@@ -1,4 +1,3 @@
-
 ---
 title: "Custom Italian Calacatta White Marble Vessel Sink with Integrated Handles"
 
@@ -103,11 +102,13 @@ moq: "1 Piece"
 
 leadTime: "To Be Confirmed According to Design and Order Requirements"
 
-featuredImage: "/images/products/stone-sinks/custom-italian-calacatta-white-marble-vessel-sink-integrated-handles/custom-italian -calacatta-white-marble-vessel-sink.jpg"
+featuredImage: "/images/products/stone-sinks/custom-italian-calacatta-white-marble-vessel-sink-integrated-handles/custom-italian-calacatta-white-marble-vessel-sink.jpg"
+featuredImageAlt: "Custom Italian Calacatta white marble vessel sink with integrated double-side handles and sculpted exterior"
 
 featureImage: "/images/products/stone-sinks/custom-italian-calacatta-white-marble-vessel-sink-integrated-handles/marble-vessel-sink-with-handles.jpg"
+imageAlt: "Italian Calacatta white marble vessel sink featuring an integrated handle design and natural grey veining"
 
-featureVideo: "/images/products/stone-sinks/custom-italian-calacatta-white-marble-vessel-sink-integrated-handles/custom-italian -calacatta-white-marble-vessel-sink-packing.mp4"
+featureVideo: "/images/products/stone-sinks/custom-italian-calacatta-white-marble-vessel-sink-integrated-handles/custom-italian-calacatta-white-marble-vessel-sink-packing.mp4"
 
 featureVideoPoster: "/images/products/stone-sinks/custom-italian-calacatta-white-marble-vessel-sink-integrated-handles/integrated-handle-marble-basin.jpg"
 
@@ -118,20 +119,20 @@ gallery:
   - image: "/images/products/stone-sinks/custom-italian-calacatta-white-marble-vessel-sink-integrated-handles/sculpted-sihouette-of-luxury-bathroom-sink.jpg"
     alt: "Close-up of the integrated handles and sculpted silhouette of a custom marble vessel sink"
 
-  - image: "/images/products/stone-sinks/custom-italian-calacatta-white-marble-vessel-sink-integrated-handles/custom-italian -calacatta-white-marble-vessel-sink.jpg"
+  - image: "/images/products/stone-sinks/custom-italian-calacatta-white-marble-vessel-sink-integrated-handles/custom-italian-calacatta-white-marble-vessel-sink.jpg"
     alt: "Natural grey veining in Italian Calacatta white marble used for a custom bathroom basin"
 
   - image: "/images/products/stone-sinks/custom-italian-calacatta-white-marble-vessel-sink-integrated-handles/crystal-surface-treatment-for-marble-sink.jpg"
-    alt: "Decorative sculpted exterior detailing on a custom Italian white marble vessel sink"
+    alt: "Crystal surface treatment on a custom Italian Calacatta white marble vessel sink"
 
   - image: "/images/products/stone-sinks/custom-italian-calacatta-white-marble-vessel-sink-integrated-handles/bespoke-natural-stone-bathroom-sink.jpg"
-    alt: "Polished natural marble surface with crystal surface treatment"
+    alt: "Sculpted exterior detailing on a custom Italian Calacatta marble vessel sink"
 
   - image: "/images/products/stone-sinks/custom-italian-calacatta-white-marble-vessel-sink-integrated-handles/carved-marble-bathroom-sink.jpg"
-    alt: "craved calacatta bathroom sink with crystal surface treatment" 
+    alt: "Carved exterior details on a Calacatta white marble vessel sink with crystal surface treatment" 
 
   - image: "/images/products/stone-sinks/custom-italian-calacatta-white-marble-vessel-sink-integrated-handles/integrated-handle-marble-basin.jpg"
-    alt: "calacatta bathroom vessel sink with two handles"   
+    alt: "Integrated double-side handles on a custom Calacatta white marble vessel sink"   
 
   - image: "/images/products/stone-sinks/custom-italian-calacatta-white-marble-vessel-sink-integrated-handles/custom-marble-basin-manufacturer.jpg"
     alt: "Custom white marble vessel sink with export packing"

@@ -18,7 +18,7 @@ heroBadges:
   - MOQ From 1 Piece
   - Global Shipping
 
-featureHeading: Why Choose This Stone Bathtub 
+featureHeading: Why Choose This Stone Bathtub
 
 featureDescription: >
   Designed for luxury residential, hospitality and custom
@@ -56,16 +56,30 @@ moq: 1 Piece
 leadTime: 30-40 Days
 
 featuredImage: /images/products/stone-bathtubs/classic-luxury-stone-oval-bathtub/cover.webp
+featuredImageAlt: "Freestanding oval natural stone bathtub with a classic luxury design"
+
 featureImage: /images/products/stone-bathtubs/classic-luxury-stone-oval-bathtub/scene-01.webp
+imageAlt: "Luxury oval natural stone bathtub in an elegant bathroom interior"
 
 gallery:
 
-- image: /images/products/stone-bathtubs/classic-luxury-stone-oval-bathtub/cover.webp
-- image: /images/products/stone-bathtubs/classic-luxury-stone-oval-bathtub/detail-01.webp
-- image: /images/products/stone-bathtubs/classic-luxury-stone-oval-bathtub/detail-02.webp
-- image: /images/products/stone-bathtubs/classic-luxury-stone-oval-bathtub/detail-03.webp
-- image: /images/products/stone-bathtubs/classic-luxury-stone-oval-bathtub/scene-01.webp
-- image: /images/products/stone-bathtubs/classic-luxury-stone-oval-bathtub/scene-02.webp
+  - image: /images/products/stone-bathtubs/classic-luxury-stone-oval-bathtub/cover.webp
+    alt: "Freestanding oval natural stone bathtub with a classic luxury design"
+
+  - image: /images/products/stone-bathtubs/classic-luxury-stone-oval-bathtub/detail-01.webp
+    alt: "Close-up of the natural stone texture and veining on an oval bathtub"
+
+  - image: /images/products/stone-bathtubs/classic-luxury-stone-oval-bathtub/detail-02.webp
+    alt: "Detail of the sculpted interior and curved rim of a natural stone bathtub"
+
+  - image: /images/products/stone-bathtubs/classic-luxury-stone-oval-bathtub/detail-03.webp
+    alt: "Craftsmanship and polished surface detail of a freestanding stone bathtub"
+
+  - image: /images/products/stone-bathtubs/classic-luxury-stone-oval-bathtub/scene-01.webp
+    alt: "Classic oval natural stone bathtub in a luxury bathroom setting"
+
+  - image: /images/products/stone-bathtubs/classic-luxury-stone-oval-bathtub/scene-02.webp
+    alt: "Freestanding natural stone oval bathtub in an elegant residential bathroom"
 
 seoTitle: Custom Luxury Stone Bathtub Manufacturer
 
@@ -74,9 +88,9 @@ seoDescription: Custom natural stone bathtub manufacturer for luxury villas, hot
 
 ### Product Overview
 
-Our freestanding stone bathtub is handcrafted from carefully selected natural marble, combining timeless aesthetics with exceptional durability. Designed for luxury residential and commercial interiors, each basin showcases the unique veining and texture of genuine natural stone, making every piece one of a kind.
+Our freestanding stone bathtub is handcrafted from carefully selected natural marble, combining timeless aesthetics with exceptional durability. Designed for luxury residential and commercial interiors, each bathtub showcases the unique veining and texture of genuine natural stone, making every piece one of a kind.
 
-Suitable for villas, boutique hotels, spa projects, luxury apartments and premium bathrooms, this custom pedestal sink delivers both functionality and architectural elegance.
+Suitable for villas, boutique hotels, spa projects, luxury apartments and premium bathrooms, this custom natural stone bathtub delivers both bathing comfort and architectural elegance.
 
 ### Available Stone Materials
 
@@ -105,35 +119,44 @@ Each finish is carefully processed to highlight the natural beauty of the select
 
 ### Custom Manufacturing Options
 
-Every project is different, so every sink can be customized.
+Every bathroom project has different requirements, so each stone bathtub can be customized to suit its intended space and design concept.
 
 Customization options include:
 
-- Overall dimensions
-- Bathtub depth
+- Overall bathtub dimensions
+- Bathtub length, width and height
+- Interior bathing depth
 - Drain position
-- Edge profile
+- Overflow configuration
+- Rim and edge profiles
 - Stone selection
 - Surface finish
 - Logo engraving
 - OEM production
 
+Our team can manufacture custom stone bathtubs according to drawings, reference images, samples or project specifications.
+
 ### Recommended Applications
 
-This custom marble pedestal sink is widely used in:
+This custom natural stone bathtub is suitable for:
 
 - Luxury Villas
 - Boutique Hotels
+- Resort Bathrooms
 - Spa & Wellness Centers
 - High-end Apartments
 - Designer Bathrooms
-- Commercial Projects
+- Luxury Residential Projects
+- Premium Hospitality Interiors
+- Commercial Wellness Projects
 
 ### Packaging & Global Shipping
 
-Each sink is carefully protected using foam, reinforced wooden crates and export-grade packaging to ensure safe international transportation.
+Each natural stone bathtub is carefully inspected and protected using suitable foam protection, reinforced wooden crates and export-grade packaging to help ensure safe international transportation.
 
-We have extensive experience shipping natural stone products worldwide for wholesalers, architects, contractors ,and project developers.
+Due to the weight and dimensions of natural stone bathtubs, packaging solutions are selected according to the product's size, stone material, structural design and shipping requirements.
+
+We support international shipments for wholesalers, architects, contractors and project developers worldwide.
 
 ### Why Work With Win-Win Stone
 

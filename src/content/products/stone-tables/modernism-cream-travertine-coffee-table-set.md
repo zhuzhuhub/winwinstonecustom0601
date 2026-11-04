@@ -58,15 +58,29 @@ moq: 1 Piece
 leadTime: 30-35 Days
 
 featuredImage: /images/products/stone-tables/modernism-cream-travertine-coffee-table-set/cover.jpg
+featuredImageAlt: "Modernist cream travertine coffee table set with sculptural natural stone design"
+
 featureImage: /images/products/stone-tables/modernism-cream-travertine-coffee-table-set/scene-02.jpg
+imageAlt: "Cream travertine coffee table set styled in an elegant living room"
 
 gallery:
   - image: /images/products/stone-tables/modernism-cream-travertine-coffee-table-set/cover.jpg
+    alt: "Modernist cream travertine coffee table set with sculptural natural stone design"
+
   - image: /images/products/stone-tables/modernism-cream-travertine-coffee-table-set/detail-01.jpg
+    alt: "Close-up of the natural texture and surface of cream travertine"
+
   - image: /images/products/stone-tables/modernism-cream-travertine-coffee-table-set/detail-02.jpg
+    alt: "Detail of the sculptural form of a cream travertine coffee table"
+
   - image: /images/products/stone-tables/modernism-cream-travertine-coffee-table-set/detail-03.jpg
+    alt: "Close-up of the craftsmanship and finish on a cream travertine coffee table"
+
   - image: /images/products/stone-tables/modernism-cream-travertine-coffee-table-set/scene-01.jpg
+    alt: "Cream travertine coffee table set in a modern living room"
+
   - image: /images/products/stone-tables/modernism-cream-travertine-coffee-table-set/scene-02.jpg
+    alt: "Modern cream travertine coffee table set in an elegant residential interior"
 
 seoTitle: Custom Travertine Coffee Tables Manufacturer | Win-Win Stone
 

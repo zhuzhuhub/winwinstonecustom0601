@@ -89,9 +89,15 @@ moq: "1 Piece"
 
 leadTime: "25–35 Days"
 
+
 featuredImage: "/images/products/stone-tables/custom-calacatta-viola-marble-coffee-table-t-shaped-stone-base/custom-calacatta-viola-marble-coffee-table.jpg"
 
+featuredImageAlt: "Custom Calacatta Viola marble coffee table with irregular rounded top and T-shaped stone base"
+
 featureImage: "/images/products/stone-tables/custom-calacatta-viola-marble-coffee-table-t-shaped-stone-base/luxury-living-room-calacatta-viola-marble-coffee-table.jpg"
+
+imageAlt: "Calacatta Viola marble coffee table with purple veining in a luxury living room"
+
 
 featureVideo: ""
 

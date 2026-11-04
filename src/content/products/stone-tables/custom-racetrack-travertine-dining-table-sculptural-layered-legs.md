@@ -1,5 +1,4 @@
 ---
-
 title: "Custom Racetrack Travertine Dining Table with Sculptural Layered Legs"
 
 description: "Custom racetrack-shaped travertine dining table featuring sculptural layered stone legs, handcrafted for luxury residences, hospitality interiors and high-end commercial projects."
@@ -86,7 +85,11 @@ leadTime: "25–35 Days"
 
 featuredImage: "/images/products/stone-tables/custom-racetrack-travertine-dining-table-sculptural-layered-legs/cover.jpg"
 
+featuredImageAlt: "Custom racetrack travertine dining table with sculptural layered stone legs and curved openings"
+
 featureImage: "/images/products/stone-tables/custom-racetrack-travertine-dining-table-sculptural-layered-legs/detail-01.jpg"
+
+imageAlt: "Natural travertine dining table with layered sculptural legs and a softly rounded racetrack-shaped top"
 
 featureVideo: "/images/products/stone-tables/custom-racetrack-travertine-dining-table-sculptural-layered-legs/video.mp4"
 
@@ -98,13 +101,13 @@ gallery:
   alt: "Custom racetrack travertine dining table with sculptural layered legs"
 
 - image: "/images/products/stone-tables/custom-racetrack-travertine-dining-table-sculptural-layered-legs/detail-01.jpg"
-  alt: "Natural travertine dining table with layered sculptural stone legs"
+  alt: "Sculptural layered travertine legs supporting a natural stone racetrack dining tabletop"
 
 - image: "/images/products/stone-tables/custom-racetrack-travertine-dining-table-sculptural-layered-legs/detail-02.jpg"
-  alt: "Racetrack-shaped travertine dining table tabletop"
+  alt: "Close-up of the softly rounded racetrack-shaped natural travertine tabletop"
 
 - image: "/images/products/stone-tables/custom-racetrack-travertine-dining-table-sculptural-layered-legs/detail-03.jpg"
-  alt: "Layered travertine leg detail on custom dining table"
+  alt: "Close-up of the layered curved openings and sculpted travertine dining table leg"
 
 - image: "/images/products/stone-tables/custom-racetrack-travertine-dining-table-sculptural-layered-legs/detail-04.jpg"
   alt: "Custom natural travertine dining table for luxury interiors"

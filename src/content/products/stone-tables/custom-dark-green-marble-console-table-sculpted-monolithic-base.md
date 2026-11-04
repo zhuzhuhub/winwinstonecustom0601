@@ -94,7 +94,11 @@ leadTime: "25–35 Days"
 
 featuredImage: "/images/products/stone-tables/custom-dark-green-marble-console-table-sculpted-monolithic-base/custom-dark-green-marble-console-table-entryway.jpg"
 
+featuredImageAlt: "Custom dark green marble console table with sculpted monolithic base"
+
 featureImage: "/images/products/stone-tables/custom-dark-green-marble-console-table-sculpted-monolithic-base/custom-dark-green-marble-console-table-entryway.jpg"
+
+imageAlt: "Sculptural console table design in dark green marble with natural white veining"
 
 featureVideo: "/images/products/stone-tables/custom-dark-green-marble-console-table-sculpted-monolithic-base/custom-calacatta-black-marble-console-table-in-factory.mp4"
 
@@ -106,19 +110,19 @@ gallery:
     alt: "Custom dark green marble console table with sculpted monolithic base in a luxury entryway"
 
   - image: "/images/products/stone-tables/custom-dark-green-marble-console-table-sculpted-monolithic-base/dark-green-marble-console-table-sculpted-base.jpg"
-    alt: "Custom dark green marble console table with sculpted base"
+    alt: "Dark green marble console table with an integrated sculpted stone base"
 
   - image: "/images/products/stone-tables/custom-dark-green-marble-console-table-sculpted-monolithic-base/dark-green-marble-console-table-sculpted-arched-base.jpg"
-    alt: "Custom dark green marble console table with sculpted monolithic base"
+    alt: "Repeated arched openings in the sculpted base of a dark green marble console table"
 
   - image: "/images/products/stone-tables/custom-dark-green-marble-console-table-sculpted-monolithic-base/dark-green-marble-natural-white-veining.jpg"
     alt: "Dark green marble with natural white veining"
 
   - image: "/images/products/stone-tables/custom-dark-green-marble-console-table-sculpted-monolithic-base/custom-black-marble-console-table-entryway.jpg"
-    alt: "Custom black marble console table with sculpted monolithic base in a luxury entryway" 
+    alt: "Sculptural marble console table in black marble with the same monolithic base design" 
 
   - image: "/images/products/stone-tables/custom-dark-green-marble-console-table-sculpted-monolithic-base/custom-white-marble-console-table-entryway.jpg"
-    alt: "Custom white marble console table with sculpted monolithic base in a luxury entryway" 
+    alt: "Sculptural marble console table in white marble with the same monolithic base design"
 
 seoTitle: "Custom Dark Green Marble Console Table | Win-Win Stone"
 

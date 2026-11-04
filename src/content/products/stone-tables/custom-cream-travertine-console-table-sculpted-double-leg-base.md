@@ -95,7 +95,12 @@ leadTime: "25–35 Days"
 
 featuredImage: "/images/products/stone-tables/custom-cream-travertine-console-table-sculpted-double-leg-base/cream-travertine-console-table-entryway.jpg"
 
+featuredImageAlt: "Cream travertine console table with sculpted double-leg base and brass accent in a luxury entryway"
+
 featureImage: "/images/products/stone-tables/custom-cream-travertine-console-table-sculpted-double-leg-base/custom-cream-travertine-console-table-sculpted-double-leg-base.jpg"
+
+imageAlt: "Custom cream travertine console table with rounded racetrack top and sculpted double-leg stone base"
+
 
 featureVideo: "/images/products/stone-tables/custom-cream-travertine-console-table-sculpted-double-leg-base/custom-cream-travertine-console-table-manufacturing.mp4"
 
@@ -116,10 +121,10 @@ gallery:
     alt: "Custom sculpted double-leg bases for cream travertine table"
 
   - image: "/images/products/stone-tables/custom-cream-travertine-console-table-sculpted-double-leg-base/cream-travertine-console-table-natural-pores.jpg"
-    alt: " There are so many natural pores in cream travertine tables"
+    alt: "Natural pores and organic surface texture of cream travertine"
 
   - image: "/images/products/stone-tables/custom-cream-travertine-console-table-sculpted-double-leg-base/cream-travertine-console-table-rounded-edge.jpg"
-    alt: "Custom rounded-edges for cream travertine console table "
+    alt: "Rounded edge detail of a custom cream travertine console table"
 
 
 seoTitle: "Custom Cream Travertine Console Table | Win-Win Stone"

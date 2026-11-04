@@ -34,7 +34,21 @@ keyFeatures:
 
   - title: Premium Natural Stone
     description: >
-      Every pedestal basin begins with nature’s finest raw materials. We rigorously select each block and slab—examining dimensions, vein patterns, and structural integrity to ensure nothing but premium quality.
+      Every pedestal basin begins with nature’s finest raw materials. We rigorously select each block and slab—examining dimensions, vein patterns, and structural  - image: /images/products/stone-sinks/black-marble-freestanding-cylindrical-pedestal-sink/cover.jpg
+  
+
+  - image: /images/products/stone-sinks/black-marble-freestanding-cylindrical-pedestal-sink/detail-01.jpg
+  
+  - image: /images/products/stone-sinks/black-marble-freestanding-cylindrical-pedestal-sink/detail-02.jpg
+  
+
+  - image: /images/products/stone-sinks/black-marble-freestanding-cylindrical-pedestal-sink/detail-03.jpg
+  
+
+  - image: /images/products/stone-sinks/black-marble-freestanding-cylindrical-pedestal-sink/scene-01.jpg
+  
+
+  - image: /images/products/stone-sinks/black-marble-freestanding-cylindrical-pedestal-sink/scene-02.jpgintegrity to ensure nothing but premium quality.
 
   - title: Fully Customizable 
     description: >
@@ -57,27 +71,29 @@ moq: 1 Piece
 leadTime: 25-30 Days
 
 featuredImage: /images/products/stone-sinks/black-marble-freestanding-cylindrical-pedestal-sink/cover.jpg
+featuredImageAlt: "Black marble freestanding cylindrical pedestal sink with a sculptural natural stone design"
 
 featureImage: /images/products/stone-sinks/black-marble-freestanding-cylindrical-pedestal-sink/scene-01.jpg
+imageAlt: "Black marble cylindrical pedestal sink in a luxury bathroom interior"
 
 gallery:
-
   - image: /images/products/stone-sinks/black-marble-freestanding-cylindrical-pedestal-sink/cover.jpg
-  
+    alt: "Black marble freestanding cylindrical pedestal sink with a sculptural natural stone design"
 
   - image: /images/products/stone-sinks/black-marble-freestanding-cylindrical-pedestal-sink/detail-01.jpg
-  
+    alt: "Close-up of the natural veining and texture of a black marble pedestal sink"
+
   - image: /images/products/stone-sinks/black-marble-freestanding-cylindrical-pedestal-sink/detail-02.jpg
-  
+    alt: "Detail of the cylindrical marble pedestal and sculpted stone construction"
 
   - image: /images/products/stone-sinks/black-marble-freestanding-cylindrical-pedestal-sink/detail-03.jpg
-  
+    alt: "Close-up of the polished surface and craftsmanship of a black marble sink"
 
   - image: /images/products/stone-sinks/black-marble-freestanding-cylindrical-pedestal-sink/scene-01.jpg
-  
+    alt: "Black marble freestanding pedestal sink in a luxury bathroom setting"
 
   - image: /images/products/stone-sinks/black-marble-freestanding-cylindrical-pedestal-sink/scene-02.jpg
-  
+    alt: "Sculptural black marble cylindrical sink in a contemporary bathroom interior"
     
 seoTitle: Black Marble Freestanding Cylindrical Pedestal Sink Manufacturer
 

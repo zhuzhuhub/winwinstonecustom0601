@@ -56,15 +56,26 @@ moq: 1 Piece
 leadTime: 25-30 Days
 
 featuredImage: /images/products/stone-tables/custom-white-crystal-dining-table/cover.jpg
+featuredImageAlt: "Custom white crystal dining table with a natural translucent stone surface"
 featureImage: /images/products/stone-tables/custom-white-crystal-dining-table/detail-01.jpg
+imageAlt: "Close-up of the natural white crystal stone used for a custom dining table"
 featureVideo: /images/products/stone-tables/custom-white-crystal-dining-table/video.mp4
 
 gallery:
   - image: /images/products/stone-tables/custom-white-crystal-dining-table/cover.jpg
+    alt: "Close-up of the natural white crystal stone tabletop"
+
   - image: /images/products/stone-tables/custom-white-crystal-dining-table/detail-01.jpg
+    alt: "Custom white crystal dining table with a natural translucent stone surface"
+
   - image: /images/products/stone-tables/custom-white-crystal-dining-table/detail-02.jpg
+    alt: "Sculptural white crystal dining table with a custom natural stone design"
+
   - image: /images/products/stone-tables/custom-white-crystal-dining-table/detail-03.jpg
+    alt: "White crystal dining table showing the natural stone texture and veining"
+
   - image: /images/products/stone-tables/custom-white-crystal-dining-table/detail-04.jpg
+    alt: "Detail of the handcrafted white crystal dining table"
 
 seoTitle: Custom White Crystal Dining Table Manufacturer | Win-Win Stone
 

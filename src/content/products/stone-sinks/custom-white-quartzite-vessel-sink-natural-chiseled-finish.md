@@ -94,8 +94,10 @@ moq: "1 Piece"
 leadTime: "25–35 Days"
 
 featuredImage: "/images/products/stone-sinks/custom-white-quartzite-stone-vessel-sink-natural-chiseled-finish/cover.webp"
+featuredImageAlt: "Custom white quartzite vessel sink with an elongated basin and hand-chiseled natural stone exterior"
 
 featureImage: "/images/products/stone-sinks/custom-white-quartzite-stone-vessel-sink-natural-chiseled-finish/scene-01.webp"
+imageAlt: "Elongated white quartzite vessel sink with a natural chiseled exterior in a luxury bathroom setting"
 
 featureVideo: "/images/products/stone-sinks/custom-white-quartzite-stone-vessel-sink-natural-chiseled-finish/video.mp4"
 
@@ -119,11 +121,10 @@ gallery:
   alt: "Handcrafted white quartzite stone vessel sink detail"
 
 - image: "/images/products/stone-sinks/custom-white-quartzite-stone-vessel-sink-natural-chiseled-finish/detail-04.webp"
-  alt: "Custom natural stone vessel sink for checking in factory"
+  alt: "White quartzite vessel sink during factory inspection and production"
 
 - image: "/images/products/stone-sinks/custom-white-quartzite-stone-vessel-sink-natural-chiseled-finish/scene-01.webp"
-  alt: "Custom natural stone vessel sink for luxury bathroom projects"
-
+  alt: "Elongated white quartzite vessel sink with a hand-chiseled exterior in a luxury bathroom"
 
 seoTitle: "Custom White quartzite Stone Vessel Sink with Natural Finish | Win-Win Stone"
 

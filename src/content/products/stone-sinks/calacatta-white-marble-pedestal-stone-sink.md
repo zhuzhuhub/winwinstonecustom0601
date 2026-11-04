@@ -51,36 +51,39 @@ keyFeatures:
 
   - title: OEM & Global Support
     description: >
-      From China to Singapore, New York, London, and Dubai, our custom stone products are delivered worldwide with export packaing safely.
+      From China to Singapore, New York, London, and Dubai, our custom stone products are delivered worldwide with export packaging safely.
 
 moq: 1 Piece
 
 leadTime: 25-35 Days
 
 featuredImage: /images/products/stone-sinks/calacatta-white-marble-pedestal-stone-sink/cover.jpg
+featuredImageAlt: "Calacatta white marble freestanding pedestal sink with elegant natural veining"
 
 featureImage: /images/products/stone-sinks/calacatta-white-marble-pedestal-stone-sink/scene-01.jpg
+imageAlt: "Calacatta white marble pedestal sink displayed in an elegant bathroom interior"
 
 gallery:
-
   - image: /images/products/stone-sinks/calacatta-white-marble-pedestal-stone-sink/cover.jpg
-  
+    alt: "Calacatta white marble freestanding pedestal sink with elegant natural veining"
 
   - image: /images/products/stone-sinks/calacatta-white-marble-pedestal-stone-sink/detail-01.jpg
-  
+    alt: "Close-up of natural grey veining across the Calacatta white marble sink"
+
   - image: /images/products/stone-sinks/calacatta-white-marble-pedestal-stone-sink/detail-02.jpg
-  
+    alt: "Detail of the sculpted marble basin and cylindrical pedestal construction"
 
   - image: /images/products/stone-sinks/calacatta-white-marble-pedestal-stone-sink/detail-03.jpg
-  
+    alt: "Close-up of the marble surface and handcrafted finish on a Calacatta pedestal sink"
 
   - image: /images/products/stone-sinks/calacatta-white-marble-pedestal-stone-sink/detail-04.jpg
-   
+    alt: "Natural Calacatta white marble texture and veining detail"
 
   - image: /images/products/stone-sinks/calacatta-white-marble-pedestal-stone-sink/scene-01.jpg
-  
+    alt: "Calacatta white marble pedestal sink in a luxury bathroom setting"
 
   - image: /images/products/stone-sinks/calacatta-white-marble-pedestal-stone-sink/scene-02.jpg
+    alt: "Freestanding Calacatta marble sink styled in a contemporary bathroom interior"
   
     
 seoTitle: Custom Calacatta White Marble Pedestal Sink Manufacturer

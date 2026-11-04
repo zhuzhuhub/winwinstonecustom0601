@@ -58,29 +58,31 @@ moq: 1 Piece
 leadTime: 25-35 Days
 
 featuredImage: /images/products/stone-sinks/fluted-cylinder-white-marble-pedestal-sink/cover.jpg
+featuredImageAlt: "Fluted white marble cylindrical pedestal sink with vertical carved grooves"
 
 featureImage: /images/products/stone-sinks/fluted-cylinder-white-marble-pedestal-sink/scene-02.jpg
+imageAlt: "White marble fluted cylinder pedestal sink in a luxury bathroom interior"
 
 gallery:
 
   - image: /images/products/stone-sinks/fluted-cylinder-white-marble-pedestal-sink/cover.jpg
-  
+    alt: "Fluted white marble cylindrical pedestal sink with vertical carved grooves"
 
   - image: /images/products/stone-sinks/fluted-cylinder-white-marble-pedestal-sink/detail-01.jpg
-  
+    alt: "Close-up of the vertical fluted grooves carved into a white marble pedestal sink"
+
   - image: /images/products/stone-sinks/fluted-cylinder-white-marble-pedestal-sink/detail-02.jpg
-  
+    alt: "Natural marble veining and polished surface detail of a white pedestal sink"
 
   - image: /images/products/stone-sinks/fluted-cylinder-white-marble-pedestal-sink/detail-03.jpg
-  
+    alt: "Sculpted cylindrical form and fluted exterior of a natural white marble sink"
 
   - image: /images/products/stone-sinks/fluted-cylinder-white-marble-pedestal-sink/detail-04.jpg
-   
+    alt: "Craftsmanship detail of the carved fluted white marble pedestal basin"
 
-  - image: /images/products/stone-sinks/fluted-cylinder-white-marble-pedestal-sink/scene-01.jpg
-  
-
+ 
   - image: /images/products/stone-sinks/fluted-cylinder-white-marble-pedestal-sink/scene-02.jpg
+    alt: "Freestanding cylindrical white marble sink with vertical fluting in a luxury bathroom setting"
   
     
 seoTitle: Custom Natural Marble Cylinder Pedestal Sink Manufacturer

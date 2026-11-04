@@ -58,14 +58,25 @@ moq: 1 Piece
 leadTime: 25-30 Days
 
 featuredImage: /images/products/stone-tables/luxury-green-marble-round-dining-table/cover.jpg
+featuredImageAlt: "Luxury green marble round dining table with a sculptural natural stone design"
 featureImage: /images/products/stone-tables/luxury-green-marble-round-dining-table/scene-01.jpg
+imageAlt: "Luxury green marble round dining table displayed in an elegant interior"
 
 gallery:
   - image: /images/products/stone-tables/luxury-green-marble-round-dining-table/cover.jpg
+    alt: "Luxury green marble round dining table with natural stone veining"
+
   - image: /images/products/stone-tables/luxury-green-marble-round-dining-table/detail-01.jpg
+    alt: "Close-up of the natural green marble surface and veining"
+
   - image: /images/products/stone-tables/luxury-green-marble-round-dining-table/detail-02.jpg
+    alt: "Detail of the sculptural stone construction of a green marble dining table"
+
   - image: /images/products/stone-tables/luxury-green-marble-round-dining-table/detail-03.jpg
+    alt: "Natural green marble texture and polished surface detail"
+
   - image: /images/products/stone-tables/luxury-green-marble-round-dining-table/scene-01.jpg
+    alt: "Green marble round dining table in a luxury interior setting"
 
 seoTitle: Custom Natural Green Marble Round Dining Tables Manufacturer | Win-Win Stone
 
@@ -135,4 +146,4 @@ We have extensive experience shipping natural stone products worldwide for whole
 
 Win-Win Stone specializes in custom natural stone manufacturing with extensive OEM and ODM experience.
 
-From raw material selection to CNC machining, hand finishing, quality inspection and global logistics, every step is carefully controlled to deliver consistent quality for international projects.
+From raw material selection to CNC machining, hand finishing, quality inspection and global logistics, every step is carefully controlled to deliver consistent quality for international projects.s

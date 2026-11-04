@@ -91,7 +91,11 @@ leadTime: "25–35 Days"
 
 featuredImage: "/images/products/stone-tables/custom-venatino-marble-round-dining-table-rotating-center/custom-venatino-marble-round-dining-table-rotating-center.jpg"
 
+featuredImageAlt: "Custom Venatino marble round dining table with two-tier rotating center and sculptural three-branch stone base"
+
 featureImage: "/images/products/stone-tables/custom-venatino-marble-round-dining-table-rotating-center/venatino-marble-round-dining-table-luxury-dining-room.jpg"
+
+imageAlt: "Venatino white marble round dining table with delicate grey veining and sculptural stone base in a luxury dining room"
 
 featureVideo: ""
 featureVideoPoster: ""
@@ -101,18 +105,18 @@ gallery:
     alt: "Custom Venatino marble round dining table with rotating center and sculptural stone base"
 
   - image: "/images/products/stone-tables/custom-venatino-marble-round-dining-table-rotating-center/venatino-marble-dining-table-rotating-center-detail.jpg"
-    alt: "Custom Venatino marble round dining table with sculptural stone base"  
+    alt: "Close-up of the two-tier circular tabletop and manually rotating center on a Venatino marble dining table" 
 
   - image: "/images/products/stone-tables/custom-venatino-marble-round-dining-table-rotating-center/venatino-marble-dining-table-triple-branch-stone-base.jpg"
-    alt: "Custom Venatino marble round dining table with triple branch stone base" 
+    alt: "Sculptural three-branch stone base supporting a round Venatino marble dining table"
 
   - image: "/images/products/stone-tables/custom-venatino-marble-round-dining-table-rotating-center/venatino-marble-dining-table-natural-grey-veining.jpg"
-    alt: "Custom Venatino marble round dining table with natural grey veining"  
+    alt: "Natural grey veining across the white Venatino marble dining tabletop" 
 
   - image: "/images/products/stone-tables/custom-venatino-marble-round-dining-table-rotating-center/venatino-marble-round-dining-table-sculpted-stone-legs.jpg"
-    alt: "Custom Venatino marble round dining table with sculpted stone legs" 
+    alt: "Sculpted natural stone supports beneath a round Venatino marble dining table"
 
-  - image: "/images/products/stone-tables/custom-venatino-marble-round-dining-table-rotating-center/venatino-marble-round-dining-table-luxury-restaurant interiors.jpg"
+  - image: "/images/products/stone-tables/custom-venatino-marble-round-dining-table-rotating-center/venatino-marble-round-dining-table-luxury-restaurant-interiors.jpg"
     alt: "Venatino marble round dining table with rotating center in a restaurant interior"
 
   - image: "/images/products/stone-tables/custom-venatino-marble-round-dining-table-rotating-center/venatino-marble-round-dining-table-luxury-dining-room.jpg"
@@ -346,4 +350,3 @@ Explore our
 **Stone Manufacturing Capabilities**
 </a>
 to learn more about our production and customization support.
-

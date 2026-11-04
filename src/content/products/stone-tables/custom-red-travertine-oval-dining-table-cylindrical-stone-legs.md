@@ -1,5 +1,4 @@
 ---
-
 title: "Custom Red Travertine Oval Dining Table with Cylindrical Stone Legs"
 
 description: "Custom red travertine oval dining table featuring a warm natural stone surface and sculptural cylindrical travertine legs, handcrafted for luxury residences, hospitality interiors and high-end commercial projects."
@@ -85,7 +84,11 @@ leadTime: "25–35 Days"
 
 featuredImage: "/images/products/stone-tables/custom-red-travertine-oval-dining-table-cylindrical-stone-legs/cover.webp"
 
+featuredImageAlt: "Custom red travertine oval dining table with warm natural stone texture and cylindrical stone legs"
+
 featureImage: "/images/products/stone-tables/custom-red-travertine-oval-dining-table-cylindrical-stone-legs/detail-01.webp"
+
+imageAlt: "Red travertine dining table with an elongated oval top and two solid cylindrical stone legs"
 
 featureVideo: ""
 
@@ -97,10 +100,10 @@ gallery:
   alt: "Custom red travertine oval dining table with cylindrical stone legs"
 
 - image: "/images/products/stone-tables/custom-red-travertine-oval-dining-table-cylindrical-stone-legs/detail-01.webp"
-  alt: "Red travertine dining table with natural stone cylindrical legs"
+  alt: "Red travertine oval dining table supported by two cylindrical natural stone legs"
 
 - image: "/images/products/stone-tables/custom-red-travertine-oval-dining-table-cylindrical-stone-legs/detail-02.webp"
-  alt: "Oval red travertine dining table tabletop with natural stone texture"
+  alt: "Close-up of the warm red-brown natural texture on an oval travertine dining tabletop"
 
 - image: "/images/products/stone-tables/custom-red-travertine-oval-dining-table-cylindrical-stone-legs/detail-03.webp"
   alt: "Cylindrical travertine legs on custom natural stone dining table"

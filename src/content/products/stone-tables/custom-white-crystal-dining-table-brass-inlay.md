@@ -75,8 +75,10 @@ moq: "1 Piece"
 leadTime: "25–35 Days"
 
 featuredImage: "/images/products/stone-tables/custom-white-crystal-dining-table-brass-inlay/cover.jpg"
+featuredImageAlt: "Custom white crystal dining table with geometric brass inlay and sculptural stone base"
 
 featureImage: "/images/products/stone-tables/custom-white-crystal-dining-table-brass-inlay/detail-01.jpg"
+imageAlt: "White crystal dining table surface with decorative brass inlay details"
 
 featureVideo: ""
 
@@ -85,15 +87,17 @@ featureVideoPoster: ""
 gallery:
 
 - image: "/images/products/stone-tables/custom-white-crystal-dining-table-brass-inlay/cover.jpg"
-  alt: "White crystal stone dining table with gold inlay"
+  alt: "White crystal stone dining table with brass inlay"
 - image: "/images/products/stone-tables/custom-white-crystal-dining-table-brass-inlay/detail-01.jpg"
-  alt: "White crystal stone dining table top with gold inlay"
+  alt: "White crystal stone dining table top with brass inlay"
 - image: "/images/products/stone-tables/custom-white-crystal-dining-table-brass-inlay/detail-02.jpg"
   alt: "White crystal stone dining table with white crystal base"
 - image: "/images/products/stone-tables/custom-white-crystal-dining-table-brass-inlay/detail-03.jpg"
-  alt: "Gold inlay detail on white crystal stone dining table"
+  alt: "Brass inlay detail on white crystal stone dining table"
 - image: "/images/products/stone-tables/custom-white-crystal-dining-table-brass-inlay/detail-04.jpg"
+  alt: "Custom white crystal dining table with brass inlay details"
 - image: "/images/products/stone-tables/custom-white-crystal-dining-table-brass-inlay/detail-05.jpg"
+  alt: "Sculptural white crystal stone base of a custom dining table"
 
 seoTitle: "Custom White Crystal Dining Table with Brass Inlay | Win-Win Stone"
 

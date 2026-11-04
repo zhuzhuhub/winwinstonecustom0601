@@ -78,9 +78,15 @@ moq: "1 Piece"
 
 leadTime: "25–35 Days"
 
+
 featuredImage: "/images/products/stone-tables/custom-beige-travertine-coffee-table-copper-accents/cover.jpg"
 
+featuredImageAlt: "Beige travertine coffee table with rounded top, sculptural stone base and copper accents"
+
 featureImage: "/images/products/stone-tables/custom-beige-travertine-coffee-table-copper-accents/detail-01.jpg"
+
+imageAlt: "Beige travertine coffee table featuring natural stone texture and copper-colored metal accents"
+
 
 featureVideo: ""
 

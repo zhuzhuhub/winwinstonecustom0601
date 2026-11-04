@@ -44,7 +44,11 @@ const {
   description,
 
   featuredImage,
+  featuredImageAlt,
+
   featureImage,
+  imageAlt,
+
   featureVideo,
   featureVideoPoster,
   gallery,
@@ -90,8 +94,6 @@ const breadcrumbs = [
 
 const allProducts =
   Object.values(allModules);
-
-
 
 const tocItems = [
   {
@@ -182,6 +184,7 @@ const relatedResources = [
   heroBadges={heroBadges}
 
   featuredImage={featuredImage}
+  featuredImageAlt={featuredImageAlt}
   gallery={gallery}
 />
 
@@ -243,10 +246,10 @@ const relatedResources = [
     description={featureDescription}
     features={keyFeatures}
     image={featureImage}
+    imageAlt={imageAlt}
     video={featureVideo}
     videoPoster={featureVideoPoster}
 />
-
 
   <ProductSpecifications
     material={material}
@@ -313,5 +316,5 @@ const relatedResources = [
     }))
   })} />
 
-  
+
 </BaseLayout>
