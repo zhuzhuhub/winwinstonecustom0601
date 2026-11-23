@@ -35,20 +35,6 @@ keyFeatures:
   - title: Premium Natural Stone
     description: >
       Every pedestal basin begins with nature’s finest raw materials. We rigorously select each block and slab—examining dimensions, vein patterns, and structural  - image: /images/products/stone-sinks/black-marble-freestanding-cylindrical-pedestal-sink/cover.jpg
-  
-
-  - image: /images/products/stone-sinks/black-marble-freestanding-cylindrical-pedestal-sink/detail-01.jpg
-  
-  - image: /images/products/stone-sinks/black-marble-freestanding-cylindrical-pedestal-sink/detail-02.jpg
-  
-
-  - image: /images/products/stone-sinks/black-marble-freestanding-cylindrical-pedestal-sink/detail-03.jpg
-  
-
-  - image: /images/products/stone-sinks/black-marble-freestanding-cylindrical-pedestal-sink/scene-01.jpg
-  
-
-  - image: /images/products/stone-sinks/black-marble-freestanding-cylindrical-pedestal-sink/scene-02.jpgintegrity to ensure nothing but premium quality.
 
   - title: Fully Customizable 
     description: >
