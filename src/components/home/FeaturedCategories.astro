@@ -1,43 +1,58 @@
 ---
 const categories = [
   {
+    number: "01",
     title: "Stone Tables",
+    eyebrow: "CUSTOM STONE FURNITURE",
     description:
-      "Custom dining tables, coffee tables, side tables, and statement stone furniture pieces.",
+      "Custom dining tables, coffee tables, side tables and console tables crafted from natural marble, travertine and other premium stones.",
     href: "/stone-tables/",
-    image: "/images/categories/stone-tables-hero.jpg"
+    image: "/images/categories/stone-tables-hero.jpg",
+    alt: "Custom natural marble and travertine stone tables"
   },
 
   {
+    number: "02",
     title: "Stone Sinks",
+    eyebrow: "BESPOKE STONE BASINS",
     description:
-      "Pedestal sinks, vessel sinks, integrated basins, and custom sink fabrication.",
+      "Vessel sinks, integrated basins, pedestal sinks and made-to-order stone designs for residential and hospitality bathrooms.",
     href: "/stone-sinks/",
-    image: "/images/categories/stone-sinks-hero.jpg"
+    image: "/images/categories/stone-sinks-hero.jpg",
+    alt: "Custom natural stone vessel sinks and bathroom basins"
   },
 
   {
+    number: "03",
     title: "Stone Bathtubs",
+    eyebrow: "LUXURY BATHROOMS",
     description:
-      "Freestanding stone bathtubs crafted for luxury residential and hospitality projects.",
+      "Freestanding natural stone bathtubs developed for luxury residences, hotels and high-end bathroom projects.",
     href: "/stone-bathtubs/",
-    image: "/images/categories/stone-bathtubs-hero.jpg"
+    image: "/images/categories/stone-bathtubs-hero.jpg",
+    alt: "Luxury freestanding natural stone bathtub"
   },
 
   {
+    number: "04",
     title: "Fireplace Surrounds",
+    eyebrow: "ARCHITECTURAL STONE",
     description:
-      "Architectural fireplace surrounds tailored for villas, hotels, and interior projects.",
+      "Custom marble and natural stone fireplace surrounds tailored to interior designs, villas and hospitality spaces.",
     href: "/stone-fireplace-surrounds/",
-    image: "/images/categories/fireplace-surrounds-hero.jpg"
+    image: "/images/categories/fireplace-surrounds-hero.jpg",
+    alt: "Custom marble fireplace surround"
   },
 
   {
+    number: "05",
     title: "Custom Stone Furniture",
+    eyebrow: "BESPOKE DEVELOPMENT",
     description:
-      "Bespoke stone furniture developed for brands, designers, and private clients.",
+      "Made-to-order stone furniture developed around your drawings, dimensions, material preferences and project requirements.",
     href: "/custom-stone-furniture/",
-    image: "/images/categories/custom-stone-furniture-hero.jpg"
+    image: "/images/categories/custom-stone-furniture-hero.jpg",
+    alt: "Bespoke custom marble stone furniture"
   }
 ];
 ---
@@ -46,37 +61,68 @@ const categories = [
 
   <div class="container">
 
-    <div class="section-header">
+    
+<!-- Section Header -->
 
+<div class="featured-categories-header">
 
-      <h2>
-        Explore Our Product Categories
-      </h2>
+  <div class="featured-categories-heading">
 
-      <p>
-        Discover custom stone categories developed for brands,
-        wholesalers, designers, project buyers, and private clients.
-      </p>
+    <h2>
+     Explore Our Natural Stone Collections
+    </h2>
 
-    </div>
+  </div>
+
+  <div class="featured-categories-intro">
+
+    <p>
+      Discover custom marble furniture, stone sinks,
+      bathtubs and architectural stone products developed
+      for brands, designers, wholesalers and project buyers.
+    </p>
+
+  </div>
+
+</div>
+
+    <!-- Category Grid -->
 
     <div class="category-grid">
 
       {
-        categories.map((category) => (
+        categories.map((category, index) => (
 
           <a
             href={category.href}
-            class="category-card"
+            class:list={[
+              "category-card",
+              index < 2 && "category-card--featured",
+              index === 4 && "category-card--custom"
+            ]}
+            aria-label={`Explore ${category.title}`}
           >
 
-            <img
-              src={category.image}
-              alt={category.title}
-              loading="lazy"
-            />
+            <div class="category-image">
+
+              <img
+                src={category.image}
+                alt={category.alt}
+                loading="lazy"
+                decoding="async"
+              />
+
+              <span class="category-number">
+                {category.number}
+              </span>
+
+            </div>
 
             <div class="category-content">
+
+              <span class="category-eyebrow">
+                {category.eyebrow}
+              </span>
 
               <h3>
                 {category.title}
@@ -85,6 +131,11 @@ const categories = [
               <p>
                 {category.description}
               </p>
+
+              <span class="category-link">
+                Explore Collection
+                <span aria-hidden="true">→</span>
+              </span>
 
             </div>
 

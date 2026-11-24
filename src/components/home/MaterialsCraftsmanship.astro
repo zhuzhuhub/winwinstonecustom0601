@@ -1,0 +1,121 @@
+---
+const mainImage = {
+  src: "/images/home/stone-material-character.jpg",
+  alt: "Natural marble and travertine stone textures",
+};
+
+const details = [
+  {
+    title: "Material Character",
+    description: "Natural colors, distinctive veining and unique stone textures.",
+    image: "/images/home/material-character-detail.jpg",
+    alt: "Close-up of natural stone texture and veining",
+  },
+  {
+    title: "Custom Fabrication",
+    description: "Custom cutting, shaping and carving for distinctive designs.",
+    image: "/images/home/custom-stone-fabrication.jpg",
+    alt: "Custom natural stone fabrication detail",
+  },
+  {
+    title: "Surface & Detail",
+    description: "Carefully refined surfaces, edges and finishing details.",
+    image: "/images/home/stone-surface-finishing.jpg",
+    alt: "Natural stone surface finishing and edge detail",
+  },
+];
+---
+
+<section class="materials-craftsmanship">
+  <div class="materials-craftsmanship-inner">
+
+    <div class="materials-main">
+
+      <div class="materials-image">
+        <img
+          src={mainImage.src}
+          alt={mainImage.alt}
+          loading="lazy"
+          decoding="async"
+        />
+        <span class="materials-image-caption">
+          THE BEAUTY OF NATURAL STONE
+        </span>
+      </div>
+
+      <div class="materials-content">
+        
+        <h2>Stone with Character.<br />Crafted with Precision.</h2>
+
+        <p class="materials-intro">
+          Every natural stone has its own character. Through thoughtful
+          material selection, precise fabrication and carefully refined
+          details, we help transform natural stone into distinctive
+          furniture and bespoke interior pieces.
+        </p>
+
+        <div class="materials-themes">
+          <div class="materials-theme">
+            <span class="materials-theme-number">01</span>
+            <div>
+              <h3>Material Character</h3>
+              <p>
+                Natural textures, colors and veining make every stone piece
+                unique.
+              </p>
+            </div>
+          </div>
+
+          <div class="materials-theme">
+            <span class="materials-theme-number">02</span>
+            <div>
+              <h3>Custom Fabrication</h3>
+              <p>
+                Custom cutting, shaping and carving bring individual designs
+                to life.
+              </p>
+            </div>
+          </div>
+
+          <div class="materials-theme">
+            <span class="materials-theme-number">03</span>
+            <div>
+              <h3>Surface & Detail</h3>
+              <p>
+                Surface treatments, edge profiles and finishing refine the
+                final appearance.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <a class="materials-link" href="/materials/">
+          Explore Our Stone Materials
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="materials-details">
+      {details.map((item) => (
+        <article class="materials-detail-card">
+          <div class="materials-detail-image">
+            <img
+              src={item.image}
+              alt={item.alt}
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+
+          <div class="materials-detail-copy">
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,309 @@
+
+/* =========================
+   Home FAQ
+========================= */
+
+.home-faq {
+  padding: 48px 0 50px;
+  background: #f8f7f4;
+}
+
+.home-faq-inner {
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+/* =========================
+   Header
+========================= */
+
+.home-faq-header {
+  width: 100%;
+  max-width: none;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+.home-faq-header h2 {
+  display: block;
+  width: 100%;
+  margin: 0;
+  color: #26382f;
+  font-size: clamp(30px, 3vw, 40px);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.home-faq-header p {
+  width: 100%;
+  max-width: none;
+  margin: 14px auto 0;
+  color: #77736d;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* =========================
+   FAQ List
+========================= */
+
+.home-faq-list {
+  border-top: 1px solid #dedbd4;
+}
+
+.home-faq-item {
+  border-bottom: 1px solid #dedbd4;
+}
+
+.home-faq-item summary {
+  display: grid;
+  grid-template-columns: 42px 1fr 24px;
+  align-items: center;
+  gap: 16px;
+  min-height: 76px;
+  padding: 18px 4px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.home-faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.home-faq-item summary::marker {
+  content: "";
+}
+
+.home-faq-number {
+  color: #a49b8e;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+.home-faq-question {
+  color: #303b34;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.6;
+  transition: color 0.2s ease;
+}
+
+.home-faq-item summary:hover .home-faq-question {
+  color: #8b765b;
+}
+
+/* Plus / Minus Icon */
+
+.home-faq-icon {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  justify-self: end;
+}
+
+.home-faq-icon::before,
+.home-faq-icon::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 12px;
+  height: 1px;
+  background: #827d73;
+  content: "";
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s ease;
+}
+
+.home-faq-icon::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.home-faq-item[open] .home-faq-icon::after {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+/* Answer */
+
+.home-faq-answer {
+  padding: 0 44px 24px 62px;
+}
+
+.home-faq-answer p {
+  max-width: 740px;
+  margin: 0;
+  color: #77736d;
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+/* =========================
+   Footer Link
+========================= */
+
+.home-faq-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin-top: 24px;
+  text-align: center;
+}
+
+.home-faq-footer p {
+  margin: 0;
+  color: #77736d;
+  font-size: 13px;
+}
+
+.home-faq-footer a {
+  color: #26382f;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.home-faq-footer a:hover {
+  color: #927b5e;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 768px) {
+  .home-faq {
+    padding: 42px 0 44px;
+  }
+
+  .home-faq-header {
+    margin-bottom: 26px;
+  }
+
+  .home-faq-header h2 {
+    font-size: 30px;
+    white-space: normal;
+  }
+
+  .home-faq-header p {
+    font-size: 13px;
+  }
+
+  .home-faq-item summary {
+    grid-template-columns: 30px 1fr 22px;
+    gap: 10px;
+    min-height: 70px;
+    padding: 16px 0;
+  }
+
+  .home-faq-question {
+    font-size: 14px;
+  }
+
+  .home-faq-answer {
+    padding: 0 30px 20px 40px;
+  }
+
+  .home-faq-answer p {
+    font-size: 13px;
+  }
+
+  .home-faq-footer {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-faq {
+    padding: 36px 0 38px;
+  }
+
+  .home-faq-header h2 {
+    font-size: 27px;
+    white-space: normal;
+  }
+
+  .home-faq-item summary {
+    grid-template-columns: 24px 1fr 20px;
+    gap: 8px;
+  }
+
+  .home-faq-number {
+    font-size: 11px;
+  }
+
+  .home-faq-question {
+    font-size: 13px;
+  }
+
+  .home-faq-answer {
+    padding-left: 32px;
+    padding-right: 24px;
+  }
+}
+
+
+/* =========================
+   Home FAQ - Left Aligned Layout
+   ========================= */
+
+.home-faq-inner {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.home-faq-header {
+  width: 100%;
+  max-width: none;
+  margin: 0 0 30px;
+  text-align: left;
+}
+
+.home-faq-header h2 {
+  width: 100%;
+  margin: 0;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.home-faq-header p {
+  width: 100%;
+  max-width: none;
+  margin: 14px 0 0;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.home-faq-footer {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+/* Tablet and Mobile */
+
+@media (max-width: 768px) {
+  .home-faq-header h2,
+  .home-faq-header p {
+    white-space: normal;
+  }
+
+  .home-faq-header p {
+    max-width: 600px;
+  }
+
+  .home-faq-footer {
+    justify-content: flex-start;
+    text-align: left;
+  }
+}

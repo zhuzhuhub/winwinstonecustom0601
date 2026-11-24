@@ -1,66 +1,99 @@
+---
+const productionStages = [
+  {
+    number: "01",
+    title: "Material Selection",
+    description:
+      "Exploring natural stone options, colors, textures and material characteristics for each custom product.",
+  },
+  {
+    number: "02",
+    title: "Precision Fabrication",
+    description:
+      "Coordinating cutting, shaping, carving and other fabrication techniques according to approved designs.",
+  },
+  {
+    number: "03",
+    title: "Finishing & Inspection",
+    description:
+      "Refining surface finishes, edges and product details while checking key requirements.",
+  },
+  {
+    number: "04",
+    title: "Export Packaging",
+    description:
+      "Preparing suitable protective packaging and export arrangements for overseas delivery.",
+  },
+];
+---
+
 <section class="production-preview">
+  <div class="production-preview-inner">
 
-  <div class="container">
+    <!-- Section Heading -->
 
-    <div class="production-heading">
+    <div class="production-header">
+      <div class="production-heading">
+        
+        <span class="production-eyebrow">
+          PRODUCTION & MANUFACTURING
+        </span>
 
-      <h2>
-        Production Process
-      </h2>
+        <h2>From Stone Selection to Finished Products.</h2>
+      </div>
 
-      <p>
-        See how custom stone products move
-        from raw material to finished pieces.
-      </p>
-
+      <div class="production-intro">
+        <p>
+          A closer look at the materials, fabrication techniques and
+          finishing details behind our custom stone products.
+        </p>
+      </div>
     </div>
 
-    <!-- Video -->
+    <!-- Production Video -->
 
     <div class="production-video">
-
       <video
-        autoplay
-        muted
-        loop
-        playsinline
         controls
+        muted
+        playsinline
+        preload="metadata"
+        aria-label="Natural stone product manufacturing and fabrication process"
       >
-        <source
-          src="/videos/factory-process.mp4"
-          type="video/mp4"
-        />
+        <source src="/videos/factory-process.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
       </video>
-
     </div>
 
-    <!-- Points -->
+    <!-- Production Stages -->
 
-    <ul class="production-points">
+    <div class="production-stages">
+      {productionStages.map((stage) => (
+        <article class="production-stage">
+          <span class="production-stage-number">
+            {stage.number}
+          </span>
 
-      <li>Material Selection</li>
+          <h3>{stage.title}</h3>
 
-      <li>Quality Inspection</li>
-
-      <li>Precision Fabrication</li>
-
-      <li>Export Packing</li>
-
-    </ul>
+          <p>{stage.description}</p>
+        </article>
+      ))}
+    </div>
 
     <!-- CTA -->
 
-    <div class="production-cta">
+    <div class="production-footer">
+      <p>
+        Discover how our manufacturing network supports custom stone
+        furniture and product development.
+      </p>
 
-      <a
-        href="/factory/"
-        class="production-button"
-      >
-        Explore Factory
+      <a href="/factory/" class="production-link">
+        Explore Our Manufacturing Network
+        <span aria-hidden="true">→</span>
       </a>
-
     </div>
 
   </div>
-
 </section>

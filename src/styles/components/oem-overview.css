@@ -1,143 +1,259 @@
-/* =========================
+
+/* ========================================
    OEM Overview
-========================= */
+======================================== */
 
 .oem-overview {
-
-  padding: 80px 0 60px;
-
-  padding-top: 80px;
-
-  padding-bottom: 80px;
-
+  position: relative;
+  padding: 76px 0;
   background: #f7f4ef;
+  overflow: hidden;
 }
 
-/* =========================
-   Layout
-========================= */
-
 .oem-inner {
-
   display: grid;
-
-  grid-template-columns: 1.2fr .8fr;
-
-  gap: 80px;
-
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 90px;
   align-items: center;
 }
 
-/* =========================
-   Left
-========================= */
+/* ========================================
+   Left Content
+======================================== */
+
+.oem-content {
+  max-width: 720px;
+}
+
+.oem-eyebrow {
+  display: inline-block;
+  margin-bottom: 22px;
+  color: #8a765f;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
 
 .oem-content h2 {
-
-  max-width: 650px;
-
-  margin-bottom: 24px;
+  max-width: 700px;
+  margin: 0 0 26px;
+  color: #252923;
+  font-size: clamp(34px, 3.5vw, 48px);
+  line-height: 1.18;
+  font-weight: 600;
+  letter-spacing: -1.2px;
 }
 
 .oem-content p {
-
-  max-width: 600px;
-
-  margin-bottom: 40px;
-
-  color: var(--muted);
-
-  line-height: 1.9;
+  max-width: 650px;
+  margin: 0 0 18px;
+  color: #66665f;
+  font-size: 16px;
+  line-height: 1.85;
 }
 
-/* =========================
-   Button
-========================= */
+.oem-content p:last-of-type {
+  margin-bottom: 30px;
+}
+
+/* ========================================
+   CTA Button
+======================================== */
 
 .oem-button {
-
   display: inline-flex;
-
   align-items: center;
-
   justify-content: center;
-
-  min-width: 180px;
-
-  height: 56px;
-
-  border-radius: 999px;
-
-  background: var(--green);
-
-  color: white;
-
-  font-weight: 700;
-
-  transition: .3s;
+  gap: 12px;
+  min-height: 52px;
+  padding: 0 28px;
+  background: #294b3c;
+  color: #fff;
+  border: 1px solid #294b3c;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
 }
 
 .oem-button:hover {
-
+  background: #1d392d;
+  border-color: #1d392d;
   transform: translateY(-2px);
 }
 
-/* =========================
-   Right Features
-========================= */
+/* ========================================
+   Right Capabilities List
+======================================== */
 
 .oem-features {
-
   display: grid;
-
-  gap: 18px;
+  grid-template-columns: 1fr;
+  gap: 0;
+  width: 100%;
 }
 
-.feature-item {
-
+.oem-features .feature-item {
   display: flex;
-
-  align-items: center;
-
-  gap: 16px;
-
-  padding: 18px 22px;
-
-  background: white;
-
-  border-radius: 16px;
-
-  box-shadow:
-    0 10px 30px rgba(0,0,0,.04);
+  align-items: flex-start;
+  gap: 20px;
+  min-width: 0;
+  padding: 21px 0;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(50, 57, 49, 0.15);
+  border-radius: 0;
+  box-shadow: none;
+  transition: padding-left 0.25s ease;
 }
 
-.feature-item span {
-
-  font-size: 1.2rem;
-
-  font-weight: 700;
-
-  color: var(--green);
+.oem-features .feature-item:first-child {
+  border-top: 1px solid rgba(50, 57, 49, 0.15);
 }
 
-.feature-item p {
+.oem-features .feature-item:hover {
+  padding-left: 6px;
+}
 
-  margin: 0;
+/* Number */
 
+.feature-number {
+  flex: 0 0 32px;
+  padding-top: 2px;
+  color: #a18b70;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Feature Text */
+
+.oem-features .feature-item h3 {
+  margin: 0 0 7px;
+  color: #292e28;
+  font-size: 16px;
+  line-height: 1.4;
   font-weight: 600;
 }
 
-/* =========================
-   Responsive
-========================= */
+.oem-features .feature-item p {
+  margin: 0;
+  color: #77766f;
+  font-size: 13px;
+  line-height: 1.65;
+}
 
-@media (max-width: 980px) {
+/* ========================================
+   Tablet
+======================================== */
 
-  .oem-inner {
-
-    grid-template-columns: 1fr;
-
-    gap: 50px;
+@media (max-width: 1024px) {
+  .oem-overview {
+    padding: 64px 0;
   }
 
+  .oem-inner {
+    grid-template-columns: 1fr 0.9fr;
+    gap: 48px;
+  }
+
+  .oem-content h2 {
+    font-size: clamp(32px, 4vw, 40px);
+  }
+
+  .oem-features .feature-item {
+    gap: 14px;
+    padding: 18px 0;
+  }
+}
+
+/* ========================================
+   Mobile / Small Tablet
+======================================== */
+
+@media (max-width: 768px) {
+  .oem-overview {
+    padding: 54px 0;
+  }
+
+  .oem-inner {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .oem-content {
+    max-width: 100%;
+  }
+
+  .oem-content h2 {
+    max-width: 600px;
+    margin-bottom: 20px;
+    font-size: 34px;
+    line-height: 1.22;
+    letter-spacing: -0.7px;
+  }
+
+  .oem-content p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .oem-content p:last-of-type {
+    margin-bottom: 25px;
+  }
+
+  .oem-features .feature-item {
+    gap: 16px;
+    padding: 19px 0;
+  }
+
+  .oem-features .feature-item h3 {
+    font-size: 15px;
+  }
+
+  .oem-features .feature-item p {
+    font-size: 13px;
+  }
+}
+
+/* ========================================
+   Small Mobile
+======================================== */
+
+@media (max-width: 480px) {
+  .oem-overview {
+    padding: 46px 0;
+  }
+
+  .oem-inner {
+    gap: 35px;
+  }
+
+  .oem-content h2 {
+    font-size: 30px;
+  }
+
+  .oem-content p {
+    font-size: 14px;
+  }
+
+  .oem-button {
+    min-height: 48px;
+    padding: 0 23px;
+  }
+
+  .oem-features .feature-item {
+    gap: 12px;
+    padding: 17px 0;
+  }
+
+  .feature-number {
+    flex-basis: 28px;
+    font-size: 12px;
+  }
 }

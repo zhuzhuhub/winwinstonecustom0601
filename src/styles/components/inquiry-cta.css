@@ -1,22 +1,21 @@
+
 /* =========================
    Inquiry CTA
 ========================= */
+
 .inquiry-cta {
-
-  padding: 20px 0;
-
-  background: #fff;
-
+  padding: 44px 0 48px;
+  background: #26382f;
 }
+
 .inquiry-box {
-
   max-width: 1200px;
-
   margin: 0 auto;
-
-  text-align: center;
-
-  color: white;
+  padding: 12px 0;
+  background: transparent;
+  border-radius: 0;
+  color: #fff;
+  text-align: left;
 }
 
 /* =========================
@@ -24,18 +23,15 @@
 ========================= */
 
 .inquiry-box h2 {
-
-  margin-bottom: 14px;
-
-  max-width: none;
-
   width: 100%;
-
-  text-align: center;
-
-  line-height: 1.05;
-
-  white-space: nowrap;
+  max-width: 800px;
+  margin: 0 0 18px;
+  color: #fff;
+  font-size: clamp(32px, 3.2vw, 44px);
+  font-weight: 500;
+  line-height: 1.18;
+  letter-spacing: -0.035em;
+  text-align: left;
 }
 
 /* =========================
@@ -43,72 +39,74 @@
 ========================= */
 
 .inquiry-box p {
-
-  max-width: 900px;
-
-  margin: 0 auto 24px;
-
-  color: var(--muted);
-
+  max-width: 680px;
+  margin: 0 0 28px;
+  color: #d7ded8;
+  font-size: 15px;
   line-height: 1.8;
-
-  font-size: 1.05rem;
+  text-align: left;
 }
+
 /* =========================
    Buttons
 ========================= */
 
 .inquiry-actions {
-
   display: flex;
-
-  justify-content: center;
-
-  gap: 16px;
-
-  margin-bottom: 20px;
-
+  justify-content: flex-start;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
   flex-wrap: wrap;
 }
 
 .inquiry-button,
 .whatsapp-button {
-
   display: inline-flex;
-
   align-items: center;
-
   justify-content: center;
-
-  height: 54px;
-
-  min-width: 220px;
-
+  min-width: 200px;
+  height: 52px;
+  padding: 0 28px;
   border-radius: 999px;
-
-  font-weight: 700;
-
-  transition: .3s;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
 }
+
 .inquiry-button {
-
-  background: var(--green);
-
-  color: white;
+  background: #f3efe6;
+  border: 1px solid #f3efe6;
+  color: #26382f;
 }
 
 .whatsapp-button {
-
-  border: 1px solid rgba(0,0,0,.12);
-
-  color: var(--ink);
-
-  background: white;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  color: #fff;
 }
-.inquiry-button:hover,
-.whatsapp-button:hover {
 
+.inquiry-button:hover {
+  background: #fff;
+  border-color: #fff;
   transform: translateY(-2px);
+}
+
+.whatsapp-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #fff;
+  transform: translateY(-2px);
+}
+
+.inquiry-button:focus-visible,
+.whatsapp-button:focus-visible {
+  outline: 2px solid #d9c8a9;
+  outline-offset: 4px;
 }
 
 /* =========================
@@ -116,36 +114,85 @@
 ========================= */
 
 .inquiry-meta {
-
   display: flex;
-
-  justify-content: center;
-
+  align-items: center;
+  justify-content: flex-start;
   gap: 12px;
-
-  color: var(--muted);
-
-  font-size: .92rem;
+  color: #c6cec7;
+  font-size: 12px;
+  line-height: 1.6;
 }
+
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width: 1024px) {
+  .inquiry-cta {
+    padding: 42px 0 48px;
+  }
+
+  .inquiry-box {
+    padding: 52px 48px;
+  }
+}
+
 /* =========================
    Mobile
 ========================= */
 
 @media (max-width: 768px) {
+  .inquiry-cta {
+    padding: 36px 0 42px;
+  }
 
   .inquiry-box {
-
-    padding: 50px 24px;
+    padding: 42px 28px;
   }
 
   .inquiry-box h2 {
-
+    font-size: 32px;
     white-space: normal;
   }
 
-  .inquiry-meta {
-
-    flex-wrap: wrap;
+  .inquiry-box p {
+    font-size: 14px;
+    margin-bottom: 24px;
   }
 
+  .inquiry-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .inquiry-button,
+  .whatsapp-button {
+    width: 100%;
+    max-width: 280px;
+    min-width: 0;
+  }
+
+  .inquiry-meta {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
+
+/* =========================
+   Small Mobile
+========================= */
+
+@media (max-width: 480px) {
+  .inquiry-box {
+    padding: 36px 22px;
+  }
+
+  .inquiry-box h2 {
+    font-size: 28px;
+  }
+
+  .inquiry-meta {
+    font-size: 11px;
+  }
 }

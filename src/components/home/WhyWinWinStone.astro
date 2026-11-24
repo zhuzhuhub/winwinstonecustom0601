@@ -1,0 +1,60 @@
+---
+const brandPillars = [
+  {
+    number: "01",
+    title: "Yunfu-Based Resources",
+    description:
+      "Connected to Yunfu's established stone industry and a broad range of local material and manufacturing resources.",
+  },
+  {
+    number: "02",
+    title: "Specialized Production Network",
+    description:
+      "Coordinating with specialized production partners to support different materials, designs and custom fabrication requirements.",
+  },
+  {
+    number: "03",
+    title: "International Project Experience",
+    description:
+      "Supporting overseas buyers with clear communication, production coordination and export preparation.",
+  },
+];
+---
+
+<section class="why-winwin">
+  <div class="why-winwin-inner">
+
+    <div class="why-winwin-intro">
+      <span class="why-winwin-eyebrow">WHY WIN WIN STONE</span>
+
+      <h2>
+        From Yunfu's Stone Industry to Global Projects.
+      </h2>
+
+      <p class="why-winwin-lead">
+        We connect international buyers with Yunfu's stone industry
+        resources, coordinating material selection, specialized
+        manufacturing and export support for custom stone products.
+      </p>
+
+      <a class="why-winwin-link" href="/why-us/">
+        Discover Why Choose Us
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    <div class="why-winwin-pillars">
+      {brandPillars.map((pillar) => (
+        <article class="why-winwin-pillar">
+          <span class="why-winwin-number">{pillar.number}</span>
+
+          <div class="why-winwin-pillar-content">
+            <h3>{pillar.title}</h3>
+            <p>{pillar.description}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+
+  </div>
+</section>

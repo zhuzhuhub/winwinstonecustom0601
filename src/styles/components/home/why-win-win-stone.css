@@ -1,0 +1,209 @@
+
+/* =========================
+   Why Win Win Stone
+========================= */
+
+.why-winwin {
+  padding: 58px 0 72px;
+  background: #26382f;
+  color: #ffffff;
+}
+
+.why-winwin-inner {
+  width: min(1240px, calc(100% - 48px));
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 0.88fr 1.12fr;
+  gap: 64px;
+  align-items: center;
+}
+
+/* =========================
+   Intro
+========================= */
+
+.why-winwin-intro {
+  max-width: 520px;
+}
+
+.why-winwin-eyebrow {
+  display: block;
+  margin-bottom: 18px;
+
+  color: #c9b99d;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+}
+
+.why-winwin-intro h2 {
+  margin: 0 0 20px;
+
+  color: #ffffff;
+  font-size: clamp(34px, 3.2vw, 46px);
+  font-weight: 500;
+  line-height: 1.18;
+  letter-spacing: -0.035em;
+}
+
+.why-winwin-lead {
+  max-width: 520px;
+  margin: 0;
+
+  color: #d5ddd6;
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+/* =========================
+   CTA Link
+========================= */
+
+.why-winwin-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+
+  margin-top: 24px;
+  padding-bottom: 7px;
+
+  border-bottom: 1px solid #a99b80;
+
+  color: #e2d5bd;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition:
+    gap 0.25s ease,
+    color 0.25s ease;
+}
+
+.why-winwin-link:hover {
+  gap: 21px;
+  color: #ffffff;
+}
+
+/* =========================
+   Brand Pillars
+========================= */
+
+.why-winwin-pillars {
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.why-winwin-pillar {
+  display: grid;
+  grid-template-columns: 38px 1fr;
+  gap: 18px;
+
+  padding: 22px 0;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.why-winwin-number {
+  padding-top: 3px;
+
+  color: #c9b99d;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+
+.why-winwin-pillar-content h3 {
+  margin: 0 0 8px;
+
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.why-winwin-pillar-content p {
+  max-width: 520px;
+  margin: 0;
+
+  color: #b9c2ba;
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width: 1024px) {
+  .why-winwin {
+    padding: 52px 0 64px;
+  }
+
+  .why-winwin-inner {
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 38px;
+  }
+
+  .why-winwin-intro h2 {
+    font-size: 36px;
+  }
+
+  .why-winwin-pillar {
+    padding: 19px 0;
+  }
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 768px) {
+  .why-winwin {
+    padding: 44px 0 54px;
+  }
+
+  .why-winwin-inner {
+    width: min(100% - 36px, 560px);
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .why-winwin-intro {
+    max-width: none;
+  }
+
+  .why-winwin-intro h2 {
+    font-size: 35px;
+  }
+
+  .why-winwin-lead {
+    font-size: 14px;
+  }
+
+  .why-winwin-pillar {
+    grid-template-columns: 34px 1fr;
+    gap: 14px;
+    padding: 18px 0;
+  }
+
+  .why-winwin-pillar-content h3 {
+    font-size: 15px;
+  }
+}
+
+/* =========================
+   Small Mobile
+========================= */
+
+@media (max-width: 480px) {
+  .why-winwin {
+    padding: 40px 0 46px;
+  }
+
+  .why-winwin-intro h2 {
+    font-size: 30px;
+  }
+
+  .why-winwin-pillar {
+    padding: 16px 0;
+  }
+}
